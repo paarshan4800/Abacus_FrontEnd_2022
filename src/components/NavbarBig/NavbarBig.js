@@ -13,6 +13,7 @@ const Navbar = () => {
           <GlassButton title="Events"/>
           <GlassButton title="Workshop"/>
           <GlassButton title="Dashboard" link="/dashboard"/>
+          <GlassButton title="Login" />
         </div>
       </nav>
     </div>
