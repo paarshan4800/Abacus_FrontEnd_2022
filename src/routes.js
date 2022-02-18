@@ -12,7 +12,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 // import TechEvents from "./pages/Events/TechEvents";
 // import NonTechEvents from "./pages/Events/NonTechEvents";
 // import EventMiddleware from "./pages/Events/Event/EventMiddleware";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 // import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
