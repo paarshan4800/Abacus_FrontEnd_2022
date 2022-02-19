@@ -5,13 +5,19 @@ import styles from './Dashboard.module.css';
 const Dashboard = () => {
   return (
     <div className={styles.bodyDb}>
-      <div style={{height:"2000px", width:"100%"}}>
-        <Card title={"LOREM IPSUM"} 
-          body={"Lorem ipsum odor amet, consectetuer adipiscing elit. Primis eros nunc fringilla id rutrum nibh."}/>
-        <Card title={"LOREM IPSUM"} 
-          body={"Lorem ipsum odor amet, consectetuer adipiscing elit. Primis eros nunc fringilla id rutrum nibh."}/>
-        <Card title={"LOREM IPSUM"} 
-          body={"Lorem ipsum odor amet, consectetuer adipiscing elit. Primis eros nunc fringilla id rutrum nibh."}/>
+      {/* <div className={styles.profileBar}>
+       HI
+      </div> */}
+      <div className={styles.content} >
+       <div className={styles.title}>
+         <h1>Registered Events</h1>
+       </div>
+       <div className={styles.displayArea}>
+        <Card title={"hi"} body={"sdfghjk"}/>
+        <Card title={"hi"} body={"sdfghjk"}/>
+        <Card title={"hi"} body={"sdfghjk"}/>
+        <Card title={"hi"} body={"sdfghjk"}/>
+       </div>
       </div>
     </div>
   );

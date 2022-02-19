@@ -4,9 +4,9 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 // import Cookies from "js-cookie";
 // import Homepage from "./pages/Homepage/Homepage";
-// import AboutUs from "./pages/About-Us/AboutUs";
-// import Events from "./pages/Events/Events";
-// import Workshops from "./pages/Workshops/Workshops";
+// import AboutUs from "./components/Aboutus";
+// import Events from "./pages/Events/eventsHome";
+// import Workshops from "./pages/Workshops/workshopHome";
 // import WorkshopMiddleware from "./pages/Workshops/WorkshopMiddleware";
 // import EventTemplate from "./components/EventTemplate/EventTemplate";
 // import TechEvents from "./pages/Events/TechEvents";
@@ -40,10 +40,10 @@ const AppRoutes = () => {
         )}
       </Route>
       <Route path="/homepage" exact component={Homepage} />
-      <Route path="/about-us" exact component={AboutUs} />
+        <Route path="/about-us" exact component={AboutUs} /> 
       <Route path="/events" exact component={Events} />
       <Route path="/workshops" exact component={Workshops} />
-
+{/*
       <Route path="/events/tech" exact component={TechEvents} />
       <Route path="/events/non-tech" exact component={NonTechEvents} />
       <Route path="/events/:type/:title" exact component={EventMiddleware} />
