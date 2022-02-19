@@ -39,7 +39,7 @@ const AppRoutes = () => {
           <Redirect to="/homepage" />
         )}
       </Route> */}
-       {/* <Route path="/homepage" exact component={Homepage} /> */}
+       {/* <Route path="/" exact component={Homepage} /> */}
       {/* <Route path="/about-us" exact component={AboutUs} />  */}
       <Route path="/events" exact component={Events} />
       <Route path="/workshops" exact component={Workshops} />
