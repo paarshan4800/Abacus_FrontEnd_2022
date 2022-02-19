@@ -3,16 +3,16 @@ import { Route, Switch, Redirect } from "react-router-dom";
 // import { AuthApi } from "./App";
 
 // import Cookies from "js-cookie";
-// import Homepage from "./pages/Homepage/Homepage";
+import Homepage from "./pages/Homepage/Homepage";
 // import AboutUs from "./pages/About-Us/AboutUs";
-// import Events from "./pages/Events/Events";
-// import Workshops from "./pages/Workshops/Workshops";
+import Events from "./pages/Events/eventsHome";
+import Workshops from "./pages/Workshops/workshopHome";
 // import WorkshopMiddleware from "./pages/Workshops/WorkshopMiddleware";
 // import EventTemplate from "./components/EventTemplate/EventTemplate";
 // import TechEvents from "./pages/Events/TechEvents";
 // import NonTechEvents from "./pages/Events/NonTechEvents";
 // import EventMiddleware from "./pages/Events/Event/EventMiddleware";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 // import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
@@ -31,20 +31,20 @@ const AppRoutes = () => {
 
   return (
     <Switch>
-      {/* <Route path="/" exact>
+    {/* <Route path="/" exact>
         {Cookies.get("token") !== undefined &&
         Cookies.get("details") !== undefined ? (
           <Redirect to="/dashboard" />
         ) : (
           <Redirect to="/homepage" />
         )}
-      </Route>
-      <Route path="/homepage" exact component={Homepage} />
-      <Route path="/about-us" exact component={AboutUs} />
+      </Route> */}
+       <Route path="/homepage" exact component={Homepage} />
+      {/* <Route path="/about-us" exact component={AboutUs} />  */}
       <Route path="/events" exact component={Events} />
       <Route path="/workshops" exact component={Workshops} />
 
-      <Route path="/events/tech" exact component={TechEvents} />
+      {/* <Route path="/events/tech" exact component={TechEvents} />
       <Route path="/events/non-tech" exact component={NonTechEvents} />
       <Route path="/events/:type/:title" exact component={EventMiddleware} />
 
@@ -57,7 +57,7 @@ const AppRoutes = () => {
       <Route path="/reset-password" exact component={ResetPassword} />
       <Route path="/forgot-password" exact component={ForgotPassword} />
       <Route path="/login-register" exact component={LoginRegister} />
-      <Route path="/google-form-data" exact component={GoogleFormData} /> */}
+      <Route path="/google-form-data" exact component={GoogleFormData} />  */}
       <Route path="/dashboard" exact component={Dashboard} />
 
       {/* <ProtectedRoute
