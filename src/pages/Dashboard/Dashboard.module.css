@@ -6,23 +6,22 @@
   box-sizing: border-box;
 
 } */
-.bodyDb {
+.body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
   min-height: 100vh;
-  background: #350048;
-  /* background-image: url("https://wallpapercave.com/wp/wp5013214.jpg");
-  background-size: contain; */
-  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  /* background: #350048; */
+  /* background: linear-gradient(-45deg, #113d42, #041941, #2e0b28, #251242);
   animation: gradient 15s ease infinite; */
 }
-
+/* 
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -33,4 +32,33 @@
   100% {
     background-position: 0% 50%;
   }
+} */
+
+.profileBar {
+  display: flex;
+  min-height: 50px;
+  background: #9544b3;
+  align-items: center;
+  /* justify-content: center; */
+  /* align-content: center; */
+}
+
+.content {
+  background: #44b3b3;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .displayArea {
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
 }

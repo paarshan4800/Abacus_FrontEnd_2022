@@ -45,6 +45,7 @@ function EventDetails() {
               <b>DATE:</b> 25-03-2021 & 26-03-2021<br></br>
               <div className={NavbarBigStyles.buttons}>
                 <GlassButton title="REGISTER" />
+                </div>
             </p>
             {/* <a href="#">Read More</a> */}
           </div>

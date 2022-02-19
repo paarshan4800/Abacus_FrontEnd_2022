@@ -68,11 +68,11 @@ function App() {
                   <SetNewLoadWorkshop.Provider value={setnewloadworkshop}>
                     <BrowserRouter>
                     <div className="gradient-bg-welcome">
-                      <Navbar/>
-                      <Hero/>
+                      {/* <Navbar/>
+                      <Hero/> */}
                     </div>
-                      <Aboutus/>
-                      <Footer/>
+                      {/* <Aboutus/>
+                      <Footer/> */}
                       <AppRoutes />
                     </BrowserRouter>
                   </SetNewLoadWorkshop.Provider>
