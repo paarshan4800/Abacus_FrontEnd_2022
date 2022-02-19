@@ -8,7 +8,7 @@ import { Provider, useSelector } from "react-redux";
 import Reducer from "./redux/Reducer";
 import { useDispatch } from "react-redux";
 
-import { Navbar , Hero , Aboutus , Footer  } from './components';
+import { Navbar, Hero, Aboutus, Footer } from "./components";
 
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
@@ -56,7 +56,6 @@ function App() {
     setheight(window.innerHeight);
   };
 
-  
   return (
     <div className="App">
       <AuthApi.Provider value={auth}>
@@ -67,11 +66,11 @@ function App() {
                 <NewLoadWorkshop.Provider value={newloadworkshop}>
                   <SetNewLoadWorkshop.Provider value={setnewloadworkshop}>
                     <BrowserRouter>
-                    <div className="gradient-bg-welcome">
-                      <Navbar/>
+                      <div className="gradient-bg-welcome">
+                        <Navbar />
                       </div>
                       <div className="gradient-bg-welcome">
-                      <AppRoutes />
+                        <AppRoutes />
                       </div>
                     </BrowserRouter>
                   </SetNewLoadWorkshop.Provider>
@@ -86,4 +85,3 @@ function App() {
 }
 
 export default App;
-

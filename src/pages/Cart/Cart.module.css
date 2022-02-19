@@ -12,8 +12,6 @@
   /* background: #350048; */
   /* background: linear-gradient(-45deg, #217b85, #0e3783, #771c68, #481f86);
   animation: gradient 15s ease infinite; */
-  background-image: url("../images/bg1.jpg");
-  background-size: cover;
 }
 
 @keyframes gradient {
@@ -26,12 +24,12 @@
   100% {
     background-position: 0% 50%;
   }
-} 
+}
 
 .loading {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   height: 100vh;
 }
 
@@ -110,7 +108,7 @@
   .content .displayArea {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 10px 50px 70px 50px;
+    padding: 10px 50px 0px 50px;
     grid-template-rows: 400px;
   }
 }
@@ -119,7 +117,7 @@
   .content .displayArea {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 10px 50px 70px 50px;
+    padding: 10px 50px 0px 50px;
   }
 }
 
@@ -127,6 +125,13 @@
   .content .displayArea {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding: 10px 50px 70px 50px;
+    padding: 10px 50px 0px 50px;
   }
+}
+
+.payButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }

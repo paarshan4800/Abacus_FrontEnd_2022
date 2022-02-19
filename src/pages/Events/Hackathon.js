@@ -2,40 +2,9 @@ import React from "react";
 import background from "./../images/bg1.jpg";
 import styles from "./../Events/EventsDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
-import { useParams } from "react-router-dom";
-import tech from "./../images/tech.jpeg";
-
 // import NavbarBigStyles from "../../components/NavbarBig/NavbarBig.module.css";
 
-function EventDetails() {
-
-  const {id} = useParams();
-
-  let techEvents = [
-    {
-      id: 1,
-      name: "Asdfgh",
-      img: tech,
-    },
-    {
-      id: 2,
-      name: "qwerty",
-      img: tech,
-    },
-    {
-      id: 3,
-      name: "zxcvb",
-      img: tech,
-    }
-  ];
-
-  const getEvent = () => {
-    var iterator = techEvents.values();
-    for (let elements of iterator) {
-      console.log(elements);
-    }
-  }
-
+function Hackathon() {
   return (
     <div
       style={{
@@ -62,7 +31,7 @@ function EventDetails() {
         </div>
         <div className={styles.box}>
           <span></span>
-          <div className={styles.content} onClick={() => getEvent}>
+          <div className={styles.content}>
             <h2 className={styles.neon}>HACKATHON</h2>
             <p>
               Are you a tech-savvy individual who can collaborate intensively to
@@ -99,4 +68,4 @@ function EventDetails() {
     </div>
   );
 }
-export default EventDetails;
+export default Hackathon;

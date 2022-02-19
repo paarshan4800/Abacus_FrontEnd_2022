@@ -6,21 +6,27 @@ import background from "./../images/bg1.jpg";
 import tech from "./../images/tech.jpeg";
 import nontech from "./../images/nontech.jpeg";
 import hack from "./../images/hack.jpeg";
-import eventsHome from "./eventsHome.module.css";
+import styles from "./EventsHome.module.css";
 
 function EventsHome() {
   let slides = [
     <div>
-      <img src={tech} alt="1" />
-      <h1 className={eventsHome.neon}>Tech Events</h1>
+      <Link to="/events/tech-events">
+        <img src={tech} alt="1" />
+        <h1 className={styles.neon}>Tech Events</h1>
+      </Link>
     </div>,
     <div>
-      <img src={nontech} alt="2" />
-      <h1 className={eventsHome.neon}>Non-Tech Events</h1>
+      <Link to="/events/non-tech-events">
+        <img src={nontech} alt="2" />
+        <h1 className={styles.neon}>Non-Tech Events</h1>
+      </Link>
     </div>,
     <div>
-      <img src={hack} alt="3" />
-      <h1 className={eventsHome.neon}>Hackathon</h1>
+      <Link to="/events/hackathon">
+        <img src={hack} alt="3" />
+        <h1 className={styles.neon}>Hackathon</h1>
+      </Link>
     </div>,
   ];
   return (
@@ -32,7 +38,7 @@ function EventsHome() {
         color: "#f5f5f5",
       }}
     >
-      <div className={eventsHome.displaylist}>
+      <div className={styles.displaylist}>
         <Carousel
           style={{ paddingTop: "400px" }}
           slides={slides}
