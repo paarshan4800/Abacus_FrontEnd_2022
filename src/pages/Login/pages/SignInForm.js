@@ -1,42 +1,17 @@
-import React, { Component } from "react";
+import React, { useState, Component } from "react";
 import { HashRouter as Router, Route, NavLink } from "react-router-dom";
 import ForgotPassword from "./ForgotPassword";
 import logstyle from "./../logstyle.module.css";
-class SignInForm extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      email: "",
-      password: ""
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    let target = event.target;
-    let value = target.type === "checkbox" ? target.checked : target.value;
-    let name = target.name;
-
-    this.setState({
-      [name]: value
-    });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-
-    console.log("The form was submitted with the following data:");
-    console.log(this.state);
-  }
-
-  render() {
+function SignInForm()
+{
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
+   console.log(password);
     return (
     <Router>
       <div className={logstyle.formCenter}>
-        <form className={logstyle.formFields} onSubmit={this.handleSubmit}>
+        <form className={logstyle.formFields} /*onSubmit={this.handleSubmit}*/>
           <div className={logstyle.formField}>
             <label className={logstyle.formFieldLabel} htmlFor="email">
               E-Mail Address
@@ -47,8 +22,10 @@ class SignInForm extends Component {
               className={logstyle.formFieldInput}
               placeholder="Enter your email"
               name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
+              value={email}
+              onChange={(e) => {
+                setEmail(e.currentTarget.value);
+              }}
             />
           </div>
 
@@ -62,8 +39,10 @@ class SignInForm extends Component {
               className={logstyle.formFieldInput}
               placeholder="Enter your password"
               name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
+              value={password}
+              onChange={(e) => {
+                setPassword(e.currentTarget.value);
+              }}
             />
           </div>
 
@@ -83,7 +62,5 @@ class SignInForm extends Component {
       </div>
       </Router>
     );
-  }
 }
-
 export default SignInForm;

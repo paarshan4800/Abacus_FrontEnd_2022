@@ -1,51 +1,26 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
 import Select from 'react-select';
 import departments from "./assets/departments";
 import years from "./assets/years";
 import colleges from "./assets/colleges";
 import logstyle from "./../logstyle.module.css";
-class SignUp extends Component {
-  constructor() {
-    super();
+import GlassButton from "../../../components/GlassButton/GlassButton.js";
 
-    this.state = {
-      email: "",
-      password: "",
-      name: "",
-      year: "",
-      dept: "",
-      colg: "",
-      phone: "",
-      conpass: "",
-      hasAgreed: false
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    let target = event.target;
-    let value = target.type === "checkbox" ? target.checked : target.value;
-    let name = target.name;
-
-    this.setState({
-      [name]: value
-    });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-
-    console.log("The form was submitted with the following data:");
-    console.log(this.state);
-  }
-
-  render() {
+function SignUp()
+{
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [department, setDepartment] = useState("");
+    const [college, setCollege] = useState("");
+    const [password, setPassword] = useState("");
+    const [conpass, setConpass] = useState("");
+    const [year, setYear] = useState("");
+    
     return (
       <div className={logstyle.formCenter}>
-        <form onSubmit={this.handleSubmit} className={logstyle.formFields}>
+        <form /*onSubmit={this.handleSubmit}*/ className={logstyle.formFields}>
           {/*name*/}
           <div className={logstyle.formField}>
             <label className={logstyle.formFieldLabel} htmlFor="name">
@@ -57,8 +32,10 @@ class SignUp extends Component {
               className={logstyle.formFieldInput}
               placeholder="Enter your full name"
               name="name"
-              value={this.state.name}
-              onChange={this.handleChange}
+              value={name}
+              onChange={(e) => {
+                setName(e.currentTarget.value);
+              }}
             />
           </div>
 
@@ -67,9 +44,12 @@ class SignUp extends Component {
             <label className={logstyle.formFieldLabel} htmlFor="year">
               Year
             </label>
-            <Select className={logstyle.drop}  components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
+            <Select className={logstyle.drop} components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
             options={years.map(opt => ({ label: opt, value: opt }))}
-            onChange={this.handleChange} 
+            value={year}
+            onChange={(e) => {
+              setYear(e);
+            }}
             placeholder="Year" />
           </div>
 
@@ -80,7 +60,10 @@ class SignUp extends Component {
             </label>
             <Select className={logstyle.drop} components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
             options={departments.map(opt => ({ label: opt, value: opt }))}
-            onChange={this.handleChange} 
+            value={department}
+            onChange={(e) => {
+              setDepartment(e);
+            }}
             placeholder="Department" />
           </div>
 
@@ -90,8 +73,11 @@ class SignUp extends Component {
               College
             </label>
             <Select className={logstyle.drop} components={{ DropdownIndicator: () => null, IndicatorSeparator: () => null }}
-            options={colleges.map(opt => ({ label: opt, value: opt }))}
-            onChange={this.handleChange} 
+            options={colleges.map(opt => ({ label: opt, value: opt }))} 
+            value={college}
+            onChange={(e) => {
+              setCollege(e);
+            }}
             placeholder="College" />
           </div>
 
@@ -105,8 +91,8 @@ class SignUp extends Component {
               className={logstyle.formFieldInput}
               placeholder="Enter your email"
               name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
+              value={email}
+              onChange={(e) => setEmail(e.currentTarget.value)}
             />
           </div>
            {/*phone*/}
@@ -120,8 +106,8 @@ class SignUp extends Component {
               className={logstyle.formFieldInput}
               placeholder="Enter your Phone Number"
               name="phone"
-              value={this.state.phone}
-              onChange={this.handleChange}
+              value={phone}
+              onChange={(e) => setPhone(e.currentTarget.value)}
             />
           </div>
           <div className={logstyle.formField}>
@@ -134,8 +120,8 @@ class SignUp extends Component {
               className={logstyle.formFieldInput}
               placeholder="Enter your password"
               name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
+              value={password}
+              onChange={(e) => setPassword(e.currentTarget.value)}
             />
           </div>
            {/*confirm password*/}
@@ -149,16 +135,19 @@ class SignUp extends Component {
               className={logstyle.formFieldInput}
               placeholder="Confirm your password"
               name="conpass"
-              value={this.state.conpass}
-              onChange={this.handleChange}
+              value={conpass}
+              onChange={(e) => setConpass(e.currentTarget.value)}
             />
           </div>
 
 
           <div className={logstyle.formField}>
-            <button className={logstyle.formFieldButton}>Sign Up</button>{" "}
+            {/*<button className={logstyle.formFieldButton}>Sign Up</button>{" "}*/}
+            <div className={logstyle.styleButton}>
+            <GlassButton title="Sign Up"/>
             </div>
-            <div className={logstyle.formField}>
+          </div>
+          <div className={logstyle.formField}>
             <Link to="/sign-in" className={logstyle.formFieldLink}>
               I'm already a member
             </Link>
@@ -166,6 +155,6 @@ class SignUp extends Component {
         </form>
       </div>
     );
-  }
+  //}
 }
 export default SignUp;
