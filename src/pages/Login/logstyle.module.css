@@ -101,10 +101,10 @@
 }
 
 .styleButton {
-  text-align: center;
-  align-items: center;
+  display: flex;
   justify-content: center;
-  margin-left: 17em;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .formFieldLabel {

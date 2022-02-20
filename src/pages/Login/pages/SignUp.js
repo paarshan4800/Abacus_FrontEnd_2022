@@ -144,7 +144,7 @@ function SignUp()
           <div className={logstyle.formField}>
             {/*<button className={logstyle.formFieldButton}>Sign Up</button>{" "}*/}
             <div className={logstyle.styleButton}>
-            <GlassButton title="Sign Up"/>
+              <GlassButton title="Sign Up"/>
             </div>
           </div>
           <div className={logstyle.formField}>

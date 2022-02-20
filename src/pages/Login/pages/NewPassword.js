@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logstyle from "./../logstyle.module.css";
+import GlassButton from "../../../components/GlassButton/GlassButton";
 
 function NewPassword() {
     return (
@@ -17,7 +18,7 @@ function NewPassword() {
               name="password"
             />
           </div>
-           {/confirm password/}
+           {/*confirm password*/}
            <div className={logstyle.formField}>
             <label className={logstyle.formFieldLabel} htmlFor="conpass">
               Confirm Password
@@ -29,6 +30,9 @@ function NewPassword() {
               placeholder="Confirm your password"
               name="conpass"
             />
+          </div>
+          <div className={logstyle.styleButton}>
+              <GlassButton title="Submit"/>
           </div>
         </form>
       </div>

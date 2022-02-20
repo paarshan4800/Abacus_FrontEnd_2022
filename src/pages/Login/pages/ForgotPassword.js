@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Typography } from "@material-ui/core";
 import logstyle from "./../logstyle.module.css";
+import GlassButton from "../../../components/GlassButton/GlassButton";
 function ForgotPassword() {
     return (
       
@@ -20,7 +21,10 @@ function ForgotPassword() {
               name="email"
             />
           </div>
-          <button className={logstyle.formFieldButton}>Submit</button>{" "}
+          {/*<button className={logstyle.formFieldButton}>Submit</button>{" "}*/}
+          <div className={logstyle.styleButton}>
+              <GlassButton title="Submit"/>
+          </div>
         </form>
       </div>
     );

@@ -2,14 +2,18 @@ import React, { useState, Component } from "react";
 import { HashRouter as Router, Route, NavLink } from "react-router-dom";
 import ForgotPassword from "./ForgotPassword";
 import logstyle from "./../logstyle.module.css";
+import GlassButton from "../../../components/GlassButton/GlassButton.js";
+import GoogleButton from 'react-google-button';
 
 function SignInForm()
 {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
-   console.log(password);
+   /*
+   const clickGoogleIcon = () => {
+    window.location = `${baseURL}${url_gAuth}`
+   }*/
     return (
-    <Router>
       <div className={logstyle.formCenter}>
         <form className={logstyle.formFields} /*onSubmit={this.handleSubmit}*/>
           <div className={logstyle.formField}>
@@ -45,22 +49,30 @@ function SignInForm()
               }}
             />
           </div>
+          <div className={logstyle.styleButton}>
+            <GoogleButton className="google-button" onClick={() => { console.log('Google button clicked') }} type="dark" />
+          </div>
 
           <div className={logstyle.formField}>
-            <button className={logstyle.formFieldButton}>Sign In</button>{" "}
+            {/*<button className={logstyle.formFieldButton}>Sign In</button>{" "}*/}
+            <div className={logstyle.styleButton}>
+              <GlassButton title="Sign In"/>
+              <NavLink to="/ForgotPassword">
+                <GlassButton title="Forgot Password?" />
+              </NavLink>
+              {/*
             <NavLink to="/ForgotPassword" className={logstyle.formFieldButtonDirected} >
               Forgot Password?
-            </NavLink>
+            </NavLink>*/}
             </div>
+          </div>
             <div className={logstyle.formField}>
             <NavLink to="/" className={logstyle.formFieldLink}>
               Create an account
             </NavLink>
-            <Route path="/ForgotPassword" component={ForgotPassword} />
           </div> 
         </form>
       </div>
-      </Router>
     );
 }
 export default SignInForm;
