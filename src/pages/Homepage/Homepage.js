@@ -7,10 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 //NeonButton
 import GlowCard from "../../components/GlowCard/GlowCard";
-import Loader from "../../components/Loader/Loader";
+import Landing from "../../components/Landing/Landing";
 import Heading from "../../components/Heading/Heading";
 import Heading1 from "../../components/Heading1/Heading1";
-import Footer from "../../components/Footer/Footer";
 
 
 function demoAsyncCall() {
@@ -35,7 +34,7 @@ class Homepage extends Component {
   
     return (
       <>
-        <Loader />
+        <Landing />
 
         {/* Child Class */}
 
@@ -266,7 +265,6 @@ class Homepage extends Component {
 
       
 
-        <Footer />
       </>
     );
   }

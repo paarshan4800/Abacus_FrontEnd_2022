@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './GlowCard.module.css'
 import FadeInSection from '../FadeInSection/FadeInSection'
 import Heading from '../Heading/Heading'
-import AnimatedCard from "@rihor/react-3d-card/dist/AnimatedCard"
 import { Width } from "../../App"
 
 /*
@@ -23,7 +22,7 @@ function GlowCard({ props }) {
     }
     return (
         <>
-            {_width > 1100 ? <AnimatedCard weight={0.05}>
+            {_width > 1100 ? <>
                 <FadeInSection>
                     <div className={styles.bg}>
                         <div className={`${styles.box}`} style={{ "--degree": props.degree }}>
@@ -70,7 +69,7 @@ function GlowCard({ props }) {
                     </div>
 
                 </FadeInSection >
-            </AnimatedCard> : <FadeInSection>
+            </> : <FadeInSection>
                 <div className={styles.bg}>
                     <div className={`${styles.box}`} style={{ "--degree": props.degree }}>
 

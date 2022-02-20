@@ -5,6 +5,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 // import Cookies from "js-cookie";
 // import Homepage from "./pages/Homepage/Homepage";
 // import AboutUs from "./pages/About-Us/AboutUs";
+import Homepage from "./pages/Homepage/Homepage"
 import Events from "./pages/Events/EventsHome";
 import Workshops from "./pages/Workshops/WorkshopHome";
 import EventDetails from "./pages/Events/EventDetails";
@@ -44,11 +45,13 @@ const AppRoutes = () => {
       </Route> */}
       {/* <Route path="/" exact component={Homepage} /> */}
       {/* <Route path="/about-us" exact component={AboutUs} />  */}
+      <Route path="/homepage" exact component={Homepage} />
       <Route path="/events" exact component={Events} />
       <Route path="/workshops" exact component={Workshops} />
       <Route path="/workshops/:id" exact component={WorkshopDetails} />
       <Route path="/events/hackathon" exact component={Hackathon} />
       <Route path="/events/tech-events" exact component={TechEventsList} />
+
 
       <Route
         path="/events/non-tech-events"

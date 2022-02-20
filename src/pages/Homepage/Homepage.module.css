@@ -87,7 +87,7 @@
 }
 .bg{
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url('../../assets/Images/3.jpeg');
+    background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url('3.jpeg');
     background-size:cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
@@ -95,7 +95,7 @@
 
 .bg1{
 
-    background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url('../../assets/Images/3.jpeg');
+    background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url('3.jpeg');
     background-repeat:no-repeat;
     background-size:cover;
     height: 100vh;
@@ -281,14 +281,14 @@
      
     @media only screen and (max-width:1025px){
         .bg{
-            background-image:url('../../assets/Images/f.jpeg');
+            background-image:url('f.jpeg');
    
             background-repeat:no-repeat;
             background-size:cover;
             background-attachment: fixed;
         }
         .bg1{
-            background-image:url('../../assets/Images/f.jpeg');
+            background-image:url('f.jpeg');
    
             background-repeat:no-repeat;
             background-size:cover;
