@@ -6,7 +6,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 // import Homepage from "./pages/Homepage/Homepage";
 // import AboutUs from "./pages/About-Us/AboutUs";
 import Events from "./pages/Events/EventsHome";
-import Workshops from "./pages/Workshops/workshopHome";
+import Workshops from "./pages/Workshops/WorkshopHome";
 import EventDetails from "./pages/Events/EventDetails";
 // import WorkshopMiddleware from "./pages/Workshops/WorkshopMiddleware";
 // import EventTemplate from "./components/EventTemplate/EventTemplate";
@@ -16,6 +16,7 @@ import NonTechEventsList from "./pages/Events/NonTechEventsList";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Cart from "./pages/Cart/Cart";
 import Hackathon from "./pages/Events/Hackathon";
+import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 // import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
 // import Navbar from "./components/Navbar/Navbar";
@@ -29,11 +30,11 @@ import Hackathon from "./pages/Events/Hackathon";
 // import Hackathon from "./pages/Hackathon/Hackathon";
 
 const AppRoutes = () => {
-//   const Auth = React.useContext(AuthApi);
+  //   const Auth = React.useContext(AuthApi);
 
   return (
     <Switch>
-    {/* <Route path="/" exact>
+      {/* <Route path="/" exact>
         {Cookies.get("token") !== undefined &&
         Cookies.get("details") !== undefined ? (
           <Redirect to="/dashboard" />
@@ -41,15 +42,23 @@ const AppRoutes = () => {
           <Redirect to="/homepage" />
         )}
       </Route> */}
-       {/* <Route path="/" exact component={Homepage} /> */}
+      {/* <Route path="/" exact component={Homepage} /> */}
       {/* <Route path="/about-us" exact component={AboutUs} />  */}
       <Route path="/events" exact component={Events} />
       <Route path="/workshops" exact component={Workshops} />
+      <Route path="/workshops/1" exact component={WorkshopDetails} />
+      <Route path="/workshops/2" exact component={WorkshopDetails} />
+      <Route path="/workshops/3" exact component={WorkshopDetails} />
       <Route path="/events/hackathon" exact component={Hackathon} />
       <Route path="/events/tech-events" exact component={TechEventsList} />
-      <Route path="/events/non-tech-events" exact component={NonTechEventsList} />
+
+      <Route
+        path="/events/non-tech-events"
+        exact
+        component={NonTechEventsList}
+      />
       <Route path="/events/tech-events/:id" exact component={EventDetails} />
-{/*
+      {/*
       <Route path="/workshops/:title" exact component={WorkshopMiddleware} />
 
       

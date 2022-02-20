@@ -1,10 +1,25 @@
 import React from "react";
 import background from "./../images/bg1.jpg";
-import workshopDetails from "./../Workshops/workshopDetails.module.css";
+import styles from "./../Workshops/WorkshopDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
-import NavbarBigStyles from "../../components/NavbarBig/NavbarBig.module.css";
-
+// import NavbarBigStyles from "../../components/NavbarBig/NavbarBig.module.css";
+import Link from "react";
+import reactDom from "react-dom";
 function WorkshopDetails() {
+  let workshops = [
+    {
+      id: 1,
+      name: "workshop1",
+    },
+    {
+      id: 2,
+      name: "workshop2",
+    },
+    {
+      id: 3,
+      name: "workshop3",
+    },
+  ];
   return (
     <div
       style={{
@@ -14,11 +29,13 @@ function WorkshopDetails() {
         color: "#f5f5f5",
       }}
     >
-      <div className={workshopDetails.container}>
-        <div className={workshopDetails.box}>
+      <div className={styles.container}>
+        {/* {workshops.map((element) => (
+          <Link to={`/workshops/${element.id}`}> */}
+        <div className={styles.box}>
           <span></span>
-          <div className={workshopDetails.content}>
-            <h2 className={workshopDetails.neon}>RULES</h2>
+          <div className={styles.content}>
+            <h2 className={styles.neon}>RULES</h2>
             <p>
               1) The event is for a team of three participants (At Least 2
               participants)<br></br> 2) Problem statement will be provided on
@@ -29,10 +46,10 @@ function WorkshopDetails() {
             {/* <a href="#">Read More</a> */}
           </div>
         </div>
-        <div className={workshopDetails.box}>
+        <div className={styles.box}>
           <span></span>
-          <div className={workshopDetails.content}>
-            <h2 className={workshopDetails.neon}>HACKATHON</h2>
+          <div className={styles.content}>
+            <h2 className={styles.neon}>HACKATHON</h2>
             <p>
               Are you a tech-savvy individual who can collaborate intensively to
               innovate and develop influential solutions to a problem using
@@ -43,27 +60,30 @@ function WorkshopDetails() {
               <br></br>
               <b>CONTACT:</b> Kanika K - 8300295535 <br></br>
               <b>DATE:</b> 25-03-2021 & 26-03-2021<br></br>
-              <div className={NavbarBigStyles.buttons}>
+              {/* <div className={NavbarBigStyles.buttons}>
                 <GlassButton title="REGISTER" />
-              </div>
+              </div> */}
             </p>
             {/* <a href="#">Read More</a> */}
           </div>
         </div>
-        <div className={workshopDetails.box}>
+        <div className={styles.box}>
           <span></span>
-          <div className={workshopDetails.content}>
-            <h2 className={workshopDetails.neon}>RULES</h2>
+          <div className={styles.content}>
+            <h2 className={styles.neon}>RULES</h2>
             <p>
               4) Participants must ensure that they have laptop with good
               internet connectivity for their convenience <br></br>5)
-              Participants must ensure that they have microsoft account<br></br>
+              Participants must ensure that they have microsoft account
+              <br></br>
               6) Participants can contact the given contact for any doubts
               regarding the event.
             </p>
             {/* <a href="#">Read More</a> */}
           </div>
         </div>
+        {/* </Link>
+        ))} */}
       </div>
     </div>
   );

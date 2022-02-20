@@ -26,7 +26,7 @@ function EventsHome() {
       id: 3,
       name: "zxcvb",
       img: tech,
-    }
+    },
   ];
 
   // const history = useHistory();
@@ -47,10 +47,10 @@ function EventsHome() {
       <div className={styles.displaylist}>
         {techEvents.map((event) => (
           <Link to={`/events/tech-events/${event.id}`}>
-          <div key={event.id}>
-            <img src={event.img} alt="1" />
-            <h1 className={styles.neon}>{event.name}</h1>
-          </div>
+            <div key={event.id}>
+              <img src={event.img} alt="1" />
+              <h1 className={styles.neon}>{event.name}</h1>
+            </div>
           </Link>
         ))}
       </div>
