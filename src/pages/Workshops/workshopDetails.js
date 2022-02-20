@@ -2,10 +2,12 @@ import React from "react";
 import background from "./../images/bg1.jpg";
 import styles from "./../Workshops/WorkshopDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
+import { useParams } from "react-router-dom";
 // import NavbarBigStyles from "../../components/NavbarBig/NavbarBig.module.css";
 import Link from "react";
 import reactDom from "react-dom";
 function WorkshopDetails() {
+  const { id } = useParams();
   let workshops = [
     {
       id: 1,
@@ -60,11 +62,8 @@ function WorkshopDetails() {
               <br></br>
               <b>CONTACT:</b> Kanika K - 8300295535 <br></br>
               <b>DATE:</b> 25-03-2021 & 26-03-2021<br></br>
-              {/* <div className={NavbarBigStyles.buttons}>
-                <GlassButton title="REGISTER" />
-              </div> */}
             </p>
-            {/* <a href="#">Read More</a> */}
+            <a href="#">Register</a>
           </div>
         </div>
         <div className={styles.box}>
@@ -79,7 +78,6 @@ function WorkshopDetails() {
               6) Participants can contact the given contact for any doubts
               regarding the event.
             </p>
-            {/* <a href="#">Read More</a> */}
           </div>
         </div>
         {/* </Link>

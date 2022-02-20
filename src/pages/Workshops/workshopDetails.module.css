@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: consolas;
 }
-
 body {
   /* display: flex;*/
   justify-content: center;
@@ -23,7 +22,7 @@ body {
 .container .box {
   position: relative;
   width: 400px;
-  height: 500px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,13 +190,14 @@ body {
   text-decoration: none;
   font-weight: 700;
   margin-top: 5px;
+  opacity: 0.5;
 }
 
-.container .box .content a:hover {
-  background: #ffcf4d;
-  border: 1px solid rgba(255, 0, 88, 0.4);
+/* .container .box .content a:hover {
+  background: #da0037;
+  border: 1px solid rgba(180, 93, 124, 0.4);
   box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
-}
+} */
 .neon {
   color: #aefeff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff,
