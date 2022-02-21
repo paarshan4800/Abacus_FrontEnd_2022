@@ -23,14 +23,14 @@ class Landing extends Component {
                         <span className={`${styles.flickerStart}`}>b</span>
                                 a<span className={`${styles.flickerStart3}`}>
                             <span className={`${styles.flickerStart}`}>c</span></span>u
-                                <span className={`${styles.flickerStart}`}>s</span><span className={`${styles.flickerStart2}`}> <b>'22</b></span>
+                                <span className={`${styles.flickerStart}`}>s</span><span className={`${styles.flickerStart2}`}>'22</span>
 
                                 
                     </div>
-                    <div className={`${styles.date}`}>
+                   {/*  <div className={`${styles.date}`}>
                             March 25,26,27
                     </div>
-                {/* <HashLink to="/homepage##" spy="true" ><i className=" fa fa-angle-double-down"></i></HashLink> */}
+                <HashLink to="/homepage##" spy="true" ><i className=" fa fa-angle-double-down"></i></HashLink> */}
 
                 
 
