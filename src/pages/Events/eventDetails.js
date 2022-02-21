@@ -1,6 +1,6 @@
 import React from "react";
 import background from "./../images/bg1.jpg";
-import styles from "./../Events/EventsDetails.module.css";
+import styles from "./../Events/eventsDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { useParams } from "react-router-dom";
 import tech from "./../images/tech.jpeg";

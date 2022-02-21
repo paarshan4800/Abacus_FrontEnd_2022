@@ -72,9 +72,6 @@ function App() {
                       <div className="gradient-bg-welcome">
                         <AppRoutes />
                       </div>
-                      <div className="gradient-bg-welcome">
-                        <Footer />
-                      </div>
                     </BrowserRouter>
                   </SetNewLoadWorkshop.Provider>
                 </NewLoadWorkshop.Provider>

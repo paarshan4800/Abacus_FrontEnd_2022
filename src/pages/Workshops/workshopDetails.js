@@ -1,6 +1,6 @@
 import React from "react";
 import background from "./../images/bg1.jpg";
-import styles from "./../Workshops/WorkshopDetails.module.css";
+import styles from "./../Workshops/workshopDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { useParams } from "react-router-dom";
 // import NavbarBigStyles from "../../components/NavbarBig/NavbarBig.module.css";

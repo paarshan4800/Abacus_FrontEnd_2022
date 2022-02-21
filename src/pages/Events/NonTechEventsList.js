@@ -6,7 +6,7 @@ import background from "./../images/bg1.jpg";
 import tech from "./../images/tech.jpeg";
 import nontech from "./../images/nontech.jpeg";
 import hack from "./../images/hack.jpeg";
-import styles from "./EventsHome.module.css";
+import styles from "./eventsHome.module.css";
 
 function EventsHome() {
   let slides = [
