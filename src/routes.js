@@ -5,6 +5,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 // import Cookies from "js-cookie";
 // import Homepage from "./pages/Homepage/Homepage";
 // import AboutUs from "./pages/About-Us/AboutUs";
+import Homepage from "./pages/Homepage/Homepage"
 import Events from "./pages/Events/EventsHome";
 import Workshops from "./pages/Workshops/WorkshopHome";
 import EventDetails from "./pages/Events/EventDetails";
@@ -23,7 +24,7 @@ import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 // import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 // import GoogleFormData from "./pages/GoogleFormData/GoogleFormData";
 // import HackathonForm from "./components/HackathonForm/HackathonForm";
-
+import { Aboutus } from "./components";
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 // import PageNotFound from "./pages/PageNotFound/PageNotFound";
@@ -42,33 +43,25 @@ const AppRoutes = () => {
           <Redirect to="/homepage" />
         )}
       </Route> */}
-      {/* <Route path="/" exact component={Homepage} /> */}
-      {/* <Route path="/about-us" exact component={AboutUs} />  */}
+       <Route path="/" exact component={Homepage} />
+      <Route path="/about-us" exact component={Aboutus} /> 
       <Route path="/events" exact component={Events} />
-      <Route path="/workshops" exact component={Workshops} />
-      <Route path="/workshops/:id" exact component={WorkshopDetails} />
       <Route path="/events/hackathon" exact component={Hackathon} />
       <Route path="/events/tech-events" exact component={TechEventsList} />
-
-      <Route
-        path="/events/non-tech-events"
-        exact
-        component={NonTechEventsList}
-      />
+      <Route path="/events/non-tech-events" exact component={NonTechEventsList} />
       <Route path="/events/tech-events/:id" exact component={EventDetails} />
+      <Route path="/workshops" exact component={Workshops} />
+      <Route path="/workshops/:id" exact component={WorkshopDetails} />
+      <Route path="/dashboard" exact component={Dashboard} />
+      <Route path="/cart" exact component={Cart} />
       {/*
       <Route path="/workshops/:title" exact component={WorkshopMiddleware} />
-
-      
-
       <Route path="/event-template" exact component={EventTemplate} />
-
       <Route path="/reset-password" exact component={ResetPassword} />
       <Route path="/forgot-password" exact component={ForgotPassword} />
       <Route path="/login-register" exact component={LoginRegister} />
       <Route path="/google-form-data" exact component={GoogleFormData} />  */}
-      <Route path="/dashboard" exact component={Dashboard} />
-      <Route path="/cart" exact component={Cart} />
+
 
       {/* <ProtectedRoute
         path="/dashboard"
