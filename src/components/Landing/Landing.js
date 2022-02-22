@@ -15,11 +15,10 @@ class Landing extends Component {
 
 
     render() {
-        return (
-            <div className={`${styles.back}`}>
+        return (            <div className={`${styles.back}`}>
             <div className={`${styles._homepage}`} >
                     <div className={`${styles._loader_sign}`}>
-                        <span className={`${styles.flickerStart}`}>a</span>
+                        <span className={`${styles.letter_a}`}>a</span>
                         <span className={`${styles.flickerStart}`}>b</span>
                                 a<span className={`${styles.flickerStart3}`}>
                             <span className={`${styles.flickerStart}`}>c</span></span>u
