@@ -18,11 +18,11 @@ class Landing extends Component {
         return (            <div className={`${styles.back}`}>
             <div className={`${styles._homepage}`} >
                     <div className={`${styles._loader_sign}`}>
-                        <span className={`${styles.letter_a}`}>a</span>
+                        <span className={`${styles.letter_a} ${styles.glow}`}>a</span>
                         <span className={`${styles.flickerStart}`}>b</span>
                                 a<span className={`${styles.flickerStart3}`}>
                             <span className={`${styles.flickerStart}`}>c</span></span>u
-                                <span className={`${styles.flickerStart}`}>s</span><span className={`${styles.flickerStart2}`}>'22</span>
+                                <span className={`${styles.flickerStart}`}>s</span><span className={`${styles.flickerStart2}`}> '22</span>
 
                                 
                     </div>

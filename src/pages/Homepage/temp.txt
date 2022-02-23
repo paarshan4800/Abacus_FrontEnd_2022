@@ -1,0 +1,75 @@
+   <section id="#">
+          <div
+            className={`${styles._homepage} ${styles._responsive} ${styles.bg1}`}
+          >
+          <div className={`${styles.box}`}>
+          <div  >
+          <img
+              src={`${process.env.PUBLIC_URL}/images/about-us/abacus logo sponsors page.png`}
+              alt=""
+              style={{
+                width: "300px",
+                height: "310px",
+                margin: "auto",
+              }}
+            />
+
+          </div>
+           
+
+            {/* Hidden Images */}
+            <div className={``}>
+            
+            <div className="container-fluid center  ml-sm-2  justify-content-center align-self-center pb-5 maxWidth">
+              <div className={` row row-cols-md-3 row-cols-sm-3 row-cols-xs-3 justify-content-center align-self-center`}>
+                <div className=" col mt-5   text-center">
+
+
+
+
+
+
+
+
+                  <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={7} redraw={true} suffix=" +">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                  <Heading1 text="Events" fontSize="20px" />
+                </div>
+                <div className=" mt-5   col text-center">
+                  <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={3} redraw={true} suffix=" +">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>{" "}
+                  </div>
+                  <Heading1 text="Workshops" fontSize="20px" />
+                </div>
+           
+                <div className="col text-center mt-5">
+                  <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={50} redraw={true} suffix=" K+">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>{" "}
+                  </div>
+                  <Heading1 text="Prize Money" fontSize="20px" />
+                </div>{" "}
+              </div>{" "}
+            </div>{" "}
+            </div>
+            </div>
+          </div>
+        </section> 

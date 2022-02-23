@@ -17,7 +17,7 @@ import NonTechEventsList from "./pages/Events/NonTechEventsList";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Cart from "./pages/Cart/Cart";
 import Hackathon from "./pages/Events/Hackathon";
-import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
+//import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 // import LoginRegister from "./pages/LoginRegister/LoginRegister.js";
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
 // import Navbar from "./components/Navbar/Navbar";
@@ -51,7 +51,7 @@ const AppRoutes = () => {
       <Route path="/events/non-tech-events" exact component={NonTechEventsList} />
       <Route path="/events/tech-events/:id" exact component={EventDetails} />
       <Route path="/workshops" exact component={Workshops} />
-      <Route path="/workshops/:id" exact component={WorkshopDetails} />
+      {/*<Route path="/workshops/:id" exact component={WorkshopDetails} />*/}
       <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/cart" exact component={Cart} />
       {/*
