@@ -10,8 +10,8 @@
 
 .appAside {
   width: 45%;
-  /* background-color: #35858b; */
-  /* background-image: url("./pages/assets/images/img_bg3.jpg"); */
+  background-color: #35858b;
+  background-image: url("./pages/assets/images/img4.jfif");
   /*background-image: linear-gradient(black,rgb(58, 7, 58),black);*/
   background-repeat: no-repeat;
   background-position: center;
@@ -19,23 +19,33 @@
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 600px) {
+  div.appAside {
+    display: none;
+  }
+}
 
 .appForm {
   width: 55%;
   /*background-image: url(./pages/assets/images/blue.jpeg);*/
-  /* background: linear-gradient(to top right, #000000 2%, #4b0125 100%); */
+  background: linear-gradient(to top right, #000000 2%, #660033 100%);
   padding: 25px 40px;
   overflow: auto;
   text-align: center;
-  /* -webkit-box-shadow: 0 0 20px #cccfcf;
+  -webkit-box-shadow: 0 0 20px #6fddda;
   -moz-box-shadow: 0 0 20px #6fddda;
-  box-shadow: 0 0 20px #6fddda; */
+  box-shadow: 0 0 20px #6fddda;
 }
-
+@media screen and (max-width: 600px) {
+  div.appForm {
+    width: 100%;
+  }
+}
 .pageSwitcher {
   margin-bottom: 10%;
   margin-top: 10%;
 }
+
 .pageSwitcherItem {
   background-color: #40434e;
   color: #9da6b1;
@@ -98,14 +108,11 @@
   align-items: center;
   justify-content: center;
 }
-
-.styleButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;
+@media screen and (max-width: 600px) {
+  .formFieldButton{
+   text-align: center;
+ }
 }
-
 .formFieldLabel {
   display: block;
   text-transform: uppercase;
@@ -140,6 +147,13 @@
   margin-left: 2vh;
   font-size: 0.8em;
   font-weight: 500;
+}
+@media screen and (max-width: 600px) {
+   .formFieldButton{
+    margin:0 auto;
+    display: block;
+    margin-bottom: 5vh;
+  }
 }
 .formFieldButtonDirected {
   background-color: #4fbdba;
@@ -214,8 +228,8 @@
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px var(--from), 0 0 20px var(--from),
-      0 0 30px var(--from), 0 0 40px var(--from);
+    text-shadow: 0 0 10px var(--from), 0 0 20px var(--from), 0 0 30px var(--from),
+      0 0 40px var(--from);
   }
   to {
     text-shadow: 0 0 20px var(--to), 0 0 30px var(--to), 0 0 40px var(--to),
