@@ -23,6 +23,52 @@ function SignUp() {
   const [googleAuth, setGoogleAuth] = useState(false);
   const [message, setMessage] = useState("");
   const [verificationCode, setVerificationCode] = useState("");
+  const [validationError, setvalidationError] = useState("");
+
+  const validate = () => {
+      let validationError = '';
+
+        if (!name) {
+          validationError = 'Name field cannot be blank';
+        } 
+        else if (!email) {
+          validationError = 'Email field cannot be blank';
+        }
+        else if (!email.includes('@')) {
+          validationError = 'Invalid Email! Try a different one!';
+        }
+        else if (!phone) {
+          validationError = 'Phone field cannot be blank';
+        }
+        else if (phone < 1000000000 || phone > 9999999999) {
+          validationError = 'Invalid Phone Number';
+        }
+        else if (!password) {
+          validationError = 'Password field cannot be blank';
+        }
+        else if (!conpass) {
+          validationError = 'Confirm Password field cannot be blank';
+        }
+        else if (!department) {
+          validationError = 'Department field cannot be blank'
+        }
+        else if (!college) {
+          validationError = 'College field cannot be blank'
+        }
+        else if (!year) {
+          validationError = 'Year field cannot be blank'
+        }
+
+        if (!validationError && (conpass !== password)) {
+          validationError = 'Passwords do not match';
+        }
+
+        if (validationError) {
+          setvalidationError(validationError);
+          return false;
+        }
+        return true;
+  }
 
   const checkWhichPage = () => {
     const url = new URL(window.location.href);
@@ -54,6 +100,8 @@ function SignUp() {
 
   useEffect(checkWhichPage, []);
   const handleSubmit = () => {
+    const isValid = validate();
+    if (isValid) {
     var values = {
       email,
       name,
@@ -99,7 +147,13 @@ function SignUp() {
       });
 
     console.log(values);
+    }
+    else
+    {
+      console.log(validationError);
+    }
   };
+  console.log(year);
   return (
     <div className={logstyle.formCenter}>
       <div className={logstyle.styleButton}>
@@ -258,10 +312,13 @@ function SignUp() {
         </div>
 
         <div className={logstyle.formField}>
+        {validationError ? (<div style={{color: "red"}}>{validationError}</div>) : null}
           {/*<button className={logstyle.formFieldButton}>Sign Up</button>{" "}*/}
-          <div className={logstyle.styleButton}>
-            <GlassButton title="Sign Up" onClick={handleSubmit} />
+          {/* <button> */}
+          <div className={logstyle.styleButton} onClick={() => handleSubmit()}>
+            <GlassButton title="Sign Up" />
           </div>
+          {/* </button> */}
         </div>
         <div className={logstyle.formField}>
           <Link to="/sign-in" className={logstyle.formFieldLink}>
