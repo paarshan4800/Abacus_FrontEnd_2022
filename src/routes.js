@@ -6,8 +6,8 @@ import { Route, Switch, Redirect } from "react-router-dom";
 // import Homepage from "./pages/Homepage/Homepage";
 // import AboutUs from "./pages/About-Us/AboutUs";
 import Homepage from "./pages/Homepage/Homepage"
-import Events from "./pages/Events/EventsHome";
-import Workshops from "./pages/Workshops/WorkshopHome";
+import EventsHome from "./pages/Events/EventsHome";
+import WorkshopsList from "./pages/Workshops/WorkshopsList";
 import EventDetails from "./pages/Events/EventDetails";
 // import WorkshopMiddleware from "./pages/Workshops/WorkshopMiddleware";
 // import EventTemplate from "./components/EventTemplate/EventTemplate";
@@ -45,12 +45,12 @@ const AppRoutes = () => {
       </Route> */}
        <Route path="/" exact component={Homepage} />
       <Route path="/about-us" exact component={Aboutus} /> 
-      <Route path="/events" exact component={Events} />
+      <Route path="/events" exact component={EventsHome} />
       <Route path="/events/hackathon" exact component={Hackathon} />
       <Route path="/events/tech-events" exact component={TechEventsList} />
       <Route path="/events/non-tech-events" exact component={NonTechEventsList} />
-      <Route path="/events/tech-events/:id" exact component={EventDetails} />
-      <Route path="/workshops" exact component={Workshops} />
+      <Route path="/events/:type/:title" exact component={EventDetails} />
+      <Route path="/workshops" exact component={WorkshopsList} />
       <Route path="/workshops/:id" exact component={WorkshopDetails} />
       <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/cart" exact component={Cart} />

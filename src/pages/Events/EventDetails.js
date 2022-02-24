@@ -1,39 +1,28 @@
 import React from "react";
-import background from "./../images/bg1.jpg";
-import styles from "./../Events/EventsDetails.module.css";
+import styles from "./../Events/EventDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
-import { useParams } from "react-router-dom";
-import tech from "./../images/tech.jpeg";
-
-// import NavbarBigStyles from "../../components/NavbarBig/NavbarBig.module.css";
+import { useParams, useHistory } from "react-router-dom";
+import { TechEvents } from "../../data/TechEventsData";
+import { NonTechEvents } from "../../data/NonTechEventsData";
+import background from "../../images/bg2.jpeg";
 
 function EventDetails() {
 
-  const {id} = useParams();
+  const { type, title } = useParams();
 
-  let techEvents = [
-    {
-      id: 1,
-      name: "Asdfgh",
-      img: tech,
-    },
-    {
-      id: 2,
-      name: "qwerty",
-      img: tech,
-    },
-    {
-      id: 3,
-      name: "zxcvb",
-      img: tech,
-    }
-  ];
+  let Hash;
 
-  const getEvent = () => {
-    var iterator = techEvents.values();
-    for (let elements of iterator) {
-      console.log(elements);
-    }
+  if (type === "tech-events") {
+      Hash = TechEvents
+  }
+  else if (type === "non-tech-events") {
+      Hash = NonTechEvents
+  }
+
+  const data = Hash[title]
+  const history = useHistory()
+  if (!data) {
+      history.push("/404")
   }
 
   return (
@@ -62,16 +51,10 @@ function EventDetails() {
         </div>
         <div className={styles.box}>
           <span></span>
-          <div className={styles.content} onClick={() => getEvent}>
-            <h2 className={styles.neon}>HACKATHON</h2>
+          <div className={styles.content}>
+            <h2 className={styles.neon}>{data.name}</h2>
             <p>
-              Are you a tech-savvy individual who can collaborate intensively to
-              innovate and develop influential solutions to a problem using
-              technology? Then why do you wait? Fasten your belts and bump into
-              the signature event of Abacus, where you need to team up and
-              brainstorm your ideas to create a prototype. Registration Fee -
-              Rs.100<br></br>
-              <br></br>
+              {data.about}<br/><br/>
               <b>CONTACT:</b> Kanika K - 8300295535 <br></br>
               <b>DATE:</b> 25-03-2021 and 26-03-2021<br></br>
               {/* <div className={NavbarBigStyles.buttons}>
