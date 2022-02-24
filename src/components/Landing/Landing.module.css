@@ -1,8 +1,8 @@
 ._homepage {
     box-sizing: border-box;
-    padding-top: 5vh;
+    padding-top: 45vh;
     padding-bottom: 5vh;
-   
+    
     height: 100vh;
     display: flex;
     resize: both;
@@ -20,8 +20,9 @@
 
 .back{
 
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('/src/components/Landing/bg.png');
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('/src/components/Landing/close1.jpg');
     background-size: 100% 100%;
+    width: 100vw;
     -webkit-background-size : cover;
     -moz-background-size: cover;
     -o-background-size : cover;
@@ -60,21 +61,28 @@
     /* transform: translate(-50%, -50%); */
     text-align: center;
     color: whitesmoke;
-    letter-spacing: 13px;
+    letter-spacing: 15px;
+    box-sizing: content-box;
     font-family: Future;
     text-transform: uppercase;
-    font-size: 150px;
+    font-size: 10rem;
+    padding-top: 2%;
     z-index: 7;
     margin: 0%;
     padding-bottom: 0px;
     margin-bottom: 0px;
-    margin-top: 15%;
+    position: relative;
+    transition: float 2s infinite ease-in-out;
 
-   
-    
-   
+}
 
-
+@keyframes float {
+    50% {
+        top: 60px;
+    }    
+    100% { 
+        top: 50px;
+    }
 }
 
 
@@ -93,7 +101,7 @@
 
 .letter_a{
     font-family: Future;
-    font-size: 270px;
+    font-size: 13rem;
     animation: blink;
 }
 
@@ -116,12 +124,11 @@
   }
 .date {
     color: #f6fd8a !important; 
-    font-size: 35px !important;
+    font-size: 3rem !important;
     font-family: Future;
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin-left: 35%;
-    margin-top: 0%;
+        margin-top: 0%;
     padding-top: 0%;
     box-sizing: border-box;
   

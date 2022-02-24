@@ -26,9 +26,9 @@ class Landing extends Component {
 
                                 
                     </div>
-                   {/*  <div className={`${styles.date}`}>
+                    <div className={`${styles.date}`}>
                             March 25,26,27
-                    </div>
+                    </div> {/*
                 <HashLink to="/homepage##" spy="true" ><i className=" fa fa-angle-double-down"></i></HashLink> */}
 
                 
