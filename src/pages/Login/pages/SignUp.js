@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Select from "react-select";
 import departments from "./assets/departments";
@@ -7,6 +7,8 @@ import colleges from "./assets/colleges";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton.js";
 import axios from "axios";
+import GoogleButton from "react-google-button";
+import { googleSignIn } from "../../../api/auth";
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -17,6 +19,35 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [conpass, setConpass] = useState("");
   const [year, setYear] = useState("");
+  const [nonChangable, setNonChangable] = useState(false);
+  const [googleAuth, setGoogleAuth] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const checkWhichPage = () => {
+    const url = new URL(window.location.href);
+    console.log(url);
+    const searchparams = new URLSearchParams(url.search);
+    console.log(searchparams);
+    // console.log("hello");
+    if (searchparams.has("email")) {
+      //
+      setEmail(searchparams.get("email"));
+    }
+    if (searchparams.has("name")) {
+      setName(searchparams.get("name"));
+      setNonChangable(true);
+    }
+    if (searchparams.has("message")) {
+      console.log(searchparams.get("message"));
+      window.alert(searchparams.get("message"));
+      setMessage(searchparams.get("message"));
+    }
+    if (searchparams.has("googleAuth")) {
+      setGoogleAuth(searchparams.get("googleAuth"));
+    }
+  };
+
+  useEffect(checkWhichPage, []);
 
   const handleSubmit = () => {
     var values = {
@@ -27,14 +58,22 @@ function SignUp() {
       year: year.value,
       department: department.value,
       password,
+      googleAuth,
     };
 
+    const signupURL = googleAuth
+      ? "http://abacus-22-backend.herokuapp.com/user/signup/updateExisting"
+      : "http://abacus-22-backend.herokuapp.com/user/signup/newUser";
+
     axios
-      .post("http://localhost:8000/user/signup/newUser", values)
+      .post(signupURL, values)
       .then((response) => {
-        if (response.status === 201) {
+        if (response.status === 201 || response.status === 200) {
           alert(response.data.message);
+          // setMessage(response.data.message);
+          window.location = "http://localhost:3000/Login#/sign-in";
         }
+        console.log(response);
       })
       .catch((err) => {
         if (err.response.data.code === 11000) {
@@ -54,8 +93,23 @@ function SignUp() {
   };
   return (
     <div className={logstyle.formCenter}>
+      <div className={logstyle.styleButton}>
+        {googleAuth ? (
+          <p>{message}</p>
+        ) : (
+          <GoogleButton
+            className="google-button"
+            onClick={() => {
+              googleSignIn();
+            }}
+            label="Sign Up with Google"
+            type="dark"
+          />
+        )}
+      </div>
       <form onSubmit={() => handleSubmit()} className={logstyle.formFields}>
         {/*name*/}
+
         <div className={logstyle.formField}>
           <label className={logstyle.formFieldLabel} htmlFor="name">
             Full Name
@@ -70,6 +124,7 @@ function SignUp() {
             onChange={(e) => {
               setName(e.currentTarget.value);
             }}
+            disabled={nonChangable ? true : false}
           />
         </div>
 
@@ -145,6 +200,7 @@ function SignUp() {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.currentTarget.value)}
+            disabled={nonChangable ? true : false}
           />
         </div>
         {/*phone*/}

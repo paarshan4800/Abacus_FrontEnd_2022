@@ -16,7 +16,7 @@ function VerifyEmail(props) {
     const code = new URLSearchParams(search).get("code");
 
     axios
-      .post("http://localhost:8000/user/signup/verifyUser", {
+      .post("http://abacus-22-backend.herokuapp.com/user/signup/verifyUser", {
         email,
         code,
       })
