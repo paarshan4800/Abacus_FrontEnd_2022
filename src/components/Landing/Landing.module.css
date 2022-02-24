@@ -9,7 +9,7 @@
     align-items: center;
     scroll-snap-align: start;
     width: 100%;
-   
+   scroll-behavior: smooth;
    
 
   
@@ -516,3 +516,18 @@ line-height: 100vh;
 /* ._loader_arrow {
     position: absolute !important;
 } */
+
+@media only screen and (max-width: 768px) {
+    .head{
+        font-size: 60px;
+    }
+    .letter_a{
+        font-size:70px;
+    }
+
+    .date{
+        font-size: 30px;
+        letter-spacing: 0px;
+
+    }
+}
