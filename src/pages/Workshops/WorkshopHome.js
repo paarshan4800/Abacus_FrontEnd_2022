@@ -2,7 +2,7 @@ import { Carousel } from "3d-react-carousal";
 import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 
-import background from "./../images/bg1.jpg";
+import background from "./../../images/bg2.jpeg";
 import tech from "./../images/tech.jpeg";
 import nontech from "./../images/nontech.jpeg";
 import hack from "./../images/hack.jpeg";

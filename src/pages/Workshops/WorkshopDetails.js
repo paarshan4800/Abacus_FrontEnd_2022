@@ -1,5 +1,5 @@
-import React from "react";
-import background from "./../images/bg1.jpg";
+import React, { useEffect, useState } from "react";
+import background from "./../../images/bg2.jpeg";
 import styles from "./../Workshops/WorkshopDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { useParams } from "react-router-dom";
