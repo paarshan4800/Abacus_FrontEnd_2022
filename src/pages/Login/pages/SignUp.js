@@ -68,9 +68,11 @@ function SignUp() {
       values.verificationCode = verificationCode;
     }
 
+    const BASE_URL = "https://abacus-22-backend.herokuapp.com/";
+    // const BASE_URL = "http://localhost:8000/";
     const signupURL = googleAuth
-      ? "http://abacus-22-backend.herokuapp.com/user/signup/googleSignUp"
-      : "http://abacus-22-backend.herokuapp.com/user/signup/newUser";
+      ? BASE_URL + "user/signup/googleSignUp"
+      : BASE_URL + "user/signup/newUser";
 
     axios
       .post(signupURL, values)
