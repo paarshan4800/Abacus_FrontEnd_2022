@@ -121,29 +121,11 @@ class Homepage extends Component {
           </div>
         </div>
 
-        {/* Child Class */}
-        {/* <div className={`${styles._homepage} ${styles._responsive} ${styles.bg}`}>
         
-           <div class="container justify-content-center align-self-center ">
-             <div class="row justify-content-center align-self-center">
-               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                 <FadeInSection>
-               <div class="embed-responsive embed-responsive-21by9">
-          <iframe src="https://www.youtube.com/embed/W0eDjWr3ATI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div> </FadeInSection>
-               </div>
-               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-               <GlowCard props={{degree: "25deg",title:"Abacus'21",content:"CSEA takes immense pleasure in organizing Abacus’21. This version is going to be one of its kind - a symposium completely organized online. We operate with a vision – to bring together students from multiple engineering colleges globally and give them a chance to demonstrate their technical prowess, ignite their passion for learning and to win exciting prizes and internships. Grab this opportunity and win cash prizes, Intern Opportunities , T shirts and many surprising prizes."}} />    
-                 </div>
-             </div>
-           </div>
-            </div> */}
-
-        {/* Child Class */}
 
         <div className={`${styles.bg}`}>
           <div className={`${styles.blur}`}>
-            <div className="text-center mt-0">
+            <div className="text-center ">
               <Heading text="Sponsors" fontSize="40px" />
               <br></br>
               <br></br>
