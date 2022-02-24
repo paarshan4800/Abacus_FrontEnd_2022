@@ -4,7 +4,9 @@ import GlassButton from "../../../components/GlassButton/GlassButton";
 
 function NewPassword() {
     return (
-      <div className={logstyle.formCenter}>
+      <div className={logstyle.NPOut}>
+      <div className={logstyle.NPCenter}>
+        <h2>Enter New Password</h2>
         <form className={logstyle.formFields}>
         <div className={logstyle.formField}>
             <label className={logstyle.formFieldLabel} htmlFor="password">
@@ -13,7 +15,7 @@ function NewPassword() {
             <input
               type="password"
               id="password"
-              className={logstyle.formFieldInput}
+              className={logstyle.formFieldInputNp}
               placeholder="Enter your password"
               name="password"
             />
@@ -26,7 +28,7 @@ function NewPassword() {
             <input
               type="password"
               id="conpass"
-              className={logstyle.formFieldInput}
+              className={logstyle.formFieldInputNp}
               placeholder="Confirm your password"
               name="conpass"
             />
@@ -35,6 +37,7 @@ function NewPassword() {
               <GlassButton title="Submit"/>
           </div>
         </form>
+      </div>
       </div>
     );
 }
