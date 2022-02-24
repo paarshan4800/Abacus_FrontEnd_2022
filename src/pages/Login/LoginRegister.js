@@ -26,10 +26,10 @@ function LoginRegister()
         </div>
           <div className={logstyle.appForm}>
             <div className={logstyle.styleButton}>
-              <NavLink to="/sign-in" activeclassName={logstyle.pageSwitcherItemActive} >
+              <NavLink to="/sign-in" className={logstyle.SignIN} style={{ color: 'white' }} activeclassName={logstyle.pageSwitcherItemActive} >
                 <GlassButton title="Sign In" />
               </NavLink>
-              <NavLink exact to="/" activeclassName={logstyle.pageSwitcherItemActive} >
+              <NavLink exact to="/" className={logstyle.SignUP} style={{ color: 'white' }} activeclassName={logstyle.pageSwitcherItemActive} >
                 <GlassButton title="Sign Up" />
               </NavLink>
             </div>
