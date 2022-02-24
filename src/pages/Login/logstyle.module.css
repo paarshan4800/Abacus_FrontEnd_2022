@@ -80,7 +80,28 @@
   .formCenter {
     margin-bottom: 100px;
   }
-  
+  .FPOut{
+    height: 60vh;
+    position: relative;
+    border: 3px solid #ff1571; 
+  }
+  .FPCenter{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+@media screen and (max-width: 600px) {
+    h1.h11{
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    h3.h33{
+      font-size: 20px;
+    }
+  }
   .formTitle {
     color: #707c8b;
     font-weight: 300;
@@ -238,7 +259,7 @@
     -moz-animation: glow 2s ease-in-out infinite alternate;
     animation: glow 2s ease-in-out infinite alternate;
   }
-  
+ 
   @-webkit-keyframes glow {
     from {
       text-shadow: 0 0 10px var(--from), 0 0 20px var(--from),
@@ -288,6 +309,7 @@
     width: 0.2vw;
     height: fit-content;
   }
+  
   
   /* Handle */
   /* ::-webkit-scrollbar-thumb {
