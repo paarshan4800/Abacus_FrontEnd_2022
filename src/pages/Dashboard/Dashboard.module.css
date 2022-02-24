@@ -12,7 +12,7 @@
   /* background: #350048; */
   /* background: linear-gradient(-45deg, #217b85, #0e3783, #771c68, #481f86);
   animation: gradient 15s ease infinite; */
-  background-image: url("../images/bg1.jpg");
+  background-image: url("./../../images/bg2.jpeg");
   background-size: cover;
 }
 
@@ -26,12 +26,12 @@
   100% {
     background-position: 0% 50%;
   }
-} 
+}
 
 .loading {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   height: 100vh;
 }
 
