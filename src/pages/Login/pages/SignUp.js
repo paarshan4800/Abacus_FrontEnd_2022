@@ -22,6 +22,7 @@ function SignUp() {
   const [nonChangable, setNonChangable] = useState(false);
   const [googleAuth, setGoogleAuth] = useState(false);
   const [message, setMessage] = useState("");
+  const [verificationCode, setVerificationCode] = useState("");
 
   const checkWhichPage = () => {
     const url = new URL(window.location.href);
@@ -45,10 +46,13 @@ function SignUp() {
     if (searchparams.has("googleAuth")) {
       setGoogleAuth(searchparams.get("googleAuth"));
     }
+
+    if (searchparams.has("verificationCode"))
+      setVerificationCode(searchparams.get("verificationCode"));
+    // console.log(searchparams.get("id_token"));
   };
 
   useEffect(checkWhichPage, []);
-
   const handleSubmit = () => {
     var values = {
       email,
@@ -60,9 +64,12 @@ function SignUp() {
       password,
       googleAuth,
     };
+    if (verificationCode != "") {
+      values.verificationCode = verificationCode;
+    }
 
     const signupURL = googleAuth
-      ? "http://abacus-22-backend.herokuapp.com/user/signup/updateExisting"
+      ? "http://abacus-22-backend.herokuapp.com/user/signup/googleSignUp"
       : "http://abacus-22-backend.herokuapp.com/user/signup/newUser";
 
     axios
@@ -83,7 +90,7 @@ function SignUp() {
           );
           setTimeout(() => {
             window.location = "http://localhost:3000/Login#/sign-in";
-          }, 1000);
+          }, 300);
         } else {
           console.log(err.response.data);
         }
