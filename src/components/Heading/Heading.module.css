@@ -4,11 +4,12 @@
     src: url(./alien.ttf);
 }
 ._heading {
-    font-family: Slim;
+    font-family: 'Open sans';
     letter-spacing: 5px;
     animation: flicker 3s infinite;
     color: white;
     font-weight: bolder;
+    text-transform: uppercase;
     text-shadow: 0 0 10px rgb(192 219 255 / 75%), 0 0 10px rgb(65 120 255 / 24%);
   
 }
