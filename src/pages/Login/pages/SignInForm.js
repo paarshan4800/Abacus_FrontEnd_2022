@@ -57,7 +57,7 @@ function SignInForm()
             {/*<button className={logstyle.formFieldButton}>Sign In</button>{" "}*/}
             <div className={logstyle.styleButton}>
               <GlassButton title="Sign In"/>
-              <NavLink to="/ForgotPassword">
+              <NavLink to="/ForgotPassword" style={{ color: 'white' }}>
                 <GlassButton title="Forgot Password?" />
               </NavLink>
               {/*
