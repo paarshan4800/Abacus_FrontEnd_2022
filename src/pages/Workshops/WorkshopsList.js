@@ -8,27 +8,27 @@ import background from "./../../images/bg1.jpg";
 import tech from "./../../images/tech.jpeg";
 import nontech from "./../../images/nontech.jpeg";
 import hack from "./../../images/hack.jpeg";
-import styles from "./EventsList.module.css";
+import styles from "./WorkshopsList.module.css";
 import { useHistory } from "react-router-dom";
 
-function TechEventsList() {
-  let techEventsList = [
+function WorkshopHome() {
+  let workshopsList = [
     {
       id: 1,
-      refName: "tenet",
-      name: "Tenet",
+      refName: "cloud-computing",
+      name: "Cloud Computing",
       img: tech,
     },
     {
       id: 2,
-      refName: "code-for-crown-olpc",
-      name: "Code for crown",
+      refName: "entrepreneurship",
+      name: "Entrepreneurship",
       img: tech,
     },
     {
       id: 3,
-      refName: "novice-init",
-      name: "Tenet",
+      refName: "job-readiness",
+      name: "Job Readiness",
       img: tech,
     },
     {
@@ -67,9 +67,9 @@ function TechEventsList() {
     // }}
     >
       <div className={styles.wrapper}>
-        {techEventsList.map((event) =>
+        {workshopsList.map((event) =>
           event.id % 3 == 2 ? (
-            <Link to={`/events/tech-events/${event.refName}`}>
+            <Link to={`/workshops/${event.refName}`}>
               <div
                 key={event.id}
                 className={cx(styles.maindiv, styles.maindiv2)}
@@ -79,7 +79,7 @@ function TechEventsList() {
               </div>
             </Link>
           ) : event.id % 3 == 1 ? (
-            <Link to={`/events/tech-events/${event.refName}`}>
+            <Link to={`/workshops/${event.refName}`}>
               <div
                 key={event.id}
                 className={cx(styles.maindiv, styles.maindiv1)}
@@ -89,7 +89,7 @@ function TechEventsList() {
               </div>
             </Link>
           ) : (
-            <Link to={`/events/tech-events/${event.refName}`}>
+            <Link to={`/workshops/${event.refName}`}>
               <div
                 key={event.id}
                 className={cx(styles.maindiv, styles.maindiv3)}
@@ -104,4 +104,4 @@ function TechEventsList() {
     </div>
   );
 }
-export default TechEventsList;
+export default WorkshopHome;
