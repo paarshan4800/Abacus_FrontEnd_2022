@@ -259,8 +259,8 @@ function SignUp() {
 
         <div className={logstyle.formField}>
           {/*<button className={logstyle.formFieldButton}>Sign Up</button>{" "}*/}
-          <div className={logstyle.styleButton} onClick={() => handleSubmit()}>
-            <GlassButton title="Sign Up" />
+          <div className={logstyle.styleButton}>
+            <GlassButton title="Sign Up" onClick={handleSubmit} />
           </div>
         </div>
         <div className={logstyle.formField}>
