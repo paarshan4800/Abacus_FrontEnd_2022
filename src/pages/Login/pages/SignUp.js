@@ -17,7 +17,67 @@ function SignUp()
     const [password, setPassword] = useState("");
     const [conpass, setConpass] = useState("");
     const [year, setYear] = useState("");
+    const [validationError, setvalidationError] = useState('');
+
+
+    //const validate = () => {
+    function validate(){
+      let validationError = '';
+
+      if (!name) {
+          validationError = 'Name field cannot be blank';
+      } else if (!email) {
+          validationError = 'Email field cannot be blank';
+      }
+      else if (!email.includes('@')) {
+          validationError = 'Invalid Email! Try a different one!';
+      }
+      else if (!phone) {
+          validationError = 'Phone field cannot be blank';
+      }
+      else if (phone < 1000000000 || phone > 9999999999) {
+          validationError = 'Invalid Phone Number';
+      }
+      else if (!password) {
+          validationError = 'Password field cannot be blank';
+      }
+      else if (!conpass) {
+          validationError = 'Confirm Password field cannot be blank';
+      }
+      else if (!department) {
+          validationError = 'Department field cannot be blank'
+      }
+      else if (!college) {
+          validationError = 'College field cannot be blank'
+      }
+      else if (!year) {
+          validationError = 'Year field cannot be blank'
+      }
+
+      if (!validationError && (conpass !== password)) {
+          validationError = 'Passwords do not match';
+      }
+
+      if (validationError) {
+          setvalidationError(validationError);
+          return false;
+      }
+
+      return true;
+  }
     
+   function submit(){
+    const isValid = validate();
+    console.log(validationError);
+    if (isValid) {
+        
+        }
+        else {
+            
+        }
+        // api
+  }
+
     return (
       <div className={logstyle.formCenter}>
         <form /*onSubmit={this.handleSubmit}*/ className={logstyle.formFields}>
@@ -139,12 +199,18 @@ function SignUp()
               onChange={(e) => setConpass(e.currentTarget.value)}
             />
           </div>
-
-
           <div className={logstyle.formField}>
+          {validationError ? (<div style="color: red;">{validationError}</div>) : null}
             {/*<button className={logstyle.formFieldButton}>Sign Up</button>{" "}*/}
             <div className={logstyle.styleButton}>
+            <button onClick={(e)=>{
+              e.preventDefault();
+              console.log("pressed");
+              let isValid = validate();
+              console.log(isValid);
+            }}>
               <GlassButton title="Sign Up"/>
+            </button>
             </div>
           </div>
           <div className={logstyle.formField}>
