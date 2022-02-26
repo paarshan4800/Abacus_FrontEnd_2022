@@ -8,7 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Landing from "../../components/Landing/Landing";
 import Heading from "../../components/Heading/Heading";
 import Heading1 from "../../components/Heading1/Heading1";
-import { Navbar, Hero, Aboutus, Footer } from "../../components";
 
 function demoAsyncCall() {
   return new Promise((resolve) => setTimeout(() => resolve(), 2000));
