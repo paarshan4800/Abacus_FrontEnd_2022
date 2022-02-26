@@ -1,28 +1,31 @@
-import React, { useState, Component } from "react";
+import React, { useState, Component, useEffect } from "react";
 import { HashRouter as Router, Route, NavLink } from "react-router-dom";
 import ForgotPassword from "./ForgotPassword";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton.js";
+import { googleSignIn } from "../../../api/auth";
 import GoogleButton from "react-google-button";
 import axios from "axios";
 
 function SignInForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [token, setToken] = useState("");
   /*
    const clickGoogleIcon = () => {
     window.location = `${baseURL}${url_gAuth}`
    }*/
-
+  //handle normal signin
   const onSubmitSignIn = () => {
-    console.log("in on submit signinnnnn");
+    console.log("in on submit signin");
     var values = {
       email,
       password,
     };
     console.log(values);
+
     axios
-      .post("https://abacus-22-backend.herokuapp.com/user/login", values)
+      .post("http://localhost:8000/user/login", values)
       .then((response) => {
         if (response.status === 200) {
           console.log("Token ==", response.data.token);
@@ -41,6 +44,25 @@ function SignInForm() {
 
     console.log(values);
   };
+
+  const afterGoogleSignIn = () => {
+    console.log("function after g sign called");
+    const url = new URL(window.location.href);
+    console.log("url is", url);
+    const searchparams = new URLSearchParams(url.search);
+    console.log("search params is", searchparams);
+    if (searchparams.has("message")) {
+      const msg = searchparams.get("message");
+      console.log(msg);
+      window.alert(msg);
+    }
+    if (searchparams.has("token")) {
+      setToken(searchparams.get("token"));
+      console.log("token is ", searchparams.get("token"));
+    }
+  };
+
+  useEffect(afterGoogleSignIn, []);
   return (
     <div className={logstyle.formCenter}>
       <form className={logstyle.formFields} onSubmit={() => onSubmitSignIn()}>
@@ -82,6 +104,8 @@ function SignInForm() {
             className="google-button"
             onClick={() => {
               console.log("Google button clicked");
+              googleSignIn();
+              //onGoogleSignIn();
             }}
             type="dark"
           />
