@@ -2,26 +2,21 @@ import React, { useEffect, useState } from "react";
 import background from "./../../images/bg2.jpeg";
 import styles from "./../Workshops/WorkshopDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
-import { useParams } from "react-router-dom";
-// import NavbarBigStyles from "../../components/NavbarBig/NavbarBig.module.css";
+import { useParams, useHistory } from "react-router-dom";
 import Link from "react";
 import reactDom from "react-dom";
+import { Workshops } from "../../data/WorkshopsData";
+
 function WorkshopDetails() {
-  const { id } = useParams();
-  let workshops = [
-    {
-      id: 1,
-      name: "workshop1",
-    },
-    {
-      id: 2,
-      name: "workshop2",
-    },
-    {
-      id: 3,
-      name: "workshop3",
-    },
-  ];
+
+  const { title } = useParams();
+
+  const data = Workshops[title]
+  const history = useHistory()
+  if (!data) {
+      history.push("/404")
+  }
+
   return (
     <div
       style={{
@@ -32,8 +27,6 @@ function WorkshopDetails() {
       }}
     >
       <div className={styles.container}>
-        {/* {workshops.map((element) => (
-          <Link to={`/workshops/${element.id}`}> */}
         <div className={styles.box}>
           <span></span>
           <div className={styles.content}>
@@ -51,19 +44,16 @@ function WorkshopDetails() {
         <div className={styles.box}>
           <span></span>
           <div className={styles.content}>
-            <h2 className={styles.neon}>HACKATHON</h2>
+            <h2 className={styles.neon}>{data.name}</h2>
             <p>
-              Are you a tech-savvy individual who can collaborate intensively to
-              innovate and develop influential solutions to a problem using
-              technology? Then why do you wait? Fasten your belts and bump into
-              the signature event of Abacus, where you need to team up and
-              brainstorm your ideas to create a prototype. Registration Fee -
-              Rs.100<br></br>
-              <br></br>
+              {data.about}<br/><br/>
               <b>CONTACT:</b> Kanika K - 8300295535 <br></br>
-              <b>DATE:</b> 25-03-2021 & 26-03-2021<br></br>
+              <b>DATE:</b> 25-03-2021 and 26-03-2021<br></br>
+              {/* <div className={NavbarBigStyles.buttons}>
+                <GlassButton title="REGISTER" />
+                </div> */}
             </p>
-            <a href="#">Register</a>
+            {/* <a href="#">Read More</a> */}
           </div>
         </div>
         <div className={styles.box}>
@@ -73,15 +63,13 @@ function WorkshopDetails() {
             <p>
               4) Participants must ensure that they have laptop with good
               internet connectivity for their convenience <br></br>5)
-              Participants must ensure that they have microsoft account
-              <br></br>
+              Participants must ensure that they have microsoft account<br></br>
               6) Participants can contact the given contact for any doubts
               regarding the event.
             </p>
+            {/* <a href="#">Read More</a> */}
           </div>
         </div>
-        {/* </Link>
-        ))} */}
       </div>
     </div>
   );

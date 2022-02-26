@@ -1,16 +1,245 @@
-body {
-    margin: 0;
+._404_wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg{
+  background-color:#060c21;
+  background-image:url("../../images/bg3.jpg");
+  background-repeat:no-repeat;
+  background-size:cover
+}
+
+.bg1{
+  background-color:#060c21;
+  background-image:url("../../images/bg3.jpg");
+  background-repeat:no-repeat;
+  background-size:cover
+}
+
+
+@media only screen and (max-width:1025px){
+  .bg{
+      background-color:#060c21;
+      background-image:url("../../images/bg3.jpg");
+      background-repeat:no-repeat;
+      background-size:cover
   }
-  
-  .wrap {
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-    background-image: linear-gradient(-206deg, #835EFF 0%, #FF008D 100%);
+  .bg1{
+      background-color:#060c21;
+      background-image:url("../../images/bg3.jpg");
+      background-repeat:no-repeat;
+      background-size:cover
   }
-  
-  canvas {
-    width: 100%;
-    height: 100%;
+
+}
+
+._404 {
+  min-height: 60vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1100px) {
+  ._404 {
+      flex-direction: column;
+      min-height: max-content;
   }
-  
+
+
+
+}
+
+@media only screen and (max-width: 578px) {
+  ._404 {
+      margin-top: 25px;
+  }
+}
+
+._404_img {
+  flex-basis: 30%;
+  text-align: center;
+}
+
+._404_text_wrapper {
+  text-align: center;
+  flex-basis: 30%;
+}
+
+._404_text {
+
+  letter-spacing: 10px;
+  font-family: Iceland;
+  text-transform: uppercase;
+  font-size: 125px;
+  color: #ffe6ff;
+  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+}
+
+
+._404_text_addi p {
+  color: white;
+  font-size: 25px;
+  font-family: Iceland;
+  margin-bottom: 5px;
+}
+
+.normalFlicker {
+  animation: flickerAnime 2s infinite;
+}
+
+.slowFlicker {
+  animation: slowFlickerAnime 2s infinite;
+}
+
+
+@keyframes flickerAnime {
+  from {
+      opacity: 1;
+  }
+
+  4% {
+      opacity: 0.9;
+  }
+
+  6% {
+      opacity: 0.85;
+  }
+
+  8% {
+      opacity: 0.95;
+  }
+
+  10% {
+      opacity: 0.9;
+  }
+
+  11% {
+      opacity: 0.922;
+  }
+
+  12% {
+      opacity: 0.9;
+  }
+
+  14% {
+      opacity: 0.95;
+  }
+
+  16% {
+      opacity: 0.98;
+  }
+
+  17% {
+      opacity: 0.9;
+  }
+
+  19% {
+      opacity: 0.93;
+  }
+
+  20% {
+      opacity: 0.99;
+  }
+
+  24% {
+      opacity: 1;
+  }
+
+  26% {
+      opacity: 0.94;
+  }
+
+  28% {
+      opacity: 0.98;
+  }
+
+  37% {
+      opacity: 0.93;
+  }
+
+  38% {
+      opacity: 0.5;
+  }
+
+  39% {
+      opacity: 0.96;
+  }
+
+  42% {
+      opacity: 1;
+  }
+
+  44% {
+      opacity: 0.97;
+  }
+
+  46% {
+      opacity: 0.94;
+  }
+
+  56% {
+      opacity: 0.9;
+  }
+
+  58% {
+      opacity: 0.9;
+  }
+
+  60% {
+      opacity: 0.99;
+  }
+
+  68% {
+      opacity: 1;
+  }
+
+  70% {
+      opacity: 0.9;
+  }
+
+  72% {
+      opacity: 0.95;
+  }
+
+  93% {
+      opacity: 0.93;
+  }
+
+  95% {
+      opacity: 0.95;
+  }
+
+  97% {
+      opacity: 0.93;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+
+@keyframes slowFlickerAnime {
+
+  0%,
+  100% {
+      color: #6b1839;
+      text-shadow: none;
+  }
+
+  50% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+          -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+          0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+}
