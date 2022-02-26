@@ -16,10 +16,11 @@ class Landing extends Component {
  
     render() {
         return (            <div className={`${styles.back}`}>
-            <div className={`${styles._homepage}`} >
+            <div className={`${styles._homepage}`}  >
             
-            <div className={`${styles.landing_heading} ${styles.head}`} >
-                <h1 className={`${styles.head}`}><span className={`${styles.letter_a} ${styles.anim}`}>A</span>BACUS   '22</h1>
+            <div className={`${styles.landing_heading} `} >
+            <span className={`${styles.letter_a}`}></span>
+                <h1 className={`${styles.head} ${styles.glitch}`}  title="ABACUS   '22">ABACUS   '22</h1>
                 <h2 className={`${styles.date}`}>March 25 and 26</h2>
             </div>
             {/*

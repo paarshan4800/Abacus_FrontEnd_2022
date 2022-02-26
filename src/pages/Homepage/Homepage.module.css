@@ -48,7 +48,7 @@
     margin: 1em 0 0.5em 0;
 	font-weight: bolder;
 	font-family: 'Open Sans', sans-serif;   
-	font-size: 5.3rem;
+	font-size: 4.7rem;
     text-align: center;
     color: white;
 	line-height: 52px;
@@ -81,7 +81,7 @@
   .left_container {
 
     height: 100%;
-    width: 40%;
+    width: 35%;
     background-color:   #060017;
     
 
@@ -99,13 +99,13 @@
   
   .right_container {
       padding-left: 5%;
-      background: rgba(0, 0,0, 0.4);
+      background: rgba(0, 0,0, 0.57);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(70px);
+      backdrop-filter: blur(80px);
       -webkit-backdrop-filter: blur(5px);
       
       
-    width: 60%;
+    width: 65%;
   }
   
   .left_content {
@@ -158,9 +158,9 @@
     
 }
 .blur{
-    background: rgba(0, 0,0, 0.5);
+    background: rgba(0, 0,0, 0.6);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(80px);
+      backdrop-filter: blur(70px);
       -webkit-backdrop-filter: blur(5x);
     width: 100%;
     height: 100%;
@@ -185,10 +185,8 @@
 }
 .bg{
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../components/Landing/close-overlay.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../components/Landing/pink.jpg') no-repeat center center fixed;
     background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
     width: 100vw;
 }
 
