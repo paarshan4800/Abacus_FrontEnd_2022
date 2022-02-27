@@ -4,10 +4,10 @@ import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton";
 function ForgotPassword() {
     return (
-      
-      <div className={logstyle.formCenter}>
-        <h1>Forgot your Password?</h1>
-        <h3>No worries! Enter your e-mail and we will send you a reset.</h3>
+      <div className={logstyle.FPOut}>
+      <div className={logstyle.FPCenter}>
+        <h1 className={logstyle.h11}>Forgot your Password?</h1>
+        <h3 className={logstyle.h33}>No worries! Enter your e-mail and we will send you a reset.</h3>
         <form className={logstyle.formFields}>
           <div className={logstyle.formField}>
             <label className={logstyle.formFieldLabel} htmlFor="email">
@@ -26,6 +26,7 @@ function ForgotPassword() {
               <GlassButton title="Submit"/>
           </div>
         </form>
+      </div>
       </div>
     );
 }

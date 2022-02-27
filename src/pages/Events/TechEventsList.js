@@ -4,42 +4,48 @@ import cx from "classnames";
 import Button from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 //import TechEventsList from "./TechEventsList";
-import background from "./../images/bg1.jpg";
-import tech from "./../images/tech.jpeg";
-import nontech from "./../images/nontech.jpeg";
-import hack from "./../images/hack.jpeg";
-import styles from "./TechEventsList.module.css";
+import background from "./../../images/bg1.jpg";
+import tech from "./../../images/tech.jpeg";
+import nontech from "./../../images/nontech.jpeg";
+import hack from "./../../images/hack.jpeg";
+import styles from "./EventsList.module.css";
 import { useHistory } from "react-router-dom";
 
 function TechEventsList() {
-  let techEvents = [
+  let techEventsList = [
     {
       id: 1,
+      refName: "tenet",
       name: "Tenet",
       img: tech,
     },
     {
       id: 2,
+      refName: "code-for-crown-olpc",
       name: "Code for crown",
       img: tech,
     },
     {
       id: 3,
+      refName: "novice-init",
       name: "Tenet",
       img: tech,
     },
     {
       id: 4,
+      refName: "tenet",
       name: "Asdfgh",
       img: tech,
     },
     {
       id: 5,
+      refName: "tenet",
       name: "qwerty",
       img: tech,
     },
     {
       id: 6,
+      refName: "tenet",
       name: "zxcvb",
       img: tech,
     },
@@ -61,9 +67,9 @@ function TechEventsList() {
     // }}
     >
       <div className={styles.wrapper}>
-        {techEvents.map((event) =>
+        {techEventsList.map((event) =>
           event.id % 3 == 2 ? (
-            <Link to={`/events/tech-events/${event.id}`}>
+            <Link to={`/events/tech-events/${event.refName}`}>
               <div
                 key={event.id}
                 className={cx(styles.maindiv, styles.maindiv2)}
@@ -73,7 +79,7 @@ function TechEventsList() {
               </div>
             </Link>
           ) : event.id % 3 == 1 ? (
-            <Link to={`/events/tech-events/${event.id}`}>
+            <Link to={`/events/tech-events/${event.refName}`}>
               <div
                 key={event.id}
                 className={cx(styles.maindiv, styles.maindiv1)}
@@ -83,7 +89,7 @@ function TechEventsList() {
               </div>
             </Link>
           ) : (
-            <Link to={`/events/tech-events/${event.id}`}>
+            <Link to={`/events/tech-events/${event.refName}`}>
               <div
                 key={event.id}
                 className={cx(styles.maindiv, styles.maindiv3)}

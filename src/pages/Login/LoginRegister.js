@@ -22,6 +22,7 @@ function LoginRegister() {
             </Typography>
           </center>
         </div>
+
         <div className={logstyle.appForm}>
           <div className={logstyle.styleButton}>
             <NavLink
@@ -37,6 +38,7 @@ function LoginRegister() {
             >
               <GlassButton title="Sign Up" />
             </NavLink>
+
           </div>
           <Route path="/NewPassword" component={NewPassword} />
           <Route exact path="/" component={SignUp} />
