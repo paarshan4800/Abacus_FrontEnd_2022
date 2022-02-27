@@ -11,6 +11,7 @@ function SignInForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
+  // console.log("token from cookie is ", localStorage.getItem("apiToken"));
   /*
    const clickGoogleIcon = () => {
     window.location = `${baseURL}${url_gAuth}`
@@ -58,6 +59,7 @@ function SignInForm() {
     }
     if (searchparams.has("token")) {
       setToken(searchparams.get("token"));
+      localStorage.setItem("apiToken", token);
       console.log("token is ", searchparams.get("token"));
     }
   };
