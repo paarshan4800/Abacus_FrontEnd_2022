@@ -36,7 +36,7 @@
 
 
 .About_Abacus {
-    height: 100vh;
+   
     width: 100vw;
 
 
@@ -48,7 +48,7 @@
     margin: 1em 0 0.5em 0;
 	font-weight: bolder;
 	font-family: 'Open Sans', sans-serif;   
-	font-size: 4.7rem;
+	font-size: 4.9rem;
     text-align: center;
     color: white;
 	line-height: 52px;
@@ -71,7 +71,7 @@
 	color: white;
 	font-weight: normal;
     padding-top: 5%;
-	font-size: 24px;
+	font-size: 27px;
 	line-height: 40px;
 	font-family: 'Open Sans';
   }
@@ -99,10 +99,11 @@
   
   .right_container {
       padding-left: 5%;
-      background: rgba(0, 0,0, 0.57);
+      background: rgba(0, 0,0, 0.4);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(80px);
-      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(90px);
+      -webkit-backdrop-filter: blur(70px);
+      height: 100vh;
       
       
     width: 65%;
@@ -158,9 +159,9 @@
     
 }
 .blur{
-    background: rgba(0, 0,0, 0.6);
+    background: rgba(0, 0,0, 0.5);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(70px);
+      backdrop-filter: blur(60px);
       -webkit-backdrop-filter: blur(5x);
     width: 100%;
     height: 100%;
@@ -185,9 +186,11 @@
 }
 .bg{
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../components/Landing/pink.jpg') no-repeat center center fixed;
-    background-size:cover;
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../components/Landing/bg.png');
     width: 100vw;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
 }
 
 .bg_flip{
@@ -485,15 +488,24 @@ height:120px;
         }
         
     }
-    @media only screen and (min-width:1200px) {
-        .eventCardImg{
-            padding-right: 30px;
-                }
-                
-
-
+    @media only screen and (max-width:980px){
+        .head{
+            font-size: 85px;
+        }
     }
+
+     @media only screen and (max-width:480px){
+        .head{
+            font-size: 30px;
+        }
+    }
+
     @media only screen and (max-width:1200px){
+
+        .head{
+            font-size: 100px;
+        }
+
         .dis{
             
           align-items: center;
@@ -522,28 +534,14 @@ height:120px;
     @media only screen and (max-width: 768px) {
 
         .heading{
-            font-size: 40px;
+            font-size: 30px;
         }
         .paragraph{
             font-size: 20px;
         }
-        .eventCardImg {
-            width: 340px;
-            height: 250px;
-
-        }
-        ._glowCardDiv {
-            /* width: 80%; */
-            flex-basis: 100% !important;
-            order: 2 !important;
-        }
-    
-        ._eventCardImgDiv {
-            order: 1 !important;
-            flex-basis: 100%;
-        }
-
+        
         .About_Abacus {
+            height : 180vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -553,10 +551,10 @@ height:120px;
 
 
   .left_container{
-      height: 135vh;
+      height: 150vh;
   }
   .right_container{
-    height: 145vh;
+    height: 150vh;
 }
   .blur{
     overflow:auto; 
@@ -604,3 +602,9 @@ height:120px;
         transform: scaleX(1);
         transform-origin: bottom left;
       }
+
+      @media only screen and (max-width:756px){
+          .left_container{
+              height: 120vh;
+          }
+    }

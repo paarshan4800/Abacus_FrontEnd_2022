@@ -239,3 +239,43 @@ line-height: 100vh;
       transform: translate(-22px,5px) skew(21deg); 
     }
   }
+
+
+
+
+
+@media only screen and (max-width:1300px){
+  .head{
+      font-size: 120px;
+      margin-top: 40%;
+  }
+}
+
+
+@media only screen and (max-width:980px ){
+  .head{
+      font-size: 80px;
+      margin-top: 40%;
+  }
+}
+
+
+
+@media only screen and (max-width:800px){
+  .head{
+    margin-top: 75%;
+      font-size: 60px;
+  }
+}
+
+@media only screen and (max-width:480px){
+  .head{
+    margin-top: 90%;
+      font-size: 43px;
+  }
+  .back{
+    background-size:cover
+    }
+}
+
+
