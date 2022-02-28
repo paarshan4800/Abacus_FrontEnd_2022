@@ -81,13 +81,10 @@ function NewPassword() {
           </div>
         </form>
       </div>
-<<<<<<< HEAD
     </div>
     </form>
     </div>
-=======
       </div>
->>>>>>> 30a902d168f396972de5aabff6925445a8b2ab9f
     );
 }
 export default NewPassword;
