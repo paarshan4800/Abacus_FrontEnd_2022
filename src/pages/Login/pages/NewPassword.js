@@ -36,10 +36,13 @@ function NewPassword() {
     console.log(values);
     }
     return (
-      <div className={logstyle.formCenter}>
-        
-        <div id="alert_msg" className={logstyle.formFieldLabel}></div> {/*this div element needs to be centered*/}
+    <div className={logstyle.formCenter}>
         <form className={logstyle.formFields} onSubmit={() => onPassword()}>
+      <div className={logstyle.NPOut}>
+      <div className={logstyle.NPCenter}>
+      <div id="alert_msg" className={logstyle.formFieldLabel}></div> {/*this div element needs to be properly positioned*/}
+        <h2>Enter New Password</h2>
+        <form className={logstyle.formFields}>
         <div className={logstyle.formField}>
             <label className={logstyle.formFieldLabel} htmlFor="password">
               Password
@@ -47,7 +50,7 @@ function NewPassword() {
             <input
               type="password"
               id="password"
-              className={logstyle.formFieldInput}
+              className={logstyle.formFieldInputNp}
               placeholder="Enter your password"
               name="password"
               //value="password"
@@ -64,7 +67,7 @@ function NewPassword() {
             <input
               type="password"
               id="conpass"
-              className={logstyle.formFieldInput}
+              className={logstyle.formFieldInputNp}
               placeholder="Confirm your password"
               name="conpass"
               //value="conpass"
@@ -78,6 +81,9 @@ function NewPassword() {
           </div>
         </form>
       </div>
+    </div>
+    </form>
+    </div>
     );
 }
 export default NewPassword;

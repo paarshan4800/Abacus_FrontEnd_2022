@@ -116,6 +116,7 @@ function SignUp() {
       values.verificationCode = verificationCode;
     }
 
+
     const BASE_URL = "https://abacus-22-backend.herokuapp.com/";
     // const BASE_URL = "http://localhost:8000/";
     const signupURL = googleAuth
@@ -317,6 +318,7 @@ function SignUp() {
           {/* <button> */}
           <div className={logstyle.styleButton} onClick={() => handleSubmit()}>
             <GlassButton title="Sign Up" />
+
           </div>
           {/* </button> */}
         </div>

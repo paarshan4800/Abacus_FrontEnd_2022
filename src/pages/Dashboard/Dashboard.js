@@ -2,59 +2,164 @@ import React from "react";
 import PreviewCard from "../../components/PreviewCard/PreviewCard";
 import styles from "./Dashboard.module.css";
 import { useState } from "react";
+import cx from "classnames";
+import tech from "./../../images/tech.jpeg";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import Loading from "../Loading/Loading";
+import GlassButton from "../../components/GlassButton/GlassButton";
 
 const Dashboard = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  let RegisteredList = [
+    {
+      id: 1,
+      refName: "tenet",
+      name: "Tenet",
+      img: tech,
+      type: "tech-events",
+    },
+    {
+      id: 2,
+      refName: "imagenation",
+      name: "Imagenation",
+      img: tech,
+      type: "non-tech-events",
+    },
+    {
+      id: 3,
+      refName: "code-for-crown-olpc",
+      name: "Code for crown",
+      img: tech,
+      type: "tech-events",
+    },
+    {
+      id: 4,
+      refName: "job-readiness",
+      name: "Job Readiness",
+      img: tech,
+      type: "workshops",
+    },
+    {
+      id: 5,
+      refName: "graphic-traffic",
+      name: "Graphic Traffic",
+      img: tech,
+      type: "non-tech-events",
+    },
+    // {
+    //   id: 6,
+    //   refName: "cloud-computing",
+    //   name: "Cloud Computing",
+    //   img: tech,
+    //   type: "workshops",
+    // },
+  ];
 
-  const AboutusCard = ({ title, subtitle }) => (
-    <div className="flex flex-row justify-start items-start white-glassmorphism p-4 m-3 cursor-pointer hover:shadow-xl">
-      <div className="ml-5 flex flex-row flex-1">
-        <h3 className="mt-2 text-white text-lg">{title}</h3>
-        <p className="mt-1 text-white text-sm md:w-9/12">{subtitle}</p>
-      </div>
-    </div>
-  );
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <div className={styles.body}>
-      <div className={styles.profileBar}>
-        {/* <AboutusCard
-          title="Hey, Joe asdasd asdasd #4101"
-          subtitle="mailid04@gmail.com and other information goes here."
-        /> */}
-        Heyy User4101!
-      </div>
-      <div className={styles.content}>
-        {!isLoading && (
-          <>
-            <div className={styles.loading}>
-              <div className={styles.loader}></div>
+    <div
+    // style={{
+    //   backgroundImage: `url(${background})`,
+    //   backgroundSize: "cover",
+    //   height: "100vh",
+    //   color: "#f5f5f5",
+    // }}
+    >
+      <div className={styles.profileBar}>Hi user4101!</div>
+
+      <div className={styles.wrapper}>
+        {isLoading && <Loading />}
+
+        {!isLoading && RegisteredList == null && (
+          <div>
+            <div className={styles.message}>
+              <p>
+                No registrations yet.
+                <br />
+                Add items to cart for registration.
+              </p>
             </div>
-          </>
+            <Link to={`/events`}>
+              <div>
+                <GlassButton title="Events" />
+              </div>
+            </Link>
+            <Link to={`/workshops`}>
+              <div>
+                <GlassButton title="Workshops" />
+              </div>
+            </Link>
+          </div>
         )}
-        {isLoading && (
+
+        {!isLoading && RegisteredList != null && (
           <>
-            <div className={styles.title}>
-              <h1>Registered Events</h1>
-            </div>
-            <div className={styles.displayArea}>
-              <PreviewCard
-                title={"Eventasdnk Name"}
-                body={"Description of the event goes here ig..."}
-              />
-              <PreviewCard
-                title={"Event Name"}
-                body={"Description of the event goes here ig..."}
-              />
-              <PreviewCard
-                title={"Event Name"}
-                body={"Description of the event goes here ig..."}
-              />
-              <PreviewCard
-                title={"Event Name"}
-                body={"Description of the event goes here ig..."}
-              />
-            </div>
+            <div className={cx(styles.title, styles.heading)}>Registered Events/Workshops</div>
+            {RegisteredList.map((event) =>
+              event.type != "workshops" ? (
+                event.id % 3 == 2 ? (
+                  <Link to={`/events/${event.type}/${event.refName}`}>
+                    <div
+                      key={event.id}
+                      className={cx(styles.maindiv, styles.maindiv2)}
+                    >
+                      <img src={event.img} alt="1" />
+                      <div className={styles.title}>{event.name}</div>
+                    </div>
+                  </Link>
+                ) : event.id % 3 == 1 ? (
+                  <Link to={`/events/${event.type}/${event.refName}`}>
+                    <div
+                      key={event.id}
+                      className={cx(styles.maindiv, styles.maindiv1)}
+                    >
+                      <img src={event.img} alt="1" />
+                      <div className={styles.title}>{event.name}</div>
+                    </div>
+                  </Link>
+                ) : (
+                  <Link to={`/events/${event.type}/${event.refName}`}>
+                    <div
+                      key={event.id}
+                      className={cx(styles.maindiv, styles.maindiv3)}
+                    >
+                      <img src={event.img} alt="1" />
+                      <div className={styles.title}>{event.name}</div>
+                    </div>
+                  </Link>
+                )
+              ) : event.id % 3 == 2 ? (
+                <Link to={`/workshops/${event.refName}`}>
+                  <div
+                    key={event.id}
+                    className={cx(styles.maindiv, styles.maindiv2)}
+                  >
+                    <img src={event.img} alt="1" />
+                    <div className={styles.title}>{event.name}</div>
+                  </div>
+                </Link>
+              ) : event.id % 3 == 1 ? (
+                <Link to={`/workshops/${event.refName}`}>
+                  <div
+                    key={event.id}
+                    className={cx(styles.maindiv, styles.maindiv1)}
+                  >
+                    <img src={event.img} alt="1" />
+                    <div className={styles.title}>{event.name}</div>
+                  </div>
+                </Link>
+              ) : (
+                <Link to={`/workshops/${event.refName}`}>
+                  <div
+                    key={event.id}
+                    className={cx(styles.maindiv, styles.maindiv3)}
+                  >
+                    <img src={event.img} alt="1" />
+                    <div className={styles.title}>{event.name}</div>
+                  </div>
+                </Link>
+              )
+            )}
           </>
         )}
       </div>

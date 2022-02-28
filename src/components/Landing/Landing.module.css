@@ -1,32 +1,50 @@
 ._homepage {
-    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 45vh;
+    
+    height: 100%;
     display: flex;
     resize: both;
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-  
-    flex-direction: column;
+    width: 100%;
+   scroll-behavior: smooth;
+
 
   
 }
 
+
+
 .back{
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('./close3.jpg') no-repeat center center;
-    background-repeat: no-repeat;
-    background-size:cover;
+
+    background: linear-gradient(rgba(0,0, 0, 0.0)  , rgba(0, 0, 0, 0.0) ), url('/src/components/Landing/purple.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
+    width: 100vw;
     height: 100vh;
+    background-size: cover;
+    filter: brightness(79%);
+    
 }
 
 @font-face {
     font-family: Future;
-    src: url(./future.ttf);
+    src: url(./space.otf);
+}
+@font-face{
+    font-family: Cabin;
+  src: url(./Vist.otf) 
 }
 
 @media only screen and (max-width: 1300px) {
     ._homepage {
         padding-top: 90px;
         margin-bottom: auto;
+    }
+
+    .head{
+        margin-top: 10%;
     }
 }
 
@@ -35,39 +53,73 @@
     text-align: center;
 }
 
-/* Copied */
-._loader_sign {
-    /* display: flex;
-    justify-content: cente
-    align-items: center; */
-    /* background-image: radial-gradient(ellipse 50% 35% at 50% 50%,
-            #6b1839,
-            transparent); */
-    /* transform: translate(-50%, -50%); */
-    letter-spacing: 10px;
+.landing_heading{
+    text-align: center;
+vertical-align: middle;
+line-height: 100vh; 
+
+}
+
+.head{
+    position: relative;
+    color: white;
+    letter-spacing: 15px;
     font-family: Future;
-    text-transform: uppercase;
-    text-shadow: 5px 5px 10px #fbfc8e;
-    font-size: 140px;
-    color:#fbfc8e;
-    
-    z-index: 5;
-    text-shadow:  1px 1px 4px #f6fd8a;
-    padding: 50px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    margin-top: 27%;
+    font-size: 160px;
+    background: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) );
+    margin-top: 14%;
+     
+
+}
+
+.anim{
+    animation: waviy 1s infinite;
+    animation-delay: 1s;
 }
 
 
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-10px)
+    }
+  }
+
+
+.letter_a{
+    font-family: Future;
+
+    font-size: 200px;
+}
+.blue1{
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #121143,
+    -0.2rem 0.1rem 1rem #acd5ff, 0.2rem 0.1rem 1rem #acd5ff,
+    0 -0.5rem 2rem #0a0026, 0 0.5rem 3rem #0a0026;
+    font-size: 8rem;
+}
+
+
+
+.year{
+    font-family: Future;
+    font-size: 7.8rem;
+    animation: blink;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+            -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+            0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+}
+
+
+
 .date {
-    color: #f6fd8a !important;
-    font-size: 35px !important;
+    color: #f6fd8a !important; 
+    font-size: 2rem !important;
     font-family: Future;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-left: 35%;
-    margin-top: 0%;
+    letter-spacing: 1px;
+        margin-top: 0%;
     padding-top: 0%;
     box-sizing: border-box;
   
@@ -107,272 +159,83 @@
 }
 
 /* Tubelight flickering effect for characters at start B,21,C */
-.flickerStart {
-    animation: abacus-anime-start 0.5s 2s;
-}
 
-.flickerStart2 {
-    animation: abacus-anime-start 1s 2.5s;
-}
-
-.flickerStart3 {
-    animation: abacus-anime-start 1s 3s;
-}
-
-
-
-
-.flicker {
-    animation: shine 2s forwards 3s, blink 3s 3s infinite;
-}
-
-.flicker2 {
-    animation: shine 2s forwards 3.4s, blink 3s 3.4s infinite;
-}
-
-.flicker3 {
-    animation: shine 2s forwards 3.7s, blink 3s 3.7s infinite;
-}
-
-/* Box flicker animation */
-
-@keyframes box-anime {
-
-    0%,
-    20% {
-        box-shadow: none;
+@media only screen and (max-width: 768px) {
+    .head{
+        font-size: 50px;
+        margin-top: 70%;
+    }
+    .letter_a{
+        font-size:70px;
     }
 
-    10%,
-    40%,
-    100% {
-        box-shadow:
-            0 0 0.1vw 0.4vw #ffe6ff,
-            0 0 0.4vw 0.6vw #4380ca,
-            0 0 4vw 0.4vw #005ECE,
-            inset 0 0 1.5vw 0.4vw #005ECE,
-            inset 0 0 0.4vw 0.2vw #4380ca,
-            inset 0 0 0.5vw 0.2vw #ffe6ff;
-    }
-}
+    .date{
+        font-size: 30px;
+        letter-spacing: 0px;
 
-@keyframes blink {
-
-    0%,
-    22%,
-    36%,
-    75% {
-        color: #ffe6ff;
-      
-    }
-
-    28%,
-    33% {
-      
-        text-shadow: none;
-    }
-
-    82%,
-    97% {
-       
-        text-shadow: none;
     }
 }
 
 
 
-/* A and CU blinking*/
-@keyframes shine {
-    0% {
-        color: #6b1839;
-        
+
+.head{
+    animation: glitch 1s linear infinite;
+  }
+
+
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
     }
-
-    100% {
-        color: #ffffff;
-     
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
     }
-}
-
-@keyframes flicker {
-    from {
-        opacity: 1;
+    62%{
+      transform: translate(0,0) skew(5deg); 
     }
-
-    4% {
-        opacity: 0.9;
+  }
+  
+  .head:before,
+  .head:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  .head:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
     }
-
-    6% {
-        opacity: 0.85;
+    4%,60%{
+      transform: translate(-2px,2px);
     }
-
-    8% {
-        opacity: 0.95;
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
     }
-
-    10% {
-        opacity: 0.9;
+  }
+  
+  .head:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
     }
-
-    11% {
-        opacity: 0.922;
+    4%,60%{
+      transform: translate(-2px,0);
     }
-
-    12% {
-        opacity: 0.9;
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
     }
-
-    14% {
-        opacity: 0.95;
-    }
-
-    16% {
-        opacity: 0.98;
-    }
-
-    17% {
-        opacity: 0.9;
-    }
-
-    19% {
-        opacity: 0.93;
-    }
-
-    20% {
-        opacity: 0.99;
-    }
-
-    24% {
-        opacity: 1;
-    }
-
-    26% {
-        opacity: 0.94;
-    }
-
-    28% {
-        opacity: 0.98;
-    }
-
-    37% {
-        opacity: 0.93;
-    }
-
-    38% {
-        opacity: 0.5;
-    }
-
-    39% {
-        opacity: 0.96;
-    }
-
-    42% {
-        opacity: 1;
-    }
-
-    44% {
-        opacity: 0.97;
-    }
-
-    46% {
-        opacity: 0.94;
-    }
-
-    56% {
-        opacity: 0.9;
-    }
-
-    58% {
-        opacity: 0.9;
-    }
-
-    60% {
-        opacity: 0.99;
-    }
-
-    68% {
-        opacity: 1;
-    }
-
-    70% {
-        opacity: 0.9;
-    }
-
-    72% {
-        opacity: 0.95;
-    }
-
-    93% {
-        opacity: 0.93;
-    }
-
-    95% {
-        opacity: 0.95;
-    }
-
-    97% {
-        opacity: 0.93;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
-@keyframes box-anime-start {
-    0% {
-        box-shadow: none;
-    }
-
-    100% {
-        box-shadow:
-            0 0 0.1vw 0.4vw #ffe6ff,
-            0 0 0.4vw 0.6vw #4380ca,
-            0 0 4vw 0.4vw #005ECE,
-            inset 0 0 1.5vw 0.4vw #005ECE,
-            inset 0 0 0.4vw 0.2vw #4380ca,
-            inset 0 0 0.5vw 0.2vw #ffe6ff;
-    }
-}
-
-@keyframes abacus-anime-start {
-    /* 0% {
-        color: #6b1839;
-        text-shadow: none;
-    }
-
-    100% {
-        color: #ffe6ff;
-        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-            -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-            0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-    } */
-
-    0%,
-    22%,
-    36%,
-    75% {
-        color: #ffe6ff;
-        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-            -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-            0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-    }
-
-    28%,
-    33% {
-        color: #ff65bd;
-        text-shadow: none;
-    }
-
-    82%,
-    97% {
-        color: #ff2483;
-        text-shadow: none;
-    }
-}
-
-/* ._loader_arrow {
-    position: absolute !important;
-} */
+  }
