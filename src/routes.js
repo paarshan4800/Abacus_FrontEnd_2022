@@ -19,6 +19,7 @@ import Cart from "./pages/Cart/Cart";
 import Hackathon from "./pages/Events/Hackathon";
 import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 import LoginRegister from "./pages/Login/LoginRegister";
+import NewPassword from "./pages/Login/pages/NewPassword";  //route needed for sending reset password as a put request
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
 // import Navbar from "./components/Navbar/Navbar";
 // import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
@@ -55,6 +56,7 @@ const AppRoutes = () => {
       <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/cart" exact component={Cart} />
       <Route path="/Login" exact component={LoginRegister} />
+      <Route path="/resetPassword/:resetPassword" exact component={NewPassword} />
       
       {/*
       <Route path="/Login" exact component={LoginRegister} />

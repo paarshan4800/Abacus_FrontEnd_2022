@@ -34,12 +34,15 @@ function SignInForm() {
       })
       .catch((err) => {
         console.log("the error code is", err.response.status);
-        alert(err.response.data.message);
+
+        var err_msg = document.getElementById("err_msg");
+        err_msg.innerHTML = err.response.data.message;
+        /*alert(err.response.data.message);
         if (err.response.status === 404) {
           setTimeout(() => {
             window.location = "http://localhost:3000/Login#/";
-          }, 1000);
-        }
+          }, 5000);
+        }*/
       });
 
     console.log(values);
@@ -65,6 +68,7 @@ function SignInForm() {
   useEffect(afterGoogleSignIn, []);
   return (
     <div className={logstyle.formCenter}>
+      <div id="err_msg"></div>  {/*this element displays the responses returned by the server incase of an error*/}
       <form className={logstyle.formFields} onSubmit={() => onSubmitSignIn()}>
         <div className={logstyle.formField}>
           <label className={logstyle.formFieldLabel} htmlFor="email">
