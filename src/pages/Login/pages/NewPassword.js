@@ -40,7 +40,7 @@ function NewPassword() {
         <form className={logstyle.formFields} onSubmit={() => onPassword()}>
       <div className={logstyle.NPOut}>
       <div className={logstyle.NPCenter}>
-      <div id="alert_msg" className={logstyle.formFieldLabel}></div> {/*this div element needs to be properly positioned*/}
+      <div id="alert_msg" className={logstyle.formFieldLabel}></div> {/*div element needs to be properly positioned*/}
         <h2>Enter New Password</h2>
         <form className={logstyle.formFields}>
         <div className={logstyle.formField}>
@@ -84,7 +84,6 @@ function NewPassword() {
     </div>
     </form>
     </div>
-      </div>
     );
 }
 export default NewPassword;

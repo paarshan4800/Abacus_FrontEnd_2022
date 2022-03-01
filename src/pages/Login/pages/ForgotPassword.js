@@ -35,15 +35,12 @@ function ForgotPassword() {
     return (
       
       <div className={logstyle.formCenter}>
-        <h1>Forgot your Password?</h1>
-        <h3>No worries! Enter your e-mail and we will send you a reset. This may take a few seconds</h3>
-        <div id="msg"></div> {/*this element displays the responses returned by the server*/}
         <form className={logstyle.formFields} onSubmit={() => onforgetPassword()}>
       <div className={logstyle.FPOut}>
       <div className={logstyle.FPCenter}>
         <h1 className={logstyle.h11}>Forgot your Password?</h1>
         <h3 className={logstyle.h33}>No worries! Enter your e-mail and we will send you a reset. This may take a few seconds</h3>
-        <div id="msg"></div> {/*the same div is repeated here. remove from either place if necessary*/}
+        <div id="msg"></div> {/*div element prints the server's responses*/}
         <form className={logstyle.formFields}>
           <div className={logstyle.formField}>
             <label className={logstyle.formFieldLabel} htmlFor="email">
