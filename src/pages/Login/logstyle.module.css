@@ -6,6 +6,9 @@
     height: 100vh;
     display: flex;
     color: white;
+    background-image: url("./pages/assets/images/pink.jpeg  ");
+    background-repeat: no-repeat;
+    background-size: cover  ;
   }
   
   .appAside {
@@ -76,9 +79,25 @@
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }
-  
+
   .formCenter {
     margin-bottom: 100px;
+  }
+  div::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: black;
+  }
+  
+  div::-webkit-scrollbar {
+    width: 0.5vw;
+    background-color:black;
+  }
+  
+  div::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #ff1571;
   }
   .FPOut{
     height: 60vh;
@@ -177,32 +196,22 @@
     color: white;
   }
   .formFieldInput {
-    width: 60%;
-    background-color: transparent;
-    border: none;
-    color: white;
+    width: 60%; 
+    color: black;
     outline: none;
-    border-bottom: 1px solid #445366;
-    font-size: 1em;
-    font-weight: 300;
-    padding-bottom: 10px;
-    margin-top: 10px;
-  }
-  .formFieldInputNp {
-    width: 100%;
+    /*border-bottom: 1px solid #445366;
     background-color: transparent;
-    border: none;
-    color: white;
-    outline: none;
-    border-bottom: 1px solid #445366;
+    border: none;*/
     font-size: 1em;
-    font-weight: 300;
-    padding-bottom: 10px;
-    margin-top: 10px;
+    font-weight: 400;
+    font-family: Roboto;
+    padding: 1vh;
+    text-align: center;
   }
   
   .formFieldInput::placeholder {
-    color: #616e7f;
+    text-align: center;
+    font-family: Roboto;
   }
   
   .formFieldButton {
@@ -261,7 +270,7 @@
   .drop {
     width: 60%;
     color: #35858b;
-    padding-top: 1vh;
+    padding: 0.2vh;
     justify-content: center;
     display: block;
     margin: 0 auto;

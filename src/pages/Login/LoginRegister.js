@@ -20,26 +20,26 @@ function LoginRegister() {
                 <div className={logstyle.glow}>Welcome!</div>
               </div>
             </Typography>
+            <div className={logstyle.styleButton}>
+                <NavLink
+                 to="/sign-in"
+                 activeclassName={logstyle.pageSwitcherItemActive}
+                >
+                <GlassButton title="Sign In" />
+                </NavLink>
+                <NavLink
+                exact
+                to="/"
+                activeclassName={logstyle.pageSwitcherItemActive}
+                >
+                <GlassButton title="Sign Up" />
+                </NavLink>
+
+                </div>
           </center>
         </div>
 
         <div className={logstyle.appForm}>
-          <div className={logstyle.styleButton}>
-            <NavLink
-              to="/sign-in"
-              activeclassName={logstyle.pageSwitcherItemActive}
-            >
-              <GlassButton title="Sign In" />
-            </NavLink>
-            <NavLink
-              exact
-              to="/"
-              activeclassName={logstyle.pageSwitcherItemActive}
-            >
-              <GlassButton title="Sign Up" />
-            </NavLink>
-
-          </div>
           <Route path="/NewPassword" component={NewPassword} />
           <Route exact path="/" component={SignUp} />
           <Route path="/sign-in" component={SignInForm} />

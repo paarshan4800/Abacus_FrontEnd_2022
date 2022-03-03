@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Typography } from "@material-ui/core";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton";
+import fpic from "./assets/images/forgot.png";
 function ForgotPassword() {
     return (
       <div className={logstyle.FPOut}>
