@@ -5,24 +5,22 @@ import { useParams, useHistory } from "react-router-dom";
 import { TechEvents } from "../../data/TechEventsData";
 import { NonTechEvents } from "../../data/NonTechEventsData";
 import background from "../../images/bg2.jpeg";
-
+import {addToCart} from "../../api/auth";
 function EventDetails() {
-
   const { type, title } = useParams();
 
   let Hash;
 
   if (type === "tech-events") {
-      Hash = TechEvents
-  }
-  else if (type === "non-tech-events") {
-      Hash = NonTechEvents
+    Hash = TechEvents;
+  } else if (type === "non-tech-events") {
+    Hash = NonTechEvents;
   }
 
-  const data = Hash[title]
-  const history = useHistory()
+  const data = Hash[title];
+  const history = useHistory();
   if (!data) {
-      history.push("/404")
+    history.push("/404");
   }
 
   return (
@@ -54,12 +52,14 @@ function EventDetails() {
           <div className={styles.content}>
             <h2 className={styles.neon}>{data.name}</h2>
             <p>
-              {data.about}<br/><br/>
+              {data.about}
+              <br />
+              <br />
               <b>CONTACT:</b> Kanika K - 8300295535 <br></br>
               <b>DATE:</b> 25-03-2021 and 26-03-2021<br></br>
-              {/* <div className={NavbarBigStyles.buttons}>
-                <GlassButton title="REGISTER" />
-                </div> */}
+              <div onClick={() => {console.log(addToCart())}}>
+                <GlassButton title="Add to cart" />
+              </div>
             </p>
             {/* <a href="#">Read More</a> */}
           </div>

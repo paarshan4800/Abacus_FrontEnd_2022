@@ -11,6 +11,7 @@ function SignInForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
+  console.log("token from cookie is ", localStorage.getItem("apiToken"));
   /*
    const clickGoogleIcon = () => {
     window.location = `${baseURL}${url_gAuth}`
@@ -30,6 +31,7 @@ function SignInForm() {
         if (response.status === 200) {
           console.log("Token ==", response.data.token);
           alert(" token has been generated, check console");
+          localStorage.setItem("apiToken", response.data.token);
         }
       })
       .catch((err) => {
@@ -61,6 +63,7 @@ function SignInForm() {
     }
     if (searchparams.has("token")) {
       setToken(searchparams.get("token"));
+      localStorage.setItem("apiToken", searchparams.get("token"));
       console.log("token is ", searchparams.get("token"));
     }
   };
