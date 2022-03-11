@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 // import { AuthApi } from "./App";
 
 // import Cookies from "js-cookie";
-import Homepage from "./pages/Homepage/Homepage"
+import Homepage from "./pages/Homepage/Homepage";
 import EventsHome from "./pages/Events/EventsHome";
 import WorkshopsList from "./pages/Workshops/WorkshopsList";
 import EventDetails from "./pages/Events/EventDetails";
@@ -25,7 +25,6 @@ import { Aboutus } from "./components";
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
-
 const AppRoutes = () => {
   //   const Auth = React.useContext(AuthApi);
 
@@ -39,12 +38,16 @@ const AppRoutes = () => {
           <Redirect to="/homepage" />
         )}
       </Route> */}
-       <Route path="/" exact component={Homepage} />
-      <Route path="/about-us" exact component={Aboutus} /> 
+      <Route path="/" exact component={Homepage} />
+      <Route path="/about-us" exact component={Aboutus} />
       <Route path="/events" exact component={EventsHome} />
       <Route path="/events/hackathon" exact component={Hackathon} />
       <Route path="/events/tech-events" exact component={TechEventsList} />
-      <Route path="/events/non-tech-events" exact component={NonTechEventsList} />
+      <Route
+        path="/events/non-tech-events"
+        exact
+        component={NonTechEventsList}
+      />
       <Route path="/events/:type/:title" exact component={EventDetails} />
       <Route path="/workshops" exact component={WorkshopsList} />
       <Route path="/workshops/:title" exact component={WorkshopDetails} />
@@ -52,14 +55,13 @@ const AppRoutes = () => {
       <Route path="/cart" exact component={Cart} />
       <Route path="/404" exact component={PageNotFound} />
       <Route path="/Login" exact component={LoginRegister} />
-      
+
       {/*
       <Route path="/Login" exact component={LoginRegister} />
       <Route path="/reset-password" exact component={ResetPassword} />
       <Route path="/forgot-password" exact component={ForgotPassword} />
       <Route path="/login-register" exact component={LoginRegister} />
       <Route path="/google-form-data" exact component={GoogleFormData} />  */}
-
 
       {/* <ProtectedRoute
         path="/dashboard"

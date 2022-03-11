@@ -6,15 +6,16 @@ import { useParams, useHistory } from "react-router-dom";
 import Link from "react";
 import reactDom from "react-dom";
 import { Workshops } from "../../data/WorkshopsData";
+import PageNotFound from "../PageNotFound/PageNotFound";
 
 function WorkshopDetails() {
-
   const { title } = useParams();
 
-  const data = Workshops[title]
-  const history = useHistory()
+  const data = Workshops[title];
+  const history = useHistory();
   if (!data) {
-      history.push("/404")
+    //history.push("/404")
+    return <PageNotFound />;
   }
 
   return (
@@ -46,7 +47,9 @@ function WorkshopDetails() {
           <div className={styles.content}>
             <h2 className={styles.neon}>{data.name}</h2>
             <p>
-              {data.about}<br/><br/>
+              {data.about}
+              <br />
+              <br />
               <b>CONTACT:</b> Kanika K - 8300295535 <br></br>
               <b>DATE:</b> 25-03-2021 and 26-03-2021<br></br>
               {/* <div className={NavbarBigStyles.buttons}>
