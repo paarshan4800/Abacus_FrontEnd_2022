@@ -68,7 +68,7 @@ function App() {
                       <div className="gradient-bg-services">
                         <Navbar />
                       </div>
-                      <div className="">
+                      <div className="" style={{backgroundColor: "black"}}>
                         <AppRoutes />
                       </div>
                       {/* <div className="gradient-bg-welcome">

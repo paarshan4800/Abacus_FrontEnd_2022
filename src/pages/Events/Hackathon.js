@@ -1,5 +1,4 @@
 import React from "react";
-import background from "./../../images/bg1.jpg";
 import styles from "./../Events/EventDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { Hackathon as HackathonData} from "../../data/HackathonData";
@@ -11,10 +10,10 @@ function Hackathon() {
   return (
     <div
       style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        height: "100vh",
-        color: "#f5f5f5",
+        // backgroundImage: `url(${background})`,
+        // backgroundSize: "cover",
+        // height: "100vh",
+        // color: "#f5f5f5",
       }}
     >
       <div className={styles.container}>

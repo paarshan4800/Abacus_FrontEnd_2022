@@ -4,7 +4,6 @@ import GlassButton from "../../components/GlassButton/GlassButton";
 import { useParams, useHistory } from "react-router-dom";
 import { TechEvents } from "../../data/TechEventsData";
 import { NonTechEvents } from "../../data/NonTechEventsData";
-import background from "../../images/bg2.jpeg";
 import PageNotFound from "../PageNotFound/PageNotFound";
 
 function EventDetails() {
@@ -81,8 +80,10 @@ function EventDetails() {
             <p>{data.rules}</p>
 
             <div className="datetime">
+              <h2 className={styles.neon}>DATE & TIME</h2>
               <p>{data.dateTime}</p>
 
+              <h2 className={styles.neon}>CONTACT</h2>
               {/* {data.contact.map((person, index) => (
                 <p key={index + 1} className={styles.glowCardName}>
                   {person.name} - <i class="fa fa-phone"></i>{" "}
