@@ -22,7 +22,8 @@ function LoginRegister() {
             </Typography>
             <div className={logstyle.styleButton}>
                 <NavLink
-                 to="/sign-in"
+                exact
+                 to="/"
                  activeclassName={logstyle.pageSwitcherItemActive}
                 >
                 <GlassButton title="Sign In" />
@@ -42,7 +43,7 @@ function LoginRegister() {
           <Switch>
           <Route path="/NewPassword" component={NewPassword} />
           <Route path="/sign-up" component={SignUp} />
-          <Route path="/sign-in" component={SignInForm} />
+          <Route exact path="/" component={SignInForm} />
           <Route path="/ForgotPassword" component={ForgotPassword} />
           <Route path="/VerifyEmail" component={VerifyEmail} />
           </Switch>

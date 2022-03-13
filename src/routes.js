@@ -16,6 +16,10 @@ import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 import LoginRegister from "./pages/Login/LoginRegister";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import { Aboutus } from "./components";
+import SignInForm from "./pages/Login/pages/SignInForm";
+import SignUp from "./pages/Login/pages/SignUp";
+import ForgotPassword from "./pages/Login/pages/ForgotPassword";
+import NewPassword from "./pages/Login/pages/NewPassword";
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
 // import Navbar from "./components/Navbar/Navbar";
 // import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
@@ -54,7 +58,11 @@ const AppRoutes = () => {
       <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/cart" exact component={Cart} />
       <Route path="/404" exact component={PageNotFound} />
-      <Route path="/Login" exact component={LoginRegister} />
+      <Route path="/Login" exact component={SignInForm} />
+      <Route path="/signUp" exact component={SignUp} />
+      <Route path="/ForgotPassword" exact component={ForgotPassword} />
+      <Route path="/NewPassword" exact component={NewPassword} />
+      {/* <Route path="/Login" exact component={LoginRegister} /> */}
 
       {/*
       <Route path="/Login" exact component={LoginRegister} />
