@@ -65,7 +65,8 @@ function SignInForm() {
   };
   useEffect(afterGoogleSignIn, []);
   return (
-    <div className={logstyle.formCenter}>
+    <div  className={logstyle.SIOut}>
+    <div className={logstyle.SICenter}>
       <form className={logstyle.formFields} onSubmit={() => onSubmitSignIn()}>
         <div className={logstyle.formField}>
           <label className={logstyle.formFieldLabel} htmlFor="email">
@@ -118,6 +119,7 @@ function SignInForm() {
             className={logstyle.styleButton}
             onClick={() => onSubmitSignIn()}
           >
+            
             <GlassButton title="Sign In" />
             <NavLink to="/ForgotPassword">
               <GlassButton title="Forgot Password?" />
@@ -135,6 +137,7 @@ function SignInForm() {
           </NavLink>
         </div>
       </form>
+    </div>
     </div>
   );
 }
