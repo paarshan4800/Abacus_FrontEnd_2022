@@ -13,6 +13,13 @@ body {
   /* background: #1d061a; */
 }
 
+.datetime {
+  display: flex;
+  background-color: #03a9f4;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -20,9 +27,10 @@ body {
   flex-wrap: wrap;
   padding: 40px 0;
 }
+
 .container .box {
   position: relative;
-  width: 400px;
+  width: 80%; /*400px;*/
   height: 500px;
   display: flex;
   justify-content: center;
@@ -68,12 +76,13 @@ body {
 
 .container .box:nth-child(1):before,
 .container .box:nth-child(1):after {
-  background: linear-gradient(315deg, #03a9f4, #da0037);
+  background: linear-gradient(315deg, #f2c92a, #04b962 );
 }
 
 .container .box:nth-child(2):before,
 .container .box:nth-child(2):after {
-  background: linear-gradient(315deg, #03a9f4, #da0037);
+  background: linear-gradient(315deg, #f2c92a, #03fe86 );
+
 }
 
 .container .box:nth-child(3):before,

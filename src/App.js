@@ -68,12 +68,12 @@ function App() {
                       <div className="gradient-bg-services">
                         <Navbar />
                       </div>
-                      <div className="gradient-bg-services">
+                      <div className="">
                         <AppRoutes />
                       </div>
-                      <div className="gradient-bg-welcome">
+                      {/* <div className="gradient-bg-welcome">
                         <Footer />
-                      </div>
+                      </div> */}
                     </BrowserRouter>
                   </SetNewLoadWorkshop.Provider>
                 </NewLoadWorkshop.Provider>
