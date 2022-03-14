@@ -13,6 +13,44 @@ import usericon from "../../images/usericonimg.jpg";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
+  let workshopsList = [
+    {
+      id: 1,
+      refName: "cloud-computing",
+      name: "Cloud Computing",
+      img: tech,
+    },
+    {
+      id: 2,
+      refName: "entrepreneurship",
+      name: "Entrepreneurship",
+      img: tech,
+    },
+    {
+      id: 3,
+      refName: "job-readiness",
+      name: "Job Readiness",
+      img: tech,
+    },
+    {
+      id: 4,
+      refName: "tenet",
+      name: "Asdfgh",
+      img: tech,
+    },
+    {
+      id: 5,
+      refName: "tenet",
+      name: "qwerty",
+      img: tech,
+    },
+    {
+      id: 6,
+      refName: "tenet",
+      name: "zxcvb",
+      img: tech,
+    },
+  ];
 
   return (
     <div>
@@ -48,14 +86,36 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-
       <div className={styles.wrapper}>
         {isLoading && <Loading />}
 
         {!isLoading && (
-          <>
-            <div className={styles.message}>hehehe</div>
-          </>
+          <div className={styles.wrapper}>
+            {workshopsList.map((event) => (
+              <Link to={`/workshops/${event.refName}`}>
+                {/* <div
+                    // className={cx(styles.maindiv, styles.maindiv1)}
+
+                  >
+                    <div className={styles.title}>{event.name}</div>
+                  </div>  */}
+                <div
+                  key={event.id}
+                  style={{ backgroundColor: "red", width: 1000 }}
+                >
+                  <img
+                    src={event.img}
+                    alt="1"
+                    style={{
+                      
+                      width: 200,
+                      height: 200,
+                    }}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
         )}
       </div>
     </div>
