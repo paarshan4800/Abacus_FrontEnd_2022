@@ -1,368 +1,382 @@
 :root {
-    --from: rgb(175, 46, 192);
-    --to: rgb(133, 34, 146);
+  --from: rgb(175, 46, 192);
+  --to: rgb(133, 34, 146);
+}
+.App {
+  height: 100vh;
+  display: flex;
+  color: white;
+  /* background-image: url("./pages/assets/images/pink.jpeg  "); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.appAside {
+  width: 100%;
+  /* background-color: #35858b; */
+  background-image: url("./pages/assets/images/imgbg.jpeg");
+  /*background-image: linear-gradient(black,rgb(58, 7, 58),black);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  div.appAside {
+    display: none;
   }
-  .App {
-    height: 100vh;
-    display: flex;
-    color: white;
-    background-image: url("./pages/assets/images/pink.jpeg  ");
-    background-repeat: no-repeat;
-    background-size: cover  ;
-  }
-  
-  .appAside {
-    width: 45%;
-    /* background-color: #35858b; */
-    /* background-image: url("./pages/assets/images/img_bg3.jpg"); */
-    /*background-image: linear-gradient(black,rgb(58, 7, 58),black);*/
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  @media screen and (max-width: 600px) {
-    div.appAside {
-      display: none;
-    }
-  }
-  
-  .appForm {
-    width: 55%;
-    /*background-image: url(./pages/assets/images/blue.jpeg);*/
-    /* background: linear-gradient(to top right, #000000 2%, #4b0125 100%); */
-    padding: 25px 40px;
-    overflow: auto;
-    text-align: center;
-    /* -webkit-box-shadow: 0 0 20px #cccfcf;
+}
+
+.appForm {
+  width: 100%;
+  /*background-image: url(./pages/assets/images/blue.jpeg);*/
+  /* background: linear-gradient(to top right, #000000 2%, #4b0125 100%); */
+  padding: 25px 40px;
+  overflow: auto;
+  text-align: center;
+  /* -webkit-box-shadow: 0 0 20px #cccfcf;
     -moz-box-shadow: 0 0 20px #6fddda;
     box-shadow: 0 0 20px #6fddda; */
-  }
-  
-  @media screen and (max-width: 600px) {
-    div.appForm {
-      width: 100%;
-    }
-  }
-  
-  .pageSwitcher {
-    margin-bottom: 10%;
-    margin-top: 10%;
-  }
-  .pageSwitcherItem {
-    background-color: #40434e;
-    color: #9da6b1;
-    padding: 2.5vh 7vw;
-    cursor: pointer;
-    font-size: 0.9em;
-    border: none;
-    outline: none;
-    display: inline-block;
-    text-decoration: none;
-  }
-  .pageSwitcherItem:hover {
-    color: white;
-    box-shadow: 0 12px 16px 0 #4fbdba3d, 0 17px 50px 0 #4fbdba30;
-  }
-  .pageSwitcherItemActive {
-    background-color: #4fbdba;
-    color: white;
-  }
-  
-  .pageSwitcherItem:first-child {
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-  }
-  .pageSwitcherItem:last-child {
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-  }
+}
 
-  .formCenter {
-    margin-bottom: 100px;
-  }
-  div::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: black;
-  }
-  
-  div::-webkit-scrollbar {
-    width: 0.5vw;
-    background-color:black;
-  }
-  
-  div::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #ff1571;
-  }
-  .FPOut{
-    height: 60vh;
-    position: relative;
-    border: 3px solid #ff1571; 
-  }
-  @media screen and (max-width: 600px) {
-    div.FPOut{
-      height: 90%;
-    }
-  }
-  .FPCenter{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  .NPOut{
-    height: 60vh;
-    position: relative;
-    border: 3px solid #ff1571; 
-  }
-  @media screen and (max-width: 600px) {
-    div.NPOut{
-      height: 90%;
-    }
-  }
-  .NPCenter{
-    margin: 0;
-    position: absolute;
-     top: 50%;
-     left: 50%;
-     -ms-transform: translate(-50%, -50%);
-     transform: translate(-50%, -50%);
-  }
 @media screen and (max-width: 600px) {
-    h1.h11{
-      font-size: 30px;
-    }
+  div.appForm {
+    width: 100%;
   }
-  @media screen and (max-width: 600px) {
-    h3.h33{
-      font-size: 20px;
-    }
+}
+
+.pageSwitcher {
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+.pageSwitcherItem {
+  background-color: #40434e;
+  color: #9da6b1;
+  padding: 2.5vh 7vw;
+  cursor: pointer;
+  font-size: 0.9em;
+  border: none;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+}
+.pageSwitcherItem:hover {
+  color: white;
+  box-shadow: 0 12px 16px 0 #4fbdba3d, 0 17px 50px 0 #4fbdba30;
+}
+.pageSwitcherItemActive {
+  background-color: #4fbdba;
+  color: white;
+}
+
+.pageSwitcherItem:first-child {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.pageSwitcherItem:last-child {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.formCenter {
+  /* margin-bottom: 100px; */
+}
+div::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: black;
+}
+
+div::-webkit-scrollbar {
+  width: 0.5vw;
+  background-color: black;
+}
+
+div::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #ff1571;
+}
+@media all and (max-width: 700px) {
+  div {
+    overflow-y: hidden;
   }
-  .formTitle {
-    color: #707c8b;
-    font-weight: 300;
-    margin-bottom: 50px;
+}
+@media all and (max-width: 700px) {
+  div {
+    overflow-x: hidden;
   }
-  
-  .formTitleLink {
-    color: #707c8b;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.7em;
-    margin: 0 10px;
-    padding-bottom: 5px;
+}
+.FPOut {
+  height: 60vh;
+  position: relative;
+  border: 3px solid #ff1571;
+}
+@media screen and (max-width: 600px) {
+  div.FPOut {
+    height: 90%;
   }
-  
-  .formTitleLink:first-child {
-    margin-left: 0;
+}
+.FPCenter {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.SIOut {
+  height: 100vh;
+}
+@media screen and (max-width: 600px) {
+  div.SIOut {
+    height: 90%;
   }
-  
-  .formTitleLinkActive {
-    color: white;
-    border-bottom: 1px solid #35858b;
+}
+.SICenter {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-top: 3vh;
+}
+
+.NPOut {
+  height: 60vh;
+  position: relative;
+  border: 3px solid #ff1571;
+}
+@media screen and (max-width: 600px) {
+  div.NPOut {
+    height: 90%;
   }
-  
-  .formField {
-    margin-bottom: 40px;
+}
+.NPCenter {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 600px) {
+  h1.h11 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  h3.h33 {
+    font-size: 20px;
+  }
+}
+.formTitle {
+  color: #707c8b;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.formTitleLink {
+  color: #707c8b;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.7em;
+  margin: 0 10px;
+  padding-bottom: 5px;
+}
+
+.formTitleLink:first-child {
+  margin-left: 0;
+}
+
+.formTitleLinkActive {
+  color: white;
+  border-bottom: 1px solid #35858b;
+}
+
+.formField {
+  margin-bottom: 40px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .formFieldButton {
     text-align: center;
-    align-items: center;
-    justify-content: center;
   }
-  
-  @media screen and (max-width: 600px) {
-    .formFieldButton {
-      text-align: center;
-    }
-  }
-  
-  .styleButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 3vh;
-    margin-top: 7vh;
-  }
-  
-  .formFieldLabel {
-    display: block;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    color: white;
-  }
-  .formFieldInput {
-    width: 60%; 
-    color: black;
-    outline: none;
-    /*border-bottom: 1px solid #445366;
+}
+
+.styleButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vh;
+  margin-top: 7vh;
+}
+
+.formFieldLabel {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: white;
+}
+.formFieldInput {
+  width: 60%;
+  color: black;
+  outline: none;
+  /*border-bottom: 1px solid #445366;
     background-color: transparent;
     border: none;*/
-    font-size: 1em;
-    font-weight: 400;
-    font-family: Roboto;
-    padding: 1vh;
-    text-align: center;
-  }
-  
-  .formFieldInput::placeholder {
-    text-align: center;
-    font-family: Roboto;
-  }
-  
+  font-size: 1em;
+  font-weight: 400;
+  font-family: Roboto;
+  padding: 1vh;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.formFieldInput::placeholder {
+  text-align: center;
+  font-family: Roboto;
+}
+
+.formFieldButton {
+  background-color: #4fbdba;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 15px 70px;
+  margin-bottom: 2vh;
+  margin-left: 2vh;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+@media screen and (max-width: 600px) {
   .formFieldButton {
-    background-color: #4fbdba;
-    color: white;
-    border: none;
-    outline: none;
-    border-radius: 25px;
-    padding: 15px 70px;
-    margin-bottom: 2vh;
-    margin-left: 2vh;
-    font-size: 0.8em;
-    font-weight: 500;
-  }
-  @media screen and (max-width: 600px) {
-    .formFieldButton {
-      margin: 0 auto;
-      display: block;
-      margin-bottom: 5vh;
-    }
-  }
-  .formFieldButtonDirected {
-    background-color: #4fbdba;
-    color: white;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    border-radius: 25px;
-    padding: 15px 70px;
-    margin-bottom: 2vh;
-    margin-left: 2vh;
-    font-size: 0.8em;
-    font-weight: 500;
-  }
-  .formFieldButton:hover {
-    box-shadow: 0 12px 16px 0 #4fbdba3d, 0 17px 50px 0 #4fbdba30;
-  }
-  
-  .formFieldLink {
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    border-bottom: 1.5px solid #35858b;
-    padding-bottom: 5px;
-  }
-  
-  .formFieldTermsLink {
-    color: white;
-    border-bottom: 1px solid #35858b;
-    text-decoration: none;
-    display: inline-block;
-    padding-bottom: 2px;
-    margin-left: 5px;
-  }
-  
-  .drop {
-    width: 60%;
-    color: #35858b;
-    padding: 0.2vh;
-    justify-content: center;
-    display: block;
     margin: 0 auto;
+    display: block;
+    margin-bottom: 5vh;
   }
-  
-  .typed-out {
-    font-size: 10vh;
-    color: papayawhip;
-    overflow: hidden;
-    border-right: 0.15em solid orange;
-    white-space: nowrap;
-    font-size: 1.6rem;
+}
+.formFieldButtonDirected {
+  background-color: #4fbdba;
+  color: white;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  padding: 15px 70px;
+  margin-bottom: 2vh;
+  margin-left: 2vh;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+.formFieldButton:hover {
+  box-shadow: 0 12px 16px 0 #4fbdba3d, 0 17px 50px 0 #4fbdba30;
+}
+
+.formFieldLink {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1.5px solid #35858b;
+  padding-bottom: 5px;
+}
+
+.formFieldTermsLink {
+  color: white;
+  border-bottom: 1px solid #35858b;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+  margin-left: 5px;
+}
+
+.drop {
+  width: 60%;
+  color: #35858b;
+  padding: 0.2vh;
+  justify-content: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.typed-out {
+  font-size: 10vh;
+  color: papayawhip;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  width: 0;
+  animation: typing 10s steps(20, end) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from {
     width: 0;
-    animation: typing 10s steps(20, end) forwards, blink 0.8s infinite;
   }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  .glow {
-    font-size: 80px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    -webkit-animation: glow 2s ease-in-out infinite alternate;
-    -moz-animation: glow 2s ease-in-out infinite alternate;
-    animation: glow 2s ease-in-out infinite alternate;
-  }
- 
-  @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px var(--from), 0 0 20px var(--from),
-        0 0 30px var(--from), 0 0 40px var(--from);
-    }
-    to {
-      text-shadow: 0 0 20px var(--to), 0 0 30px var(--to), 0 0 40px var(--to),
-        0 0 50px var(--to);
-    }
-  }
-  
-  .typingDemo {
+  to {
     width: 100%;
-    animation: typing 1.8s steps(8), blink 0.5s step-end infinite;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-family: Roboto;
-    font-size: 5em;
-    color: white;
   }
-  
-  @media only screen and (max-width: 900px) {
-    .typingDemo {
-      font-size: 3em;
-    }
+}
+.glow {
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--from), 0 0 20px var(--from),
+      0 0 30px var(--from), 0 0 40px var(--from);
   }
-  @media only screen and (max-width: 600px) {
-    .typingDemo {
-      font-size: 1.8em;
-    }
+  to {
+    text-shadow: 0 0 20px var(--to), 0 0 30px var(--to), 0 0 40px var(--to),
+      0 0 50px var(--to);
   }
-  @keyframes typing {
-    from {
-      width: 0;
-    }
+}
+
+.typingDemo {
+  width: 100%;
+  animation: typing 1.8s steps(8), blink 0.5s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: Roboto;
+  font-size: 5em;
+  color: white;
+}
+
+@media only screen and (max-width: 900px) {
+  .typingDemo {
+    font-size: 3em;
   }
-  
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
+}
+@media only screen and (max-width: 600px) {
+  .typingDemo {
+    font-size: 1.8em;
   }
-  /*SCROLL*/
-  /* width */
-  ::-webkit-scrollbar {
-    width: 0.2vw;
-    height: fit-content;
+}
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  
-  /* Handle */
-  /* ::-webkit-scrollbar-thumb {
-    background: #ffffff;
-    border-radius: 0.5vw;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
-  
-  /* Handle on hover */
-  /* ::-webkit-scrollbar-thumb:hover {
-    background: #ffffff;
-  } */
-  
+}
+
+::-webkit-scrollbar {
+  width: 0.2vw;
+  height: fit-content;
+}

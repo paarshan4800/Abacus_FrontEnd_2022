@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { HashRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect, NavLink } from "react-router-dom";
 import SignUp from "./pages/SignUp";
 import SignInForm from "./pages/SignInForm";
 import { Typography } from "@material-ui/core";
@@ -10,9 +10,9 @@ import GlassButton from "../../components/GlassButton/GlassButton";
 import VerifyEmail from "./pages/VerifyEmail";
 function LoginRegister() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className={logstyle.App}>
-        {/*<div className={logstyle.appAside} ><center><div className={logstyle.typed-out}>Welcome!</div></center></div>*/}
+        
         <div className={logstyle.appAside}>
           <center>
             <Typography>
@@ -22,14 +22,14 @@ function LoginRegister() {
             </Typography>
             <div className={logstyle.styleButton}>
                 <NavLink
-                 to="/sign-in"
+                exact
+                 to="/"
                  activeclassName={logstyle.pageSwitcherItemActive}
                 >
                 <GlassButton title="Sign In" />
                 </NavLink>
                 <NavLink
-                exact
-                to="/"
+                to="/sign-up"
                 activeclassName={logstyle.pageSwitcherItemActive}
                 >
                 <GlassButton title="Sign Up" />
@@ -40,14 +40,16 @@ function LoginRegister() {
         </div>
 
         <div className={logstyle.appForm}>
+          <Switch>
           <Route path="/NewPassword" component={NewPassword} />
-          <Route exact path="/" component={SignUp} />
-          <Route path="/sign-in" component={SignInForm} />
+          <Route path="/sign-up" component={SignUp} />
+          <Route exact path="/" component={SignInForm} />
           <Route path="/ForgotPassword" component={ForgotPassword} />
           <Route path="/VerifyEmail" component={VerifyEmail} />
+          </Switch>
         </div>
-      </div>
-    </Router>
+        </div>
+    </BrowserRouter>
   );
 }
 

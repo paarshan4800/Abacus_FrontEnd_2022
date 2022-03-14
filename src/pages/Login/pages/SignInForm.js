@@ -1,5 +1,6 @@
 import React, { useState, Component, useEffect } from "react";
-import { HashRouter as Router, Route, NavLink } from "react-router-dom";
+// import { HashRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect, NavLink } from "react-router-dom";
 import ForgotPassword from "./ForgotPassword";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton.js";
@@ -65,8 +66,49 @@ function SignInForm() {
   };
   useEffect(afterGoogleSignIn, []);
   return (
-    <div className={logstyle.formCenter}>
+    <div className={logstyle.App}>
+    <div className={logstyle.appAside}>
+          {/* <center>
+            <Typography>
+              <div className={logstyle.typingDemo} width="40%">
+                <div className={logstyle.glow}>Welcome!</div>
+              </div>
+            </Typography>
+            <div className={logstyle.styleButton}>
+                <NavLink
+                exact
+                 to="/"
+                 activeclassName={logstyle.pageSwitcherItemActive}
+                >
+                <GlassButton title="Sign In" />
+                </NavLink>
+                <NavLink
+                to="/sign-up"
+                activeclassName={logstyle.pageSwitcherItemActive}
+                >
+                <GlassButton title="Sign Up" />
+                </NavLink>
+
+                </div>
+          </center> */}
+    </div>
+
+    <div className={logstyle.appForm}>
+    <div  className={logstyle.SIOut}>
+    <div className={logstyle.SICenter}>
+      <div className={logstyle.styleButton}>
+          <GoogleButton
+            className="google-button"
+            onClick={() => {
+              console.log("Google button clicked");
+              googleSignIn();
+              //onGoogleSignIn();
+            }}
+            type="dark"
+          />
+        </div>
       <form className={logstyle.formFields} onSubmit={() => onSubmitSignIn()}>
+        
         <div className={logstyle.formField}>
           <label className={logstyle.formFieldLabel} htmlFor="email">
             E-Mail Address
@@ -100,17 +142,6 @@ function SignInForm() {
             }}
           />
         </div>
-        <div className={logstyle.styleButton}>
-          <GoogleButton
-            className="google-button"
-            onClick={() => {
-              console.log("Google button clicked");
-              googleSignIn();
-              //onGoogleSignIn();
-            }}
-            type="dark"
-          />
-        </div>
 
         <div className={logstyle.formField}>
           {/*<button className={logstyle.formFieldButton}>Sign In</button>{" "}*/}
@@ -118,10 +149,8 @@ function SignInForm() {
             className={logstyle.styleButton}
             onClick={() => onSubmitSignIn()}
           >
-            <GlassButton title="Sign In" />
-            <NavLink to="/ForgotPassword">
-              <GlassButton title="Forgot Password?" />
-            </NavLink>
+            
+            <GlassButton title="Login" />
             {/*
 
             <NavLink to="/ForgotPassword" className={logstyle.formFieldButtonDirected} >
@@ -130,11 +159,21 @@ function SignInForm() {
           </div>
         </div>
         <div className={logstyle.formField}>
-          <NavLink to="/" className={logstyle.formFieldLink}>
+          <div style={{display: "inline"}}>
+          <NavLink to="/signUp" className={logstyle.formFieldLink}>
             Create an account
           </NavLink>
+          </div>
+          <div style={{display: "inline", marginLeft: "50px"}}>
+          <NavLink to="/ForgotPassword" className={logstyle.formFieldLink}>
+            Forgot Password?
+          </NavLink>
+          </div>
         </div>
       </form>
+    </div>
+    </div>
+    </div>
     </div>
   );
 }

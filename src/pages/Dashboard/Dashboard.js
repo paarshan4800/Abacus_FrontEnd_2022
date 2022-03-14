@@ -14,6 +14,44 @@ import userimg from "../../images/usericonimg.jpg";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
+  let workshopsList = [
+    {
+      id: 1,
+      refName: "cloud-computing",
+      name: "Cloud Computing",
+      img: tech,
+    },
+    {
+      id: 2,
+      refName: "entrepreneurship",
+      name: "Entrepreneurship",
+      img: tech,
+    },
+    {
+      id: 3,
+      refName: "job-readiness",
+      name: "Job Readiness",
+      img: tech,
+    },
+    {
+      id: 4,
+      refName: "tenet",
+      name: "Asdfgh",
+      img: tech,
+    },
+    {
+      id: 5,
+      refName: "tenet",
+      name: "qwerty",
+      img: tech,
+    },
+    {
+      id: 6,
+      refName: "tenet",
+      name: "zxcvb",
+      img: tech,
+    },
+  ];
 
   return (
     <div>
