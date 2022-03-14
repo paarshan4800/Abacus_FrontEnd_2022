@@ -4,7 +4,7 @@ import cx from "classnames";
 import Button from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 //import TechEventsList from "./TechEventsList";
-import background from "./../../images/bg1.jpg";
+
 import tech from "./../../images/tech.jpeg";
 import nontech from "./../../images/nontech.jpeg";
 import hack from "./../../images/hack.jpeg";
@@ -17,13 +17,13 @@ function NonTechEventsList() {
       id: 1,
       refName: "house-full",
       name: "House Full",
-      img: tech,
+      img: nontech,
     },
     {
       id: 2,
       refName: "graphic-traffic",
       name: "Graphic Traffic",
-      img: tech,
+      img: hack,
     },
     {
       id: 3,
@@ -41,13 +41,13 @@ function NonTechEventsList() {
       id: 5,
       refName: "tenet",
       name: "qwerty",
-      img: tech,
+      img: nontech,
     },
     {
       id: 6,
       refName: "tenet",
       name: "zxcvb",
-      img: tech,
+      img: hack,
     },
   ];
 
@@ -62,17 +62,7 @@ function NonTechEventsList() {
     >
       <div className={styles.wrapper}>
         {nonTechEventsList.map((event) =>
-          event.id % 3 == 2 ? (
-            <Link to={`/events/non-tech-events/${event.refName}`}>
-              <div
-                key={event.id}
-                className={cx(styles.maindiv, styles.maindiv2)}
-              >
-                <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
-              </div>
-            </Link>
-          ) : event.id % 3 == 1 ? (
+          event.id % 2 == 0 ? (
             <Link to={`/events/non-tech-events/${event.refName}`}>
               <div
                 key={event.id}

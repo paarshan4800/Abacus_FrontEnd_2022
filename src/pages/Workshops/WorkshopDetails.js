@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import background from "./../../images/bg2.jpeg";
 import styles from "./../Workshops/WorkshopDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { useParams, useHistory } from "react-router-dom";
@@ -20,12 +19,12 @@ function WorkshopDetails() {
 
   return (
     <div
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        height: "100vh",
-        color: "#f5f5f5",
-      }}
+      // style={{
+      //   backgroundImage: `url(${background})`,
+      //   backgroundSize: "cover",
+      //   height: "100vh",
+      //   color: "#f5f5f5",
+      // }}
     >
       <div className={styles.container}>
         <div className={styles.box}>

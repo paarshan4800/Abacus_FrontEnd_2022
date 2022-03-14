@@ -9,6 +9,101 @@ body {
   font-family: "Almarai", sans-serif;
 }
 
+.friendCard {
+	margin: 15px;
+	height: 250px;
+	width: 250px;
+	border: 2px solid gray;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.friendCard__front {
+	display: flex;
+	flex-direction: column;
+}
+
+.friendCard__frontTop {
+	flex: 0.7;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: rgb(255, 196, 70);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: -2px;
+}
+
+.friendCard__frontTop * {
+	margin: 5px;
+}
+
+.friendCard__frontBottom {
+	flex: 0.2;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 15px;
+	background-color: lawngreen;
+	align-items: center;
+}
+
+.friendCard__frontBottom > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.friendCard__frontBottom > div:nth-child(1) {
+	border-right: 2px solid black;
+}
+.friendCard__frontBottom > div:nth-child(2) {
+	padding-right: 5px;
+	border-right: 2px solid black;
+}
+.friendCard__back {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.friendCard__back ul {
+	list-style-type: none;
+}
+.friendCard__back ul li {
+	display: inline-block;
+	min-width: 40px;
+	font-size: large;
+	padding: 10px;
+	padding-left: auto;
+	padding-right: auto;
+	margin: 10px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	min-height: 30px;
+	background-color: lightseagreen;
+	color: white;
+}
+
+.friendCard__backFollow {
+	display: inline-block;
+	align-self: center;
+	padding: 6px;
+	cursor: pointer;
+	margin-bottom: 3px;
+	border-radius: 10px;
+	background-color: rgb(14, 207, 255);
+}
+
+.friendCard__backFollow:hover {
+	transform: scaleY(1.1);
+	box-shadow: 2px 2px rgb(151, 151, 151);
+}
+
+
+
+
 .profileBar {
   display: flex;
   min-height: 40px;

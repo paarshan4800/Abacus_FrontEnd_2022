@@ -4,7 +4,7 @@ import cx from "classnames";
 import Button from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 //import TechEventsList from "./TechEventsList";
-import background from "./../../images/bg1.jpg";
+
 import tech from "./../../images/tech.jpeg";
 import nontech from "./../../images/nontech.jpeg";
 import hack from "./../../images/hack.jpeg";
