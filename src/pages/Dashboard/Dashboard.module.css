@@ -43,6 +43,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  box-shadow: 0 10px 50px #43eb19;
 }
 
 .userinfo {
@@ -110,7 +111,7 @@ body {
   font-size: 1.1em;
   width: 60%;
   height: 90%;
-  background-color: #4b4b4b;
+  background: linear-gradient(135deg, rgba(138,255,0,1) 4%, rgba(203,233,56,1) 68%, rgba(73,201,40,1) 100%);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -127,12 +128,14 @@ body {
 .stats_card .num1 {
   display: flex;
   align-self:center;
+  color: #141414;
   font-size: 5vw;
 }
 
 .stats_card .num2 {
   display: flex;
   align-self:flex-end;
+  color: #ffffff;
   font-size: 2vw;
 }
 
@@ -251,6 +254,16 @@ body {
     align-self:flex-end;
     font-size: 3vw;
   }
+
+  .userinfo .name p {
+    color: #ffffff;
+    font-size: 0.9em;
+  }
+  
+  .userinfo .abacusid p {
+    color: #ffffff;
+    font-size: 0.9em;
+  }
 }
 
 .content {
@@ -338,4 +351,21 @@ body {
 .list_element2 .btn {
   display: flex;
   justify-content: flex-end;
+}
+
+.selector {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }

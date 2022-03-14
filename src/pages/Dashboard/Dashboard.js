@@ -35,7 +35,7 @@ const Dashboard = () => {
         </div>
 
         <div className={styles.userstats}>
-          {1 ? (
+          {0 ? (
             <div className={styles.event_pass}>
               <Link to={`/events`}>
                 <img src={eventpassimg} />
@@ -52,7 +52,7 @@ const Dashboard = () => {
             </div>
           )}
           {/*aaahhhhhh*/}
-          {1 ? (
+          {0 ? (
             <div className={styles.workshop_pass}>
               <Link to={`/workshops`}>
                 <img src={workshoppassimg} />
@@ -76,36 +76,55 @@ const Dashboard = () => {
 
         {!isLoading && (
           <>
-            <div className={styles.list}>
-              <div className={styles.list_element}>
-                <div className={styles.title}>Tenet</div>
-                <div className={styles.btn}><GlassButton title="Register"/></div>
+            <div className={styles.display}>
+              <div className={styles.selector}>
+                <GlassButton title="Events" />
+                <GlassButton title="Workshop" />
               </div>
-              <div className={styles.list_element}>
-                <div className={styles.title}>Tenet</div>
-                <div className={styles.btn}><GlassButton title="Register"/></div>
+              <div className={styles.list}>
+                <div className={styles.list_element}>
+                  <div className={styles.title}>Tenet</div>
+                  <div className={styles.btn}>
+                    <GlassButton title="Register" />
+                  </div>
+                </div>
+                <div className={styles.list_element}>
+                  <div className={styles.title}>Tenet</div>
+                  <div className={styles.btn}>
+                    <GlassButton title="Register" />
+                  </div>
+                </div>
+                <div className={styles.list_element2}>
+                  <div className={styles.title}>Tenet</div>
+                  <div className={styles.btn}>
+                    <GlassButton title="Register" />
+                  </div>
+                </div>
+                <div className={styles.list_element}>
+                  <div className={styles.title}>Tenet</div>
+                  <div className={styles.btn}>
+                    <GlassButton title="Register" />
+                  </div>
+                </div>
+                <div className={styles.list_element2}>
+                  <div className={styles.title}>Tenet</div>
+                  <div className={styles.btn}>
+                    <GlassButton title="Register" />
+                  </div>
+                </div>
+                <div className={styles.list_element2}>
+                  <div className={styles.title}>Tenet</div>
+                  <div className={styles.btn}>
+                    <GlassButton title="Register" />
+                  </div>
+                </div>
+                <div className={styles.list_element}>
+                  <div className={styles.title}>Tenet</div>
+                  <div className={styles.btn}>
+                    <GlassButton title="Register" />
+                  </div>
+                </div>
               </div>
-              <div className={styles.list_element2}>
-                <div className={styles.title}>Tenet</div>
-                <div className={styles.btn}><GlassButton title="Register"/></div>
-              </div>
-              <div className={styles.list_element}>
-                <div className={styles.title}>Tenet</div>
-                <div className={styles.btn}><GlassButton title="Register"/></div>
-              </div>
-              <div className={styles.list_element2}>
-                <div className={styles.title}>Tenet</div>
-                <div className={styles.btn}><GlassButton title="Register"/></div>
-              </div>
-              <div className={styles.list_element2}>
-                <div className={styles.title}>Tenet</div>
-                <div className={styles.btn}><GlassButton title="Register"/></div>
-              </div>
-              <div className={styles.list_element}>
-                <div className={styles.title}>Tenet</div>
-                <div className={styles.btn}><GlassButton title="Register"/></div>
-              </div>
-            
             </div>
           </>
         )}
