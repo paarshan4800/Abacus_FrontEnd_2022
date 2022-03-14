@@ -24,6 +24,7 @@ const Dashboard = () => {
       name: "Tenet",
       img: tech,
       type: "tech-events",
+      registered: true,
     },
     {
       id: 2,
@@ -31,6 +32,7 @@ const Dashboard = () => {
       name: "Code for crown",
       img: nontech,
       type: "tech-events",
+      registered: false,
     },
     {
       id: 3,
@@ -38,6 +40,7 @@ const Dashboard = () => {
       name: "Tenet",
       img: hack,
       type: "tech-events",
+      registered: false,
     },
     {
       id: 4,
@@ -45,6 +48,7 @@ const Dashboard = () => {
       name: "Asdfgh",
       img: nontech,
       type: "tech-events",
+      registered: true,
     },
     {
       id: 5,
@@ -52,6 +56,7 @@ const Dashboard = () => {
       name: "qwerty",
       img: hack,
       type: "tech-events",
+      registered: true,
     },
     {
       id: 6,
@@ -59,6 +64,7 @@ const Dashboard = () => {
       name: "zxcvb",
       img: tech,
       type: "tech-events",
+      registered: false,
     },
     {
       id: 7,
@@ -66,6 +72,7 @@ const Dashboard = () => {
       name: "House Full",
       img: nontech,
       type: "non-tech-events",
+      registered: true,
     },
     {
       id: 8,
@@ -73,6 +80,7 @@ const Dashboard = () => {
       name: "Graphic Traffic",
       img: hack,
       type: "non-tech-events",
+      registered: false,
     },
     {
       id: 9,
@@ -80,6 +88,7 @@ const Dashboard = () => {
       name: "Imagenation",
       img: tech,
       type: "non-tech-events",
+      registered: true,
     },
   ];
 
@@ -103,7 +112,7 @@ const Dashboard = () => {
         </div>
 
         <div className={styles.userstats}>
-          {1 ? (
+          {0 ? (
             <div className={styles.event_pass}>
               <Link to={`/events`}>
                 <img src={eventpassimg} />
@@ -152,18 +161,31 @@ const Dashboard = () => {
               </div>
 
               <div className={styles.list}>
-                {eventList.map((event) => (
-                  <div key={event.id} className={styles.list_element}>
-                    <div className={styles.title}>{event.refName}</div>
-                    <div className={styles.hide}>
-                      <Link to={`/events/${event.type}/${event.refName}`}>
-                        <div className={styles.btn}>
-                          <GlassButton title="Register" />
-                        </div>
-                      </Link>
+                {eventList.map((event) =>
+                  event.registered ? (
+                    <div key={event.id} className={styles.list_element2}>
+                      <div className={styles.title}>{event.refName}</div>
+                      <div className={styles.hide}>
+                        <Link to={`/events/${event.type}/${event.refName}`}>
+                          <div className={styles.btn}>
+                            <GlassButton title="View More" />
+                          </div>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ) : (
+                    <div key={event.id} className={styles.list_element}>
+                      <div className={styles.title}>{event.refName}</div>
+                      <div className={styles.hide}>
+                        <Link to={`/events/${event.type}/${event.refName}`}>
+                          <div className={styles.btn}>
+                            <GlassButton title="Register" />
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </>
