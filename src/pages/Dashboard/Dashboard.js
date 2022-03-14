@@ -4,6 +4,8 @@ import styles from "./Dashboard.module.css";
 import { useState } from "react";
 import cx from "classnames";
 import tech from "./../../images/tech.jpeg";
+import hack from "./../../images/hack.jpeg";
+import nontech from "./../../images/nontech.jpeg";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import GlassButton from "../../components/GlassButton/GlassButton";
@@ -14,6 +16,72 @@ import userimg from "../../images/usericonimg.jpg";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
+
+  let eventList = [
+    {
+      id: 1,
+      refName: "tenet",
+      name: "Tenet",
+      img: tech,
+      type: "tech-events",
+    },
+    {
+      id: 2,
+      refName: "code-for-crown-olpc",
+      name: "Code for crown",
+      img: nontech,
+      type: "tech-events",
+    },
+    {
+      id: 3,
+      refName: "novice-init",
+      name: "Tenet",
+      img: hack,
+      type: "tech-events",
+    },
+    {
+      id: 4,
+      refName: "tenet",
+      name: "Asdfgh",
+      img: nontech,
+      type: "tech-events",
+    },
+    {
+      id: 5,
+      refName: "tenet",
+      name: "qwerty",
+      img: hack,
+      type: "tech-events",
+    },
+    {
+      id: 6,
+      refName: "tenet",
+      name: "zxcvb",
+      img: tech,
+      type: "tech-events",
+    },
+    {
+      id: 7,
+      refName: "house-full",
+      name: "House Full",
+      img: nontech,
+      type: "non-tech-events",
+    },
+    {
+      id: 8,
+      refName: "graphic-traffic",
+      name: "Graphic Traffic",
+      img: hack,
+      type: "non-tech-events",
+    },
+    {
+      id: 9,
+      refName: "imagenation",
+      name: "Imagenation",
+      img: tech,
+      type: "non-tech-events",
+    },
+  ];
 
   return (
     <div>
@@ -35,7 +103,7 @@ const Dashboard = () => {
         </div>
 
         <div className={styles.userstats}>
-          {0 ? (
+          {1 ? (
             <div className={styles.event_pass}>
               <Link to={`/events`}>
                 <img src={eventpassimg} />
@@ -56,6 +124,7 @@ const Dashboard = () => {
             <div className={styles.workshop_pass}>
               <Link to={`/workshops`}>
                 <img src={workshoppassimg} />
+                {/* <img src={eventpassimg} /> */}
               </Link>
             </div>
           ) : (
@@ -81,49 +150,20 @@ const Dashboard = () => {
                 <GlassButton title="Events" />
                 <GlassButton title="Workshop" />
               </div>
+
               <div className={styles.list}>
-                <div className={styles.list_element}>
-                  <div className={styles.title}>Tenet</div>
-                  <div className={styles.btn}>
-                    <GlassButton title="Register" />
+                {eventList.map((event) => (
+                  <div key={event.id} className={styles.list_element}>
+                    <div className={styles.title}>{event.refName}</div>
+                    <div className={styles.hide}>
+                      <Link to={`/events/${event.type}/${event.refName}`}>
+                        <div className={styles.btn}>
+                          <GlassButton title="Register" />
+                        </div>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-                <div className={styles.list_element}>
-                  <div className={styles.title}>Tenet</div>
-                  <div className={styles.btn}>
-                    <GlassButton title="Register" />
-                  </div>
-                </div>
-                <div className={styles.list_element2}>
-                  <div className={styles.title}>Tenet</div>
-                  <div className={styles.btn}>
-                    <GlassButton title="Register" />
-                  </div>
-                </div>
-                <div className={styles.list_element}>
-                  <div className={styles.title}>Tenet</div>
-                  <div className={styles.btn}>
-                    <GlassButton title="Register" />
-                  </div>
-                </div>
-                <div className={styles.list_element2}>
-                  <div className={styles.title}>Tenet</div>
-                  <div className={styles.btn}>
-                    <GlassButton title="Register" />
-                  </div>
-                </div>
-                <div className={styles.list_element2}>
-                  <div className={styles.title}>Tenet</div>
-                  <div className={styles.btn}>
-                    <GlassButton title="Register" />
-                  </div>
-                </div>
-                <div className={styles.list_element}>
-                  <div className={styles.title}>Tenet</div>
-                  <div className={styles.btn}>
-                    <GlassButton title="Register" />
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </>

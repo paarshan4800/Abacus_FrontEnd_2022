@@ -107,6 +107,6 @@
 .container .btn:nth-child(1)::before,
 .container .btn:nth-child(1)::after {
   background: #18af04;
-  box-shadow: 0 0 5px #18af04, 0 0 15px #18af04, 0 0 30px #18af04,
-    0 0 60px #18af04;
+  box-shadow: 0 0 5px #18af04, 0 0 15px #18af04, 0 0 30px #18af04;
+    /* 0 0 60px #18af04; */
 }
