@@ -7,6 +7,7 @@ import { NonTechEvents } from "../../data/NonTechEventsData";
 import background from "../../images/bg2.jpeg";
 import PageNotFound from "../PageNotFound/PageNotFound";
 
+
 function EventDetails() {
   const { type, title } = useParams();
 
@@ -22,6 +23,7 @@ function EventDetails() {
   const history = useHistory();
   if (!data) {
     // history.push("/404")
+    console.log("Hello")
     return <PageNotFound />;
   }
 
@@ -56,6 +58,7 @@ function EventDetails() {
         </div>
       </div>
 
+      {console.log("Haso")}
       <div className={styles.container}>
         <div className={styles.box}>
           <span></span>
@@ -83,12 +86,19 @@ function EventDetails() {
             <div className="datetime">
               <p>{data.dateTime}</p>
 
-              {/* {data.contact.map((person, index) => (
+              {data.contact.map(
+                (person, index) =>{ 
+                  
+                  return(
+
                 <p key={index + 1} className={styles.glowCardName}>
-                  {person.name} - <i class="fa fa-phone"></i>{" "}
+                  {person.name} - <i className="fa fa-phone"></i>{" "}
                   <span style={{ color: "#fff" }}>{person.mobile}</span>
                 </p>
-              ))} */}
+                )
+              })} 
+              
+              
             </div>
             {/* <a href="#">Read More</a> */}
           </div>
