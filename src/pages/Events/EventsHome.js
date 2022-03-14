@@ -2,11 +2,12 @@ import { Carousel } from "3d-react-carousal";
 import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import TechEventsList from "./TechEventsList";
-import background from "./../../images/bg1.jpg";
+
 import tech from "./../../images/tech.jpeg";
 import nontech from "./../../images/nontech.jpeg";
 import hack from "./../../images/hack.jpeg";
 import styles from "./EventsHome.module.css";
+import eventpassimg from "../../images/eventpassimg.png";
 
 function EventsHome() {
   let slides = [
@@ -32,12 +33,17 @@ function EventsHome() {
   return (
     <div
       style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
+        // backgroundImage: `url(${background})`,
+        // backgroundSize: "cover",
         height: "100vh",
-        color: "#f5f5f5",
+        // color: "#f5f5f5",
       }}
     >
+      <Link to={`/dashboard`}>
+        <div className={styles.pass}>
+          <img src={eventpassimg} />
+        </div>
+      </Link>
       <div className={styles.displaylist}>
         <Carousel
           style={{ paddingTop: "400px" }}

@@ -92,11 +92,11 @@
   transition-delay: 0.2s;
 }
 
-.container .btn:nth-child(1)::before,
-.container .btn:nth-child(1)::after {
-  background: #ff1571;
-  box-shadow: 0 0 5px #ff1571, 0 0 15px #ff1571, 0 0 30px #ff1571,
-    0 0 60px #ff1571;
+.container .btn:nth-child(3)::before,
+.container .btn:nth-child(3)::after {
+  background: #32a81a;
+  box-shadow: 0 0 5px #32e00f, 0 0 15px #32e00f, 0 0 30px #32e00f,
+    0 0 60px #32e00f;
 }
 .container .btn:nth-child(2)::before,
 .container .btn:nth-child(2)::after {
@@ -104,9 +104,9 @@
   box-shadow: 0 0 5px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff,
     0 0 60px #2bd2ff;
 }
-.container .btn:nth-child(3)::before,
-.container .btn:nth-child(3)::after {
-  background: #1eff45;
-  box-shadow: 0 0 5px #1eff45, 0 0 15px #1eff45, 0 0 30px #1eff45,
-    0 0 60px #1eff45;
+.container .btn:nth-child(1)::before,
+.container .btn:nth-child(1)::after {
+  background: #18af04;
+  box-shadow: 0 0 5px #18af04, 0 0 15px #18af04, 0 0 30px #18af04;
+    /* 0 0 60px #18af04; */
 }

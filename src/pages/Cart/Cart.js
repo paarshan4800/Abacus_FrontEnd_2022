@@ -7,6 +7,7 @@ import tech from "./../../images/tech.jpeg";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import GlassButton from "../../components/GlassButton/GlassButton";
+import ReactCardFlip from "react-card-flip"
 
 const Cart = () => {
   let CartList = [
@@ -54,118 +55,60 @@ const Cart = () => {
     },
   ];
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [flip, setFlip] = useState(false);
 
   return (
-    <div
-    // style={{
-    //   backgroundImage: `url(${background})`,
-    //   backgroundSize: "cover",
-    //   height: "100vh",
-    //   color: "#f5f5f5",
-    // }}
-    >
-      <div className={styles.profileBar}>Hi user4101!</div>
+    <div className="body">
+      
+      <ReactCardFlip
+				isFlipped={flip}
+				flipDirection="horizontal"
+				infinite="1"
+				flipSpeedBackToFront="0.9"
+				flipSpeedFrontToBack="0.9"
+			>
+				<div
+					className="friendCard friendCard__front"
+					onMouseEnter={() => setFlip(true)}
+				>
+					<div className="friendCard__frontTop">
+				
+						<h3>sdfgh</h3>
+						<p>cvbnm</p>
+					</div>
+					<div className="friendCard__frontBottom">
+						<div>
+							<p>Followers</p>
+							<p>123</p>
+						</div>
+						<div>
+							<p>Following</p>
+							<p>123</p>
+						</div>
+						<div>
+							<p>Posts</p>
+							<p>123</p>
+						</div>
+					</div>
+				</div>
+				<div
+					className="friendCard friendCard__back"
+					onMouseLeave={() => setFlip(false)}
+				>
+					<div className="friendCard__backSkills">
+						<h4>Favourite Languages:</h4>
+						
+					</div>
 
-      <div className={styles.wrapper}>
-        {isLoading && <Loading />}
-
-        {!isLoading && CartList == null && (
-          <div>
-            <div className={styles.message}>
-              <p>
-                Cart is empty.
-                <br />
-                Add items to cart for registration.
-              </p>
-            </div>
-            <Link to={`/events`}>
-              <div>
-                <GlassButton title="Events" />
-              </div>
-            </Link>
-            <Link to={`/workshops`}>
-              <div>
-                <GlassButton title="Workshops" />
-              </div>
-            </Link>
-          </div>
-        )}
-
-        {!isLoading && CartList != null && (
-          <>
-            <div className={cx(styles.title, styles.heading)}>Cart</div>
-            {CartList.map((event) =>
-              event.type != "workshops" ? (
-                event.id % 3 == 2 ? (
-                  <Link to={`/events/${event.type}/${event.refName}`}>
-                    <div
-                      key={event.id}
-                      className={cx(styles.maindiv, styles.maindiv2)}
-                    >
-                      <img src={event.img} alt="1" />
-                      <div className={styles.title}>{event.name}</div>
-                    </div>
-                  </Link>
-                ) : event.id % 3 == 1 ? (
-                  <Link to={`/events/${event.type}/${event.refName}`}>
-                    <div
-                      key={event.id}
-                      className={cx(styles.maindiv, styles.maindiv1)}
-                    >
-                      <img src={event.img} alt="1" />
-                      <div className={styles.title}>{event.name}</div>
-                    </div>
-                  </Link>
-                ) : (
-                  <Link to={`/events/${event.type}/${event.refName}`}>
-                    <div
-                      key={event.id}
-                      className={cx(styles.maindiv, styles.maindiv3)}
-                    >
-                      <img src={event.img} alt="1" />
-                      <div className={styles.title}>{event.name}</div>
-                    </div>
-                  </Link>
-                )
-              ) : event.id % 3 == 2 ? (
-                <Link to={`/workshops/${event.refName}`}>
-                  <div
-                    key={event.id}
-                    className={cx(styles.maindiv, styles.maindiv2)}
-                  >
-                    <img src={event.img} alt="1" />
-                    <div className={styles.title}>{event.name}</div>
-                  </div>
-                </Link>
-              ) : event.id % 3 == 1 ? (
-                <Link to={`/workshops/${event.refName}`}>
-                  <div
-                    key={event.id}
-                    className={cx(styles.maindiv, styles.maindiv1)}
-                  >
-                    <img src={event.img} alt="1" />
-                    <div className={styles.title}>{event.name}</div>
-                  </div>
-                </Link>
-              ) : (
-                <Link to={`/workshops/${event.refName}`}>
-                  <div
-                    key={event.id}
-                    className={cx(styles.maindiv, styles.maindiv3)}
-                  >
-                    <img src={event.img} alt="1" />
-                    <div className={styles.title}>{event.name}</div>
-                  </div>
-                </Link>
-              )
-            )}
-            <GlassButton title="P a y" />
-          </>
-        )}
-      </div>
+					<div className="friendCard__backAbout">
+						<h4>About :</h4>
+						<p>dgsrtg</p>
+					</div>
+				</div>
+			</ReactCardFlip>
+    
     </div>
-  );
+    );
 };
 
 export default Cart;

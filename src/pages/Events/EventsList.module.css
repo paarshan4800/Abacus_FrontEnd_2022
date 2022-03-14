@@ -60,15 +60,15 @@ body {
   top: 0;
   width: 50%;
   height: 50%;
-  -webkit-box-shadow: 0 0 19px 5px #da0037, 0 0 6px 4px #da0037;
-  box-shadow: 0 0 19px 5px #da0037, 0 0 6px 4px #da0037;
+  -webkit-box-shadow: 0 0 19px 5px #0f0, 0 0 6px 4px #0f0;
+  box-shadow: 0 0 19px 5px #0f0, 0 0 6px 4px #0f0;
   z-index: 0;
   -webkit-animation-name: yellow-shadow;
   animation-name: yellow-shadow;
   -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   border-radius: 7px;
@@ -85,15 +85,15 @@ body {
   bottom: 0;
   width: 50%;
   height: 50%;
-  -webkit-box-shadow: 0 0 19px 5px #03a9f4, 0 0 6px 4px #03a9f4;
-  box-shadow: 0 0 19px 5px #03a9f4, 0 0 6px 4px #03a9f4;
+  -webkit-box-shadow: 0 0 19px 5px #bdcf1a, 0 0 6px 4px #bdcf1a;
+  box-shadow: 0 0 19px 5px #bdcf1a, 0 0 6px 4px #bdcf1a;
   z-index: 0;
   -webkit-animation-name: cyan-shadow;
   animation-name: cyan-shadow;
   -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   border-radius: 7px;
@@ -103,7 +103,7 @@ body {
   -o-border-radius: 7px;
 }
 
-.maindiv2::before {
+/* .maindiv2::before {
   content: "";
   position: absolute;
   left: 0;
@@ -126,7 +126,7 @@ body {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
-}
+} */
 
 .maindiv3::before {
   content: "";
@@ -135,15 +135,15 @@ body {
   top: 0;
   width: 50%;
   height: 100%;
-  -webkit-box-shadow: 0 0 19px 5px #da0037, 0 0 6px 4px #da0037;
-  box-shadow: 0 0 19px 5px #da0037, 0 0 6px 4px #da0037;
+  -webkit-box-shadow: 0 0 19px 5px #0f0, 0 0 6px 4px #0f0;
+  box-shadow: 0 0 19px 5px #0f0, 0 0 6px 4px #0f0;
   z-index: 0;
   -webkit-animation-name: half-yellow-shadow;
   animation-name: half-yellow-shadow;
   -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   border-radius: 7px;
@@ -160,15 +160,15 @@ body {
   bottom: 0;
   width: 50%;
   height: 100%;
-  -webkit-box-shadow: 0 0 19px 5px #03a9f4, 0 0 6px 4px #03a9f4;
-  box-shadow: 0 0 19px 5px #03a9f4, 0 0 6px 4px #03a9f4;
+  -webkit-box-shadow: 0 0 19px 5px #bdcf1a, 0 0 6px 4px #bdcf1a;
+  box-shadow: 0 0 19px 5px #bdcf1a, 0 0 6px 4px #bdcf1a;
   z-index: 0;
   -webkit-animation-name: half-cyan-shadow;
   animation-name: half-cyan-shadow;
   -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   border-radius: 7px;
@@ -184,7 +184,7 @@ body {
   height: 100px;
   position: relative;
   z-index: 3;
-  background-color: #060c1f;
+  background-color: #000000;
 
   text-align: center;
   color: #ffffff;
