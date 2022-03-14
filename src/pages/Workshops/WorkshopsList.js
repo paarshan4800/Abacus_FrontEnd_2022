@@ -23,25 +23,25 @@ function WorkshopHome() {
       id: 2,
       refName: "entrepreneurship",
       name: "Entrepreneurship",
-      img: tech,
+      img: nontech,
     },
     {
       id: 3,
       refName: "job-readiness",
       name: "Job Readiness",
-      img: tech,
+      img: hack,
     },
     {
       id: 4,
       refName: "tenet",
       name: "Asdfgh",
-      img: tech,
+      img: nontech,
     },
     {
       id: 5,
       refName: "tenet",
       name: "qwerty",
-      img: tech,
+      img: hack,
     },
     {
       id: 6,
@@ -68,17 +68,7 @@ function WorkshopHome() {
     >
       <div className={styles.wrapper}>
         {workshopsList.map((event) =>
-          event.id % 3 == 2 ? (
-            <Link to={`/workshops/${event.refName}`}>
-              <div
-                key={event.id}
-                className={cx(styles.maindiv, styles.maindiv2)}
-              >
-                <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
-              </div>
-            </Link>
-          ) : event.id % 3 == 1 ? (
+          event.id % 2 == 0 ? (
             <Link to={`/workshops/${event.refName}`}>
               <div
                 key={event.id}

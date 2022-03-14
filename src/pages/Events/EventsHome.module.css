@@ -4,5 +4,19 @@
   text-align: center;
 }
 .displaylist {
-  padding-top: 10%;
+  padding-top: 3%;
+}
+
+.pass {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aliceblue; */
+}
+
+.pass img {
+  height: 90%;
+  background-repeat: repeat-x;
 }

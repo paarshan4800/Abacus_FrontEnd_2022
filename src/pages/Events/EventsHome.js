@@ -7,6 +7,7 @@ import tech from "./../../images/tech.jpeg";
 import nontech from "./../../images/nontech.jpeg";
 import hack from "./../../images/hack.jpeg";
 import styles from "./EventsHome.module.css";
+import eventpassimg from "../../images/eventpassimg.png";
 
 function EventsHome() {
   let slides = [
@@ -34,10 +35,15 @@ function EventsHome() {
       style={{
         // backgroundImage: `url(${background})`,
         // backgroundSize: "cover",
-        // height: "100vh",
+        height: "100vh",
         // color: "#f5f5f5",
       }}
     >
+      <Link to={`/dashboard`}>
+        <div className={styles.pass}>
+          <img src={eventpassimg} />
+        </div>
+      </Link>
       <div className={styles.displaylist}>
         <Carousel
           style={{ paddingTop: "400px" }}
