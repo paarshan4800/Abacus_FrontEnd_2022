@@ -35,7 +35,7 @@ const Navbar = () => {
   const [navbar, setNavbar] = React.useState(false);
   
   const changeBackground = () => {
-    if (window.scrollY >= 20){
+    if (window.scrollY >= 50){
       setNavbar(true);
     }else{
       setNavbar(false);

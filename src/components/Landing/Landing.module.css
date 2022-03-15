@@ -19,7 +19,7 @@
 
 .back{
 
-  background: linear-gradient(rgba(0,0, 0, 0.0)  , rgba(0, 0, 0, 0.0) ), url('/src/components/Landing/6235663.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0, 0, 0.0)  , rgba(0, 0, 0, 0.0) ), url('/src/components/Landing/box.jpg') no-repeat center center fixed;
     background-size: 100% 100%; 
     width: 100vw;
     height: 100vh;
@@ -30,7 +30,7 @@
 
 @font-face {
     font-family: Future;
-    src: url(./space.otf);
+    src: url(./Vist.otf);
 }
 @font-face{
     font-family: Cabin;
@@ -65,7 +65,7 @@ line-height: 60vh;
     color: white;
     letter-spacing: 15px;
     font-family: Future;
-    font-size: 160px;
+    font-size: 180px;
   
      
 
@@ -90,7 +90,7 @@ line-height: 60vh;
 .letter_a{
     font-family: Future;
 
-    font-size: 200px;
+    font-size: 250px;
 }
 .blue1{
     text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #121143,
