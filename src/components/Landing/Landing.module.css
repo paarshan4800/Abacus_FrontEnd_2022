@@ -29,7 +29,7 @@
 }
 
 @font-face {
-    font-family: Future;
+    font-family: VIST;
     src: url(./Vist.otf);
 }
 @font-face{
@@ -64,32 +64,18 @@ line-height: 60vh;
     position: relative;
     color: white;
     letter-spacing: 15px;
-    font-family: Future;
+    font-family: VIST;
     font-size: 180px;
   
      
 
 }
 
-.anim{
-    animation: waviy 1s infinite;
-    animation-delay: 1s;
-}
 
-
-  @keyframes waviy {
-    0%,40%,100% {
-      transform: translateY(0)
-    }
-    20% {
-      transform: translateY(-10px)
-    }
-  }
 
 
 .letter_a{
-    font-family: Future;
-
+    font-family: VIST;
     font-size: 250px;
 }
 .blue1{
@@ -114,7 +100,7 @@ line-height: 60vh;
 
 .date {
     color: #f6fd8a !important; 
-    font-size: 2rem !important;
+    font-size: 3rem !important;
     font-family: Future;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -178,9 +164,7 @@ line-height: 60vh;
 
 
 
-.head{
-    animation: glitch 1s linear infinite;
-  }
+
 
 
   

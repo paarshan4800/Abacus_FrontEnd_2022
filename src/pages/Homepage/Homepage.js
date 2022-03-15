@@ -41,8 +41,8 @@ class Homepage extends Component {
                   src={`${process.env.PUBLIC_URL}/images/about-us/abacus logo sponsors page.png`}
                   alt=""
                   style={{
-                    width: "300px",
-                    height: "290px",
+                    width: "330px",
+                    height: "340px",
                     margin: "auto",
                   }}
                 />
