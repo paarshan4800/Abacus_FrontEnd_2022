@@ -46,19 +46,17 @@ const Navbar = () => {
   window.addEventListener('scroll',changeBackground);
 
   return (
-    <nav className="w-full flex md:justify-center justify-between items-center p-4">
-    {/* <nav className={navbar ? 'w-full flex md:justify-center justify-between items-center fixed gradient-bg-welcome z-10' : 'w-full flex md:justify-center justify-between items-center fixed z-10'}> */}
+    <nav className={navbar ? 'w-full flex md:justify-center justify-between items-center fixed gradient-bg-welcome z-10' : 'w-full flex md:justify-center justify-between items-center fixed z-10'}>
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
-        <img src={logo} alt="logo" className="w-32 cursor-pointer" onClick={()=>{window.location="/"}}/>
+        <img src={logo} alt="logo" className="w-32 cursor-pointer" />
       </div>
       <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-  {/* {["Home", "About us", "Events", "signup"].map( */
-            LinksList.map(
-              (item, index) => <NavBarItem key={item.title + index} title={item.title} link={item.link} classprops="my-2 text-lg" />,
-            )}
-        {/* <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+        {["Home", "About us", "Events", "signup"].map((item, index) => (
+          <NavBarItem key={item + index} title={item} />
+        ))}
+        <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
           Login
-        </li> */}
+        </li>
       </ul>
       <div className="flex relative">
         {!toggleMenu && (
@@ -73,16 +71,17 @@ const Navbar = () => {
             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
           >
             <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {/* {["Home", "About us", "Events", "signup"].map( */
-            LinksList.map(
-              (item, index) => <NavBarItem key={item.title + index} title={item.title} link={item.link} classprops="my-2 text-lg" />,
+            {["Home", "About us", "Events", "signup"].map(
+              (item, index) => <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />,
             )}
+            <li className="bg-[#2952e3] py-2 px-7 mx-4 mt-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+              Login
+          </li>
           </ul>
         )}
       </div>
     </nav>
   );
 };
-
 export default Navbar;
 
