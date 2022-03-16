@@ -148,10 +148,10 @@ line-height: 60vh;
 @media only screen and (max-width: 768px) {
     .head{
         font-size: 50px;
-        margin-top: 70%;
+        margin-top: 40%;
     }
     .letter_a{
-        font-size:70px;
+        font-size:70px; 
     }
 
     .date{
@@ -238,7 +238,7 @@ line-height: 60vh;
 @media only screen and (max-width:980px ){
   .head{
       font-size: 80px;
-      margin-top: 40%;
+      margin-top: 20%;
   }
 }
 
@@ -246,15 +246,16 @@ line-height: 60vh;
 
 @media only screen and (max-width:800px){
   .head{
-    margin-top: 75%;
+    margin-top: 20%;
       font-size: 60px;
   }
 }
 
 @media only screen and (max-width:480px){
   .head{
-    margin-top: 90%;
-      font-size: 43px;
+    margin-top: 0%;
+      font-size: 70px;
+      margin-bottom: 20%;
   }
   .back{
     background-size:cover

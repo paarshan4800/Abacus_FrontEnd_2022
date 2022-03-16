@@ -379,21 +379,7 @@ margin-top: 18%;
     
      
     @media only screen and (max-width:1025px){
-        .bg{
-            background-image:url('../../components/Landing/close1.jpg');
-   
-            background-repeat:no-repeat;
-            background-size:cover;
-            background-attachment: fixed;
-        }
-        .bg1{
-            background-image:url('../../components/Landing/close1.jpg');
-   
-            background-repeat:no-repeat;
-            background-size:cover;
-            background-attachment: fixed;
-            
-        }
+    
 
     }
     .img2{
@@ -403,7 +389,7 @@ margin-top: 18%;
     }
     .img{
         margin-right: 25%;
-        width:150px;
+   width:150px;
         height:150px;
     }
     .img4{

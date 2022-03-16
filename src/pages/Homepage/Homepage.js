@@ -71,6 +71,11 @@ class Homepage extends Component {
         
 
         <div className={`${styles.bg}`}>
+        <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
           <div className={`${styles.blur}`}>
             <div className="text-center ">
               <Heading text="Sponsors" fontSize="40px" />
