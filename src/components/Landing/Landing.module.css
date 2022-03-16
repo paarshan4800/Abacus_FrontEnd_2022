@@ -148,7 +148,7 @@ line-height: 60vh;
 @media only screen and (max-width: 768px) {
     .head{
         font-size: 50px;
-        margin-top: 40%;
+        margin-top: 0%;
     }
     .letter_a{
         font-size:70px; 
@@ -230,7 +230,7 @@ line-height: 60vh;
 @media only screen and (max-width:1300px){
   .head{
       font-size: 120px;
-      margin-top: 40%;
+      margin-top: 0%;
   }
 }
 
@@ -238,7 +238,7 @@ line-height: 60vh;
 @media only screen and (max-width:980px ){
   .head{
       font-size: 80px;
-      margin-top: 20%;
+      margin-top: 0%;
   }
 }
 
@@ -246,7 +246,7 @@ line-height: 60vh;
 
 @media only screen and (max-width:800px){
   .head{
-    margin-top: 20%;
+    margin-top: 0%;
       font-size: 60px;
   }
 }
