@@ -48,7 +48,7 @@
     margin: 1em 0 0.5em 0;
 	font-weight: bolder;
 	font-family: 'Open Sans', sans-serif;   
-	font-size: 4.9rem;
+	font-size: 5.2rem;
     text-align: center;
     color: white;
 	line-height: 52px;
@@ -88,7 +88,7 @@
   }
 
   .logo{
-      margin-bottom: 10%;
+      margin-top: 25%;
   }
 
   .count{
@@ -99,11 +99,11 @@
   
   .right_container {
       padding-left: 5%;
-      background: rgba(0, 0,0, 0.4);
+     /* background: rgba(0, 0,0, 0.4);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(90px);
-      -webkit-backdrop-filter: blur(70px);
-      height: 100vh;
+      backdrop-filter: blur(70px); */
+       background-color: #001638;
+      height: 100vh; 
       
       
     width: 65%;
@@ -111,13 +111,14 @@
   
   .left_content {
     width: 100%;
-    padding-top: 10%;
+    padding-top: 15%;
     text-align: center;
     display: flex;
     flex-direction: column; 
   }
   
   .right_content {
+margin-top: 18%;
   max-width: 90%;
   color: yellow;
 
@@ -159,10 +160,11 @@
     
 }
 .blur{
+    /*
     background: rgba(0, 0,0, 0.5);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(60px);
-      -webkit-backdrop-filter: blur(5x);
+      -webkit-backdrop-filter: blur(5x);*/
     width: 100%;
     height: 100%;
 
@@ -186,7 +188,8 @@
 }
 .bg{
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) ), url('../../components/Landing/bg.png');
+    background-color: #002535;
+    background-color: #001638;
     width: 100vw;
     background-size:cover;
     background-repeat:no-repeat;
@@ -377,21 +380,7 @@
     
      
     @media only screen and (max-width:1025px){
-        .bg{
-            background-image:url('../../components/Landing/close1.jpg');
-   
-            background-repeat:no-repeat;
-            background-size:cover;
-            background-attachment: fixed;
-        }
-        .bg1{
-            background-image:url('../../components/Landing/close1.jpg');
-   
-            background-repeat:no-repeat;
-            background-size:cover;
-            background-attachment: fixed;
-            
-        }
+    
 
     }
     .img2{
@@ -401,7 +390,7 @@
     }
     .img{
         margin-right: 25%;
-        width:150px;
+   width:150px;
         height:150px;
     }
     .img4{

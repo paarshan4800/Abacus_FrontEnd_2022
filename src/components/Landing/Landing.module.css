@@ -1,6 +1,6 @@
 ._homepage {
     box-sizing: border-box;
-    padding-top: 45vh;
+   padding-top: 3vh;
     
     height: 100%;
     display: flex;
@@ -19,18 +19,18 @@
 
 .back{
 
-    background: linear-gradient(rgba(0,0, 0, 0.0)  , rgba(0, 0, 0, 0.0) ), url('/src/components/Landing/purple.jpg') no-repeat center center fixed;
-    background-size: 100% 100%;
+  background: linear-gradient(rgba(0,0, 0, 0.0)  , rgba(0, 0, 0, 0.0) ), url('/src/components/Landing/box.jpg') no-repeat center center fixed;
+    background-size: 100% 100%; 
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    filter: brightness(79%);
+ 
     
 }
 
 @font-face {
-    font-family: Future;
-    src: url(./space.otf);
+    font-family: VIST;
+    src: url(./Vist.otf);
 }
 @font-face{
     font-family: Cabin;
@@ -56,7 +56,7 @@
 .landing_heading{
     text-align: center;
 vertical-align: middle;
-line-height: 100vh; 
+line-height: 60vh; 
 
 }
 
@@ -64,34 +64,19 @@ line-height: 100vh;
     position: relative;
     color: white;
     letter-spacing: 15px;
-    font-family: Future;
-    font-size: 160px;
-    background: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) );
-    margin-top: 14%;
+    font-family: VIST;
+    font-size: 180px;
+  
      
 
 }
 
-.anim{
-    animation: waviy 1s infinite;
-    animation-delay: 1s;
-}
 
-
-  @keyframes waviy {
-    0%,40%,100% {
-      transform: translateY(0)
-    }
-    20% {
-      transform: translateY(-10px)
-    }
-  }
 
 
 .letter_a{
-    font-family: Future;
-
-    font-size: 200px;
+    font-family: VIST;
+    font-size: 250px;
 }
 .blue1{
     text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #121143,
@@ -115,7 +100,7 @@ line-height: 100vh;
 
 .date {
     color: #f6fd8a !important; 
-    font-size: 2rem !important;
+    font-size: 3rem !important;
     font-family: Future;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -163,10 +148,10 @@ line-height: 100vh;
 @media only screen and (max-width: 768px) {
     .head{
         font-size: 50px;
-        margin-top: 70%;
+        margin-top: 0%;
     }
     .letter_a{
-        font-size:70px;
+        font-size:70px; 
     }
 
     .date{
@@ -179,9 +164,7 @@ line-height: 100vh;
 
 
 
-.head{
-    animation: glitch 1s linear infinite;
-  }
+
 
 
   
@@ -247,7 +230,7 @@ line-height: 100vh;
 @media only screen and (max-width:1300px){
   .head{
       font-size: 120px;
-      margin-top: 40%;
+      margin-top: 0%;
   }
 }
 
@@ -255,7 +238,7 @@ line-height: 100vh;
 @media only screen and (max-width:980px ){
   .head{
       font-size: 80px;
-      margin-top: 40%;
+      margin-top: 0%;
   }
 }
 
@@ -263,15 +246,16 @@ line-height: 100vh;
 
 @media only screen and (max-width:800px){
   .head{
-    margin-top: 75%;
+    margin-top: 0%;
       font-size: 60px;
   }
 }
 
 @media only screen and (max-width:480px){
   .head{
-    margin-top: 90%;
-      font-size: 43px;
+    margin-top: 0%;
+      font-size: 70px;
+      margin-bottom: 20%;
   }
   .back{
     background-size:cover

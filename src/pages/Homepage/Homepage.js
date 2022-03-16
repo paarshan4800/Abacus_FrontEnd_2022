@@ -41,66 +41,13 @@ class Homepage extends Component {
                   src={`${process.env.PUBLIC_URL}/images/about-us/abacus logo sponsors page.png`}
                   alt=""
                   style={{
-                    width: "300px",
-                    height: "290px",
+                    width: "330px",
+                    height: "340px",
                     margin: "auto",
                   }}
                 />
               </div>
-              <div className={`${styles.count}`}>
-                <div className="row  mb-2">
-                  <div className="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={7} redraw={true} suffix=" +">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>
-                    </div>{" "}
-                    <Heading1 text="Events" fontSize="20px" />
-                  </div>
-                  <div className="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={1} redraw={true} suffix=" ">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>
-                    </div>{" "}
-                    <Heading1 text="Hackathon" fontSize="20px" />
-                  </div>
-                </div>
-                <div className="row mt-6">
-                  <div className="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={5} redraw={true} suffix=" +">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>{" "}
-                    </div>
-                    <Heading1 text="Workshops" fontSize="20px" />
-                  </div>
-                  <div class="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={50} redraw={true} suffix=" K+">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>{" "}
-                    </div>
-                    <Heading1 text="Prize Money" fontSize="20px" />
-                  </div>
-                </div>
-              </div>
+       
             </div>
           </div>
           <div className={`${styles.right_container}`}>
@@ -124,6 +71,11 @@ class Homepage extends Component {
         
 
         <div className={`${styles.bg}`}>
+        <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
           <div className={`${styles.blur}`}>
             <div className="text-center ">
               <Heading text="Sponsors" fontSize="40px" />

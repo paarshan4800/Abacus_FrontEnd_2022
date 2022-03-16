@@ -7,8 +7,7 @@ import AppRoutes from "./routes";
 import { Provider, useSelector } from "react-redux";
 import Reducer from "./redux/Reducer";
 import { useDispatch } from "react-redux";
-import { Navbar, Footer } from "./components";
-
+import { Navbar } from "./components";
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
@@ -65,12 +64,12 @@ function App() {
                 <NewLoadWorkshop.Provider value={newloadworkshop}>
                   <SetNewLoadWorkshop.Provider value={setnewloadworkshop}>
                     <BrowserRouter>
-                      <div className="gradient-bg-services">
-                        <Navbar />
-                      </div>
-                      <div className="" style={{backgroundColor: "black"}}>
+                      
+                        <Navbar/>
+                
+                      
                         <AppRoutes />
-                      </div>
+                    
                       {/* <div className="gradient-bg-welcome">
                         <Footer />
                       </div> */}
