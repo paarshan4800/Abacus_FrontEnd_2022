@@ -59,7 +59,7 @@ const AppRoutes = () => {
       <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/cart" exact component={Cart} />
       <Route path="/404" exact component={PageNotFound} />
-      <Route path="/Login" exact component={SignInForm} />
+      <Route path="/Login" exact component={LoginRegister} />
       <Route path="/signUp" exact component={SignUp} />
       <Route path="/ForgotPassword" exact component={ForgotPassword} />
       <Route path="/NewPassword" exact component={NewPassword} />

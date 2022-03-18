@@ -4,20 +4,11 @@
 }
 .App {
   height: 100vh;
-  display: flex;
+  width: 100vw;
   color: white;
-  /* background-image: url("./pages/assets/images/pink.jpeg  "); */
+  background-image: url("./pages/assets/images/imgbg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.appAside {
-  width: 100%;
-  /* background-color: #35858b; */
-  background-image: url("./pages/assets/images/imgbg.jpeg");
-  /*background-image: linear-gradient(black,rgb(58, 7, 58),black);*/
-  background-repeat: no-repeat;
-  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,15 +21,12 @@
 }
 
 .appForm {
-  width: 100%;
-  /*background-image: url(./pages/assets/images/blue.jpeg);*/
-  /* background: linear-gradient(to top right, #000000 2%, #4b0125 100%); */
+  width: 50%;
+  height: 95vh;
   padding: 25px 40px;
   overflow: auto;
   text-align: center;
-  /* -webkit-box-shadow: 0 0 20px #cccfcf;
-    -moz-box-shadow: 0 0 20px #6fddda;
-    box-shadow: 0 0 20px #6fddda; */
+  background-color: black !important;
 }
 
 @media screen and (max-width: 600px) {
@@ -97,7 +85,7 @@ div::-webkit-scrollbar {
 div::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #ff1571;
+  background-color: #15ff3c;
 }
 @media all and (max-width: 700px) {
   div {
@@ -128,6 +116,9 @@ div::-webkit-scrollbar-thumb {
 }
 .SIOut {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 600px) {
   div.SIOut {
@@ -136,11 +127,6 @@ div::-webkit-scrollbar-thumb {
 }
 .SICenter {
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  padding-top: 3vh;
 }
 
 .NPOut {
@@ -224,6 +210,21 @@ div::-webkit-scrollbar-thumb {
 }
 .formFieldInput {
   width: 60%;
+  color: black;
+  outline: none;
+  /*border-bottom: 1px solid #445366;
+    background-color: transparent;
+    border: none;*/
+  font-size: 1em;
+  font-weight: 400;
+  font-family: Roboto;
+  padding: 1vh;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.formFieldInputSI {
+  width: 80%;
   color: black;
   outline: none;
   /*border-bottom: 1px solid #445366;
@@ -380,3 +381,34 @@ div::-webkit-scrollbar-thumb {
   width: 0.2vw;
   height: fit-content;
 }
+.main{
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.Card{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style:preserve-3d ;
+  transition: all 1s ease;
+  background-color: yellow;
+}
+.Front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: aqua;
+  color: black;
+}
+.Back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: yellow;
+  color: aqua;
+  transform: rotateY(180deg);
+}
+
