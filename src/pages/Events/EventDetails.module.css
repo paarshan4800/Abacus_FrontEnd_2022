@@ -47,7 +47,7 @@ body {
   width: 50%;
   height: 100%;
   text-decoration: none;
-  background: #fff;
+  background: rgb(0, 0, 0);
   border-radius: 8px;
   transform: skewX(15deg);
   transition: 0.5s;
@@ -76,13 +76,12 @@ body {
 
 .container .box:nth-child(1):before,
 .container .box:nth-child(1):after {
-  background: linear-gradient(315deg, #f2c92a, #04b962 );
+  background: linear-gradient(315deg, #ffbe0c, #fcff31);
 }
 
 .container .box:nth-child(2):before,
 .container .box:nth-child(2):after {
-  background: linear-gradient(315deg, #f2c92a, #03fe86 );
-
+  background: linear-gradient(315deg, #f2c92a, #03fe86);
 }
 
 .container .box:nth-child(3):before,
@@ -170,7 +169,7 @@ body {
   border-radius: 8px;
   z-index: 1;
   transform: 0.5s;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .container .box:hover .content {
@@ -180,7 +179,7 @@ body {
 
 .container .box .content h2 {
   font-size: 2em;
-  color: #fff;
+  color: rgb(0, 0, 0);
   margin-bottom: 10px;
 }
 
