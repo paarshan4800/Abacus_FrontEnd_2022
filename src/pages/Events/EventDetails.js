@@ -4,7 +4,7 @@ import GlassButton from "../../components/GlassButton/GlassButton";
 import { useParams, useHistory } from "react-router-dom";
 import { TechEvents } from "../../data/TechEventsData";
 import { NonTechEvents } from "../../data/NonTechEventsData";
-import background from "../../images/bg2.jpeg";
+
 import PageNotFound from "../PageNotFound/PageNotFound";
 
 

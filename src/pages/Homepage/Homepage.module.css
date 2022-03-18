@@ -8,6 +8,25 @@
     background-color: #060c1f;
     font-family: "Almarai", sans-serif;
   }
+  .eve{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .top{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+  .bottom{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .one_count{
+    width: 50%;
+  }
   
   .wrapper {
     height: 100%;
@@ -777,7 +796,7 @@ margin-top: 15%;
     }}
     .countup{
    
-        font-size:50px;
+        font-size:30px;
         font-family: 'Montserrat Alternates';      
        animation: flicker 3s infinite;
         color:white;

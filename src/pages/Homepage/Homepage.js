@@ -56,8 +56,74 @@ class Homepage extends Component {
                     margin: "auto",
                   }}
                 />
+
+                <div className = {styles.eve}>
+
+
+                <div className = {styles.top}>
+
+                <div className={`${styles.one_count}`}>
+                <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={7} redraw={true} suffix=" +">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Events" fontSize="20px" />
+                </div>
+               
+            <div className={`${styles.one_count}`}>
+                <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={3} redraw={true} suffix=" +">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Workshops" fontSize="20px" />
+                </div>
+
+                </div>
+
+                <div className = {styles.bottom}>
+
+                <div className={`${styles.one_count}`}>
+                <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={7} redraw={true} suffix=" +">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Events" fontSize="20px" />
+
+                </div>
+               <div className={`${styles.one_count}`}>
+               <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={1} redraw={true}>
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Hackathon" fontSize="20px" />
+               </div>
+                   
+                </div>
+                </div>
+                
+               
               </div>
-       
+              
             </div>
           </div>
           <div className={`${styles.right_container}`}>
