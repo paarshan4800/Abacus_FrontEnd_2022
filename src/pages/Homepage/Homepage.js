@@ -94,7 +94,7 @@ class Homepage extends Component {
 
                 <div className={`${styles.one_count}`}>
                 <div className={`${styles.countup}`}>
-                    <CountUp start={0} end={7} redraw={true} suffix=" +">
+                    <CountUp start={0} end={90} redraw={true} suffix=" K+">
                       {({ countUpRef, start }) => (
                         <VisibilitySensor onChange={start} delayedCall>
                           <span ref={countUpRef} />
@@ -102,7 +102,7 @@ class Homepage extends Component {
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Events" fontSize="20px" />
+                   <Heading1 text="Cash Prize" fontSize="20px" />
 
                 </div>
                <div className={`${styles.one_count}`}>

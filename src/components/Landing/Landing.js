@@ -21,7 +21,7 @@ class Landing extends Component {
             <div className={`${styles.landing_heading} `} >
             <span className={`${styles.letter_a}`}></span>
                 <h1 className={`${styles.head}`}  ><span className={styles.letter_a}>A</span>BACUS   '22</h1>
-                <h2 className={`${styles.date}`}>March 25 and 26</h2>
+                <h2 className={`${styles.date}`}>April 28, 29 and 30</h2>
             </div>
             {/*
 
