@@ -9,6 +9,7 @@ import nontech from "./../../images/nontech.jpeg";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import GlassButton from "../../components/GlassButton/GlassButton";
+import GlassBtn from "../../components/GlassBtn/GlassBtn";
 import eventpassimg from "../../images/eventpassimg.png";
 import workshoppassimg from "../../images/workshoppassimg.png";
 import { FaUserCircle } from "react-icons/fa";
@@ -92,6 +93,50 @@ const Dashboard = () => {
     },
   ];
 
+  let workshopList = [
+    {
+      id: 1,
+      refName: "cloud-computing",
+      name: "Cloud Computing",
+      img: tech,
+      registered: true,
+    },
+    {
+      id: 2,
+      refName: "entrepreneurship",
+      name: "Entrepreneurship",
+      img: nontech,
+      registered: false,
+    },
+    {
+      id: 3,
+      refName: "job-readiness",
+      name: "Job Readiness",
+      img: hack,
+      registered: false,
+    },
+    {
+      id: 4,
+      refName: "cloud-computing",
+      name: "Cloud Computing",
+      img: tech,
+      registered: true,
+    },
+  ];
+
+  const [isEventList, setEventList] = useState(false);
+  const [isWorkshopList, setWorkshopList] = useState(true);
+
+  const expandEventList = () => {
+    setEventList(true);
+    setWorkshopList(false);
+  };
+
+  const expandWorkshopList = () => {
+    setEventList(false);
+    setWorkshopList(true);
+  };
+
   return (
     <div>
       <div className={styles.infoBar}>
@@ -102,7 +147,7 @@ const Dashboard = () => {
             </div>
             <div className={styles.userinfo}>
               <div className={styles.name}>
-                <p>Name: Jyotir Aditya Giri Joe Doe</p>
+                <p>Name: Jonita Arnold Gigi Joe Doe</p>
               </div>
               <div className={styles.abacusid}>
                 <p>Abacus-ID: 4101</p>
@@ -156,10 +201,11 @@ const Dashboard = () => {
           <>
             <div className={styles.display}>
               <div className={styles.selector}>
-                <GlassButton title="Events" />
-                <GlassButton title="Workshop" />
+                <GlassButton title="Events" onClick={() => {expandEventList()}}/>
+                <GlassButton title="Workshop" onClick={() => {expandWorkshopList()}}/>
               </div>
 
+              {isEventList && (
               <div className={styles.list}>
                 {eventList.map((event) =>
                   event.registered ? (
@@ -168,18 +214,57 @@ const Dashboard = () => {
                       <div className={styles.hide}>
                         <Link to={`/events/${event.type}/${event.refName}`}>
                           <div className={styles.btn}>
-                            <GlassButton title="View More" />
+                            <GlassBtn title="View More" />
                           </div>
                         </Link>
+                      </div>
+                      <div className={styles.badge}>
+                        HI
+                      </div>
+                    </div>
+                  ) : (
+                    <div key={event.id} className={styles.list_element2}>
+                      <div className={styles.title}>{event.refName}</div>
+                      <div className={styles.hide}>
+                        <Link to={`/events/${event.type}/${event.refName}`}>
+                          <div className={styles.btn}>
+                            <GlassBtn title="Register" />
+                          </div>
+                        </Link>
+                      </div>
+                      <div className={styles.badge}>
+                        HI
+                      </div>
+                    </div>
+                  )
+                )}
+              </div>
+              )}
+
+              {isWorkshopList && (
+              <div className={styles.list}>
+                {workshopList.map((event) =>
+                  event.registered ? (
+                    <div key={event.id} className={styles.list_element2}>
+                      <div className={styles.title}>{event.refName}</div>
+                      <div className={styles.hide}>
+                        <Link to={`/workshops/${event.refName}`}>
+                          <div className={styles.btn}>
+                            <GlassBtn title="View More" />
+                          </div>
+                        </Link>
+                      </div>
+                      <div className={styles.badge}>
+                        HI
                       </div>
                     </div>
                   ) : (
                     <div key={event.id} className={styles.list_element}>
                       <div className={styles.title}>{event.refName}</div>
                       <div className={styles.hide}>
-                        <Link to={`/events/${event.type}/${event.refName}`}>
+                        <Link to={`/workshops/${event.refName}`}>
                           <div className={styles.btn}>
-                            <GlassButton title="Register" />
+                            <GlassBtn title="Register" />
                           </div>
                         </Link>
                       </div>
@@ -187,6 +272,8 @@ const Dashboard = () => {
                   )
                 )}
               </div>
+              )}
+
             </div>
           </>
         )}
