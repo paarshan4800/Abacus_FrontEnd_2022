@@ -3,6 +3,7 @@ import styles from "./Homepage.module.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
+import cx from 'classnames'
 
 //NeonButton
 import Landing from "../../components/Landing/Landing";
@@ -29,11 +30,20 @@ class Homepage extends Component {
   render() {
     return (
       <>
-        <Landing />
+      <Landing />
+       {/* 
+
+         Child Class */}
+
+        
 
         {/* Child Class */}
 
-        <div className={`${styles.About_Abacus} ${styles.bg}`}>
+        {/* Dev Section 
+        
+        
+       */}
+       <div className={`${styles.About_Abacus} ${styles.bg}`}>
           <div className={`${styles.left_container}`}>
             <div className={`${styles.left_content}`}>
               <div className={`${styles.logo}`}>
@@ -52,7 +62,12 @@ class Homepage extends Component {
           </div>
           <div className={`${styles.right_container}`}>
             <div className={`${styles.right_content}`}>
-              <h1 className={`${styles.heading}`}>Abacus '22</h1>
+            <div
+                key={1}
+                className={cx(styles.maindiv)}
+              >
+
+                  <h1 className={`${styles.heading}`}>Abacus '22</h1>
               <p className={`${styles.paragraph} mt-1`}>
                 CSEA takes immense pleasure in organizing Abacus'22. This
                 version is going to be one of its kind - a symposium completely
@@ -64,6 +79,8 @@ class Homepage extends Component {
                 Grab this opportunity and win cash prizes, Intern opportunities,
                 T shirts and many more prizes.
               </p>
+              </div>
+            
             </div>
           </div>
         </div>
@@ -169,10 +186,6 @@ class Homepage extends Component {
             <div></div>
           </div>
         </div>
-
-        {/* Child Class */}
-
-        {/* Dev Section */}
       </>
     );
   }

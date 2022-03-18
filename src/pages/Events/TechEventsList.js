@@ -85,7 +85,7 @@ function TechEventsList() {
                 className={cx(styles.maindiv, styles.maindiv1)}
               >
                 <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
+                <div >{event.name}</div>
               </div>
             </Link>
           ) : (

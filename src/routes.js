@@ -43,6 +43,7 @@ const AppRoutes = () => {
         )}
       </Route> */}
       <Route path="/" exact component={Homepage} />
+      <Route path="/Home" exact component={Homepage} />
       <Route path="/about-us" exact component={Aboutus} />
       <Route path="/events" exact component={EventsHome} />
       <Route path="/events/hackathon" exact component={Hackathon} />
