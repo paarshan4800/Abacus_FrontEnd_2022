@@ -14,6 +14,7 @@ import eventpassimg from "../../images/eventpassimg.png";
 import workshoppassimg from "../../images/workshoppassimg.png";
 import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
+import { FcApproval } from "react-icons/fc";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -219,7 +220,7 @@ const Dashboard = () => {
                         </Link>
                       </div>
                       <div className={styles.badge}>
-                        HI
+                        <FcApproval/>
                       </div>
                     </div>
                   ) : (
@@ -233,7 +234,6 @@ const Dashboard = () => {
                         </Link>
                       </div>
                       <div className={styles.badge}>
-                        HI
                       </div>
                     </div>
                   )

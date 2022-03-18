@@ -30,7 +30,7 @@ function EventDetails() {
         // backgroundImage: `url(${background})`,
         // backgroundSize: "cover",
         // backgroundRepeat: 1,
-        height: "100vh",
+        // height: "100vh",
         // color: "#f5f5f5",
       }}
     >
