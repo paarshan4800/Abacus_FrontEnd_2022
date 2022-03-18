@@ -82,7 +82,7 @@ function TechEventsList() {
             <Link to={`/events/tech-events/${event.refName}`}>
               <div
                 key={event.id}
-                className={cx(styles.maindiv, styles.maindiv3)}
+                className={cx(styles.maindiv, styles.maindiv1)}
               >
                 <img src={event.img} alt="1" />
                 <div className={styles.title}>{event.name}</div>

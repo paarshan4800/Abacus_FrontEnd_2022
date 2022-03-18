@@ -14,7 +14,7 @@ import eventpassimg from "../../images/eventpassimg.png";
 import workshoppassimg from "../../images/workshoppassimg.png";
 import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
-import { FcApproval } from "react-icons/fc";
+import { TiTick } from "react-icons/ti";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -220,7 +220,7 @@ const Dashboard = () => {
                         </Link>
                       </div>
                       <div className={styles.badge}>
-                        <FcApproval/>
+                        <TiTick size={35}/>
                       </div>
                     </div>
                   ) : (
@@ -255,11 +255,11 @@ const Dashboard = () => {
                         </Link>
                       </div>
                       <div className={styles.badge}>
-                        HI
+                        <TiTick size={35}/>
                       </div>
                     </div>
                   ) : (
-                    <div key={event.id} className={styles.list_element}>
+                    <div key={event.id} className={styles.list_element2}>
                       <div className={styles.title}>{event.refName}</div>
                       <div className={styles.hide}>
                         <Link to={`/workshops/${event.refName}`}>

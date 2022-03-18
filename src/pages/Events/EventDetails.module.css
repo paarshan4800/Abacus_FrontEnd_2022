@@ -76,7 +76,8 @@ body {
 
 .container .box:nth-child(1):before,
 .container .box:nth-child(1):after {
-  background: linear-gradient(315deg, #f2c92a, #04b962 );
+  background: linear-gradient(to right, #35be69, #11998e); 
+  /* background: linear-gradient(315deg, #f2c92a, #04b962 ); */
 }
 
 .container .box:nth-child(2):before,
@@ -170,7 +171,7 @@ body {
   border-radius: 8px;
   z-index: 1;
   transform: 0.5s;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .container .box:hover .content {
@@ -180,7 +181,7 @@ body {
 
 .container .box .content h2 {
   font-size: 2em;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-bottom: 10px;
 }
 
