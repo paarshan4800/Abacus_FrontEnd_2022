@@ -87,7 +87,7 @@ div::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #15ff3c;
 }
-@media all and (max-width: 700px) {
+/* @media all and (max-width: 700px) {
   div {
     overflow-y: hidden;
   }
@@ -96,7 +96,7 @@ div::-webkit-scrollbar-thumb {
   div {
     overflow-x: hidden;
   }
-}
+} */
 .FPOut {
   height: 60vh;
   position: relative;

@@ -1,9 +1,9 @@
-import styles from "./GlassButton.module.css";
+import styles from "./GlassBtn.module.css";
 
-const GlassButton = (props) => {
+const GlassBtn = (props) => {
   return (
     <div className={styles.container}>
-      <div className={props.selected ? styles.btn2 : styles.btn}>
+      <div className={styles.btn}>
         <a
           href={props.link}
           onClick={() => {
@@ -20,4 +20,4 @@ const GlassButton = (props) => {
   );
 };
 
-export default GlassButton;
+export default GlassBtn;
