@@ -1,7 +1,7 @@
 import React from "react";
 import PreviewCard from "../../components/PreviewCard/PreviewCard";
 import styles from "./Dashboard.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import cx from "classnames";
 import tech from "./../../images/tech.jpeg";
 import hack from "./../../images/hack.jpeg";
@@ -15,6 +15,7 @@ import workshoppassimg from "../../images/workshoppassimg.png";
 import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
 import { TiTick } from "react-icons/ti";
+
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -125,8 +126,13 @@ const Dashboard = () => {
     },
   ];
 
-  const [isEventList, setEventList] = useState(false);
+  const [isEventList, setEventList] = useState(true);
   const [isWorkshopList, setWorkshopList] = useState(true);
+
+  useEffect(() => {
+    setEventList(true);
+    setWorkshopList(false);
+  },[]);
 
   const expandEventList = () => {
     setEventList(true);
@@ -175,11 +181,11 @@ const Dashboard = () => {
             </div>
           )}
           {/*aaahhhhhh*/}
-          {0 ? (
+          {1 ? (
             <div className={styles.workshop_pass}>
               <Link to={`/workshops`}>
-                <img src={workshoppassimg} />
-                {/* <img src={eventpassimg} /> */}
+                {/* <img src={workshoppassimg} /> */}
+                <img src={eventpassimg} />
               </Link>
             </div>
           ) : (
@@ -202,8 +208,8 @@ const Dashboard = () => {
           <>
             <div className={styles.display}>
               <div className={styles.selector}>
-                <GlassButton title="Events" onClick={() => {expandEventList()}}/>
-                <GlassButton title="Workshop" onClick={() => {expandWorkshopList()}}/>
+                <GlassButton title="Events" selected={isEventList} onClick={() => {expandEventList()}}/>
+                <GlassButton title="Workshop" selected={isWorkshopList} onClick={() => {expandWorkshopList()}}/>
               </div>
 
               {isEventList && (
