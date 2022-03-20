@@ -15,7 +15,7 @@
 
 .bg1{
   background-color:#060c21;
-  background-image:url("../../images/bg3.jpg");
+  background-image:url("../../images/bgg.jpg");
   background-repeat:no-repeat;
   background-size:cover
 }
@@ -24,13 +24,13 @@
 @media only screen and (max-width:1025px){
   .bg{
       background-color:#060c21;
-      background-image:url("../../images/bg3.jpg");
+      background-image:url("../../images/bgg.jpg");
       background-repeat:no-repeat;
       background-size:cover
   }
   .bg1{
       background-color:#060c21;
-      background-image:url("../../images/bg3.jpg");
+      background-image:url("../../images/bgg.jpg");
       background-repeat:no-repeat;
       background-size:cover
   }

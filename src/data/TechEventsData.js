@@ -1,6 +1,6 @@
 export const TechEvents = {
     // Tenet
-    "tenet": {
+    "reverse-engineering": {
         name: "Tenet",
         imgName:"Saj.jpeg",
         refName: "tenet",
@@ -128,7 +128,7 @@ export const TechEvents = {
     },
 
     // Code for Crown - OLPC
-    "code-for-crown-olpc": {
+    "code-for-crown": {
         imgName:"code-for-crown_sponsor1.jpeg",
         name: "Code for Crown - OLPC",
         refName: "code-for-crown",
@@ -176,7 +176,7 @@ export const TechEvents = {
     },
 
     // X-Domain Combat
-    "x-domain-combat": {
+    "get-hired": {
         imgName:"Saj.jpeg",
         name: "X-Domain Combat",
         refName: "x-domain-combat",

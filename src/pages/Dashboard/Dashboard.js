@@ -10,8 +10,8 @@ import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
-import eventpassimg from "../../images/eventpassimggg.png";
-import workshoppassimg from "../../images/workshoppassimgg.png";
+import eventpassimg from "../../images/eventpassimg.png";
+import workshoppassimg from "../../images/workshoppassimg.png";
 import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
 import { TiTick } from "react-icons/ti";
@@ -23,73 +23,85 @@ const Dashboard = () => {
   let eventList = [
     {
       id: 1,
-      refName: "tenet",
-      name: "Tenet",
-      img: tech,
+      refName: "reverse-engineering",
+      name: "Reverse Engineering",
       type: "tech-events",
       registered: true,
     },
     {
       id: 2,
-      refName: "code-for-crown-olpc",
-      name: "Code for crown",
-      img: nontech,
+      refName: "code-for-crown",
+      name: "Code for Crown",
       type: "tech-events",
       registered: false,
     },
     {
       id: 3,
-      refName: "novice-init",
-      name: "Tenet",
-      img: hack,
+      refName: "web-design",
+      name: "Web Design",
       type: "tech-events",
       registered: false,
     },
     {
       id: 4,
-      refName: "tenet",
-      name: "Asdfgh",
-      img: nontech,
+      refName: "capture-the-flag",
+      name: "Capture the Flag",
       type: "tech-events",
       registered: true,
     },
     {
       id: 5,
-      refName: "tenet",
-      name: "qwerty",
-      img: hack,
+      refName: "she-codes",
+      name: "She Codes",
       type: "tech-events",
       registered: true,
     },
     {
       id: 6,
-      refName: "tenet",
-      name: "zxcvb",
-      img: tech,
+      refName: "booting",
+      name: "Booting",
       type: "tech-events",
       registered: false,
     },
     {
       id: 7,
-      refName: "house-full",
-      name: "House Full",
-      img: nontech,
-      type: "non-tech-events",
+      refName: "get-hired",
+      name: "Get Hired",
+      type: "tech-events",
       registered: true,
     },
     {
       id: 8,
-      refName: "graphic-traffic",
-      name: "Graphic Traffic",
-      img: hack,
+      refName: "ship-wreck",
+      name: "Ship-Wreck",
       type: "non-tech-events",
       registered: false,
     },
     {
       id: 9,
-      refName: "imagenation",
-      name: "Imagenation",
-      img: tech,
+      refName: "design-a-thon",
+      name: "Design-a-thon",
+      type: "non-tech-events",
+      registered: true,
+    },
+    {
+      id: 10,
+      refName: "fandom-quiz",
+      name: "Fandom Quiz",
+      type: "non-tech-events",
+      registered: false,
+    },
+    {
+      id: 11,
+      refName: "thadam",
+      name: "Thadam",
+      type: "non-tech-events",
+      registered: true,
+    },
+    {
+      id: 12,
+      refName: "gamindrome",
+      name: "Gamindrome",
       type: "non-tech-events",
       registered: true,
     },
@@ -97,31 +109,21 @@ const Dashboard = () => {
 
   let workshopList = [
     {
-      id: 1,
-      refName: "cloud-computing",
-      name: "Cloud Computing",
-      img: tech,
+      id: 13,
+      refName: "blockchain-and-cryptocurrency",
+      name: "Blockchain and Cryptocurrency",
       registered: true,
     },
     {
-      id: 2,
-      refName: "entrepreneurship",
-      name: "Entrepreneurship",
-      img: nontech,
+      id: 14,
+      refName: "dev-ops",
+      name: "DevOps",
       registered: false,
     },
     {
-      id: 3,
-      refName: "job-readiness",
-      name: "Job Readiness",
-      img: hack,
-      registered: false,
-    },
-    {
-      id: 4,
-      refName: "cloud-computing",
-      name: "Cloud Computing",
-      img: tech,
+      id: 15,
+      refName: "stock-market-and-share-market",
+      name: "Stock Market and Share Market",
       registered: true,
     },
   ];

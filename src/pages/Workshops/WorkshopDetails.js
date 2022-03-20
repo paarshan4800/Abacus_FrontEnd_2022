@@ -33,7 +33,7 @@ function WorkshopDetails() {
           <div className={styles.content}>
             <h2 className={styles.neon}>DESCRIPTION</h2>
             <p>{data.about}</p>
-            <h2 className={styles.neon}>DATE & TIME</h2>
+            {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
             {data.dateTime.map((obj) => (
               <p key={1}> {obj}</p>
             ))}
@@ -50,7 +50,11 @@ function WorkshopDetails() {
         <div className={styles.box} style={{ width: "400px" }}>
           <span></span>
           <div className={styles.content}>
-            <img src={nontech} style={{ width: "200px", height: "200px" }} />
+          <img
+                src={require(`./../../images/Workshops/${title}.png`)}
+                style={{ width: "200px", height: "200px" }}
+                alt={title}
+              />
             <GlassButton title="Register" />
           </div>
         </div>

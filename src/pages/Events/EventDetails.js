@@ -5,9 +5,9 @@ import { useParams, useHistory } from "react-router-dom";
 import { TechEvents } from "../../data/TechEventsData";
 import { NonTechEvents } from "../../data/NonTechEventsData";
 import PageNotFound from "../PageNotFound/PageNotFound";
-import nontech from "./../../images/nontech.jpeg";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
 import background from "../../images/bgg.jpg";
+import nontech from "./../../images/nontech.jpeg";
 
 function EventDetails() {
   const { type, title } = useParams();
@@ -60,7 +60,20 @@ function EventDetails() {
         <div className={styles.box} style={{ width: "400px" }}>
           <span></span>
           <div className={styles.content}>
-            <img src={nontech} style={{ width: "200px", height: "200px" }} />
+            {type === "tech-events" && (
+              <img
+                src={require(`./../../images/TechEvents/${title}.png`)}
+                style={{ width: "200px", height: "200px" }}
+                alt={title}
+              />
+            )}
+            {type === "non-tech-events" && (
+              <img
+                src={require(`./../../images/NonTechEvents/${title}.png`)}
+                style={{ width: "200px", height: "200px" }}
+                alt={title}
+              />
+            )}
             <GlassButton title="Register" />
           </div>
         </div>

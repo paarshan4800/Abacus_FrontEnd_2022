@@ -1,7 +1,7 @@
 export const NonTechEvents = {
 
     // House Full
-    "house-full": {
+    "ship-wreck": {
         name: "House Full",
         refName: "house-full",
         about: `Are you looking for a bizarre event that furnishes a crazy time?. Then get ready and jump in. This is an event for all the non technical pros out there.`,
@@ -53,7 +53,7 @@ export const NonTechEvents = {
     },
 
     // Imagenation
-    "imagenation": {
+    "design-a-thon": {
         name: "Imagenation",
         refName: "imagenation",
         about: `Hello Photographers, get your cam ready and start capturing the moment.
@@ -118,7 +118,7 @@ export const NonTechEvents = {
     },
 
     // Graphic Traffic
-    "graphic-traffic": {
+    "thadam": {
         name: "Graphic Traffic",
         refName: "graphic-traffic",
         about: `Hello Designers, get your sketch ready and start portraying the moment.
