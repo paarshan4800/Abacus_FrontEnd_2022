@@ -10,7 +10,6 @@ import EventDetails from "./pages/Events/EventDetails";
 import TechEventsList from "./pages/Events/TechEventsList";
 import NonTechEventsList from "./pages/Events/NonTechEventsList";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Cart from "./pages/Cart/Cart";
 import Hackathon from "./pages/Events/Hackathon";
 import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 import LoginRegister from "./pages/Login/LoginRegister";
@@ -57,7 +56,6 @@ const AppRoutes = () => {
       <Route path="/workshops" exact component={WorkshopsList} />
       <Route path="/workshops/:title" exact component={WorkshopDetails} />
       <Route path="/dashboard" exact component={Dashboard} />
-      <Route path="/cart" exact component={Cart} />
       <Route path="/404" exact component={PageNotFound} />
       <Route path="/Login" exact component={LoginRegister} />
       <Route path="/signUp" exact component={SignUp} />

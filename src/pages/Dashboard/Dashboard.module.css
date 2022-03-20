@@ -292,7 +292,7 @@ body {
     font-size: 0.9em;
   }
 
-  .list_element2 {
+  .list_element {
     display: flex;
     align-items: center;
     width: 80%;
@@ -305,11 +305,11 @@ body {
     transition: transform 0.3s;
   }
 
-  .list_element2 .hide {
+  .list_element .hide {
     display: none;
   }
 
-  .list_element2 .title {
+  .list_element .title {
     width: 90% !important ;
     /* background-color: #4b4b4b !important ; */
     display: flex;
@@ -318,32 +318,22 @@ body {
     color: #000000;
   }
 
-  .list_element2 .badge {
+  .list_element .badge {
     display: flex;
     justify-content: flex-end;
     width: 10%;
     /* background-color: #4b4b4b; */
   }
-  /* .list_element:hover {
-    transform: scale(1.05);
-  }
-  
-  .list_element .title {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 1.5em;
-    color: #ffffff;
-  } */
-  
+ 
 }
 
 @media only screen and (max-width: 400px) {
 
-  .list_element2 .title {
+  .list_element .title {
    font-size: 1em !important;
   }
 
-  .list_element2 {
+  .list_element {
     max-height: 40px !important;
   }
 
@@ -378,36 +368,7 @@ body {
   width: 75%;
 }
 
-/* .list_element {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  justify-content: space-between;
-  padding: 40px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  background: linear-gradient(90deg, rgba(87,177,25,1) 0%, rgba(127,218,11,1) 69%, rgba(237,255,8,1) 98%);
-  height: 80px;
-  transition: transform 0.3s;
-}
-
-.list_element:hover {
-  transform: scale(1.05);
-}
-
-.list_element .title {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 1.5em;
-  color: #000000;
-}
-
-.list_element .btn {
-  display: flex;
-  justify-content: flex-end;
-} */
-
-.list_element2 {
+.list_element {
   display: flex;
   align-items: center;
   width: 80%;
@@ -432,11 +393,11 @@ body {
   /* box-shadow: 0 0 10px 5px #43eb19; */
 }
 
-.list_element2:hover {
+.list_element:hover {
   transform: scale(1.05);
 }
 
-.list_element2 .title {
+.list_element .title {
   display: flex;
   justify-content: flex-start;
   width: 60%;
@@ -445,18 +406,18 @@ body {
   /* background-color: antiquewhite; */
 }
 
-.list_element2 .hide {
+.list_element .hide {
   width: 35%;
 }
 
-.list_element2 .btn {
+.list_element .btn {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   /* background-color: aqua; */
 }
 
-.list_element2 .badge {
+.list_element .badge {
   display: flex;
   justify-content: flex-end;
   width: 5%;

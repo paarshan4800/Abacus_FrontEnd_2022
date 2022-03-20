@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./PageNotFound.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { useHistory } from "react-router-dom";
-import img404 from "../../images/bg3.jpg";
+import img404 from "../../images/bgg.jpg";
 
 function PageNotFound() {
   const history = useHistory();

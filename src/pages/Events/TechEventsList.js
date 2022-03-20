@@ -67,29 +67,14 @@ function TechEventsList() {
     // }}
     >
       <div className={styles.wrapper}>
-        {techEventsList.map((event) =>
-          event.id % 2 == 0 ? (
-            <Link to={`/events/tech-events/${event.refName}`}>
-              <div
-                key={event.id}
-                className={cx(styles.maindiv, styles.maindiv1)}
-              >
-                <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
-              </div>
-            </Link>
-          ) : (
-            <Link to={`/events/tech-events/${event.refName}`}>
-              <div
-                key={event.id}
-                className={cx(styles.maindiv, styles.maindiv1)}
-              >
-                <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
-              </div>
-            </Link>
-          )
-        )}
+        {techEventsList.map((event) => (
+          <Link to={`/events/tech-events/${event.refName}`}>
+            <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
+              <img src={event.img} alt="1" />
+              <div className={styles.title}>{event.name}</div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

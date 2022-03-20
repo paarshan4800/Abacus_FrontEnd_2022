@@ -139,9 +139,9 @@ export const TechEvents = {
             "Time:11am"
         ],
 
-        /*contact: [
+        contact: [
 
-        ],*/
+        ],
 
         sponsor: "Amazon",
 

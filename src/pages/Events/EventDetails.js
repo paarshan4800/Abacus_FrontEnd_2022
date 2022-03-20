@@ -29,15 +29,13 @@ function EventDetails() {
 
   return (
     <div
-      style={
-        {
-          backgroundImage: `url(${background})`,
-          backgroundSize: "cover",
-          backgroundRepeat: 1,
-          //height: "100vh",
-          // color: "#f5f5f5",
-        }
-      }
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundRepeat: 1,
+        //height: "100vh",
+        // color: "#f5f5f5",
+      }}
     >
       <div className={styles.container}>
         <div className={styles.box} style={{ width: "800px" }}>
@@ -45,7 +43,7 @@ function EventDetails() {
           <div className={styles.content}>
             <h2 className={styles.neon}>DESCRIPTION</h2>
             <p>{data.about}</p>
-            <h2 className={styles.neon}>DATE & TIME</h2>
+            {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
             {data.dateTime.map((obj) => (
               <p key={1}> {obj}</p>
             ))}
@@ -63,8 +61,8 @@ function EventDetails() {
           <span></span>
           <div className={styles.content}>
             <img src={nontech} style={{ width: "200px", height: "200px" }} />
+            <GlassButton title="Register" />
           </div>
-          <GlassButton />
         </div>
       </div>
 
@@ -111,8 +109,7 @@ function EventDetails() {
                 {round.title} - {round.description}
               </p>
             ))}
-
-            {/* <a href="#">Read More</a> */}
+            <GlassButton title="Scroll to Top" />
           </div>
         </div>
       </div>

@@ -215,7 +215,7 @@ const Dashboard = () => {
               <div className={styles.list}>
                 {eventList.map((event) =>
                   event.registered ? (
-                    <div key={event.id} className={styles.list_element2}>
+                    <div key={event.id} className={styles.list_element}>
                       <div className={styles.title}>{event.refName}</div>
                       <div className={styles.hide}>
                         <Link to={`/events/${event.type}/${event.refName}`}>
@@ -229,7 +229,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                   ) : (
-                    <div key={event.id} className={styles.list_element2}>
+                    <div key={event.id} className={styles.list_element}>
                       <div className={styles.title}>{event.refName}</div>
                       <div className={styles.hide}>
                         <Link to={`/events/${event.type}/${event.refName}`}>

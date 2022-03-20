@@ -6,6 +6,7 @@ import Link from "react";
 import reactDom from "react-dom";
 import { Workshops } from "../../data/WorkshopsData";
 import PageNotFound from "../PageNotFound/PageNotFound";
+import nontech from "./../../images/nontech.jpeg";
 
 function WorkshopDetails() {
   const { title } = useParams();
@@ -19,57 +20,74 @@ function WorkshopDetails() {
 
   return (
     <div
-      // style={{
-      //   backgroundImage: `url(${background})`,
-      //   backgroundSize: "cover",
-      //   height: "100vh",
-      //   color: "#f5f5f5",
-      // }}
+    // style={{
+    //   backgroundImage: `url(${background})`,
+    //   backgroundSize: "cover",
+    //   height: "100vh",
+    //   color: "#f5f5f5",
+    // }}
     >
+      <div className={styles.container}>
+        <div className={styles.box} style={{ width: "800px" }}>
+          <span></span>
+          <div className={styles.content}>
+            <h2 className={styles.neon}>DESCRIPTION</h2>
+            <p>{data.about}</p>
+            <h2 className={styles.neon}>DATE & TIME</h2>
+            {data.dateTime.map((obj) => (
+              <p key={1}> {obj}</p>
+            ))}
+            <h2 className={styles.neon}>CONTACT</h2>
+            {data.contact.map((person, index) => (
+              <p key={index + 1} className={styles.glowCardName}>
+                {person.name} - <i class="fa fa-phone"></i>
+                {person.mobile}
+              </p>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.box} style={{ width: "400px" }}>
+          <span></span>
+          <div className={styles.content}>
+            <img src={nontech} style={{ width: "200px", height: "200px" }} />
+            <GlassButton title="Register" />
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.container}>
+        <div className={styles.box} style={{ width: "400px" }}>
+          <span></span>
+          <div className={styles.content}>
+            <img src={nontech} style={{ width: "200px", height: "200px" }} />
+          </div>
+        </div>
+
+        <div className={styles.box} style={{ width: "800px" }}>
+          <span></span>
+          <div className={styles.content}>
+            <h2 className={styles.neon}>SPONSORS</h2>
+            <p>{data.about}</p>
+
+            {/* <a href="#">Read More</a> */}
+          </div>
+        </div>
+      </div>
+
       <div className={styles.container}>
         <div className={styles.box}>
           <span></span>
           <div className={styles.content}>
-            <h2 className={styles.neon}>RULES</h2>
-            <p>
-              1) The event is for a team of three participants (At Least 2
-              participants)<br></br> 2) Problem statement will be provided on
-              25th March, 2021 and participants are expected to present their
-              prototype on 26th March, 2021 <br></br>3) Decisions made by the
-              administrators will be final
-            </p>
-            {/* <a href="#">Read More</a> */}
-          </div>
-        </div>
-        <div className={styles.box}>
-          <span></span>
-          <div className={styles.content}>
-            <h2 className={styles.neon}>{data.name}</h2>
-            <p>
-              {data.about}
-              <br />
-              <br />
-              <b>CONTACT:</b> Kanika K - 8300295535 <br></br>
-              <b>DATE:</b> 25-03-2021 and 26-03-2021<br></br>
-              {/* <div className={NavbarBigStyles.buttons}>
-                <GlassButton title="REGISTER" />
-                </div> */}
-            </p>
-            {/* <a href="#">Read More</a> */}
-          </div>
-        </div>
-        <div className={styles.box}>
-          <span></span>
-          <div className={styles.content}>
-            <h2 className={styles.neon}>RULES</h2>
-            <p>
-              4) Participants must ensure that they have laptop with good
-              internet connectivity for their convenience <br></br>5)
-              Participants must ensure that they have microsoft account<br></br>
-              6) Participants can contact the given contact for any doubts
-              regarding the event.
-            </p>
-            {/* <a href="#">Read More</a> */}
+            <h2 className={styles.neon}>SPEAKERS</h2>
+            {data.speakers.map((speaker, index) => (
+              <p key={index + 1} className={styles.glowCardName}>
+                <a href={speaker.href}>
+                  {index + 1}. {speaker.name} - {speaker.profession} ({" "}
+                  {speaker.company})
+                </a>
+              </p>
+            ))}
           </div>
         </div>
       </div>

@@ -52,6 +52,7 @@ body {
   transition: all 200ms ease-in;
   transform: scale(1.1);
 }
+
 .maindiv1::before {
   content: "";
   position: absolute;
@@ -59,11 +60,11 @@ body {
   top: 0;
   width: 50%;
   height: 50%;
-  -webkit-box-shadow: 0 0 19px 5px #0f0, 0 0 6px 4px #0f0;
-  box-shadow: 0 0 19px 5px #0f0, 0 0 6px 4px #0f0;
+  -webkit-box-shadow: 0 0 19px 5px #38ef7d, 0 0 6px 4px #38ef7d;
+  box-shadow: 0 0 19px 5px #38ef7d, 0 0 6px 4px #38ef7d;
   z-index: 0;
-  -webkit-animation-name: yellow-shadow;
-  animation-name: yellow-shadow;
+  -webkit-animation-name: green-shadow;
+  animation-name: green-shadow;
   -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
   -webkit-animation-duration: 10s;
@@ -84,8 +85,8 @@ body {
   bottom: 0;
   width: 50%;
   height: 50%;
-  -webkit-box-shadow: 0 0 19px 5px #bdcf1a, 0 0 6px 4px #bdcf1a;
-  box-shadow: 0 0 19px 5px #bdcf1a, 0 0 6px 4px #bdcf1a;
+  -webkit-box-shadow: 0 0 19px 5px #11998e, 0 0 6px 4px #11998e;
+  box-shadow: 0 0 19px 5px #11998e, 0 0 6px 4px #11998e;
   z-index: 0;
   -webkit-animation-name: cyan-shadow;
   animation-name: cyan-shadow;
@@ -125,7 +126,7 @@ body {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
-} */
+}
 
 .maindiv3::before {
   content: "";
@@ -175,7 +176,7 @@ body {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
-}
+} */
 
 .title {
   padding: 5%;
@@ -183,20 +184,21 @@ body {
   height: 100px;
   position: relative;
   z-index: 3;
-  background-color: #060c1f;
+  background-color: #000000;
 
   text-align: center;
   color: #ffffff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff;
   border-radius: 0 0 7px 7px;
 }
+
 img {
   position: relative;
   z-index: 3;
   border-radius: 7px 7px 0 0;
 }
 
-@-webkit-keyframes yellow-shadow {
+@-webkit-keyframes green-shadow {
   0% {
     top: 0;
     left: 0;
@@ -219,7 +221,7 @@ img {
   }
 }
 
-@keyframes yellow-shadow {
+@keyframes green-shadow {
   0% {
     top: 0;
     left: 0;
@@ -288,7 +290,7 @@ img {
   }
 }
 
-@-webkit-keyframes gradient-shadow {
+/* @-webkit-keyframes gradient-shadow {
   0% {
     -webkit-box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
     box-shadow: 0 0 17px 3px #c586c0, 0 0 4px 2px #c586c0;
@@ -520,4 +522,4 @@ img {
     height: 50%;
     width: 50%;
   }
-}
+} */

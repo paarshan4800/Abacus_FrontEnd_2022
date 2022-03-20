@@ -61,29 +61,14 @@ function NonTechEventsList() {
     // }}
     >
       <div className={styles.wrapper}>
-        {nonTechEventsList.map((event) =>
-          event.id % 2 == 0 ? (
-            <Link to={`/events/non-tech-events/${event.refName}`}>
-              <div
-                key={event.id}
-                className={cx(styles.maindiv, styles.maindiv1)}
-              >
-                <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
-              </div>
-            </Link>
-          ) : (
-            <Link to={`/events/non-tech-events/${event.refName}`}>
-              <div
-                key={event.id}
-                className={cx(styles.maindiv, styles.maindiv3)}
-              >
-                <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
-              </div>
-            </Link>
-          )
-        )}
+        {nonTechEventsList.map((event) => (
+          <Link to={`/events/non-tech-events/${event.refName}`}>
+            <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
+              <img src={event.img} alt="1" />
+              <div className={styles.title}>{event.name}</div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
