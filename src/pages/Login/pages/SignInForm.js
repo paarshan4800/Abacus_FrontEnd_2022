@@ -67,6 +67,7 @@ function SignInForm() {
   };
   useEffect(afterGoogleSignIn, []);
   return (
+    <div className={logstyle.App}> 
     <div  className={logstyle.appForm}>
     <div className={logstyle.formCenter}> 
       <div className={logstyle.styleButton}>
@@ -132,12 +133,18 @@ function SignInForm() {
         </div>
         <div className={logstyle.formField}>
           <div style={{display: "inline"}}>
+          <NavLink to="/signUp" className={logstyle.formFieldLink} onClick={LoginRegister.flips}>
+            Create an account
+          </NavLink>
+          </div>
+          <div style={{display: "inline", marginLeft: "50px"}}>
           <NavLink to="/ForgotPassword" className={logstyle.formFieldLink}>
             Forgot Password?
           </NavLink>
           </div>
         </div>
       </form>
+    </div>
     </div>
     </div>
   );

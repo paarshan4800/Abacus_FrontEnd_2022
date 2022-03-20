@@ -1,10 +1,14 @@
-.LoginRegisterBg{
-  background: linear-gradient(to right, #38ef7d, #11998e) !important;
+:root {
+  --from: rgb(175, 46, 192);
+  --to: rgb(133, 34, 146);
 }
 .App {
   height: 100vh;
   width: 100vw;
   color: white;
+  background-image: url("./pages/assets/images/imgbg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,16 +21,20 @@
 }
 
 .appForm {
-  width: 100%;
+  width: 50%;
   height: 95vh;
   padding: 25px 40px;
   overflow: auto;
   text-align: center;
+<<<<<<< HEAD
   /*background: rgb(2,5,4);
   background: linear-gradient(148deg, rgba(2,5,4,1) 1%, rgba(22,97,59,1) 10%, rgba(1,1,1,1) 20%, rgba(56,239,125,1) 40%, rgba(30,127,67,1) 54%, rgba(24,101,53,1) 58%, rgba(54,232,121,1) 72%, rgba(28,118,62,1) 81%, rgba(1,1,1,1) 92%, rgba(12,49,26,1) 100%, rgba(17,153,142,1) 100%);*/
   background-image: url("./pages/assets/images/bluegreen.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+=======
+  background-color: black !important;
+>>>>>>> parent of f0c332c (flip card)
 }
 
 @media screen and (max-width: 600px) {
@@ -68,6 +76,9 @@
   border-bottom-right-radius: 25px;
 }
 
+.formCenter {
+  /* margin-bottom: 100px; */
+}
 div::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -408,41 +419,4 @@ div::-webkit-scrollbar-thumb {
   color: aqua;
   transform: rotateY(180deg);
 }
-.butchange{
-  background-color: #15ff3c;
-  color:white;
-}
-.frontCard{
-  display: flex;
-  width: 25vw;
-  height: 25vw;
-  background-color: blue;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 1s ease;
-}
 
-.backCard{
-  transform: rotatey(180deg);
-  transition: 1s ease;
-  display: flex;
-  width: 25vw;
-  height: 25vw;
-  background-color: blue;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.deactive{
-  display: none;
-}
-.back {
-  transform: rotatey(180deg);
-}
-
-.active {
-  display: block;
-  transform: rotatey();
-}
