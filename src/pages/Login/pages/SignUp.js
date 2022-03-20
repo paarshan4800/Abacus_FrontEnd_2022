@@ -161,7 +161,6 @@ function SignUp() {
   };
   console.log(year);
   return (
-  <div className={logstyle.App}> 
     <div className={logstyle.appForm}>
     <div className={logstyle.formCenter}>
       <div className={logstyle.styleButton}>
@@ -184,9 +183,6 @@ function SignUp() {
         {/*name*/}
 
         <div className={logstyle.formField}>
-          {/* <label className={logstyle.formFieldLabel} htmlFor="name">
-            Full Name
-          </label> */}
           <div style={{}}>
           <input
             type="text"
@@ -205,9 +201,6 @@ function SignUp() {
 
         {/*year*/}
         <div className={logstyle.formField}>
-          {/* <label className={logstyle.formFieldLabel} htmlFor="year">
-            Year
-          </label> */}
           <Select
             className={logstyle.drop}
             components={{
@@ -225,9 +218,6 @@ function SignUp() {
 
         {/*department*/}
         <div className={logstyle.formField}>
-          {/* <label className={logstyle.formFieldLabel} htmlFor="dept">
-            Department
-          </label> */}
           <Select
             className={logstyle.drop}
             components={{
@@ -245,9 +235,6 @@ function SignUp() {
 
         {/*college*/}
         <div className={logstyle.formField}>
-          {/* <label className={logstyle.formFieldLabel} htmlFor="colg">
-            College
-          </label> */}
           <Select
             className={logstyle.drop}
             components={{
@@ -264,9 +251,6 @@ function SignUp() {
         </div>
 
         <div className={logstyle.formField}>
-          {/* <label className={logstyle.formFieldLabel} htmlFor="email">
-            E-Mail Address
-          </label> */}
           <input
             type="email"
             id="email"
@@ -278,11 +262,7 @@ function SignUp() {
             disabled={nonChangable ? true : false}
           />
         </div>
-        {/*phone*/}
         <div className={logstyle.formField}>
-          {/* <label className={logstyle.formFieldLabel} htmlFor="phone">
-            Phone Number
-          </label> */}
           <input
             type="text"
             id="phone"
@@ -294,9 +274,6 @@ function SignUp() {
           />
         </div>
         <div className={logstyle.formField}>
-          {/* <label className={logstyle.formFieldLabel} htmlFor="password">
-            Password
-          </label> */}
           <input
             type="password"
             id="password"
@@ -309,9 +286,6 @@ function SignUp() {
         </div>
         {/*confirm password*/}
         <div className={logstyle.formField}>
-          {/* <label className={logstyle.formFieldLabel} htmlFor="conpass">
-            Confirm Password
-          </label> */}
           <input
             type="password"
             id="conpass"
@@ -324,20 +298,12 @@ function SignUp() {
         </div>
 
         <div className={logstyle.styleButton}>
-          {/*<button className={logstyle.formFieldButton}>Sign Up</button>{" "}*/}
-          {/* <button> */}
             <GlassButton title="Sign Up" />
-          {/* </button> */}
         </div>
-        <div className={logstyle.formField}>
-          <NavLink to="/Login" className={logstyle.formFieldLink} onClick={LoginRegister.flips}>
-            I'm already a member!
-          </NavLink>
-        </div>
+
       </form>
     </div>
     </div>
-  </div>
   );
   //}
 }
