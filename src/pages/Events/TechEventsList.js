@@ -39,8 +39,8 @@ function TechEventsList() {
     },
     {
       id: 5,
-      refName: "tenet",
-      name: "qwerty",
+      refName: "x-domain-combat",
+      name: "x-domain-combat",
       img: hack,
     },
     {
@@ -75,7 +75,7 @@ function TechEventsList() {
                 className={cx(styles.maindiv, styles.maindiv1)}
               >
                 <img src={event.img} alt="1" />
-                <div >{event.name}</div>
+                <div className={styles.title}>{event.name}</div>
               </div>
             </Link>
           ) : (

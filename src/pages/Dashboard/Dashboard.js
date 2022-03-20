@@ -164,7 +164,7 @@ const Dashboard = () => {
         </div>
 
         <div className={styles.userstats}>
-          {0 ? (
+          {1 ? (
             <div className={styles.event_pass}>
               <Link to={`/events`}>
                 <img src={eventpassimg} />
@@ -184,8 +184,7 @@ const Dashboard = () => {
           {1 ? (
             <div className={styles.workshop_pass}>
               <Link to={`/workshops`}>
-                {/* <img src={workshoppassimg} /> */}
-                <img src={eventpassimg} />
+                <img src={workshoppassimg} />
               </Link>
             </div>
           ) : (

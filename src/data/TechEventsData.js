@@ -147,7 +147,6 @@ export const TechEvents = {
 
         rules: [
             "This event is for individual participants only.",
-            
             "There will be no negative marking for MCQs.",
             "Participants are allowed to use any one of the following programming languages for the coding rounds (C, C++, Java, Python3)",
             "Participants found guilty are not allowed to proceed with the competition.",

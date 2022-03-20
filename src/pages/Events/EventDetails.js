@@ -7,6 +7,7 @@ import { NonTechEvents } from "../../data/NonTechEventsData";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import nontech from "./../../images/nontech.jpeg";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
+import background from "../../images/bgg.jpg";
 
 function EventDetails() {
   const { type, title } = useParams();
@@ -30,9 +31,9 @@ function EventDetails() {
     <div
       style={
         {
-          // backgroundImage: `url(${background})`,
-          // backgroundSize: "cover",
-          // backgroundRepeat: 1,
+          backgroundImage: `url(${background})`,
+          backgroundSize: "cover",
+          backgroundRepeat: 1,
           //height: "100vh",
           // color: "#f5f5f5",
         }
