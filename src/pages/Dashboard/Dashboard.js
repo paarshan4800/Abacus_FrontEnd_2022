@@ -10,8 +10,8 @@ import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
-import eventpassimg from "../../images/eventpassimg.png";
-import workshoppassimg from "../../images/workshoppassimg.png";
+import eventpassimg from "../../images/eventpassimggg.png";
+import workshoppassimg from "../../images/workshoppassimgg.png";
 import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
 import { TiTick } from "react-icons/ti";
@@ -154,7 +154,7 @@ const Dashboard = () => {
             </div>
             <div className={styles.userinfo}>
               <div className={styles.name}>
-                <p>Name: Jonita Arnold Gigi Joe Doe</p>
+                <p>Name: Harry Edward Styles</p>
               </div>
               <div className={styles.abacusid}>
                 <p>Abacus-ID: 4101</p>
