@@ -67,7 +67,7 @@ function App() {
                     <BrowserRouter>
                       <Navbar />
 
-                      <div style={{ backgroundImage: `url(${background})`, backgroundSize: "cover", backgroundRepeat: 1 }}>
+                      <div style={{ paddingTop: "90px", backgroundImage: `url(${background})`, backgroundSize: "cover", backgroundRepeat: 1 }}>
                         <AppRoutes />
                       </div> 
                       {/* <div className="gradient-bg-welcome">

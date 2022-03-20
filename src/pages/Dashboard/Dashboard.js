@@ -150,13 +150,13 @@ const Dashboard = () => {
     <div>
       <div className={styles.infoBar}>
         <div className={styles.profile}>
-          <div className={styles.info_card}>
+          <div className={styles.info_card2}>
             <div className={styles.userimg}>
               <img src={userimg} />
             </div>
             <div className={styles.userinfo}>
               <div className={styles.name}>
-                <p>Name: Harry Edward Styles</p>
+                <p>Name: Harry Edward Styles Louis Tomlinson</p>
               </div>
               <div className={styles.abacusid}>
                 <p>Abacus-ID: 4101</p>
@@ -218,7 +218,7 @@ const Dashboard = () => {
                 {eventList.map((event) =>
                   event.registered ? (
                     <div key={event.id} className={styles.list_element}>
-                      <div className={styles.title}>{event.refName}</div>
+                      <div className={styles.title}>{event.name}</div>
                       <div className={styles.hide}>
                         <Link to={`/events/${event.type}/${event.refName}`}>
                           <div className={styles.btn}>
@@ -232,7 +232,7 @@ const Dashboard = () => {
                     </div>
                   ) : (
                     <div key={event.id} className={styles.list_element}>
-                      <div className={styles.title}>{event.refName}</div>
+                      <div className={styles.title}>{event.name}</div>
                       <div className={styles.hide}>
                         <Link to={`/events/${event.type}/${event.refName}`}>
                           <div className={styles.btn}>
@@ -253,7 +253,7 @@ const Dashboard = () => {
                 {workshopList.map((event) =>
                   event.registered ? (
                     <div key={event.id} className={styles.list_element}>
-                      <div className={styles.title}>{event.refName}</div>
+                      <div className={styles.title}>{event.name}</div>
                       <div className={styles.hide}>
                         <Link to={`/workshops/${event.refName}`}>
                           <div className={styles.btn}>
@@ -267,7 +267,7 @@ const Dashboard = () => {
                     </div>
                   ) : (
                     <div key={event.id} className={styles.list_element}>
-                      <div className={styles.title}>{event.refName}</div>
+                      <div className={styles.title}>{event.name}</div>
                       <div className={styles.hide}>
                         <Link to={`/workshops/${event.refName}`}>
                           <div className={styles.btn}>
