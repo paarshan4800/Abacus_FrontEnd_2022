@@ -101,6 +101,19 @@ export const NonTechEvents = {
             "Last date for sending the photo: 20-03-2021",
             "Send your entries to (email id) : abacus.imagenation@gmail.com"
         ],
+        rounds: {
+            number: 2,
+            roundDetails: [
+                {
+                    title: "Prelims",
+                    description: "Participants will be given 30 minutes to answer questions from familiar topics."
+                },
+                {
+                    title: "Finals",
+                    description: "A round in round robin fashion. Based on Kollywood (60 minutes)"
+                },
+            ]
+        }, 
         registration: false
     },
 
@@ -152,7 +165,7 @@ export const NonTechEvents = {
             "Last date for sending the poster: 20-03-2021",
             "Send your entries to (email id) : abacus.graphictraffic@gmail.com"
         ],
-        /* rounds: {
+        rounds: {
             number: 2,
             roundDetails: [
                 {
@@ -164,7 +177,7 @@ export const NonTechEvents = {
                     description: "A round in round robin fashion. Based on Kollywood (60 minutes)"
                 },
             ]
-        }, */
+        }, 
         registration: false
     },
 }
