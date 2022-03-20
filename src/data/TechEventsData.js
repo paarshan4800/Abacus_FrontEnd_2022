@@ -67,7 +67,7 @@ export const TechEvents = {
     },
 
     // Novice
-    "novice-init": {
+    "web-design": {
         name: "Novice.init()",
         refName: "novice",
         about: `Novice.init() is an exclusive event for the first year students of various colleges. It provides scope for the young minds to explore the coding world and to assess their logical reasoning abilities. This event introduces newbies to the technical contests.`,
