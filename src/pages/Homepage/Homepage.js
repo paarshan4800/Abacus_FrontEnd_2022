@@ -3,6 +3,7 @@ import styles from "./Homepage.module.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
+import cx from 'classnames'
 
 //NeonButton
 import Landing from "../../components/Landing/Landing";
@@ -29,11 +30,20 @@ class Homepage extends Component {
   render() {
     return (
       <>
-        <Landing />
+      <Landing />
+       {/* 
+
+         Child Class */}
+
+        
 
         {/* Child Class */}
 
-        <div className={`${styles.About_Abacus} ${styles.bg}`}>
+        {/* Dev Section 
+        
+        
+       */}
+       <div className={`${styles.About_Abacus} ${styles.bg}`}>
           <div className={`${styles.left_container}`}>
             <div className={`${styles.left_content}`}>
               <div className={`${styles.logo}`}>
@@ -41,71 +51,89 @@ class Homepage extends Component {
                   src={`${process.env.PUBLIC_URL}/images/about-us/abacus logo sponsors page.png`}
                   alt=""
                   style={{
-                    width: "300px",
-                    height: "290px",
+                    width: "330px",
+                    height: "340px",
                     margin: "auto",
                   }}
                 />
-              </div>
-              <div className={`${styles.count}`}>
-                <div className="row  mb-2">
-                  <div className="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={7} redraw={true} suffix=" +">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>
-                    </div>{" "}
-                    <Heading1 text="Events" fontSize="20px" />
-                  </div>
-                  <div className="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={1} redraw={true} suffix=" ">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>
-                    </div>{" "}
-                    <Heading1 text="Hackathon" fontSize="20px" />
-                  </div>
+
+                <div className = {styles.eve}>
+
+
+                <div className = {styles.top}>
+
+                <div className={`${styles.one_count}`}>
+                <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={7} redraw={true} suffix=" +">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Events" fontSize="20px" />
                 </div>
-                <div className="row mt-6">
-                  <div className="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={5} redraw={true} suffix=" +">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>{" "}
-                    </div>
-                    <Heading1 text="Workshops" fontSize="20px" />
-                  </div>
-                  <div class="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={50} redraw={true} suffix=" K+">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>{" "}
-                    </div>
-                    <Heading1 text="Prize Money" fontSize="20px" />
-                  </div>
+               
+            <div className={`${styles.one_count}`}>
+                <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={3} redraw={true} suffix=" +">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Workshops" fontSize="20px" />
                 </div>
+
+                </div>
+
+                <div className = {styles.bottom}>
+
+                <div className={`${styles.one_count}`}>
+                <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={90} redraw={true} suffix=" K+">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Cash Prize" fontSize="20px" />
+
+                </div>
+               <div className={`${styles.one_count}`}>
+               <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={1} redraw={true}>
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Hackathon" fontSize="20px" />
+               </div>
+                   
+                </div>
+                </div>
+                
+               
               </div>
+              
             </div>
           </div>
           <div className={`${styles.right_container}`}>
             <div className={`${styles.right_content}`}>
-              <h1 className={`${styles.heading}`}>Abacus '22</h1>
+            <div
+                key={1}
+                className={cx(styles.maindiv)}
+              >
+
+                  <h1 className={`${styles.heading}`}>Abacus '22</h1>
               <p className={`${styles.paragraph} mt-1`}>
                 CSEA takes immense pleasure in organizing Abacus'22. This
                 version is going to be one of its kind - a symposium completely
@@ -117,6 +145,8 @@ class Homepage extends Component {
                 Grab this opportunity and win cash prizes, Intern opportunities,
                 T shirts and many more prizes.
               </p>
+              </div>
+            
             </div>
           </div>
         </div>
@@ -124,6 +154,11 @@ class Homepage extends Component {
         
 
         <div className={`${styles.bg}`}>
+        <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
           <div className={`${styles.blur}`}>
             <div className="text-center ">
               <Heading text="Sponsors" fontSize="40px" />
@@ -217,10 +252,6 @@ class Homepage extends Component {
             <div></div>
           </div>
         </div>
-
-        {/* Child Class */}
-
-        {/* Dev Section */}
       </>
     );
   }

@@ -2,7 +2,7 @@ export const TechEvents = {
   // Tenet
   tenet: {
     name: "Tenet",
-    imgName: "./../../images/nontech.jpeg",
+    imgName: "Saj.jpeg",
     refName: "tenet",
     about: `TENET is a challenge where the participants have to identify and resolve bugs, thus making the system unproblematic. Logical thinking of the programmer is tested through this event where the participant has to come up with unique solutions to produce an expected output.`,
     fee: `Registration Fee - RS.150`,

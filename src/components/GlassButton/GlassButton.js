@@ -3,7 +3,7 @@ import styles from "./GlassButton.module.css";
 const GlassButton = (props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.btn}>
+      <div className={props.selected ? styles.btn2 : styles.btn}>
         <a
           href={props.link}
           onClick={() => {

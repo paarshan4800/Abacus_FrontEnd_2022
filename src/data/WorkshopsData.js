@@ -1,7 +1,7 @@
 export const Workshops = {
 
     // Job Readiness
-    "job-readiness": {
+    "blockchain-and-cryptocurrency": {
         name: "Job Readiness",
         refName: "job-readiness",
         about: `Getting a job is one of the most crucial junctures of one's life, marking the transformation from being a student to being professional. This workshop helps you in learning the industry trends from senior professionals from various top firms around the globe and get a clear picture along with some mock interviews.`,
@@ -83,7 +83,7 @@ export const Workshops = {
     },
 
     // Entrepreneurship
-    "entrepreneurship": {
+    "dev-ops": {
         name: "Entrepreneurship",
         refName: "entrepreneurship",
 
@@ -161,7 +161,7 @@ export const Workshops = {
     },
 
     // Cloud Computing
-    "cloud-computing": {
+    "stock-market-and-share-market": {
         name: "Cloud Computing",
         refName: "cloud-computing",
         about: `Unlock the future of data storage and computing power through our cloud computing workshop. You will learn how to apply concepts with cloud services and work with relevant tools and platforms like AWS, Azure, Google Cloud and DevOps from experts at Walmart.`,

@@ -21,23 +21,4 @@
   background-repeat: repeat-x;
 }
 
-.react-3d-carousel .slider-container .slider-left div {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  margin-top: -20px;
-  color: #ffffff;
-  transform: translateY(-50%);
-  padding: 10px 10px;
-  border: 0px;
-}
-.react-3d-carousel .slider-container .slider-right div {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  margin-top: -20px;
-  color: #ffffff;
-  transform: translateY(-50%);
-  padding: 10px 10px;
-  border: 0px;
-}
+/* ####### Add the css for arrows here ####### */

@@ -12,8 +12,7 @@ import { googleSignIn } from "../../../api/auth";
 import { BrowserRouter, Route, Switch, Redirect, NavLink } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import { FaApple } from "react-icons/fa";
-
-
+import LoginRegister from "../LoginRegister";
 
 //import ;
 function SignUp() {
@@ -162,33 +161,7 @@ function SignUp() {
   };
   console.log(year);
   return (
-  <div className={logstyle.App}>
-  
-  <div className={logstyle.appAside}>
-          {/* <center>
-            <Typography>
-              <div className={logstyle.typingDemo} width="40%">
-                <div className={logstyle.glow}>Welcome!</div>
-              </div>
-            </Typography>
-            <div className={logstyle.styleButton}>
-                <NavLink
-                exact
-                 to="/"
-                 activeclassName={logstyle.pageSwitcherItemActive}
-                >
-                <GlassButton title="Sign In" />
-                </NavLink>
-                <NavLink
-                to="/sign-up"
-                activeclassName={logstyle.pageSwitcherItemActive}
-                >
-                <GlassButton title="Sign Up" />
-                </NavLink>
-
-                </div>
-          </center> */}
-    </div>
+  <div className={logstyle.App}> 
     <div className={logstyle.appForm}>
     <div className={logstyle.formCenter}>
       <div className={logstyle.styleButton}>
@@ -206,7 +179,7 @@ function SignUp() {
         )}
       </div>
 
-      or
+      <p>or </p>
       <form onSubmit={() => handleSubmit()} className={logstyle.formFields}>
         {/*name*/}
 
@@ -357,9 +330,9 @@ function SignUp() {
           {/* </button> */}
         </div>
         <div className={logstyle.formField}>
-          <Link to="/Login" className={logstyle.formFieldLink}>
-            I'm already a member
-          </Link>
+          <NavLink to="/Login" className={logstyle.formFieldLink} onClick={LoginRegister.flips}>
+            I'm already a member!
+          </NavLink>
         </div>
       </form>
     </div>

@@ -5,8 +5,9 @@ import { useParams, useHistory } from "react-router-dom";
 import { TechEvents } from "../../data/TechEventsData";
 import { NonTechEvents } from "../../data/NonTechEventsData";
 import PageNotFound from "../PageNotFound/PageNotFound";
-import nontech from "./../../images/nontech.jpeg";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
+import background from "../../images/bgg.jpg";
+import nontech from "./../../images/nontech.jpeg";
 
 function EventDetails() {
   const { type, title } = useParams();
@@ -28,15 +29,13 @@ function EventDetails() {
 
   return (
     <div
-      style={
-        {
-          // backgroundImage: `url(${background})`,
-          // backgroundSize: "cover",
-          // backgroundRepeat: 1,
-          //height: "100vh",
-          // color: "#f5f5f5",
-        }
-      }
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundRepeat: 1,
+        //height: "100vh",
+        // color: "#f5f5f5",
+      }}
     >
       <div className={styles.container}>
         <div className={styles.box} style={{ width: "800px" }}>
@@ -44,7 +43,7 @@ function EventDetails() {
           <div className={styles.content}>
             <h2 className={styles.neon}>DESCRIPTION</h2>
             <p>{data.about}</p>
-            <h2 className={styles.neon}>DATE & TIME</h2>
+            {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
             {data.dateTime.map((obj) => (
               <p key={1}> {obj}</p>
             ))}
@@ -61,7 +60,21 @@ function EventDetails() {
         <div className={styles.box} style={{ width: "400px" }}>
           <span></span>
           <div className={styles.content}>
-            <img src={nontech} style={{ width: "200px", height: "200px" }} />
+            {type === "tech-events" && (
+              <img
+                src={require(`./../../images/TechEvents/${title}.png`)}
+                style={{ width: "200px", height: "200px" }}
+                alt={title}
+              />
+            )}
+            {type === "non-tech-events" && (
+              <img
+                src={require(`./../../images/NonTechEvents/${title}.png`)}
+                style={{ width: "200px", height: "200px" }}
+                alt={title}
+              />
+            )}
+            <GlassButton title="Register" />
           </div>
           <GlassButton />
         </div>
@@ -110,8 +123,7 @@ function EventDetails() {
                 {round.title} - {round.description}
               </p>
             ))}
-
-            {/* <a href="#">Read More</a> */}
+            <GlassButton title="Scroll to Top" />
           </div>
         </div>
       </div>

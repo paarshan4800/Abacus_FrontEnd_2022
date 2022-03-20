@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./../Events/EventDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { Hackathon as HackathonData} from "../../data/HackathonData";
+import nontech from "./../../images/nontech.jpeg";
 
 function Hackathon() {
 
@@ -17,46 +18,67 @@ function Hackathon() {
       }}
     >
       <div className={styles.container}>
-        <div className={styles.box}>
+        <div className={styles.box} style={{ width: "800px" }}>
           <span></span>
           <div className={styles.content}>
-            <h2 className={styles.neon}>RULES</h2>
-            <p>
-              {data.rules}
-            </p>
-            {/* <a href="#">Read More</a> */}
+            <h2 className={styles.neon}>DESCRIPTION</h2>
+            <p>{data.about}</p>
+            {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
+            {data.dateTime.map((obj) => (
+              <p key={1}> {obj}</p>
+            ))}
+            <h2 className={styles.neon}>CONTACT</h2>
+            {data.contact.map((person, index) => (
+              <p key={index + 1} className={styles.glowCardName}>
+                {person.name} - <i class="fa fa-phone"></i>
+                {person.mobile}
+              </p>
+            ))}
           </div>
         </div>
-        <div className={styles.box}>
+
+        <div className={styles.box} style={{ width: "400px" }}>
           <span></span>
           <div className={styles.content}>
-            <h2 className={styles.neon}>{data.name}</h2>
-            <p>
-              {data.about}<br/><br/>
-              <b>CONTACT:</b> Kanika K - 8300295535 <br></br>
-              <b>DATE:</b> 25-03-2021 and 26-03-2021<br></br>
-              {/* <div className={NavbarBigStyles.buttons}>
-                <GlassButton title="REGISTER" />
-                </div> */}
-            </p>
-            {/* <a href="#">Read More</a> */}
+            <img src={nontech} style={{ width: "200px", height: "200px" }} />
+            <GlassButton title="Register" />
           </div>
         </div>
-        <div className={styles.box}>
+      </div>
+
+      <div className={styles.container}>
+        <div className={styles.box} style={{ width: "400px" }}>
           <span></span>
           <div className={styles.content}>
-            <h2 className={styles.neon}>RULES</h2>
-            <p>
-              4) Participants must ensure that they have laptop with good
-              internet connectivity for their convenience <br></br>5)
-              Participants must ensure that they have microsoft account<br></br>
-              6) Participants can contact the given contact for any doubts
-              regarding the event.
-            </p>
+            <img src={nontech} style={{ width: "200px", height: "200px" }} />
+          </div>
+        </div>
+
+        <div className={styles.box} style={{ width: "800px" }}>
+          <span></span>
+          <div className={styles.content}>
+            <h2 className={styles.neon}>SPONSORS</h2>
+            <p>{data.about}</p>
+
             {/* <a href="#">Read More</a> */}
           </div>
         </div>
       </div>
+
+      <div className={styles.container}>
+        <div className={styles.box}>
+          <span></span>
+          <div className={styles.content}>
+            <h2 className={styles.neon}>RULES</h2>
+            {data.rules.map((rule, index) => (
+              <p key={index + 1} className={styles.glowCardName}>
+                {index + 1}. {rule}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
