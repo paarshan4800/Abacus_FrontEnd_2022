@@ -96,7 +96,7 @@ body {
 .userstats .event_pass {
   /* background-color: #1f1f1f; */
   display: flex;
-  flex: 1.2;
+  flex: 1;
   align-items: center;
   justify-content: center;
   padding: 15px;
