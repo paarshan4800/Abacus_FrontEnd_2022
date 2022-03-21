@@ -1,0 +1,22 @@
+export const imageBasePath = `${process.env.PUBLIC_URL}/assets/images/Logos/`;
+
+export const INFO = [
+  {
+    title: "Abacus",
+    content:"ABACUS is the annual intercollege symposium of the Department of Computer Science and Engineering conducted by Computer Science and Engineering Association (CSEA), College of Engineering Guindy. It is an event where people from multiple colleges demonstrate their technical prowess to win exciting prizes and internships.",
+    image: "ceg.png",
+  },
+  {
+    title: "CSEA",
+    content:
+      "The Computer Science and Engineering Association, CEG is a team of students and faculty members. We perform multiple activities throughout the year, the most notable ones being SYNC (intra college symposium), periodic coding contests to encourage students to code more and weekly classes for juniors for subjects they find difficult, placement assistance and competitive coding. CSEA is a forum of dedicated members who want to inculcate interest and good programming practices amongst the students.",
+    image: "ctf_full.png",
+  },
+
+  {
+    title: "CEG",
+    content:
+      "Located at the Heart of Chennai, is our very own College of Engineering Guindy, a dream and desire that students all across Tamil Nadu aspire to touch. Founded in 1794, CEG holds laurels of being amongst the top ten institutions in the country, with a rich history spanning over 225 years. Living up to its motto of 'PROGRESS THROUGH KNOWLEDGE', it has been at the fore with it’s cutting-edge research, technology and innovation in shaping the world. True to its esteem, even today CEG stands as a beacon of light to students who wish to make a change in the world.",
+    image: "kurukshetra.png",
+  },
+];

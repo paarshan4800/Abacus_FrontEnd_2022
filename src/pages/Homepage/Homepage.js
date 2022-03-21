@@ -127,11 +127,13 @@ class Homepage extends Component {
             </div>
           </div>
           <div className={`${styles.right_container}`}>
-            <div className={`${styles.right_content}`}>
+         
             <div
                 key={1}
-                className={cx(styles.maindiv)}
+                className={cx(styles.maindiv,styles.maindiv1)}
               >
+            
+            <div className={styles.card}>
 
                   <h1 className={`${styles.heading}`}>Abacus '22</h1>
               <p className={`${styles.paragraph} mt-1`}>
@@ -147,6 +149,8 @@ class Homepage extends Component {
               </p>
               </div>
             
+            
+
             </div>
           </div>
         </div>
