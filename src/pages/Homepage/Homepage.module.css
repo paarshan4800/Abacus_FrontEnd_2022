@@ -43,7 +43,8 @@
     padding-top: 0%;
     margin-right: 10%;
     background-color: transparent;
-    background-color:  #e1ad01;
+    /* background-color:  #e1ad01; */
+    background: linear-gradient(to right, #35be69, #11998e); 
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1);
     -ms-transition: all 200ms ease-in;

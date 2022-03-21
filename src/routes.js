@@ -10,7 +10,6 @@ import EventDetails from "./pages/Events/EventDetails";
 import TechEventsList from "./pages/Events/TechEventsList";
 import NonTechEventsList from "./pages/Events/NonTechEventsList";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Cart from "./pages/Cart/Cart";
 import Hackathon from "./pages/Events/Hackathon";
 import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 import LoginRegister from "./pages/Login/LoginRegister";
@@ -20,6 +19,8 @@ import SignInForm from "./pages/Login/pages/SignInForm";
 import SignUp from "./pages/Login/pages/SignUp";
 import ForgotPassword from "./pages/Login/pages/ForgotPassword";
 import NewPassword from "./pages/Login/pages/NewPassword";
+import Test from "./pages/Test/Test";
+
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
 // import Navbar from "./components/Navbar/Navbar";
 // import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
@@ -57,8 +58,8 @@ const AppRoutes = () => {
       <Route path="/workshops" exact component={WorkshopsList} />
       <Route path="/workshops/:title" exact component={WorkshopDetails} />
       <Route path="/dashboard" exact component={Dashboard} />
-      <Route path="/cart" exact component={Cart} />
       <Route path="/404" exact component={PageNotFound} />
+      <Route path="/test/:type/:title" exact component={Test} />
       <Route path="/Login" exact component={LoginRegister} />
       <Route path="/signUp" exact component={SignUp} />
       <Route path="/ForgotPassword" exact component={ForgotPassword} />

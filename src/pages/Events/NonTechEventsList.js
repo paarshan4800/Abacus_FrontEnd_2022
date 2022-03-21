@@ -1,53 +1,34 @@
-import { Carousel } from "3d-react-carousal";
 import React from "react";
 import cx from "classnames";
-import Button from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-//import TechEventsList from "./TechEventsList";
-
-import tech from "./../../images/tech.jpeg";
-import nontech from "./../../images/nontech.jpeg";
-import hack from "./../../images/hack.jpeg";
 import styles from "./EventsList.module.css";
-import { useHistory } from "react-router-dom";
 
 function NonTechEventsList() {
   let nonTechEventsList = [
     {
-      id: 1,
-      refName: "house-full",
-      name: "House Full",
-      img: nontech,
+      id: 8,
+      refName: "ship-wreck",
+      name: "Ship-Wreck",
     },
     {
-      id: 2,
-      refName: "graphic-traffic",
-      name: "Graphic Traffic",
-      img: hack,
+      id: 9,
+      refName: "design-a-thon",
+      name: "Design-a-thon",
     },
     {
-      id: 3,
-      refName: "imagenation",
-      name: "Imagenation",
-      img: tech,
+      id: 10,
+      refName: "fandom-quiz",
+      name: "Fandom Quiz",
     },
     {
-      id: 4,
-      refName: "tenet",
-      name: "Asdfgh",
-      img: tech,
+      id: 11,
+      refName: "thadam",
+      name: "Thadam",
     },
     {
-      id: 5,
-      refName: "tenet",
-      name: "qwerty",
-      img: nontech,
-    },
-    {
-      id: 6,
-      refName: "tenet",
-      name: "zxcvb",
-      img: hack,
+      id: 12,
+      refName: "gamindrome",
+      name: "Gamindrome",
     },
   ];
 
@@ -61,29 +42,18 @@ function NonTechEventsList() {
     // }}
     >
       <div className={styles.wrapper}>
-        {nonTechEventsList.map((event) =>
-          event.id % 2 == 0 ? (
-            <Link to={`/events/non-tech-events/${event.refName}`}>
-              <div
-                key={event.id}
-                className={cx(styles.maindiv, styles.maindiv1)}
-              >
-                <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
-              </div>
-            </Link>
-          ) : (
-            <Link to={`/events/non-tech-events/${event.refName}`}>
-              <div
-                key={event.id}
-                className={cx(styles.maindiv, styles.maindiv3)}
-              >
-                <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
-              </div>
-            </Link>
-          )
-        )}
+        {nonTechEventsList.map((event) => (
+          <Link to={`/events/non-tech-events/${event.refName}`}>
+            <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
+              <img
+                src={require(`./../../images/NonTechEvents/${event.refName}.png`)}
+                style={{ width: "350px", height: "300px" }}
+                alt={event.refName}
+              />
+              <div className={styles.title}>{event.name}</div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

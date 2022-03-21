@@ -1,6 +1,6 @@
 export const TechEvents = {
     // Tenet
-    "tenet": {
+    "reverse-engineering": {
         name: "Tenet",
         imgName:"Saj.jpeg",
         refName: "tenet",
@@ -67,7 +67,7 @@ export const TechEvents = {
     },
 
     // Novice
-    "novice-init": {
+    "web-design": {
         name: "Novice.init()",
         refName: "novice",
         about: `Novice.init() is an exclusive event for the first year students of various colleges. It provides scope for the young minds to explore the coding world and to assess their logical reasoning abilities. This event introduces newbies to the technical contests.`,
@@ -128,7 +128,7 @@ export const TechEvents = {
     },
 
     // Code for Crown - OLPC
-    "code-for-crown-olpc": {
+    "code-for-crown": {
         imgName:"code-for-crown_sponsor1.jpeg",
         name: "Code for Crown - OLPC",
         refName: "code-for-crown",
@@ -139,15 +139,14 @@ export const TechEvents = {
             "Time:11am"
         ],
 
-        /*contact: [
+        contact: [
 
-        ],*/
+        ],
 
         sponsor: "Amazon",
 
         rules: [
             "This event is for individual participants only.",
-            
             "There will be no negative marking for MCQs.",
             "Participants are allowed to use any one of the following programming languages for the coding rounds (C, C++, Java, Python3)",
             "Participants found guilty are not allowed to proceed with the competition.",
@@ -177,7 +176,7 @@ export const TechEvents = {
     },
 
     // X-Domain Combat
-    "x-domain-combat": {
+    "get-hired": {
         imgName:"Saj.jpeg",
         name: "X-Domain Combat",
         refName: "x-domain-combat",

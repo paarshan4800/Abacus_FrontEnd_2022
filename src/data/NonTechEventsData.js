@@ -1,7 +1,7 @@
 export const NonTechEvents = {
 
     // House Full
-    "house-full": {
+    "ship-wreck": {
         name: "House Full",
         refName: "house-full",
         about: `Are you looking for a bizarre event that furnishes a crazy time?. Then get ready and jump in. This is an event for all the non technical pros out there.`,
@@ -53,7 +53,7 @@ export const NonTechEvents = {
     },
 
     // Imagenation
-    "imagenation": {
+    "design-a-thon": {
         name: "Imagenation",
         refName: "imagenation",
         about: `Hello Photographers, get your cam ready and start capturing the moment.
@@ -101,11 +101,24 @@ export const NonTechEvents = {
             "Last date for sending the photo: 20-03-2021",
             "Send your entries to (email id) : abacus.imagenation@gmail.com"
         ],
+        rounds: {
+            number: 2,
+            roundDetails: [
+                {
+                    title: "Prelims",
+                    description: "Participants will be given 30 minutes to answer questions from familiar topics."
+                },
+                {
+                    title: "Finals",
+                    description: "A round in round robin fashion. Based on Kollywood (60 minutes)"
+                },
+            ]
+        }, 
         registration: false
     },
 
     // Graphic Traffic
-    "graphic-traffic": {
+    "thadam": {
         name: "Graphic Traffic",
         refName: "graphic-traffic",
         about: `Hello Designers, get your sketch ready and start portraying the moment.
@@ -152,7 +165,7 @@ export const NonTechEvents = {
             "Last date for sending the poster: 20-03-2021",
             "Send your entries to (email id) : abacus.graphictraffic@gmail.com"
         ],
-        /* rounds: {
+        rounds: {
             number: 2,
             roundDetails: [
                 {
@@ -164,7 +177,7 @@ export const NonTechEvents = {
                     description: "A round in round robin fashion. Based on Kollywood (60 minutes)"
                 },
             ]
-        }, */
+        }, 
         registration: false
     },
 }

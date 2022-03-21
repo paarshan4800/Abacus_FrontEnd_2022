@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 import { Navbar } from "./components";
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
+import background from "./images/bgg.jpg";
 
 const rootReducer = combineReducers({
   Reducer: Reducer,
@@ -64,12 +65,11 @@ function App() {
                 <NewLoadWorkshop.Provider value={newloadworkshop}>
                   <SetNewLoadWorkshop.Provider value={setnewloadworkshop}>
                     <BrowserRouter>
-                      
-                        <Navbar/>
-                
-                      
+                      <Navbar />
+
+                      <div style={{ paddingTop: "90px", backgroundImage: `url(${background})`, backgroundSize: "cover", backgroundRepeat: 1 }}>
                         <AppRoutes />
-                    
+                      </div> 
                       {/* <div className="gradient-bg-welcome">
                         <Footer />
                       </div> */}

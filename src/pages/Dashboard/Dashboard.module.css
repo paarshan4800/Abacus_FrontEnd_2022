@@ -28,20 +28,34 @@ body {
   align-items: center;
   justify-content: space-evenly;
   border-radius: 7px;
-  background: rgba(255, 255, 255, 0.05);
+  /* background: rgba(255, 255, 255, 0.05); */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  /* border-image: linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%; */
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.15), transparent);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1); 
+  background: linear-gradient(to right, #ffffff26, transparent);
   backdrop-filter: blur(45px);
   width: 90%;
   height: 90%;
   padding: 15px;
 }
 
+.info_card2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 7px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1); 
+  background: linear-gradient(to right, #09b5e0, #30ad60);
+  backdrop-filter: blur(45px);
+  width: 90%;
+  height: 80%;
+  padding: 15px;
+}
+
 .userimg {
-  background-color: #4b4b4b;
+  background-color: #ffffff;
   border-radius: 100%;
   width: 100px;
   height: 100px;
@@ -49,7 +63,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  box-shadow: 0 10px 50px #43eb19;
+  box-shadow: 0 10px 40px #43eb19;
 }
 
 .userinfo {
@@ -62,12 +76,12 @@ body {
 }
 
 .userinfo .name p {
-  color: #ffffff;
+  color: #000000;
   font-size: 1.1em;
 }
 
 .userinfo .abacusid p {
-  color: #ffffff;
+  color: #000000;
   font-size: 1.1em;
 }
 
@@ -124,7 +138,7 @@ body {
     rgba(203, 233, 56, 1) 68%,
     rgba(73, 201, 40, 1) 100%
   ); */
-  background: linear-gradient(to right, #27c764, #15a79a); 
+  background: linear-gradient(to right, #27c764, #15a79a);
 
   border-radius: 10px;
   display: flex;
@@ -170,6 +184,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .userinfo {
+    /* background-color: #6b6a68; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    height: 80%;
+  }
+  
+  .userinfo .name p {
+    color: #000000;
+    font-size: 1.1em;
+  }
+  
+  .userinfo .abacusid p {
+    color: #000000;
+    font-size: 1.1em;
+    margin-left: 40px;
   }
 
   .stats_card {
@@ -236,16 +270,33 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
+    /* background: linear-gradient(to right, #ffffff33, transparent); */
+    background: linear-gradient(to right, #38ef7d, #11998e);
     backdrop-filter: blur(45px);
     width: 90%;
-    height: 90%;
+    height: 70%;
     max-height: 120px;
     padding: 15px;
+  }
+ 
+  .userinfo {
+    /* background-color: #6b6a68; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 80%;
+  }
+
+  .userinfo .name p {
+    color: #000000;
+    font-size: 1em;
+  }
+
+  .userinfo .abacusid p {
+    color: #000000;
+    font-size: 1em;
+    margin-left: 0px;
   }
 
   .stats_card {
@@ -282,17 +333,7 @@ body {
     font-size: 4vw;
   }
 
-  .userinfo .name p {
-    color: #ffffff;
-    font-size: 0.9em;
-  }
-
-  .userinfo .abacusid p {
-    color: #ffffff;
-    font-size: 0.9em;
-  }
-
-  .list_element2 {
+  .list_element {
     display: flex;
     align-items: center;
     width: 80%;
@@ -305,11 +346,11 @@ body {
     transition: transform 0.3s;
   }
 
-  .list_element2 .hide {
+  .list_element .hide {
     display: none;
   }
 
-  .list_element2 .title {
+  .list_element .title {
     width: 90% !important ;
     /* background-color: #4b4b4b !important ; */
     display: flex;
@@ -318,35 +359,34 @@ body {
     color: #000000;
   }
 
-  .list_element2 .badge {
+  .list_element .badge {
     display: flex;
     justify-content: flex-end;
     width: 10%;
     /* background-color: #4b4b4b; */
   }
-  /* .list_element:hover {
-    transform: scale(1.05);
-  }
-  
-  .list_element .title {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 1.5em;
-    color: #ffffff;
-  } */
-  
 }
 
 @media only screen and (max-width: 400px) {
 
-  .list_element2 .title {
-   font-size: 1em !important;
+  .userinfo .name p {
+    color: #000000;
+    font-size: 1em;
   }
 
-  .list_element2 {
+  .userinfo .abacusid p {
+    color: #000000;
+    font-size: 1em;
+    margin-left: 0px;
+  }
+
+  .list_element .title {
+    font-size: 1em !important;
+  }
+
+  .list_element {
     max-height: 40px !important;
   }
-
 }
 
 .content {
@@ -378,36 +418,7 @@ body {
   width: 75%;
 }
 
-/* .list_element {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  justify-content: space-between;
-  padding: 40px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  background: linear-gradient(90deg, rgba(87,177,25,1) 0%, rgba(127,218,11,1) 69%, rgba(237,255,8,1) 98%);
-  height: 80px;
-  transition: transform 0.3s;
-}
-
-.list_element:hover {
-  transform: scale(1.05);
-}
-
-.list_element .title {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 1.5em;
-  color: #000000;
-}
-
-.list_element .btn {
-  display: flex;
-  justify-content: flex-end;
-} */
-
-.list_element2 {
+.list_element {
   display: flex;
   align-items: center;
   width: 80%;
@@ -424,19 +435,19 @@ body {
   /* background: linear-gradient(to right, #27c764, #15a79a);  */
   /* background: rgb(144,244,130); */
   /* background: linear-gradient(90deg, rgba(144,244,130,1) 0%, rgba(170,248,250,1) 100%); */
-  background: linear-gradient(to right, #38ef7d, #11998e); 
+  background: linear-gradient(to right, #38ef7d, #11998e);
   /* background: linear-gradient(315deg, #03a9f4, #da0037); */
- 
+
   height: 80px;
   transition: transform 0.3s;
   /* box-shadow: 0 0 10px 5px #43eb19; */
 }
 
-.list_element2:hover {
+.list_element:hover {
   transform: scale(1.05);
 }
 
-.list_element2 .title {
+.list_element .title {
   display: flex;
   justify-content: flex-start;
   width: 60%;
@@ -445,18 +456,18 @@ body {
   /* background-color: antiquewhite; */
 }
 
-.list_element2 .hide {
+.list_element .hide {
   width: 35%;
 }
 
-.list_element2 .btn {
+.list_element .btn {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   /* background-color: aqua; */
 }
 
-.list_element2 .badge {
+.list_element .badge {
   display: flex;
   justify-content: flex-end;
   width: 5%;
