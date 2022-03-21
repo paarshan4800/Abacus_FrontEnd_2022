@@ -15,7 +15,7 @@ import Hackathon from "./pages/Events/Hackathon";
 import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 import LoginRegister from "./pages/Login/LoginRegister";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
-import { AboutUs } from "./pages/AboutUs/AboutUs";
+import { Aboutus } from "./components/";
 import SignInForm from "./pages/Login/pages/SignInForm";
 import SignUp from "./pages/Login/pages/SignUp";
 import ForgotPassword from "./pages/Login/pages/ForgotPassword";
@@ -44,7 +44,7 @@ const AppRoutes = () => {
       </Route> */}
       <Route path="/" exact component={Homepage} />
       <Route path="/Home" exact component={Homepage} />
-      <Route path="/about-us" exact component={AboutUs} />
+      <Route path="/about-us" exact component={Aboutus} />
       <Route path="/events" exact component={EventsHome} />
       <Route path="/events/hackathon" exact component={Hackathon} />
       <Route path="/events/tech-events" exact component={TechEventsList} />
