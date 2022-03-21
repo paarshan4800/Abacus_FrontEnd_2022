@@ -164,7 +164,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-
+.
         <div className={styles.userstats}>
           {1 ? (
             <div className={styles.event_pass}>

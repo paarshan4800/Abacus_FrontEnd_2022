@@ -10,6 +10,23 @@ import styles from "./EventsHome.module.css";
 import eventpassimg from "../../images/eventpassimg.png";
 
 function EventsHome() {
+
+  const onGetEventPass = () => {
+
+    axios
+    .put("http://localhost:8000/user/geteventpass")
+    .then((response) => {
+      if (response.status === 200) {
+        console.log(response.data.message)
+        console.log("Event Pass retrieved");
+      }
+    })
+    .catch((err) => {
+      console.log(err.response.data.message)
+      console.log("the error code is", err.response.status);
+    });
+  }
+
   let slides = [
     <div>
       <Link to="/events/tech-events">
@@ -39,7 +56,7 @@ function EventsHome() {
         // color: "#f5f5f5",
       }}
     >
-      <Link to={`/dashboard`}>
+      <Link to={`/dashboard`} onClick={() => onGetEventPass()}>
         <div className={styles.pass}>
           <img src={eventpassimg} />
         </div>

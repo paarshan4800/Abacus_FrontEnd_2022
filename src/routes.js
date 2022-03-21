@@ -62,7 +62,7 @@ const AppRoutes = () => {
       <Route path="/test/:type/:title" exact component={Test} />
       <Route path="/Login" exact component={LoginRegister} />
       <Route path="/signUp" exact component={SignUp} />
-      <Route path="/ForgotPassword" exact component={ForgotPassword} />
+     
       <Route path="/NewPassword" exact component={NewPassword} />
       {/* <Route path="/Login" exact component={LoginRegister} /> */}
 
