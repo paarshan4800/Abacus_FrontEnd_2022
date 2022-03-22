@@ -30,7 +30,7 @@ body {
 
 .container .box {
   position: relative;
-  width: 80%; /*400px;*/
+  width: 800px; /*400px;*/
   height: 500px;
   display: flex;
   justify-content: center;

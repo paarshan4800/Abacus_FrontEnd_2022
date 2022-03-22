@@ -59,7 +59,10 @@ function TechEventsList() {
     >
       <div className={styles.wrapper}>
         {techEventsList.map((event) => (
-          <Link to={`/events/tech-events/${event.refName}`}>
+          <Link
+            to={`/events/tech-events/${event.refName}`}
+            className={styles.linkTag}
+          >
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
               <img
                 src={require(`./../../images/TechEvents/${event.refName}.png`)}

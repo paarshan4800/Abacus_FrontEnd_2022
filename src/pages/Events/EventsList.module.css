@@ -102,6 +102,9 @@ body {
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
 }
+.linkTag {
+  text-decoration: none !important;
+}
 
 /* .maindiv2::before {
   content: "";
