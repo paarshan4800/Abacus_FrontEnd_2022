@@ -49,18 +49,18 @@ const Navbar = () => {
   window.addEventListener('scroll',changeBackground);
 
   return (
-    <nav className={navbar ? `w-full flex md:justify-center justify-between items-center fixed gradient-bg-welcome z-10 text-2xl font-sans` : `font-sans w-full flex md:justify-center justify-between items-center fixed z-10 text-2xl nav`}>
+    <nav className={navbar ? `w-full flex md:justify-center justify-between items-center fixed gradient-bg-welcome z-10 text-2xl font-sans` : `font-sans w-full flex md:justify-center gradient-bg-welcome justify-between items-center fixed z-10 text-2xl nav`}>
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
         <img src={logo} alt="logo" className="w-32 cursor-pointer" />
       </div>
       <ul className={`text-white md:flex hidden list-none flex-row justify-between items-center flex-initial ${styles.nav}`}>
-        {["Home", "About-us", "Events", "signup"].map((item, index) => 
+        {["Home", "About-us", "Events", "workshops"].map((item, index) => 
           
-          <NavBarItem key={item + index} title={item} className={styles.nav} link={`/${item}`}/>
+          <NavBarItem key={item + index} title={item.toUpperCase()} className={styles.nav} link={`/${item}`}/>
           
          
         )}
-        <li className={`bg-[#11998e] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[x]  ${styles.nav}`}>
+        <li className={`bg-[#11998e] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[blue]  ${styles.nav}`}>
           Login
         </li>
       </ul>
@@ -69,22 +69,22 @@ const Navbar = () => {
           <HiMenuAlt4 fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />
         )}
         {toggleMenu && (
-          <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
+          <AiOutlineClose fontSize={10} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
         )}
         {toggleMenu && (
           <ul
-            className="z-10 fixed -top-0 -right-2 p-3 w-[60vw] h-screen shadow-2xl md:hidden list-none
+            className="z-10 fixed -top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
           >
             <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {["Home", "About us", "Events", "signup"].map(
+            {["Home", "about-us", "Events", "Workshops"].map(
               (item, index) =>
-              {
-               <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />
-              }
+              
+               <NavBarItem key={item + index} title={item.toUpperCase()} classprops="my-2 text-lg" link={`/${item}`} />
+              
             )}
             <li className="bg-[#2952e3] py-2 px-7 mx-4 mt-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-              Login
+            <NavBarItem  title="LOGIN"  link={`/Login`} />
           </li>
           </ul>
         )}
