@@ -35,19 +35,15 @@ height: 100%;
 .a {
 
   color: white; 
-background: linear-gradient( rgba(0,0, 0, 0.6)  , rgba(0,0, 0, 0.6) , url(../../components/Landing/rays.png) no-repeat center center fixed ); 
-background-image: url(../../components/Landing/bgg.jpg);
-background-position: center;
-background-size: cover;
+
 background: linear-gradient(to right, rgba(0,0, 0, 0.0)  , rgba(0,0, 0, 0.0)); 
 max-height: 95.3125vh;
 margin-top: -90px;
-background-image: url(../../components/Landing/siri.jpg);
-background-position-x: left;
-background-size: contain;
-background-repeat: no-repeat;
-background-color: #000000;
-
+background: url(../../components/Landing/pattern_again.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 
 @keyframes spin{
@@ -1453,10 +1449,10 @@ padding-bottom: 4%;
 .head{
   margin-top: 3%;
   position: relative;
-  color: white; 
-  letter-spacing: 10px;
+  color: whitesmoke; 
+  letter-spacing: 13px;
   font-family: Future;
-  font-size: 150px;
+  font-size: 140px;
 
  
   
@@ -1467,12 +1463,12 @@ padding-bottom: 4%;
 
 .letter_a{
   font-family: future;
-  font-size: 160px;
+  font-size: 180px;
 }
 
 .date {
   
-  font-size: 1.6rem !important;
+  font-size: 2.0rem !important;
   font-family: Future;
   text-transform: uppercase;
   letter-spacing: 1px;
