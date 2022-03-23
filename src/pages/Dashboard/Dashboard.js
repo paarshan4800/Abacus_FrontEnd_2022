@@ -230,6 +230,7 @@ const Dashboard = () => {
                         <TiTick size={35}/>
                       </div>
                     </div>
+                    
                   ) : (
                     <div key={event.id} className={styles.list_element}>
                       <div className={styles.title}>{event.name}</div>

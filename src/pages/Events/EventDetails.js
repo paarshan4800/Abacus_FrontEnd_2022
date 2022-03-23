@@ -38,7 +38,7 @@ function EventDetails() {
       }}
     >
       <div className={styles.container}>
-        <div className={styles.box} style={{ width: "800px" }}>
+        <div className={styles.box}>
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>DESCRIPTION</h2>

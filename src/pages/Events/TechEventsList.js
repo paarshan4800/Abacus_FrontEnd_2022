@@ -1,7 +1,8 @@
 import React from "react";
 import cx from "classnames";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-import styles from "./EventsList.module.css";
+//import styles from "./EventsList.module.css";
+import styles from "./../Events/EventDetails.module.css";
 
 function TechEventsList() {
   let techEventsList = [
@@ -57,20 +58,46 @@ function TechEventsList() {
     //   color: "#f5f5f5",
     // }}
     >
-      <div className={styles.wrapper}>
+      {/* <div className={styles.wrapper}>
         {techEventsList.map((event) => (
-          <Link to={`/events/tech-events/${event.refName}`}>
+          <Link
+            to={`/events/tech-events/${event.refName}`}
+            className={styles.linkTag}
+          >
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
               <img
                 src={require(`./../../images/TechEvents/${event.refName}.png`)}
-                style={{ width: "350px", height: "300px" }}
+                style={{ width: "350px", height: "250px" }}
                 alt={event.refName}
               />
               <div className={styles.title}>{event.name}</div>
             </div>
           </Link>
         ))}
-      </div>
+      </div> */}
+
+      {techEventsList.map((event) => (
+        <div className={cx(styles.container, styles.list)}>
+          <div className={styles.box}>
+            <span></span>
+            <div className={styles.content}>
+              <Link
+                to={`/events/tech-events/${event.refName}`}
+                className={styles.linkTag}
+              >
+                <div key={event.id}>
+                  <img
+                    src={require(`./../../images/TechEvents/${event.refName}.png`)}
+                    style={{ width: "200px", height: "200px" }}
+                    alt={event.refName}
+                  />
+                  <div className={styles.neon}>{event.name}</div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
