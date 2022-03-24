@@ -952,30 +952,40 @@ padding:1%;
 padding-bottom: 3%;
 }
 
+@font-face {
+  font-family: alien;
+  src: url(../../components/Heading/alien.ttf);
+}
+
+
 .head{
   
-  position: relative;
-  color: whitesmokemain; 
+  position: relative; 
   letter-spacing: 13px;
-  font-family: Future;
-  font-size: 110px;
+  font-family: alien;
+  font-size: 120px;
 
  color: lightskyblue;
-  
+ animation: flicker 3s infinite;
+ color: white;
+ font-weight: bolder;
+ text-transform: uppercase;
+ text-shadow: 0 0 5px rgb(192 219 255 / 75%), 0 0 5px rgb(65 120 255 / 24%);  
+ padding-bottom: 4%;
 }
 
 
 
 
 .letter_a{
-  font-family: future;
-  font-size: 110px;
+  font-family: alien;
+  font-size: 160px;
 }
 
 .date {
   color: gold;
-  font-size: 2.0rem !important;
-  font-family: Future;
+  font-size: 2.2rem !important;
+  font-family: alien;
   text-transform: uppercase;
   letter-spacing: 1px;
       margin-top: 0%;
@@ -1503,7 +1513,7 @@ height:120px;
   font-size: 50px;
   }
   .date{
-    font-size: 17px;
+    font-size: 13px;
   }
   .left_container{
     margin: 0;
