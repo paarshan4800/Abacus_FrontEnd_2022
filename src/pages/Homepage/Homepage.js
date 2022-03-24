@@ -4,46 +4,73 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
 import cx from 'classnames'
+import {Footer} from '../../components/'
+
 
 //NeonButton
-import Landing from "../../components/Landing/Landing";
+import Sphere from "../../components/Sphere/Sphere";
 import Heading from "../../components/Heading/Heading";
 import Heading1 from "../../components/Heading1/Heading1";
 
-function demoAsyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 2000));
-}
 
-class Homepage extends Component {
-  constructor(props) {
-    super(props);
+const Homepage = (props)=>{
 
-    this.state = {
-      loading: true,
-    };
-  }
-
-  componentDidMount() {
-    demoAsyncCall().then(() => this.setState({ loading: false }));
-  }
-
-  render() {
+  
     return (
+
+       
       <>
-      <Landing />
-       {/* 
+     <main>
+  <section className={`${styles.one} ${styles.a} ${styles.land}` }>
+  
+      
+  <div className={`${styles.landing_heading} `} >
+                <h1 className={`${styles.head}`}  ><span className={styles.letter_a}>A</span>BACUS   '22</h1>
+                <h2 className={`${styles.date}`}>April 28, 29 and 30</h2>
+            </div>
 
-         Child Class */}
+            
+ 
+  
 
-        
 
-        {/* Child Class */}
 
-        {/* Dev Section 
-        
-        
-       */}
-       <div className={`${styles.About_Abacus} ${styles.bg}`}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  </section>
+  <section className={`${styles.one} ${styles.b}` }>
+
+
+  <div className={`${styles.About_Abacus} ${styles.bg}`}>
           <div className={`${styles.left_container}`}>
             <div className={`${styles.left_content}`}>
               <div className={`${styles.logo}`}>
@@ -56,6 +83,7 @@ class Homepage extends Component {
                     margin: "auto",
                   }}
                 />
+               
 
                 <div className = {styles.eve}>
 
@@ -127,11 +155,13 @@ class Homepage extends Component {
             </div>
           </div>
           <div className={`${styles.right_container}`}>
-            <div className={`${styles.right_content}`}>
+         
             <div
                 key={1}
-                className={cx(styles.maindiv)}
+                className={ cx(styles.maindiv,styles.maindiv1) } 
               >
+            
+            <div className={styles.card}>
 
                   <h1 className={`${styles.heading}`}>Abacus '22</h1>
               <p className={`${styles.paragraph} mt-1`}>
@@ -147,30 +177,50 @@ class Homepage extends Component {
               </p>
               </div>
             
+            
+
             </div>
           </div>
         </div>
 
-        
 
-        <div className={`${styles.bg}`}>
-        <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+  <section className={`${styles.one}` }>
+
+  <div>
+       
           <div className={`${styles.blur}`}>
             <div className="text-center ">
               <Heading text="Sponsors" fontSize="40px" />
-              <br></br>
-              <br></br>
-              <br></br>
+              
+             
             </div>
             <div className="container-fluid mx-auto d-flex justify-content-center align-self-center mt-0">
               <div className="m-auto row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
-                <div class="col text-center">
+                <div className="col text-center">
                   <Heading text="Title Sponsors" fontSize="30px" />
-                  <div class="row row-cols-lg-2 d-flex justify-content-center align-self-center ">
+                  <div className="row row-cols-lg-2 d-flex justify-content-center align-self-center ">
                     <div className="col text-center">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/motorq.svg`}
@@ -189,10 +239,10 @@ class Homepage extends Component {
                   </div>
                 </div>
 
-                <div class="m-auto row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
-                  <div class="col text-center ">
+                <div className="m-auto row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
+                  <div className="col text-center ">
                     <Heading text="Merchandise Sponsors" fontSize="28px" />
-                    <div class="row  d-flex justify-content-center align-self-center">
+                    <div className="row  d-flex justify-content-center align-self-center">
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/Career Crafter.jpg`}
@@ -202,10 +252,10 @@ class Homepage extends Component {
                       </div>
                     </div>
                   </div>
-                  <div class="col text-center ">
+                  <div className="col text-center ">
                     <Heading text="Workshops Sponsors" fontSize="28px" />
                    
-                    <div class="row d-flex justify-content-center align-self-center">
+                    <div className="row d-flex justify-content-center align-self-center">
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/Tamilpreneur Logo.png`}
@@ -215,9 +265,9 @@ class Homepage extends Component {
                       </div>
                     </div>
                   </div>
-                  <div class="col text-center ">
+                  <div className="col text-center ">
                     <Heading text="Platform Sponsors" fontSize="28px" />
-                    <div class="row  d-flex justify-content-center align-self-center">
+                    <div className="row  d-flex justify-content-center align-self-center">
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
                           src="https://codechef_shared.s3.amazonaws.com/download/New%20CodeChef%20Logo/cc-logo.svg"
@@ -227,9 +277,9 @@ class Homepage extends Component {
                       </div>
                     </div>
                   </div>
-                  <div class="col text-center">
+                  <div className="col text-center">
                     <Heading text="Internship Sponsors" fontSize="28px" />
-                    <div class="row row-cols-lg-2 d-flex justify-content-center align-self-center  pb-5 pt-4">
+                    <div className="row row-cols-lg-2 d-flex justify-content-center align-self-center  pb-5 pt-4">
                       <div className="col text-center pt-5 mb-5">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/amazon.jpeg`}
@@ -251,10 +301,16 @@ class Homepage extends Component {
             </div>
             <div></div>
           </div>
-        </div>
+          </div> 
+  </section>
+
+
+  
+</main>
+<Footer/>
       </>
     );
   }
-}
+
 
 export default Homepage;

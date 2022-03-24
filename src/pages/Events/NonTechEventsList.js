@@ -43,7 +43,10 @@ function NonTechEventsList() {
     >
       <div className={styles.wrapper}>
         {nonTechEventsList.map((event) => (
-          <Link to={`/events/non-tech-events/${event.refName}`}>
+          <Link
+            to={`/events/non-tech-events/${event.refName}`}
+            className={styles.linkTag}
+          >
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
               <img
                 src={require(`./../../images/NonTechEvents/${event.refName}.png`)}

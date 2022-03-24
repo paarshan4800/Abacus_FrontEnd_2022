@@ -14,7 +14,7 @@ import Hackathon from "./pages/Events/Hackathon";
 import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 import LoginRegister from "./pages/Login/LoginRegister";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
-import { Aboutus } from "./components";
+import { Aboutus } from "./components/";
 import SignInForm from "./pages/Login/pages/SignInForm";
 import SignUp from "./pages/Login/pages/SignUp";
 import ForgotPassword from "./pages/Login/pages/ForgotPassword";
