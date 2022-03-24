@@ -46,12 +46,22 @@ const Navbar = () => {
     
   }
 
+  const widthChange = () =>{
+    if (window.innerWidth > 1150){
+       return  <img src={logo} alt="logo" className="w-32 cursor-pointer" />
+    }
+  }
+
   window.addEventListener('scroll',changeBackground);
+  window.addEventListener('resize', widthChange);
+  
 
   return (
-    <nav className={navbar ? `w-full flex md:justify-center justify-between items-center fixed gradient-bg-welcome z-10 text-2xl font-sans` : `font-sans w-full flex md:justify-center gradient-bg-welcome justify-between items-center fixed z-10 text-2xl nav`}>
+    <nav className={navbar ? `w-full flex md:justify-center justify-between items-center fixed gradient-bg-welcome z-10 text-2xl font-sans` : `font-sans w-full flex md:justify-center justify-between items-center fixed z-10 text-2xl nav`}>
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
-        <img src={logo} alt="logo" className="w-32 cursor-pointer" />
+      
+       {widthChange()}
+
       </div>
       <ul className={`text-white md:flex hidden list-none flex-row justify-between items-center flex-initial ${styles.nav}`}>
         {["Home", "About-us", "Events", "workshops"].map((item, index) => 
@@ -69,7 +79,7 @@ const Navbar = () => {
           <HiMenuAlt4 fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />
         )}
         {toggleMenu && (
-          <AiOutlineClose fontSize={10} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
+          <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
         )}
         {toggleMenu && (
           <ul
