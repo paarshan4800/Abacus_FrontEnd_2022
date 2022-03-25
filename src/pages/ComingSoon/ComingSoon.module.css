@@ -100,6 +100,10 @@
   animation: slowFlickerAnime 2s infinite;
 }
 
+.slowFlicker2 {
+    animation: slowFlickerAnime2 2s infinite;
+  }
+  
 
 @keyframes flickerAnime {
   from {
@@ -243,3 +247,19 @@
           0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
   }
 }
+
+@keyframes slowFlickerAnime2 {
+
+    50%,
+    100% {
+        color: #186b60;
+        text-shadow: none;
+    }
+  
+    0% {
+        color: #ffe6ff;
+        text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
+            -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+            0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+    }
+  }

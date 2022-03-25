@@ -47,11 +47,16 @@ function WorkshopHome() {
     >
       <div className={styles.wrapper}>
         {workshopsList.map((event) => (
-          <Link to={`/workshops/${event.refName}`}>
+          <Link to={`/workshops/${event.refName}`} className={styles.linkTag}>
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
-            <img
+              <img
                 src={require(`./../../images/Workshops/${event.refName}.png`)}
-                style={{ width: "350px", height: "300px" }}
+                style={{
+                  width: "350px",
+                  height: "250px",
+                  padding: "20px",
+                  backgroundColor: "black",
+                }}
                 alt={event.refName}
               />
               <div className={styles.title}>{event.name}</div>

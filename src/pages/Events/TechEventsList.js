@@ -68,7 +68,12 @@ function TechEventsList() {
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
               <img
                 src={require(`./../../images/TechEvents/${event.refName}.png`)}
-                style={{ width: "350px", height: "250px" ,padding: "20px", backgroundColor: "black"}}
+                style={{
+                  width: "350px",
+                  height: "250px",
+                  padding: "20px",
+                  backgroundColor: "black",
+                }}
                 alt={event.refName}
               />
               <div className={styles.title}>{event.name}</div>

@@ -26,7 +26,7 @@ function ComingSoon() {
               <span className={`${styles.slowFlicker}`}>O</span>
               <span className={`${styles.normalFlicker}`}>MING</span>             
               <span className={`${styles.normalFlicker}`}> SO</span>
-              <span className={`${styles.slowFlicker}`}>O</span>
+              <span className={`${styles.slowFlicker2}`}>O</span>
               <span className={`${styles.normalFlicker}`}>N</span>
             </div>
             <div className={`${styles._404_text_addi}`}>
