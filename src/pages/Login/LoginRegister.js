@@ -15,7 +15,7 @@ class LoginRegister extends React.Component {
   }
  render(){
   return(
-    <div>
+    <div className={logstyle.LoginRegisterBg}>
       <Main />
     </div>
   );

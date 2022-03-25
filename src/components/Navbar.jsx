@@ -31,7 +31,7 @@ const LinksList = [{
   link:"/workshops"
 },{
   title: "Login",
-  link: "/Login"
+  link: "/signup"
 }]
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
@@ -94,7 +94,7 @@ const Navbar = () => {
               
             )}
             <li className="bg-[#2952e3] py-2 px-7 mx-4 mt-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-            <NavBarItem  title="LOGIN"  link={`/Login`} />
+            <NavBarItem  title="LOGIN"  link={`/signup`} />
           </li>
           </ul>
         )}

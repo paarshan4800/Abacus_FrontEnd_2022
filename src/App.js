@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import { Navbar } from "./components";
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
-import background from "./images/backk.jpg";
+import background from "./images/bgg.jpg";
 
 const rootReducer = combineReducers({
   Reducer: Reducer,

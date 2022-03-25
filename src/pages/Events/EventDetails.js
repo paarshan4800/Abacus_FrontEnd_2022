@@ -74,8 +74,9 @@ function EventDetails() {
                 alt={title}
               />
             )}
-            <GlassButton title="Register" />
+            <GlassButton  title="Register"/>
           </div>
+          {/* <GlassButton /> */}
         </div>
       </div>
 
