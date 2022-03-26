@@ -21,16 +21,20 @@ function EventsHome() {
       </Link>
     </div>,
     <div>
-      <Link to="/events/non-tech-events" className={styles.linkTag}>
-        <img src={nontech} alt="2" />
-        <h1 className={styles.neon}>Non-Tech Events</h1>
-      </Link>
+      <div className={styles.linkBackground}>
+        <Link to="/events/non-tech-events" className={styles.linkTag}>
+          <img src={nontech} alt="2" />
+          <h1 className={styles.neon}>Non-Tech Events</h1>
+        </Link>
+      </div>
     </div>,
     <div>
-      <Link to="/events/hackathon" className={styles.linkTag}>
-        <img src={hack} alt="3" />
-        <h1 className={styles.neon}>Hackathon</h1>
-      </Link>
+      <div className={styles.linkBackground}>
+        <Link to="/events/hackathon" className={styles.linkTag}>
+          <img src={hack} alt="3" />
+          <h1 className={styles.neon}>Hackathon</h1>
+        </Link>
+      </div>
     </div>,
   ];
   return (

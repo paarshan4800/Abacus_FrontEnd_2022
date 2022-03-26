@@ -2,7 +2,7 @@ import React from "react";
 import cx from "classnames";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import styles from "./EventsList.module.css";
-
+import stylesnew from "./EventsHome.module.css";
 function NonTechEventsList() {
   let nonTechEventsList = [
     {
@@ -52,6 +52,7 @@ function NonTechEventsList() {
                 src={require(`./../../images/NonTechEvents/${event.refName}.png`)}
                 style={{ width: "350px", height: "300px" }}
                 alt={event.refName}
+                className={stylesnew.linkBackground}
               />
               <div className={styles.title}>{event.name}</div>
             </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-//import styles from "./EventsList.module.css";
+import stylesnew from "./EventsList.module.css";
 import styles from "./../Events/EventDetails.module.css";
 
 function TechEventsList() {
@@ -83,7 +83,7 @@ function TechEventsList() {
             <div className={styles.content}>
               <Link
                 to={`/events/tech-events/${event.refName}`}
-                className={styles.linkTag}
+                className={stylesnew.linkTag}
               >
                 <div key={event.id}>
                   <img

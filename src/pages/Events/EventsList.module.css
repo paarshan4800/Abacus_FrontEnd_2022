@@ -104,6 +104,8 @@ body {
 }
 .linkTag {
   text-decoration: none !important;
+  font-size: larger;
+  text-align: center;
 }
 .title {
   font-size: x-large !important;
