@@ -27,11 +27,12 @@ function SignInForm() {
     };
     console.log(values);
 
-    axios //.post("http://localhost:8000/user/login", values)
+    axios//.post("http://localhost:8000/user/login", values)
       .post("https://abacus-22-backend.herokuapp.com/user/login", values)
       .then((response) => {
         if (response.status === 200) {
           console.log("Token ==", response.data.token);
+          localStorage.setItem("apiToken", response.data.token)
           alert(" token has been generated, check console");
         }
       })
@@ -49,23 +50,24 @@ function SignInForm() {
   };
 
   const afterGoogleSignIn = () => {
-    console.log("function after g sign called");
+    // console.log("function after g sign called");
     const url = new URL(window.location.href);
-    console.log("url is", url);
+    // console.log("url is", url);
     const searchparams = new URLSearchParams(url.search);
-    console.log("search params is", searchparams);
+    // console.log("search params is", searchparams);
     if (searchparams.has("message")) {
       const msg = searchparams.get("message");
-      console.log(msg);
+      // console.log(msg);
       window.alert(msg);
     }
     if (searchparams.has("token")) {
       setToken(searchparams.get("token"));
       localStorage.setItem("apiToken", token);
-      console.log("token is ", searchparams.get("token"));
+      // console.log("token is ", searchparams.get("token"));
+      console.log("token is : ", localStorage.getItem("apiToken")); 
     }
   };
-  useEffect(afterGoogleSignIn, []);
+  useEffect(afterGoogleSignIn);
   return (
     <div  className={logstyle.appForm}>
     <div className={logstyle.formCenter}> 

@@ -77,9 +77,9 @@ function SignUp() {
 
   const checkWhichPage = () => {
     const url = new URL(window.location.href);
-    console.log(url);
+    // console.log(url);
     const searchparams = new URLSearchParams(url.search);
-    console.log(searchparams);
+    // console.log(searchparams);
     // console.log("hello");
     if (searchparams.has("email")) {
       //
@@ -159,7 +159,7 @@ function SignUp() {
       console.log(validationError);
     }
   };
-  console.log(year);
+  // console.log(year); 
   return (
     <div className={logstyle.appForm}>
     <div className={logstyle.formCenter}>
