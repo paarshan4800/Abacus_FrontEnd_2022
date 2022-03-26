@@ -56,7 +56,7 @@ const Navbar = () => {
 
       </div>
       <ul className={`text-white md:flex hidden list-none flex-row justify-between items-center flex-initial ${styles.nav}`}>
-        {["Home", "About-us", "Events", "workshops"].map((item, index) =>
+        {["Home", "aboutus", "Events", "workshops"].map((item, index) =>
 
           // <NavBarItem key={item + index} title={item.toUpperCase()} className={styles.nav} link={`/${item}`}/>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
           ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav}>{item}</Link></li>
         )}
         <li className={`bg-[#11998e] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[blue]  ${styles.nav}`}>
-        <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav}>Login</Link>
+        <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >Login</Link>
         </li>
       </ul>
       <div className="flex relative">
@@ -73,15 +73,16 @@ const Navbar = () => {
           <HiMenuAlt4 fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />
         )}
         {toggleMenu && (
-          <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
+          <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer mx-2" onClick={() => setToggleMenu(false)} />
         )}
         {toggleMenu && (
           <ul
-            className="z-10 fixed -top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
-            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
+            className={`z-10 fixed -top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
+            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in  ${styles.nav_mobile}`}
+            
           >
             <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {["Home", "about-us", "Events", "Workshops"].map(
+            {["Home", "aboutus", "Events", "Workshops"].map(
               (item, index) =>
 
                 // <NavBarItem key={item + index} title={item.toUpperCase()} classprops="my-2 text-lg" link={`/${item}`} />

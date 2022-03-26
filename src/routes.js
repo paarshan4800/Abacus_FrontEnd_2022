@@ -46,7 +46,7 @@ const AppRoutes = () => {
       </Route> */}
       <Route path="/" exact component={Homepage} />
       <Route path="/Home" exact component={Homepage} />
-      <Route path="/about-us" exact component={Aboutus} />
+      <Route path="/aboutus" exact component={Aboutus} />
       <Route path="/events" exact component={EventsHome} />
       <Route path="/events/hackathon" exact component={Hackathon} />
       <Route path="/events/tech-events" exact component={TechEventsList} />
@@ -60,7 +60,7 @@ const AppRoutes = () => {
       <Route path="/workshops/:title" exact component={WorkshopDetails} />
       <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/test/:type/:title" exact component={Test} />
-      <Route path="/Login" exact component={LoginRegister} />
+      <Route path="/login" exact component={LoginRegister} />
       <Route path="/signUp" exact component={SignUp} />
       <Route path="/ForgotPassword" exact component={ForgotPassword} />
       <Route path="/NewPassword" exact component={NewPassword} />

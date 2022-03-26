@@ -1355,6 +1355,10 @@ height:120px;
     height:220px;
     width:200px;
 }
+
+.date{
+  font-size: 20px;
+}
   }
  
  
@@ -1461,27 +1465,6 @@ height:120px;
 }
 
 
-@media only screen and (max-width: 1290px) {
- 
-  .eve{
-    flex-direction: column;
-  }
-
-  .top{
-    width:100%;
-    margin: 3%;
-  }
-  .bottom{
-    width:100%;
-    margin: 3%;
-  }
-  .one_count{
-    width:50%;
-    text-align: center;
-  }
-}
-
-
 
 @media only screen and (max-width: 540px) {
   .title{
@@ -1513,7 +1496,7 @@ height:120px;
   font-size: 50px;
   }
   .date{
-    font-size: 13px;
+    font-size: 10px;
   }
   .left_container{
     margin: 0;
