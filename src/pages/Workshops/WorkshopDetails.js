@@ -50,11 +50,11 @@ function WorkshopDetails() {
         <div className={styles.box} style={{ width: "400px" }}>
           <span></span>
           <div className={styles.content}>
-          <img
-                src={require(`./../../images/Workshops/${title}.png`)}
-                style={{ width: "200px", height: "200px" }}
-                alt={title}
-              />
+            <img
+              src={require(`./../../images/Workshops/${title}.png`)}
+              style={{ width: "200px", height: "200px" }}
+              alt={title}
+            />
             <GlassButton title="Register" />
           </div>
         </div>
@@ -94,6 +94,28 @@ function WorkshopDetails() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className={styles.container}>
+        {data.speakers.map((speaker, index) => (
+          <div
+            className={styles.box}
+            key={index + 1}
+            style={{ width: "300px" }}
+          >
+            <span></span>
+            <div className={styles.content} >
+            <img src={nontech} />
+
+              <h3 className={styles.neon}>{speaker.name}</h3>
+              <p className={styles.glowCardName}>
+                <a href={speaker.href}>
+                  {speaker.profession} <br /> {speaker.company}
+                </a>
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

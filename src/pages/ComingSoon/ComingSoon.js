@@ -16,9 +16,9 @@ function ComingSoon() {
       <div className={`${styles._404_wrapper} ${styles.bg}`}>
         <div className={`${styles._404}`}>
           {/* Image */}
-          <div className={`${styles._404_img}`}>
+          {/* <div className={`${styles._404_img}`}>
             <img src={img404} alt="" width="250px" height="250px" />
-          </div>
+          </div> */}
           {/* Text */}
           <div className={`${styles._404_text_wrapper}`}>
             <div className={`${styles._404_text}`}>
@@ -31,9 +31,9 @@ function ComingSoon() {
             </div>
             <div className={`${styles._404_text_addi}`}>
               <p>The registrations will be open soon.</p>
-              <div onClick={redirect}>
+              {/* <div onClick={redirect}>
                 <GlassButton title="Homepage" />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
