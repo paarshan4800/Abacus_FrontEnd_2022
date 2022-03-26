@@ -59,13 +59,13 @@ const AppRoutes = () => {
       <Route path="/workshops" exact component={WorkshopsList} />
       <Route path="/workshops/:title" exact component={WorkshopDetails} />
       <Route path="/dashboard" exact component={Dashboard} />
-      <Route path="/404" exact component={PageNotFound} />
       <Route path="/test/:type/:title" exact component={Test} />
       <Route path="/Login" exact component={LoginRegister} />
       <Route path="/signUp" exact component={SignUp} />
       <Route path="/ForgotPassword" exact component={ForgotPassword} />
       <Route path="/NewPassword" exact component={NewPassword} />
       <Route path="/ComingSoon" exact component={ComingSoon} />
+      <Route component={PageNotFound} />
       {/* <Route path="/Login" exact component={LoginRegister} /> */}
 
       {/*
