@@ -70,10 +70,10 @@ const Navbar = () => {
       </ul>
       <div className="flex relative">
         {!toggleMenu && (
-          <HiMenuAlt4 fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />
+          <HiMenuAlt4 fontSize={38} className="text-white md:hidden cursor-pointer" padding="10px" onClick={() => setToggleMenu(true)} />
         )}
         {toggleMenu && (
-          <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer mx-2" onClick={() => setToggleMenu(false)} />
+          <AiOutlineClose fontSize={38} className="text-white md:hidden cursor-pointer mx-2" onClick={() => setToggleMenu(false)} />
         )}
         {toggleMenu && (
           <ul
@@ -81,7 +81,7 @@ const Navbar = () => {
             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in  ${styles.nav_mobile}`}
             
           >
-            <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
+            <li className="text-3xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
             {["Home", "aboutus", "Events", "Workshops"].map(
               (item, index) =>
 
@@ -94,7 +94,7 @@ const Navbar = () => {
                 ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav}>{item}</Link></li>
             )}
             <li className="bg-[#2952e3] py-2 px-7 mx-4 mt-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-            <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav}>Login</Link>
+            <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   className={styles.nav}>Login</Link>
             </li>
           </ul>
         )}
