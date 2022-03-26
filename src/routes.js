@@ -19,6 +19,7 @@ import SignInForm from "./pages/Login/pages/SignInForm";
 import SignUp from "./pages/Login/pages/SignUp";
 import ForgotPassword from "./pages/Login/pages/ForgotPassword";
 import NewPassword from "./pages/Login/pages/NewPassword";
+import ComingSoon from "./pages/ComingSoon/ComingSoon";
 import Test from "./pages/Test/Test";
 
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
@@ -64,6 +65,7 @@ const AppRoutes = () => {
       <Route path="/signUp" exact component={SignUp} />
       <Route path="/ForgotPassword" exact component={ForgotPassword} />
       <Route path="/NewPassword" exact component={NewPassword} />
+      <Route path="/ComingSoon" exact component={ComingSoon} />
       {/* <Route path="/Login" exact component={LoginRegister} /> */}
 
       {/*

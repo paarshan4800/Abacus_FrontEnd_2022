@@ -16,7 +16,6 @@ import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
 import { TiTick } from "react-icons/ti";
 
-
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -134,7 +133,7 @@ const Dashboard = () => {
   useEffect(() => {
     setEventList(true);
     setWorkshopList(false);
-  },[]);
+  }, []);
 
   const expandEventList = () => {
     setEventList(true);
@@ -209,79 +208,121 @@ const Dashboard = () => {
           <>
             <div className={styles.display}>
               <div className={styles.selector}>
-                <GlassButton title="Events" selected={isEventList} onClick={() => {expandEventList()}}/>
-                <GlassButton title="Workshop" selected={isWorkshopList} onClick={() => {expandWorkshopList()}}/>
+                <GlassButton
+                  title="Events"
+                  selected={isEventList}
+                  onClick={() => {
+                    expandEventList();
+                  }}
+                />
+                <GlassButton
+                  title="Workshop"
+                  selected={isWorkshopList}
+                  onClick={() => {
+                    expandWorkshopList();
+                  }}
+                />
               </div>
 
-              {isEventList && (
-              <div className={styles.list}>
-                {eventList.map((event) =>
-                  event.registered ? (
-                    <div key={event.id} className={styles.list_element}>
-                      <div className={styles.title}>{event.name}</div>
-                      <div className={styles.hide}>
-                        <Link to={`/events/${event.type}/${event.refName}`}>
-                          <div className={styles.btn}>
-                            <GlassBtn title="View More" />
-                          </div>
-                        </Link>
+              <div className={styles.webView}>
+                {isEventList && (
+                  <div className={styles.list}>
+                    {eventList.map((event) => (
+                      <div key={event.id} className={styles.list_element}>
+                        <div className={styles.title}>{event.name}</div>
+                        <div className={styles.hide}>
+                          <Link to={`/events/${event.type}/${event.refName}`}>
+                            <div className={styles.btn}>
+                              {event.registered ? (
+                                <GlassBtn title="View More" />
+                              ) : (
+                                <GlassBtn title="Register" />
+                              )}
+                            </div>
+                          </Link>
+                        </div>
+                        <div className={styles.badge}>
+                          {event.registered ? <TiTick size={35} /> : <></>}
+                        </div>
                       </div>
-                      <div className={styles.badge}>
-                        <TiTick size={35}/>
+                    ))}
+                  </div>
+                )}
+
+                {isWorkshopList && (
+                  <div className={styles.list}>
+                    {workshopList.map((event) => (
+                      <div key={event.id} className={styles.list_element}>
+                        <div className={styles.title}>{event.name}</div>
+                        <div className={styles.hide}>
+                          <Link to={`/workshops/${event.refName}`}>
+                            <div className={styles.btn}>
+                              {event.registered ? (
+                                <GlassBtn title="View More" />
+                              ) : (
+                                <GlassBtn title="Register" />
+                              )}
+                            </div>
+                          </Link>
+                        </div>
+                        <div className={styles.badge}>
+                          {event.registered ? <TiTick size={35} /> : <></>}
+                        </div>
                       </div>
-                    </div>
-                    
-                  ) : (
-                    <div key={event.id} className={styles.list_element}>
-                      <div className={styles.title}>{event.name}</div>
-                      <div className={styles.hide}>
-                        <Link to={`/events/${event.type}/${event.refName}`}>
-                          <div className={styles.btn}>
-                            <GlassBtn title="Register" />
-                          </div>
-                        </Link>
-                      </div>
-                      <div className={styles.badge}>
-                      </div>
-                    </div>
-                  )
+                    ))}
+                  </div>
                 )}
               </div>
-              )}
+              
+              <div className={styles.mobileView}>
+                {isEventList && (
+                  <div className={styles.list}>
+                    {eventList.map((event) => (
+                      <div key={event.id} className={styles.list_element}>
+                        <div className={styles.title}>{event.name}</div>
+                        <div className={styles.hide}>
+                          <Link to={`/events/${event.type}/${event.refName}`}>
+                            <div className={styles.btn}>
+                              {event.registered ? (
+                                <GlassBtn title="View More" />
+                              ) : (
+                                <GlassBtn title="Register" />
+                              )}
+                            </div>
+                          </Link>
+                        </div>
+                        <div className={styles.badge}>
+                          {event.registered ? <TiTick size={35} /> : <></>}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
-              {isWorkshopList && (
-              <div className={styles.list}>
-                {workshopList.map((event) =>
-                  event.registered ? (
-                    <div key={event.id} className={styles.list_element}>
-                      <div className={styles.title}>{event.name}</div>
-                      <div className={styles.hide}>
-                        <Link to={`/workshops/${event.refName}`}>
-                          <div className={styles.btn}>
-                            <GlassBtn title="View More" />
-                          </div>
-                        </Link>
+                {isWorkshopList && (
+                  <div className={styles.list}>
+                    {workshopList.map((event) => (
+                      <div key={event.id} className={styles.list_element}>
+                        <div className={styles.title}>{event.name}</div>
+                        <div className={styles.hide}>
+                          <Link to={`/workshops/${event.refName}`}>
+                            <div className={styles.btn}>
+                              {event.registered ? (
+                                <GlassBtn title="View More" />
+                              ) : (
+                                <GlassBtn title="Register" />
+                              )}
+                            </div>
+                          </Link>
+                        </div>
+                        <div className={styles.badge}>
+                          {event.registered ? <TiTick size={35} /> : <></>}
+                        </div>
                       </div>
-                      <div className={styles.badge}>
-                        <TiTick size={35}/>
-                      </div>
-                    </div>
-                  ) : (
-                    <div key={event.id} className={styles.list_element}>
-                      <div className={styles.title}>{event.name}</div>
-                      <div className={styles.hide}>
-                        <Link to={`/workshops/${event.refName}`}>
-                          <div className={styles.btn}>
-                            <GlassBtn title="Register" />
-                          </div>
-                        </Link>
-                      </div>
-                    </div>
-                  )
+                    ))}
+                  </div>
                 )}
               </div>
-              )}
-
             </div>
           </>
         )}

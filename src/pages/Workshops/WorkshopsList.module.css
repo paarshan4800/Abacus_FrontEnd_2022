@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background-color: #060c1f;
+  /* background-color: #060c1f; */
   font-family: "Almarai", sans-serif;
 }
 
@@ -101,6 +101,13 @@ body {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
+}
+.linkTag {
+  text-decoration: none !important;
+}
+.title {
+  font-size: x-large !important;
+  text-decoration: none !important;
 }
 
 /* .maindiv2::before {

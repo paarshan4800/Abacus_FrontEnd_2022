@@ -50,7 +50,7 @@ function NonTechEventsList() {
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
               <img
                 src={require(`./../../images/NonTechEvents/${event.refName}.png`)}
-                style={{ width: "350px", height: "300px" }}
+                style={{ width: "350px", height: "250px" , padding: "20px", backgroundColor: "black"}}
                 alt={event.refName}
                 className={stylesnew.linkBackground}
               />

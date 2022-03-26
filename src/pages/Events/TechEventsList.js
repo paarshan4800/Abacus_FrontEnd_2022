@@ -1,8 +1,9 @@
 import React from "react";
 import cx from "classnames";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-import stylesnew from "./EventsList.module.css";
-import styles from "./../Events/EventDetails.module.css";
+import styles from "./EventsList.module.css";
+// import styles from "./../Events/EventDetails.module.css";
+import background from "../../images/bgg.jpg";
 
 function TechEventsList() {
   let techEventsList = [
@@ -58,7 +59,7 @@ function TechEventsList() {
     //   color: "#f5f5f5",
     // }}
     >
-      {/* <div className={styles.wrapper}>
+      <div className={styles.wrapper}>
         {techEventsList.map((event) => (
           <Link
             to={`/events/tech-events/${event.refName}`}
@@ -67,16 +68,21 @@ function TechEventsList() {
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
               <img
                 src={require(`./../../images/TechEvents/${event.refName}.png`)}
-                style={{ width: "350px", height: "250px" }}
+                style={{
+                  width: "350px",
+                  height: "250px",
+                  padding: "20px",
+                  backgroundColor: "black",
+                }}
                 alt={event.refName}
               />
               <div className={styles.title}>{event.name}</div>
             </div>
           </Link>
         ))}
-      </div> */}
+      </div>
 
-      {techEventsList.map((event) => (
+      {/* {techEventsList.map((event) => (
         <div className={cx(styles.container, styles.list)}>
           <div className={styles.box}>
             <span></span>
@@ -97,7 +103,7 @@ function TechEventsList() {
             </div>
           </div>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }

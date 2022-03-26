@@ -1,0 +1,265 @@
+._404_wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg{
+  background-color:#060c21;
+  background-image:url("../../images/bgg.jpg");
+  background-repeat:no-repeat;
+  background-size:cover
+}
+
+.bg1{
+  background-color:#060c21;
+  background-image:url("../../images/bgg.jpg");
+  background-repeat:no-repeat;
+  background-size:cover
+}
+
+
+@media only screen and (max-width:1025px){
+  .bg{
+      background-color:#060c21;
+      background-image:url("../../images/bgg.jpg");
+      background-repeat:no-repeat;
+      background-size:cover
+  }
+  .bg1{
+      background-color:#060c21;
+      background-image:url("../../images/bgg.jpg");
+      background-repeat:no-repeat;
+      background-size:cover
+  }
+
+}
+
+._404 {
+  min-height: 60vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1100px) {
+  ._404 {
+      flex-direction: column;
+      min-height: max-content;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 578px) {
+  ._404 {
+      margin-top: 25px;
+  }
+}
+
+._404_img {
+  flex-basis: 30%;
+  text-align: center;
+}
+
+._404_text_wrapper {
+  text-align: center;
+  flex-basis: 30%;
+}
+
+._404_text {
+
+  letter-spacing: 10px;
+  font-family: Iceland;
+  text-transform: uppercase;
+  font-size: 125px;
+  color: #ffe6ff;
+  text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
+  -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+  0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+}
+
+
+._404_text_addi p {
+  color: white;
+  font-size: 25px;
+  font-family: Iceland;
+  margin-bottom: 5px;
+}
+
+.normalFlicker {
+  animation: flickerAnime 2s infinite;
+}
+
+.slowFlicker {
+  animation: slowFlickerAnime 2s infinite;
+}
+
+.slowFlicker2 {
+    animation: slowFlickerAnime2 2s infinite;
+  }
+  
+
+@keyframes flickerAnime {
+  from {
+      opacity: 1;
+  }
+
+  4% {
+      opacity: 0.9;
+  }
+
+  6% {
+      opacity: 0.85;
+  }
+
+  8% {
+      opacity: 0.95;
+  }
+
+  10% {
+      opacity: 0.9;
+  }
+
+  11% {
+      opacity: 0.922;
+  }
+
+  12% {
+      opacity: 0.9;
+  }
+
+  14% {
+      opacity: 0.95;
+  }
+
+  16% {
+      opacity: 0.98;
+  }
+
+  17% {
+      opacity: 0.9;
+  }
+
+  19% {
+      opacity: 0.93;
+  }
+
+  20% {
+      opacity: 0.99;
+  }
+
+  24% {
+      opacity: 1;
+  }
+
+  26% {
+      opacity: 0.94;
+  }
+
+  28% {
+      opacity: 0.98;
+  }
+
+  37% {
+      opacity: 0.93;
+  }
+
+  38% {
+      opacity: 0.5;
+  }
+
+  39% {
+      opacity: 0.96;
+  }
+
+  42% {
+      opacity: 1;
+  }
+
+  44% {
+      opacity: 0.97;
+  }
+
+  46% {
+      opacity: 0.94;
+  }
+
+  56% {
+      opacity: 0.9;
+  }
+
+  58% {
+      opacity: 0.9;
+  }
+
+  60% {
+      opacity: 0.99;
+  }
+
+  68% {
+      opacity: 1;
+  }
+
+  70% {
+      opacity: 0.9;
+  }
+
+  72% {
+      opacity: 0.95;
+  }
+
+  93% {
+      opacity: 0.93;
+  }
+
+  95% {
+      opacity: 0.95;
+  }
+
+  97% {
+      opacity: 0.93;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+
+@keyframes slowFlickerAnime {
+
+  0%,
+  100% {
+      color: #186b60;
+      text-shadow: none;
+  }
+
+  50% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
+          -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+          0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+  }
+}
+
+@keyframes slowFlickerAnime2 {
+
+    50%,
+    100% {
+        color: #186b60;
+        text-shadow: none;
+    }
+  
+    0% {
+        color: #ffe6ff;
+        text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
+            -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+            0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+    }
+  }
