@@ -963,7 +963,7 @@ padding-bottom: 3%;
   position: relative; 
   letter-spacing: 13px;
   font-family: alien;
-  font-size: 120px;
+  font-size: 110px;
 
  color: lightskyblue;
  animation: flicker 3s infinite;
@@ -979,7 +979,7 @@ padding-bottom: 3%;
 
 .letter_a{
   font-family: alien;
-  font-size: 160px;
+  font-size: 120px;
 }
 
 .date {

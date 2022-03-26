@@ -2,9 +2,9 @@
   
 @font-face {
     font-family: Future;
-    src: url(./Landing/Vist.otf);
+    src: url(../components/Heading/alien.ttf);
 }
 .nav{
     font-family: Future;
-    font-size: 25px;
+    font-size: 22px;
 }
