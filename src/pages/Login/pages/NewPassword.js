@@ -4,36 +4,11 @@ import GlassButton from "../../../components/GlassButton/GlassButton";
 
 function NewPassword() {
     return (
-      <div className={logstyle.App}>
-      <div className={logstyle.appAside}>
-          {/* <center>
-            <Typography>
-              <div className={logstyle.typingDemo} width="40%">
-                <div className={logstyle.glow}>Welcome!</div>
-              </div>
-            </Typography>
-            <div className={logstyle.styleButton}>
-                <NavLink
-                exact
-                 to="/"
-                 activeclassName={logstyle.pageSwitcherItemActive}
-                >
-                <GlassButton title="Sign In" />
-                </NavLink>
-                <NavLink
-                to="/sign-up"
-                activeclassName={logstyle.pageSwitcherItemActive}
-                >
-                <GlassButton title="Sign Up" />
-                </NavLink>
-
-                </div>
-          </center> */}
-    </div>
+    <div className={logstyle.App}>
 
     <div className={logstyle.appForm}>
-      <div className={logstyle.SIOut}>
-      <div className={logstyle.SICenter}>
+      {/* <div className={logstyle.SIOut}> */}
+      {/* <div className={logstyle.SICenter}> */}
         <h2>Enter New Password</h2>
         <br></br>
         <form className={logstyle.formFields}>
@@ -66,8 +41,8 @@ function NewPassword() {
               <GlassButton title="Submit"/>
           </div>
         </form>
-      </div>
-      </div>
+      {/* </div> */}
+      {/* </div> */}
       </div>
       </div>
     );
