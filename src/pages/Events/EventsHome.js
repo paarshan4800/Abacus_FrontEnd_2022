@@ -5,7 +5,7 @@ import TechEventsList from "./TechEventsList";
 
 import tech from "./../../images/tech.png";
 import nontech from "./../../images/nontech.png";
-import hack from "./../../images/TechEvents/reverse-engineering.png";
+import hack from "./../../images/hack.png";
 import styles from "./EventsHome.module.css";
 import eventpassimg from "../../images/eventpassimg.png";
 
