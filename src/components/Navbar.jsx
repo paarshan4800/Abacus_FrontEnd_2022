@@ -39,8 +39,11 @@ const Navbar = () => {
   }
 
   const widthChange = () => {
-    if (window.innerWidth > 1150) {
+    if (window.innerWidth > 1150 ) {
       return <img src={logo} alt="logo" className="w-[5.6rem] cursor-pointer" />
+    }
+    else if (window.innerWidth <= 750 ){
+      return <img src={logo} alt="logo" className="w-[4.5rem] cursor-pointer" />
     }
   }
 

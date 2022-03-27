@@ -87,9 +87,10 @@ margin-top: -90px;
   height: 70%;
   box-sizing: border-box;
   border-radius: 16px;
-  margin-top: 15%;
+  margin-top: 13%;
   padding-top: 0%;
   margin-right: 10%;
+  height: 75%;
   background-color: transparent;
   background-color:   #060c1f;
   /* background-color:  #e1ad01; */
@@ -292,7 +293,7 @@ background-size: contain;
 font-weight: bolder;
 
 font-family: 'Open Sans', sans-serif;   
-font-size: 3.7rem;
+font-size: 3.3rem;
   text-align: center;
   color: white;
 line-height: 0px;
@@ -315,7 +316,7 @@ letter-spacing: 3px;
   padding-left: 2%;
   padding-right: 2%;
 color: white;
-letter-spacing: 2px;
+letter-spacing: 1px;
   padding-top: 8%;
 font-size: 1.1rem;
 line-height: 40px;
@@ -434,7 +435,6 @@ body {
   margin-left: 10%;
   padding: 0;
   background-color: transparent;
-  object-fit: contain;
   
 }
 
