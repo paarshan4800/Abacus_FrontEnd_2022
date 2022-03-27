@@ -242,6 +242,27 @@ body {
     font-size: 3vw;
     /* font-size:  0.8em; */
   }
+
+  .list_element .hide {
+    display: none;
+  }
+
+  .list_element .title {
+    width: 90% !important ;
+    /* background-color: #4b4b4b !important ; */
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.2em;
+    color: #000000;
+  }
+
+  .list_element .badge {
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+    /* background-color: #4b4b4b; */
+  }
+  
 }
 
 
@@ -458,7 +479,7 @@ body {
 }
 
 .list_element .hide {
-  width: 35%;
+  width: 25%;
 }
 
 .list_element .btn {
@@ -471,7 +492,8 @@ body {
 .list_element .badge {
   display: flex;
   justify-content: flex-end;
-  width: 5%;
+  width: 15%;
+  text-decoration: none;
   /* background-color: #4b4b4b; */
 }
 
@@ -501,6 +523,10 @@ body {
   width: 100%;
   justify-content: flex-start;
   align-items: center;
+}
+
+.mobileView a{
+  text-decoration: none;
 }
 
 .webView {

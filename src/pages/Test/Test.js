@@ -7,7 +7,7 @@ import { NonTechEvents } from "../../data/NonTechEventsData";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
 import background from "../../images/bgg.jpg";
-import nontech from "./../../images/nontech.jpeg";
+import nontech from "./../../images/nontech.png";
 
 function Test() {
   const { type, title } = useParams();
