@@ -25,7 +25,7 @@ const Homepage = (props)=>{
   
       
   <div className={`${styles.landing_heading} `} >
-                <h1 className={`${styles.head}`}  ><span className={styles.letter_a}>A</span>BACUS   '22</h1>
+                <h1 className={`${styles.head}`} > ABACUS   '22</h1>
                 <h2 className={`${styles.date}`}>April 28, 29 and 30</h2>
             </div>
 

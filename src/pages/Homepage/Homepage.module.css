@@ -95,6 +95,7 @@ margin-top: -90px;
   background-color:   #060c1f;
   /* background-color:  #e1ad01; */
   background: linear-gradient(to right, #35be69, #11998e); 
+ 
 
 }
 .card{
@@ -320,7 +321,8 @@ letter-spacing: 1px;
   padding-top: 8%;
 font-size: 1.1rem;
 line-height: 40px;
- font-family: alien;;
+ font-family: alien;
+
 }
 
 
@@ -966,7 +968,7 @@ padding-bottom: 3%;
   position: relative; 
   letter-spacing: 13px;
   font-family: alien;
-  font-size: 110px;
+  font-size: 115px;
   margin-top: 3%;
  color: lightskyblue;
  animation: flicker 1s infinite;
@@ -1003,7 +1005,7 @@ padding-bottom: 3%;
 
 
 
-
+/*
 
 
 @media only screen and (min-width:850px) and (max-width: 1290px) {
@@ -1025,7 +1027,7 @@ padding-bottom: 3%;
      animation: flicker 3s infinite;
       color:white;
       
-  }
+  }*/
   @keyframes flicker {
       from {
           opacity: 1;
@@ -1171,11 +1173,7 @@ padding-bottom: 3%;
      
   }
   
-   
-  @media only screen and (max-width:1025px){
-  
 
-  }
   .img2{
       margin-left: 25%;
       width:250px;
@@ -1241,9 +1239,13 @@ height:120px;
 
   }
   
-  @media only screen and (max-width: 1100px) {
+  
+
+/*
+
+@media only screen and (max-width: 1100px) {
       ._about_event {
-          /* flex-direction: column; */
+         
           align-items: center;
           margin-top: 40px;
           flex-wrap: wrap;
@@ -1255,7 +1257,7 @@ height:120px;
       }
   
       ._glowCardDiv {
-          /* width: 80%; */
+         
           flex-basis: 100% !important;
           order: 2 !important;
       }
@@ -1270,6 +1272,7 @@ height:120px;
       }
       
   }
+
   @media only screen and (max-width:980px){
       .head{
           font-size: 85px;
@@ -1281,7 +1284,6 @@ height:120px;
           font-size: 30px;
       }
   }
-
   @media only screen and (max-width:1200px){
 
       .head{
@@ -1313,26 +1315,10 @@ height:120px;
         }
 
   }
-  @media only screen and (max-width: 768px) {
-
-      .heading{
-          font-size: 30px;
-      }
-      .paragraph{
-          font-size: 20px;
-      }
-      
-      .About_Abacus {
-          height : 180vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  
-}
 
 
-.left_container{
+
+.left_container{ 
     height: 150vh;
 }
 .right_container{
@@ -1363,8 +1349,7 @@ height:120px;
 .date{
   font-size: 20px;
 }
-  }
- 
+  
  
 
   .underline {
@@ -1396,7 +1381,7 @@ height:120px;
         }
   }
 
-
+*/
 
   
 @keyframes yellow-shadow {
@@ -1468,11 +1453,48 @@ height:120px;
 }
 }
 
+@media only screen and (max-width: 768px) {
+
+  .heading{
+      font-size: 30px;
+  }
+  .paragraph{
+      font-size: 20px;
+  }
+  
+  .About_Abacus {
+display: flex;
+flex-direction: column;
+
+
+}
+.date{
+  font-size: 10px;
+}
+}
+
 
 
 @media only screen and (max-width: 540px) {
   .title{
       margin-left: auto;
+  }
+  .heading{
+    font-size: 2.5rem;
+  }
+  .paragraph{
+    font-size: 0.9rem;
+    line-height: 32px;
+  }
+
+  .left_container{
+    width: 100%;
+  }
+  .left_content{
+    padding-right: 15%;
+  }
+  .right_container{
+    width: 100%;
   }
 
   .margin{
@@ -1500,7 +1522,7 @@ height:120px;
   font-size: 50px;
   }
   .date{
-    font-size: 10px;
+    font-size: 0.3em;
   }
   .left_container{
     margin: 0;
@@ -1526,7 +1548,93 @@ height:120px;
   }
 
   .maindiv{
-    height: 100vh;
+    
+  }
+
+  .blur{
+    margin-top: 40%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 480px) { 
+  .title{
+      margin-left: auto;
+  }
+  .heading{
+    font-size: 1.5rem;
+  }
+  .paragraph{
+    font-size: 0.5rem;
+    line-height: 22px;
+  }
+
+  .left_container{
+    width: 100%;
+  }
+  .left_content{
+    padding-right: 15%;
+  }
+  .right_container{
+    width: 100%;
+  }
+
+  .margin{
+    margin:0;
+    padding: 0;
+  }
+  .left_content{
+    margin: 0%; 
+    padding: 0%;
+  }
+  .head{
+    font-size:50px;
+  }
+  .landing_heading{
+    width: 90%;
+    padding-top: 10%;
+  padding-bottom: 10%;  }
+
+  .a{
+    margin: 0%;
+    padding: 0%;
+
+  }
+  .letter_a{
+  font-size: 50px;
+  }
+  .date{
+    font-size: 0.3em;
+  }
+  .left_container{
+    margin: 0;
+    padding: 0;
+  }
+
+  .eve{
+    flex-direction: column;
+    width: 100%;
+    margin-right: 10%;
+  }
+  .top{
+    width:100%;
+    margin: 3%;
+  }
+  .bottom{
+    width:100%;
+    margin: 3%;
+  }
+  .one_count{
+    width:50%;
+    text-align: center;
+  }
+
+  .maindiv{
+    
   }
 
   .blur{
