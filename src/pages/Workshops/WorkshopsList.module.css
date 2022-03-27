@@ -1,13 +1,13 @@
-* {
+/* * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  /* background-color: #060c1f; */
+  background-color: #060c1f; 
   font-family: "Almarai", sans-serif;
-}
+} */
 
 .wrapper {
   height: 100%;

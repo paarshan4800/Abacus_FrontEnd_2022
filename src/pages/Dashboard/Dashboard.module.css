@@ -1,13 +1,4 @@
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  /* background-color: #060c1f; */
-  font-family: "Almarai", sans-serif;
-}
 
 .infoBar {
   display: flex;
@@ -526,6 +517,10 @@ body {
 }
 
 .mobileView a{
+  text-decoration: none;
+}
+
+.webView a{
   text-decoration: none;
 }
 

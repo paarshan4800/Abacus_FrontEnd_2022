@@ -322,7 +322,7 @@ const Dashboard = () => {
                             </div>
                           </div>
                           <div className={styles.badge}>
-                            {event.registered ? <TiTick size={35} /> : <></>}
+                            {event.registered ? <TiTick size={35} style={{color: "black"}}/> : <></>}
                           </div>
                         </Link>
                       ))}

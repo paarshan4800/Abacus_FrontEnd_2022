@@ -14,6 +14,7 @@ import Hackathon from "./pages/Events/Hackathon";
 import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 import LoginRegister from "./pages/Login/LoginRegister";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import HackathonRegister from "./pages/Events/HackathonRegister";
 import { Aboutus } from "./components/";
 import SignInForm from "./pages/Login/pages/SignInForm";
 import SignUp from "./pages/Login/pages/SignUp";
@@ -65,6 +66,7 @@ const AppRoutes = () => {
       <Route path="/ForgotPassword" exact component={ForgotPassword} />
       <Route path="/NewPassword" exact component={NewPassword} />
       <Route path="/ComingSoon" exact component={ComingSoon} />
+      <Route path="/hackathon-register" exact component={HackathonRegister} />
       <Route component={PageNotFound} />
       {/* <Route path="/Login" exact component={LoginRegister} /> */}
 
