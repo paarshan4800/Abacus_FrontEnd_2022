@@ -29,8 +29,8 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
   const [navbar, setNavbar] = React.useState(false);
 
-  const changeBackground = () => {
-    if (window.scrollY >= 768) {
+  const changeBackground = () => { 
+    if (window.scrollY >= 80) {
       setNavbar(true);
     } else {
       setNavbar(false);

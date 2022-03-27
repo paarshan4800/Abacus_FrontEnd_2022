@@ -290,7 +290,7 @@ background-size: contain;
 .heading{
   z-index: 2;
 font-weight: bolder;
-margin-top: 3%;
+
 font-family: 'Open Sans', sans-serif;   
 font-size: 3.7rem;
   text-align: center;
@@ -434,6 +434,7 @@ body {
   margin-left: 10%;
   padding: 0;
   background-color: transparent;
+  object-fit: contain;
   
 }
 
@@ -966,14 +967,14 @@ padding-bottom: 3%;
   letter-spacing: 13px;
   font-family: alien;
   font-size: 110px;
-
+  margin-top: 3%;
  color: lightskyblue;
- animation: flicker 3s infinite;
+ animation: flicker 1s infinite;
  color: white;
  font-weight: bolder;
  text-transform: uppercase;
  text-shadow: 0 0 10px rgb(192 219 255 / 75%), 0 0 10px rgb(65 120 255 / 24%);  
- padding-bottom: 4%;
+ padding-bottom: 3%;
 
 }
 
