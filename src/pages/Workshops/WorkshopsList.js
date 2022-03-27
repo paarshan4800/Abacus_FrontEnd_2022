@@ -14,40 +14,19 @@ import { useHistory } from "react-router-dom";
 function WorkshopHome() {
   let workshopsList = [
     {
-      id: 1,
-      refName: "cloud-computing",
-      name: "Cloud Computing",
-      img: tech,
+      id: 13,
+      refName: "blockchain-and-cryptocurrency",
+      name: "Blockchain and Cryptocurrency",
     },
     {
-      id: 2,
-      refName: "entrepreneurship",
-      name: "Entrepreneurship",
-      img: nontech,
+      id: 14,
+      refName: "dev-ops",
+      name: "DevOps",
     },
     {
-      id: 3,
-      refName: "job-readiness",
-      name: "Job Readiness",
-      img: hack,
-    },
-    {
-      id: 4,
-      refName: "tenet",
-      name: "Asdfgh",
-      img: nontech,
-    },
-    {
-      id: 5,
-      refName: "tenet",
-      name: "qwerty",
-      img: hack,
-    },
-    {
-      id: 6,
-      refName: "tenet",
-      name: "zxcvb",
-      img: tech,
+      id: 15,
+      refName: "stock-market-and-share-market",
+      name: "Stock Market and Share Market",
     },
   ];
 
@@ -67,29 +46,23 @@ function WorkshopHome() {
     // }}
     >
       <div className={styles.wrapper}>
-        {workshopsList.map((event) =>
-          event.id % 2 == 0 ? (
-            <Link to={`/workshops/${event.refName}`}>
-              <div
-                key={event.id}
-                className={cx(styles.maindiv, styles.maindiv1)}
-              >
-                <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
-              </div>
-            </Link>
-          ) : (
-            <Link to={`/workshops/${event.refName}`}>
-              <div
-                key={event.id}
-                className={cx(styles.maindiv, styles.maindiv3)}
-              >
-                <img src={event.img} alt="1" />
-                <div className={styles.title}>{event.name}</div>
-              </div>
-            </Link>
-          )
-        )}
+        {workshopsList.map((event) => (
+          <Link to={`/workshops/${event.refName}`} className={styles.linkTag}>
+            <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
+              <img
+                src={require(`./../../images/Workshops/${event.refName}.png`)}
+                style={{
+                  width: "350px",
+                  height: "250px",
+                  padding: "20px",
+                  backgroundColor: "black",
+                }}
+                alt={event.refName}
+              />
+              <div className={styles.title}>{event.name}</div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 // import { Loader } from ".";
 
-import icon from "../images/streamline-icon-designer-working@400x400.png";
+// import icon from "../images/streamline-icon-designer-working@400x400.png";
 
 const Hero = () => {
     return (
@@ -20,7 +20,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
-            <img src={icon} alt="Studing"></img>
+            {/* <img src={icon} alt="Studing"></img> */}
       </div>
       </div>
 

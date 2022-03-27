@@ -1,7 +1,7 @@
 import React from "react";
 import PreviewCard from "../../components/PreviewCard/PreviewCard";
 import styles from "./Dashboard.module.css";
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import cx from "classnames";
 import tech from "./../../images/tech.jpeg";
 import hack from "./../../images/hack.jpeg";
@@ -9,100 +9,154 @@ import nontech from "./../../images/nontech.jpeg";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import GlassButton from "../../components/GlassButton/GlassButton";
+import GlassBtn from "../../components/GlassBtn/GlassBtn";
 import eventpassimg from "../../images/eventpassimg.png";
 import workshoppassimg from "../../images/workshoppassimg.png";
 import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
-
+import { TiTick } from "react-icons/ti";
+import { Width } from "../../App";
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const width = useContext(Width);
 
   let eventList = [
     {
       id: 1,
-      refName: "tenet",
-      name: "Tenet",
-      img: tech,
+      refName: "reverse-engineering",
+      name: "Reverse Engineering",
       type: "tech-events",
       registered: true,
     },
     {
       id: 2,
-      refName: "code-for-crown-olpc",
-      name: "Code for crown",
-      img: nontech,
+      refName: "code-for-crown",
+      name: "Code for Crown",
       type: "tech-events",
       registered: false,
     },
     {
       id: 3,
-      refName: "novice-init",
-      name: "Tenet",
-      img: hack,
+      refName: "web-design",
+      name: "Web Design",
       type: "tech-events",
       registered: false,
     },
     {
       id: 4,
-      refName: "tenet",
-      name: "Asdfgh",
-      img: nontech,
+      refName: "capture-the-flag",
+      name: "Capture the Flag",
       type: "tech-events",
       registered: true,
     },
     {
       id: 5,
-      refName: "tenet",
-      name: "qwerty",
-      img: hack,
+      refName: "she-codes",
+      name: "She Codes",
       type: "tech-events",
       registered: true,
     },
     {
       id: 6,
-      refName: "tenet",
-      name: "zxcvb",
-      img: tech,
+      refName: "booting",
+      name: "Booting",
       type: "tech-events",
       registered: false,
     },
     {
       id: 7,
-      refName: "house-full",
-      name: "House Full",
-      img: nontech,
-      type: "non-tech-events",
+      refName: "get-hired",
+      name: "Get Hired",
+      type: "tech-events",
       registered: true,
     },
     {
       id: 8,
-      refName: "graphic-traffic",
-      name: "Graphic Traffic",
-      img: hack,
+      refName: "ship-wreck",
+      name: "Ship-Wreck",
       type: "non-tech-events",
       registered: false,
     },
     {
       id: 9,
-      refName: "imagenation",
-      name: "Imagenation",
-      img: tech,
+      refName: "design-a-thon",
+      name: "Design-a-thon",
+      type: "non-tech-events",
+      registered: true,
+    },
+    {
+      id: 10,
+      refName: "fandom-quiz",
+      name: "Fandom Quiz",
+      type: "non-tech-events",
+      registered: false,
+    },
+    {
+      id: 11,
+      refName: "thadam",
+      name: "Thadam",
+      type: "non-tech-events",
+      registered: true,
+    },
+    {
+      id: 12,
+      refName: "gamindrome",
+      name: "Gamindrome",
       type: "non-tech-events",
       registered: true,
     },
   ];
 
+  let workshopList = [
+    {
+      id: 13,
+      refName: "blockchain-and-cryptocurrency",
+      name: "Blockchain and Cryptocurrency",
+      registered: true,
+    },
+    {
+      id: 14,
+      refName: "dev-ops",
+      name: "DevOps",
+      registered: false,
+    },
+    {
+      id: 15,
+      refName: "stock-market-and-share-market",
+      name: "Stock Market and Share Market",
+      registered: true,
+    },
+  ];
+
+  const [isEventList, setEventList] = useState(true);
+  const [isWorkshopList, setWorkshopList] = useState(true);
+
+  useEffect(() => {
+    setEventList(true);
+    setWorkshopList(false);
+  }, []);
+
+  const expandEventList = () => {
+    setEventList(true);
+    setWorkshopList(false);
+  };
+
+  const expandWorkshopList = () => {
+    setEventList(false);
+    setWorkshopList(true);
+  };
+
   return (
     <div>
       <div className={styles.infoBar}>
         <div className={styles.profile}>
-          <div className={styles.info_card}>
+          <div className={styles.info_card2}>
             <div className={styles.userimg}>
               <img src={userimg} />
             </div>
             <div className={styles.userinfo}>
               <div className={styles.name}>
-                <p>Name: Jyotir Aditya Giri Joe Doe</p>
+                <p>Name: Harry Edward Styles Louis Tomlinson</p>
               </div>
               <div className={styles.abacusid}>
                 <p>Abacus-ID: 4101</p>
@@ -112,7 +166,7 @@ const Dashboard = () => {
         </div>
 
         <div className={styles.userstats}>
-          {0 ? (
+          {1 ? (
             <div className={styles.event_pass}>
               <Link to={`/events`}>
                 <img src={eventpassimg} />
@@ -129,11 +183,10 @@ const Dashboard = () => {
             </div>
           )}
           {/*aaahhhhhh*/}
-          {0 ? (
+          {1 ? (
             <div className={styles.workshop_pass}>
               <Link to={`/workshops`}>
                 <img src={workshoppassimg} />
-                {/* <img src={eventpassimg} /> */}
               </Link>
             </div>
           ) : (
@@ -156,37 +209,127 @@ const Dashboard = () => {
           <>
             <div className={styles.display}>
               <div className={styles.selector}>
-                <GlassButton title="Events" />
-                <GlassButton title="Workshop" />
+                <GlassButton
+                  title="Events"
+                  selected={isEventList}
+                  onClick={() => {
+                    expandEventList();
+                  }}
+                />
+                <GlassButton
+                  title="Workshop"
+                  selected={isWorkshopList}
+                  onClick={() => {
+                    expandWorkshopList();
+                  }}
+                />
               </div>
 
-              <div className={styles.list}>
-                {eventList.map((event) =>
-                  event.registered ? (
-                    <div key={event.id} className={styles.list_element2}>
-                      <div className={styles.title}>{event.refName}</div>
-                      <div className={styles.hide}>
-                        <Link to={`/events/${event.type}/${event.refName}`}>
-                          <div className={styles.btn}>
-                            <GlassButton title="View More" />
+              {width > 750 ? (
+                <div className={styles.webView}>
+                  {isEventList && (
+                    <div className={styles.list}>
+                      {eventList.map((event) => (
+                        <div key={event.id} className={styles.list_element}>
+                          <div className={styles.title}>{event.name}</div>
+                          <div className={styles.hide}>
+                            <Link to={`/events/${event.type}/${event.refName}`}>
+                              <div className={styles.btn}>
+                                {event.registered ? (
+                                  <GlassBtn title="View More" />
+                                ) : (
+                                  <GlassBtn title="Register" />
+                                )}
+                              </div>
+                            </Link>
+                          </div>
+                          <div className={styles.badge}>
+                            {event.registered ? <TiTick size={35} /> : <></>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {isWorkshopList && (
+                    <div className={styles.list}>
+                      {workshopList.map((event) => (
+                        <div key={event.id} className={styles.list_element}>
+                          <div className={styles.title}>{event.name}</div>
+                          <div className={styles.hide}>
+                            <Link to={`/workshops/${event.refName}`}>
+                              <div className={styles.btn}>
+                                {event.registered ? (
+                                  <GlassBtn title="View More" />
+                                ) : (
+                                  <GlassBtn title="Register" />
+                                )}
+                              </div>
+                            </Link>
+                          </div>
+                          <div className={styles.badge}>
+                            {event.registered ? <TiTick size={35} /> : <></>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className={styles.mobileView}>
+                  {isEventList && (
+                    <div className={styles.list}>
+                      {eventList.map((event) => (
+                        <Link
+                          key={event.id}
+                          to={`/events/${event.type}/${event.refName}`}
+                          className={styles.list_element}
+                        >
+                          <div className={styles.title}>{event.name}</div>
+                          <div className={styles.hide}>
+                            <div className={styles.btn}>
+                              {event.registered ? (
+                                <GlassBtn title="View More" />
+                              ) : (
+                                <GlassBtn title="Register" />
+                              )}
+                            </div>
+                          </div>
+                          <div className={styles.badge}>
+                            {event.registered ? <TiTick size={35} /> : <></>}
                           </div>
                         </Link>
-                      </div>
+                      ))}
                     </div>
-                  ) : (
-                    <div key={event.id} className={styles.list_element}>
-                      <div className={styles.title}>{event.refName}</div>
-                      <div className={styles.hide}>
-                        <Link to={`/events/${event.type}/${event.refName}`}>
-                          <div className={styles.btn}>
-                            <GlassButton title="Register" />
+                  )}
+
+                  {isWorkshopList && (
+                    <div className={styles.list}>
+                      {workshopList.map((event) => (
+                        <Link
+                          to={`/workshops/${event.refName}`}
+                          key={event.id}
+                          className={styles.list_element}
+                        >
+                          <div className={styles.title}>{event.name}</div>
+                          <div className={styles.hide}>
+                            <div className={styles.btn}>
+                              {event.registered ? (
+                                <GlassBtn title="View More" />
+                              ) : (
+                                <GlassBtn title="Register" />
+                              )}
+                            </div>
+                          </div>
+                          <div className={styles.badge}>
+                            {event.registered ? <TiTick size={35} /> : <></>}
                           </div>
                         </Link>
-                      </div>
+                      ))}
                     </div>
-                  )
-                )}
-              </div>
+                  )}
+                </div>
+              )}
             </div>
           </>
         )}

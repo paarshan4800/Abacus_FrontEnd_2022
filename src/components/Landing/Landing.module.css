@@ -1,6 +1,6 @@
 ._homepage {
     box-sizing: border-box;
-    padding-top: 45vh;
+   padding-top: 3vh;
     
     height: 100%;
     display: flex;
@@ -9,29 +9,31 @@
     align-items: center;
     scroll-snap-align: start;
     width: 100%;
-   scroll-behavior: smooth;
+   background: linear-gradient(rgba(0,0, 0, 0.0)  , rgba(0,0, 0, 0.0) ), url('/src/components/Landing/siri.jpg') no-repeat center center fixed;
+   background-size:contain;
 
-
+   background-position-x: left;
   
 }
 
 
 
 .back{
-
-    background: linear-gradient(rgba(0,0, 0, 0.0)  , rgba(0, 0, 0, 0.0) ), url('/src/components/Landing/purple.jpg') no-repeat center center fixed;
-    background-size: 100% 100%;
+  background-color: black;
+ 
+    background-size: 100% 100%; 
     width: 100vw;
     height: 100vh;
-    background-size: cover;
-    filter: brightness(79%);
+
     
 }
 
 @font-face {
-    font-family: Future;
-    src: url(./space.otf);
+    font-family: VIST;
+    src: url(./Vist.otf);
 }
+
+
 @font-face{
     font-family: Cabin;
   src: url(./Vist.otf) 
@@ -56,42 +58,28 @@
 .landing_heading{
     text-align: center;
 vertical-align: middle;
-line-height: 100vh; 
+line-height: 60vh; 
+padding-left: 37.5%; 
 
 }
 
 .head{
     position: relative;
-    color: white;
-    letter-spacing: 15px;
-    font-family: Future;
-    font-size: 160px;
-    background: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) );
-    margin-top: 14%;
-     
-
-}
-
-.anim{
-    animation: waviy 1s infinite;
-    animation-delay: 1s;
+    color: lightgray; 
+    letter-spacing: 10px;
+    font-family: VIST;
+    font-size: 100px;
+    margin-bottom: 2%;
+   
+    
 }
 
 
-  @keyframes waviy {
-    0%,40%,100% {
-      transform: translateY(0)
-    }
-    20% {
-      transform: translateY(-10px)
-    }
-  }
 
 
 .letter_a{
-    font-family: Future;
-
-    font-size: 200px;
+    font-family: VIST;
+    font-size: 110px;
 }
 .blue1{
     text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #121143,
@@ -114,8 +102,8 @@ line-height: 100vh;
 
 
 .date {
-    color: #f6fd8a !important; 
-    font-size: 2rem !important;
+  
+    font-size: 1.8rem !important;
     font-family: Future;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -124,6 +112,7 @@ line-height: 100vh;
     box-sizing: border-box;
   
     position: top;
+    color: lightgrey;
 }
 
 
@@ -163,10 +152,10 @@ line-height: 100vh;
 @media only screen and (max-width: 768px) {
     .head{
         font-size: 50px;
-        margin-top: 70%;
+        margin-top: 0%;
     }
     .letter_a{
-        font-size:70px;
+        font-size:70px; 
     }
 
     .date{
@@ -179,66 +168,10 @@ line-height: 100vh;
 
 
 
-.head{
-    animation: glitch 1s linear infinite;
-  }
+
 
 
   
-  @keyframes glitch{
-    2%,64%{
-      transform: translate(2px,0) skew(0deg);
-    }
-    4%,60%{
-      transform: translate(-2px,0) skew(0deg);
-    }
-    62%{
-      transform: translate(0,0) skew(5deg); 
-    }
-  }
-  
-  .head:before,
-  .head:after{
-    content: attr(title);
-    position: absolute;
-    left: 0;
-  }
-  
-  .head:before{
-    animation: glitchTop 1s linear infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  }
-  
-  @keyframes glitchTop{
-    2%,64%{
-      transform: translate(2px,-2px);
-    }
-    4%,60%{
-      transform: translate(-2px,2px);
-    }
-    62%{
-      transform: translate(13px,-1px) skew(-13deg); 
-    }
-  }
-  
-  .head:after{
-    animation: glitchBotom 1.5s linear infinite;
-    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  }
-  
-  @keyframes glitchBotom{
-    2%,64%{
-      transform: translate(-2px,0);
-    }
-    4%,60%{
-      transform: translate(-2px,0);
-    }
-    62%{
-      transform: translate(-22px,5px) skew(21deg); 
-    }
-  }
 
 
 
@@ -247,7 +180,7 @@ line-height: 100vh;
 @media only screen and (max-width:1300px){
   .head{
       font-size: 120px;
-      margin-top: 40%;
+      margin-top: 0%;
   }
 }
 
@@ -255,7 +188,7 @@ line-height: 100vh;
 @media only screen and (max-width:980px ){
   .head{
       font-size: 80px;
-      margin-top: 40%;
+      margin-top: 0%;
   }
 }
 
@@ -263,15 +196,16 @@ line-height: 100vh;
 
 @media only screen and (max-width:800px){
   .head{
-    margin-top: 75%;
+    margin-top: 0%;
       font-size: 60px;
   }
 }
 
 @media only screen and (max-width:480px){
   .head{
-    margin-top: 90%;
-      font-size: 43px;
+    margin-top: 0%;
+      font-size: 70px;
+      margin-bottom: 20%;
   }
   .back{
     background-size:cover
@@ -279,3 +213,20 @@ line-height: 100vh;
 }
 
 
+
+
+/* Tablet only */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .glitchText {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile only */
+@media only screen and (max-width: 767px) {
+  .glitchText {
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+    transform: scale(1, 1.3);
+  }
+}

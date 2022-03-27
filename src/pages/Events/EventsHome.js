@@ -3,28 +3,31 @@ import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import TechEventsList from "./TechEventsList";
 
-import tech from "./../../images/tech.jpeg";
-import nontech from "./../../images/nontech.jpeg";
-import hack from "./../../images/hack.jpeg";
+// import tech from "./../../images/tech.jpeg";
+import tech from "./../../images/TechEvents/web-design.png";
+// import nontech from "./../../images/nontech.jpeg";
+import nontech from "./../../images/NonTechEvents/gamindrome.png";
+// import hack from "./../../images/hack.jpeg";
+import hack from "./../../images/TechEvents/code-for-crown.png";
 import styles from "./EventsHome.module.css";
 import eventpassimg from "../../images/eventpassimg.png";
 
 function EventsHome() {
   let slides = [
-    <div>
-      <Link to="/events/tech-events">
+    <div className={styles.linkBackground}>
+      <Link to="/events/tech-events" className={styles.linkTag}>
         <img src={tech} alt="1" />
         <h1 className={styles.neon}>Tech Events</h1>
       </Link>
     </div>,
-    <div>
-      <Link to="/events/non-tech-events">
+    <div className={styles.linkBackground}>
+      <Link to="/events/non-tech-events" className={styles.linkTag}>
         <img src={nontech} alt="2" />
         <h1 className={styles.neon}>Non-Tech Events</h1>
       </Link>
     </div>,
-    <div>
-      <Link to="/events/hackathon">
+    <div className={styles.linkBackground}>
+      <Link to="/events/hackathon" className={styles.linkTag}>
         <img src={hack} alt="3" />
         <h1 className={styles.neon}>Hackathon</h1>
       </Link>
@@ -49,6 +52,7 @@ function EventsHome() {
           style={{ paddingTop: "400px" }}
           slides={slides}
           interval={2000}
+          arrows={true}
         />
       </div>
     </div>

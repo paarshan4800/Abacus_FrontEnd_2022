@@ -7,6 +7,7 @@ import GlassButton from "../../../components/GlassButton/GlassButton.js";
 import { googleSignIn } from "../../../api/auth";
 import GoogleButton from "react-google-button";
 import axios from "axios";
+import LoginRegister from "../LoginRegister";
 
 function SignInForm() {
   const [email, setEmail] = useState("");
@@ -66,43 +67,14 @@ function SignInForm() {
   };
   useEffect(afterGoogleSignIn, []);
   return (
-    <div className={logstyle.App}>
-    <div className={logstyle.appAside}>
-          {/* <center>
-            <Typography>
-              <div className={logstyle.typingDemo} width="40%">
-                <div className={logstyle.glow}>Welcome!</div>
-              </div>
-            </Typography>
-            <div className={logstyle.styleButton}>
-                <NavLink
-                exact
-                 to="/"
-                 activeclassName={logstyle.pageSwitcherItemActive}
-                >
-                <GlassButton title="Sign In" />
-                </NavLink>
-                <NavLink
-                to="/sign-up"
-                activeclassName={logstyle.pageSwitcherItemActive}
-                >
-                <GlassButton title="Sign Up" />
-                </NavLink>
-
-                </div>
-          </center> */}
-    </div>
-
-    <div className={logstyle.appForm}>
-    <div  className={logstyle.SIOut}>
-    <div className={logstyle.SICenter}>
+    <div  className={logstyle.appForm}>
+    <div className={logstyle.formCenter}> 
       <div className={logstyle.styleButton}>
           <GoogleButton
             className="google-button"
             onClick={() => {
               console.log("Google button clicked");
               googleSignIn();
-              //onGoogleSignIn();
             }}
             type="dark"
           />
@@ -116,7 +88,7 @@ function SignInForm() {
           <input
             type="email"
             id="email"
-            className={logstyle.formFieldInput}
+            className={logstyle.formFieldInputSI}
             placeholder="Enter your email"
             name="email"
             value={email}
@@ -133,7 +105,7 @@ function SignInForm() {
           <input
             type="password"
             id="password"
-            className={logstyle.formFieldInput}
+            className={logstyle.formFieldInputSI}
             placeholder="Enter your password"
             name="password"
             value={password}
@@ -160,19 +132,12 @@ function SignInForm() {
         </div>
         <div className={logstyle.formField}>
           <div style={{display: "inline"}}>
-          <NavLink to="/signUp" className={logstyle.formFieldLink}>
-            Create an account
-          </NavLink>
-          </div>
-          <div style={{display: "inline", marginLeft: "50px"}}>
           <NavLink to="/ForgotPassword" className={logstyle.formFieldLink}>
             Forgot Password?
           </NavLink>
           </div>
         </div>
       </form>
-    </div>
-    </div>
     </div>
     </div>
   );

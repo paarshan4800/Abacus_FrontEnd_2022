@@ -1,64 +1,80 @@
 import React from "react";
-import { BsShieldFillCheck } from "react-icons/bs";
-import { BiSearchAlt } from "react-icons/bi";
-import { RiHeart2Fill } from "react-icons/ri";
 
-const AboutusCard = ({ color, title, icon, subtitle }) => (
-  <div className="flex flex-row justify-start items-start white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
-    <div className={`w-10 h-10 rounded-full flex justify-center items-center ${color}`}>
-      {icon}
-    </div>
-    <div className="ml-5 flex flex-col flex-1">
-      <h3 className="mt-2 text-white text-lg">{title}</h3>
-      <p className="mt-1 text-white text-sm md:w-9/12">
-        {subtitle}
-      </p>
-    </div>
-  </div>
-);
 
-const Aboutus = () => (
-  <div className="flex w-full justify-center items-center gradient-bg-services">
-    <div className="flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4">
-      <div className="flex-1 flex flex-col justify-start items-start">
-        <h1 className="text-white text-3xl sm:text-5xl py-2 text-gradient ">
-          About us
-          <br />
-          Just to know us better!
-        </h1>
-      </div>
+import styles from './about.module.css'
+import ceg from './ceg.png'
+import csea from './CSEA.png'
+import abacus from './ab.png'
 
-      <div className="flex-1 flex flex-col justify-start items-center">
-        <AboutusCard
-          color="bg-[#2952E3]"
-          title="CSEA"
-          icon={<BsShieldFillCheck fontSize={21} className="text-white" />}
-          subtitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        />
-        <AboutusCard
-          color="bg-[#8945F8]"
-          title="Abacus"
-          icon={<BiSearchAlt fontSize={21} className="text-white" />}
-          subtitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        />
-        <AboutusCard
-          color="bg-[#F84550]"
-          title="CEG"
-          icon={<RiHeart2Fill fontSize={21} className="text-white" />}
-          subtitle="Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-          It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        />
-      </div>
-    </div>
-  </div>
-);
+const Aboutus = () => {
+  let img;
+  const INFO = [
+    {
+      title: "Abacus",
+      content:"ABACUS is the annual intercollege symposium of the Department of Computer Science and Engineering conducted by Computer Science and Engineering Association (CSEA), College of Engineering Guindy. It is an event where people from multiple colleges demonstrate their technical prowess to win exciting prizes and internships.",
+      image: "ceg.png",
+    },
+    {
+      title: "CSEA",
+      content:
+        "The Computer Science and Engineering Association, CEG is a team of students and faculty members. We perform multiple activities throughout the year, the most notable ones being SYNC (intra college symposium), periodic coding contests to encourage students to code more and weekly classes for juniors for subjects they find difficult, placement assistance and competitive coding. CSEA is a forum of dedicated members who want to inculcate interest and good programming practices amongst the students.",
+      image: "csea_white.png",
+    },
+  
+    {
+      title: "CEG",
+      content:
+        "Located at the Heart of Chennai, is our very own College of Engineering Guindy, a dream and desire that students all across Tamil Nadu aspire to touch. Founded in 1794, CEG holds laurels of being amongst the top ten institutions in the country, with a rich history spanning over 225 years. Living up to its motto of 'PROGRESS THROUGH KNOWLEDGE', it has been at the fore with it’s cutting-edge research, technology and innovation in shaping the world. True to its esteem, even today CEG stands as a beacon of light to students who wish to make a change in the world.",
+      image: "kurukshetra.png",
+    },
+  ];
+    return (
+      <div className={`${styles.about_root}`}>
+      <div className={`${styles.wrapper}`}>
+      <div name="main" className={`${styles.content_wrapper}`}>
+      
+      <h1 className={`${styles.heading}`}>About Us</h1>
+          {INFO.map((item, index) => {
+            if(index == 0){
+              img = abacus;
+            }
+            else if( index == 1){
+              img = csea;
+            }
+            else{
+              img = ceg;
+            }
+
+            return (
+              <div
+                
+                key={index}
+                className={`${styles.content_container}`}
+              >
+                <div
+                  
+                  className={`${styles.image_box}`}
+                >
+                  <img
+                    alt={`${item.title}`}
+                    src={img}
+                    width="275px"
+                    height="275px"
+                  />
+                </div>
+                <div className={`${styles.text_box}`}>
+                <h1 className={`${styles.subheading}`}>{item.title}</h1>
+                  <p className={`${styles.content}`}>{item.content}</p>
+
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        </div>
+       </div>
+    );
+
+};
 
 export default Aboutus;

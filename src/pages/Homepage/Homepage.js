@@ -3,109 +3,167 @@ import styles from "./Homepage.module.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
+import cx from 'classnames'
+import {Footer} from '../../components/'
+
 
 //NeonButton
-import Landing from "../../components/Landing/Landing";
+import Sphere from "../../components/Sphere/Sphere";
 import Heading from "../../components/Heading/Heading";
 import Heading1 from "../../components/Heading1/Heading1";
 
-function demoAsyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 2000));
-}
 
-class Homepage extends Component {
-  constructor(props) {
-    super(props);
+const Homepage = (props)=>{
 
-    this.state = {
-      loading: true,
-    };
-  }
-
-  componentDidMount() {
-    demoAsyncCall().then(() => this.setState({ loading: false }));
-  }
-
-  render() {
+  
     return (
+
+       
       <>
-        <Landing />
+     <main>
+  <section className={`${styles.one} ${styles.a} ${styles.land}` }>
+  
+      
+  <div className={`${styles.landing_heading} `} >
+                <h1 className={`${styles.head}`}  ><span className={styles.letter_a}>A</span>BACUS   '22</h1>
+                <h2 className={`${styles.date}`}>April 28, 29 and 30</h2>
+            </div>
 
-        {/* Child Class */}
+            
+ 
+  
 
-        <div className={`${styles.About_Abacus} ${styles.bg}`}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  </section>
+  <section className={`${styles.one} ${styles.b}` }>
+
+
+  <div className={`${styles.About_Abacus} ${styles.bg}`}>
           <div className={`${styles.left_container}`}>
             <div className={`${styles.left_content}`}>
               <div className={`${styles.logo}`}>
                 <img
-                  src={`${process.env.PUBLIC_URL}/images/about-us/abacus logo sponsors page.png`}
+                  src={`${process.env.PUBLIC_URL}/images/about-us/ab.png`}
                   alt=""
                   style={{
-                    width: "300px",
-                    height: "290px",
+                    width: "330px",
+                    height: "340px",
                     margin: "auto",
                   }}
                 />
-              </div>
-              <div className={`${styles.count}`}>
-                <div className="row  mb-2">
-                  <div className="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={7} redraw={true} suffix=" +">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>
-                    </div>{" "}
-                    <Heading1 text="Events" fontSize="20px" />
-                  </div>
-                  <div className="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={1} redraw={true} suffix=" ">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>
-                    </div>{" "}
-                    <Heading1 text="Hackathon" fontSize="20px" />
-                  </div>
+               
+
+                <div className = {styles.eve}>
+
+
+                <div className = {styles.top}>
+
+                <div className={`${styles.one_count}`}>
+                <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={7} redraw={true} suffix=" +">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Events" fontSize="20px" />
                 </div>
-                <div className="row mt-6">
-                  <div className="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={5} redraw={true} suffix=" +">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>{" "}
-                    </div>
-                    <Heading1 text="Workshops" fontSize="20px" />
-                  </div>
-                  <div class="col-md-6">
-                    <div className={`${styles.countup}`}>
-                      <CountUp start={0} end={50} redraw={true} suffix=" K+">
-                        {({ countUpRef, start }) => (
-                          <VisibilitySensor onChange={start} delayedCall>
-                            <span ref={countUpRef} />
-                          </VisibilitySensor>
-                        )}
-                      </CountUp>{" "}
-                    </div>
-                    <Heading1 text="Prize Money" fontSize="20px" />
-                  </div>
+               
+            <div className={`${styles.one_count}`}>
+                <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={3} redraw={true} suffix=" +">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Workshops" fontSize="20px" />
                 </div>
+
+                </div>
+
+                <div className = {styles.bottom}>
+
+                <div className={`${styles.one_count}`}>
+                <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={90} redraw={true} suffix=" K+">
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Cash Prize" fontSize="20px" />
+
+                </div>
+               <div className={`${styles.one_count}`}>
+               <div className={`${styles.countup}`}>
+                    <CountUp start={0} end={1} redraw={true}>
+                      {({ countUpRef, start }) => (
+                        <VisibilitySensor onChange={start} delayedCall>
+                          <span ref={countUpRef} />
+                        </VisibilitySensor>
+                      )}
+                    </CountUp>
+                  </div>{" "}
+                   <Heading1 text="Hackathon" fontSize="20px" />
+               </div>
+                   
+                </div>
+                </div>
+                
+               
               </div>
+              
             </div>
           </div>
           <div className={`${styles.right_container}`}>
-            <div className={`${styles.right_content}`}>
-              <h1 className={`${styles.heading}`}>Abacus '22</h1>
+         
+            <div
+                key={1}
+                className={ cx(styles.maindiv,styles.maindiv1) } 
+              >
+            
+            <div className={styles.card}>
+
+                  <h1 className={`${styles.heading}`}>Abacus '22</h1>
               <p className={`${styles.paragraph} mt-1`}>
                 CSEA takes immense pleasure in organizing Abacus'22. This
                 version is going to be one of its kind - a symposium completely
@@ -117,26 +175,53 @@ class Homepage extends Component {
                 Grab this opportunity and win cash prizes, Intern opportunities,
                 T shirts and many more prizes.
               </p>
+              </div>
+            
+            
+
             </div>
           </div>
         </div>
 
-        
 
-        <div className={`${styles.bg}`}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+  <section className={`${styles.one}` }>
+
+  <div>
+       
           <div className={`${styles.blur}`}>
-            <div className="text-center ">
-              <Heading text="Sponsors" fontSize="40px" />
-              <br></br>
-              <br></br>
-              <br></br>
+            <div className="text-center mb-20">
+              <Heading text="Sponsors" fontSize="60px"  />
+              
+             
             </div>
             <div className="container-fluid mx-auto d-flex justify-content-center align-self-center mt-0">
               <div className="m-auto row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
-                <div class="col text-center">
+                <div className="col text-center">
                   <Heading text="Title Sponsors" fontSize="30px" />
-                  <div class="row row-cols-lg-2 d-flex justify-content-center align-self-center ">
-                    <div className="col text-center">
+                  <div className="row row-cols-lg-2 d-flex justify-content-center align-self-center ">
+                    <div className="col text-center pb-4">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/motorq.svg`}
                         className={`${styles.img2}`}
@@ -144,7 +229,7 @@ class Homepage extends Component {
                       />
                     </div>
 
-                    <div className="col text-center pb-4">
+                    <div className="col text-center pb-5">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/visa_modified.svg`}
                         className={`${styles.img2}`}
@@ -154,10 +239,10 @@ class Homepage extends Component {
                   </div>
                 </div>
 
-                <div class="m-auto row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
-                  <div class="col text-center ">
+                <div className="m-auto row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
+                  <div className="col text-center ">
                     <Heading text="Merchandise Sponsors" fontSize="28px" />
-                    <div class="row  d-flex justify-content-center align-self-center">
+                    <div className="row  d-flex justify-content-center align-self-center">
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/Career Crafter.jpg`}
@@ -167,10 +252,10 @@ class Homepage extends Component {
                       </div>
                     </div>
                   </div>
-                  <div class="col text-center ">
+                  <div className="col text-center ">
                     <Heading text="Workshops Sponsors" fontSize="28px" />
                    
-                    <div class="row d-flex justify-content-center align-self-center">
+                    <div className="row d-flex justify-content-center align-self-center">
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/Tamilpreneur Logo.png`}
@@ -180,9 +265,9 @@ class Homepage extends Component {
                       </div>
                     </div>
                   </div>
-                  <div class="col text-center ">
+                  <div className="col text-center ">
                     <Heading text="Platform Sponsors" fontSize="28px" />
-                    <div class="row  d-flex justify-content-center align-self-center">
+                    <div className="row  d-flex justify-content-center align-self-center">
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
                           src="https://codechef_shared.s3.amazonaws.com/download/New%20CodeChef%20Logo/cc-logo.svg"
@@ -192,9 +277,9 @@ class Homepage extends Component {
                       </div>
                     </div>
                   </div>
-                  <div class="col text-center">
+                  <div className="col text-center">
                     <Heading text="Internship Sponsors" fontSize="28px" />
-                    <div class="row row-cols-lg-2 d-flex justify-content-center align-self-center  pb-5 pt-4">
+                    <div className="row row-cols-lg-2 d-flex justify-content-center align-self-center  pb-5 pt-4">
                       <div className="col text-center pt-5 mb-5">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/amazon.jpeg`}
@@ -216,14 +301,16 @@ class Homepage extends Component {
             </div>
             <div></div>
           </div>
-        </div>
+          </div> 
+  </section>
 
-        {/* Child Class */}
 
-        {/* Dev Section */}
+  
+</main>
+<Footer/>
       </>
     );
   }
-}
+
 
 export default Homepage;
