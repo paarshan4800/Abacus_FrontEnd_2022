@@ -65,7 +65,7 @@ const Navbar = () => {
 
           <li className={`hover:bg-[#8A2BD6] py-2 px-7 mx-4 hover:rounded-full hover:cursor-pointer  ${styles.nav}`}
             
-          ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav}>{item}</Link></li>
+          ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >{item}</Link></li>
         )}
         <li className={`bg-[#11998e] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[blue]  ${styles.nav}`}>
         <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >Login</Link>
@@ -94,10 +94,10 @@ const Navbar = () => {
                 py-2 
                 px-7 mx-4 hover:rounded-full hover:cursor-pointer  ${styles.nav}`} 
                
-                ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav}>{item}</Link></li>
+                ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >{item}</Link></li>
             )}
             <li className="bg-[#2952e3] py-2 px-7 mx-4 mt-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-            <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   className={styles.nav}>Login</Link>
+            <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Login</Link>
             </li>
           </ul>
         )}

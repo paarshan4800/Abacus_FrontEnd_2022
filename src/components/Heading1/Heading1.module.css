@@ -1,8 +1,14 @@
+@font-face {
+    font-family: alien;
+    src: url(../../components/Heading/alien.ttf);
+  }
+
 ._heading {
-    font-family: 'Open Sans';
+    font-family: alien;
     letter-spacing: 1px;
     animation: flicker 3s infinite;
-    color: #ffe6ff;
+    color: white;
+    font-size: 2rem;
     
     
 }
