@@ -3,7 +3,7 @@ import React from "react";
 
 import styles from './about.module.css'
 import ceg from './ceg.png'
-import csea from './csea_white.png'
+import csea from './CSEA.png'
 import abacus from './ab.png'
 
 const Aboutus = () => {

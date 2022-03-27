@@ -2,7 +2,7 @@ import React from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from 'react-router-dom'
-import logo from "../images/logo.png";
+import logo from "./CSEA.png";
 import styles from './Navbar.module.css'
 
 import { StylesContext } from "@material-ui/styles";
@@ -40,7 +40,7 @@ const Navbar = () => {
 
   const widthChange = () => {
     if (window.innerWidth > 1150) {
-      return <img src={logo} alt="logo" className="w-32 cursor-pointer" />
+      return <img src={logo} alt="logo" className="w-[5.6rem] cursor-pointer" />
     }
   }
 

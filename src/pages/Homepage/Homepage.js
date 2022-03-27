@@ -75,7 +75,7 @@ const Homepage = (props)=>{
             <div className={`${styles.left_content}`}>
               <div className={`${styles.logo}`}>
                 <img
-                  src={`${process.env.PUBLIC_URL}/images/about-us/abacus logo sponsors page.png`}
+                  src={`${process.env.PUBLIC_URL}/images/about-us/ab.png`}
                   alt=""
                   style={{
                     width: "330px",
@@ -211,8 +211,8 @@ const Homepage = (props)=>{
   <div>
        
           <div className={`${styles.blur}`}>
-            <div className="text-center ">
-              <Heading text="Sponsors" fontSize="40px" />
+            <div className="text-center mb-20">
+              <Heading text="Sponsors" fontSize="60px"  />
               
              
             </div>
@@ -221,7 +221,7 @@ const Homepage = (props)=>{
                 <div className="col text-center">
                   <Heading text="Title Sponsors" fontSize="30px" />
                   <div className="row row-cols-lg-2 d-flex justify-content-center align-self-center ">
-                    <div className="col text-center">
+                    <div className="col text-center pb-4">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/motorq.svg`}
                         className={`${styles.img2}`}
@@ -229,7 +229,7 @@ const Homepage = (props)=>{
                       />
                     </div>
 
-                    <div className="col text-center pb-4">
+                    <div className="col text-center pb-5">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/visa_modified.svg`}
                         className={`${styles.img2}`}
