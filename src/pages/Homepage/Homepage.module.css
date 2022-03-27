@@ -297,6 +297,8 @@ font-size: 3.7rem;
   color: white;
 line-height: 0px;
 text-transform: uppercase;
+font-family: alien;
+letter-spacing: 3px;
 
 
   animation: flicker 3s infinite;
@@ -313,11 +315,11 @@ text-transform: uppercase;
   padding-left: 2%;
   padding-right: 2%;
 color: white;
-
+letter-spacing: 2px;
   padding-top: 8%;
-font-size: 1.3rem;
+font-size: 1.1rem;
 line-height: 40px;
-font-family: 'Open Sans';
+ font-family: alien;;
 }
 
 
@@ -970,8 +972,9 @@ padding-bottom: 3%;
  color: white;
  font-weight: bolder;
  text-transform: uppercase;
- text-shadow: 0 0 5px rgb(192 219 255 / 75%), 0 0 5px rgb(65 120 255 / 24%);  
+ text-shadow: 0 0 10px rgb(192 219 255 / 75%), 0 0 10px rgb(65 120 255 / 24%);  
  padding-bottom: 4%;
+
 }
 
 
