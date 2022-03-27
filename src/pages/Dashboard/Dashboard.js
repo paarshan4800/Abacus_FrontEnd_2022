@@ -15,9 +15,12 @@ import workshoppassimg from "../../images/workshoppassimg.png";
 import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
 import { TiTick } from "react-icons/ti";
+import axios from "axios";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
+
+  let registeredList = [];
 
   let eventList = [
     {
@@ -25,14 +28,14 @@ const Dashboard = () => {
       refName: "reverse-engineering",
       name: "Reverse Engineering",
       type: "tech-events",
-      registered: true,
+      registered: registeredList.includes(1),
     },
     {
       id: 2,
       refName: "code-for-crown",
       name: "Code for Crown",
       type: "tech-events",
-      registered: false,
+      registered: registeredList.includes(2),
     },
     {
       id: 3,
@@ -145,6 +148,52 @@ const Dashboard = () => {
     setWorkshopList(true);
   };
 
+  const onRegister = () => {
+    const token = localStorage.getItem("apiToken");
+    const eventName = window.location.pathname.split('/')[3];
+    console.log(eventName)
+    const eventId = eventList.find(e => e.name==eventName);
+    eventId = eventId.id;
+    console.log(eventName + eventId)
+
+    axios
+    .put("http://localhost:8000/user/registration/"+ eventId +"/add",{ headers: {"Authorization" : `Bearer ${token}`} })
+    .then((response) => {
+      if (response.status === 200) {
+        console.log(response.data.message)
+        window.location = "http://localhost:3000/dashboard/";
+      }
+    })
+    .catch((err) => {
+      console.log(err.response.data.message)
+      console.log("the error code is", err.response.status);
+    });
+  }
+
+  //get name, abacusId and list of registered events of user
+  //list of events received needs to be used to see if the user is registered or not and
+  //updated in the eventList[]
+  useEffect(() => {
+    const token = localStorage.getItem("apiToken");
+    axios
+      .get("http://localhost:8000/user/getDetails",{ headers: {"Authorization" : `Bearer ${token}`} })
+      .then((response) => {
+        if (response.status === 200) {
+          
+          var name_msg = document.getElementById("name");
+          name_msg.innerHTML = "Name: " + response.data.details.name;
+
+          var id_msg = document.getElementById("id");
+          id_msg.innerHTML = "ID: " + response.data.details.abacusId;
+
+          registeredList = response.data.details.eventList;        
+          console.log("Details received");
+        }
+      })
+      .catch((err) => {
+        console.log("the error code is", err.response.status);
+      });
+  })
   return (
     <div>
       <div className={styles.infoBar}>
@@ -155,10 +204,10 @@ const Dashboard = () => {
             </div>
             <div className={styles.userinfo}>
               <div className={styles.name}>
-                <p>Name: Harry Edward Styles Louis Tomlinson</p>
+                <p id="name"></p>
               </div>
               <div className={styles.abacusid}>
-                <p>Abacus-ID: 4101</p>
+                <p id="id"></p>
               </div>
             </div>
           </div>
@@ -233,16 +282,16 @@ const Dashboard = () => {
                         <div className={styles.hide}>
                           <Link to={`/events/${event.type}/${event.refName}`}>
                             <div className={styles.btn}>
-                              {event.registered ? (
+                              {registeredList.includes(1) ? (
                                 <GlassBtn title="View More" />
                               ) : (
-                                <GlassBtn title="Register" />
+                                <GlassBtn title="Register" onClick={() => onRegister()}/>
                               )}
                             </div>
                           </Link>
                         </div>
                         <div className={styles.badge}>
-                          {event.registered ? <TiTick size={35} /> : <></>}
+                          {registeredList.includes(1) ? <TiTick size={35} /> : <></>}
                         </div>
                       </div>
                     ))}
