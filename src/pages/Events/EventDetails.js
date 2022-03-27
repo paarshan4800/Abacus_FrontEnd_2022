@@ -74,7 +74,7 @@ function EventDetails() {
                 alt={title}
               />
             )}
-            <GlassButton  title="Register"/>
+            <GlassButton title="Register" />
           </div>
           {/* <GlassButton /> */}
         </div>
@@ -100,7 +100,7 @@ function EventDetails() {
       </div>
 
       <div className={styles.container}>
-        <div className={styles.box}>
+        <div className={styles.box} style={{ height: 800 }}>
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>RULES</h2>
@@ -123,7 +123,7 @@ function EventDetails() {
                 {round.title} - {round.description}
               </p>
             ))}
-            <GlassButton title="Scroll to Top" />
+            {/* <GlassButton title="Scroll to Top" /> */}
           </div>
         </div>
       </div>
