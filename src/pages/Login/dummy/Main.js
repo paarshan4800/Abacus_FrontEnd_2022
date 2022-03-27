@@ -6,6 +6,7 @@ import logstyle from "./../logstyle.module.css";
 import SignUp from "../pages/SignUp";
 import SignInForm from "../pages/SignInForm";
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
+import { Left } from "react-bootstrap/lib/Media";
 
 
 // const FlippyStyle = {
@@ -70,10 +71,27 @@ class Main extends React.Component{
   
 
     constructor() {
-      // this.state={
-      //   width: 0
-      // };
+
+  // useEffect(() => {
+  // if (window.innerWidth > 1450) {
+  //                 this.setState({width: 500});
+  //             } else {
+  //               this.setState({width: 200});
+  //             }
+  // }, []);
         super();
+        this.state = { width: 0, height: 0 };
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+    componentDidMount() {
+      this.updateWindowDimensions();
+      window.addEventListener('resize', this.updateWindowDimensions);
+    }
+    componentWillUnmount() {
+      window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+    updateWindowDimensions() {
+      this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
     render(){
         return (
@@ -81,7 +99,8 @@ class Main extends React.Component{
             <Flippy
               ref={(r) => this.flippyHorizontal = r}
               flipOnClick={false}
-               style={{width: '60%',
+              style={{
+              width: this.state.width,
               height: '40%',
               textAlign: 'center',
               color: '#FFF',

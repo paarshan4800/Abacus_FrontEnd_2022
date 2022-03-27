@@ -199,10 +199,7 @@ div::-webkit-scrollbar-thumb {
     text-align: center;
   }
   .formFieldLabel {
-    font-size: 0.2em;
-  }
-  .formFieldInput {
-    width: 100%;
+    font-size: 0.8em;
   }
 }
 
@@ -221,7 +218,7 @@ div::-webkit-scrollbar-thumb {
   color: white;
 }
 .formFieldInput {
-  width: 60%;
+  width: 50%;
   color: black;
   outline: none;
   /*border-bottom: 1px solid #445366;
@@ -236,7 +233,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .formFieldInputSI {
-  width: 80%;
+  width: 60%;
   color: black;
   outline: none;
   /*border-bottom: 1px solid #445366;
@@ -253,6 +250,15 @@ div::-webkit-scrollbar-thumb {
 .formFieldInput::placeholder {
   text-align: center;
   /* font-family: Roboto; */
+}
+
+@media screen and (max-width: 600px) {
+  .formFieldInput {
+    width: 100%;
+  }
+  .formFieldInputSI {
+    width: 100%;
+  }
 }
 
 .formFieldButton {
