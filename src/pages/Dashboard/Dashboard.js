@@ -3,9 +3,9 @@ import PreviewCard from "../../components/PreviewCard/PreviewCard";
 import styles from "./Dashboard.module.css";
 import { useState, useEffect, useContext } from "react";
 import cx from "classnames";
-import tech from "./../../images/tech.jpeg";
+import tech from "./../../images/tech.png";
 import hack from "./../../images/hack.jpeg";
-import nontech from "./../../images/nontech.jpeg";
+import nontech from "./../../images/nontech.png";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import GlassButton from "../../components/GlassButton/GlassButton";
@@ -225,7 +225,7 @@ const Dashboard = () => {
                 />
               </div>
 
-              {width > 750 ? (
+              {width > 950 ? (
                 <div className={styles.webView}>
                   {isEventList && (
                     <div className={styles.list}>
@@ -296,7 +296,7 @@ const Dashboard = () => {
                             </div>
                           </div>
                           <div className={styles.badge}>
-                            {event.registered ? <TiTick size={35} /> : <></>}
+                            {event.registered ? <TiTick size={35} style={{color: "black"}} /> : <></>}
                           </div>
                         </Link>
                       ))}

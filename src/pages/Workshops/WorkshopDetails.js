@@ -6,7 +6,7 @@ import Link from "react";
 import reactDom from "react-dom";
 import { Workshops } from "../../data/WorkshopsData";
 import PageNotFound from "../PageNotFound/PageNotFound";
-import nontech from "./../../images/nontech.jpeg";
+import nontech from "./../../images/nontech.png";
 
 function WorkshopDetails() {
   const { title } = useParams();

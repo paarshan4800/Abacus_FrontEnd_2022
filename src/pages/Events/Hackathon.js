@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./../Events/EventDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { Hackathon as HackathonData} from "../../data/HackathonData";
-import nontech from "./../../images/nontech.jpeg";
+import nontech from "./../../images/nontech.png";
 
 function Hackathon() {
 

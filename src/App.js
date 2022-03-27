@@ -66,7 +66,7 @@ function App() {
                   <SetNewLoadWorkshop.Provider value={setnewloadworkshop}>
                     <BrowserRouter>
                     <Navbar />
-                      <div style={{ paddingTop: "90px", backgroundImage: `url(${background})`, backgroundSize: "contain", backgroundRepeat: 1 }}>
+                      <div style={{ paddingTop: "80px", backgroundImage: `url(${background})`, backgroundSize: "contain", backgroundRepeat: 1 }}>
                         <AppRoutes />
                       </div> 
                       {/* <div className="gradient-bg-welcome">

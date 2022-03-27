@@ -1,5 +1,7 @@
-.LoginRegisterBg{
-  background: linear-gradient(to right, #38ef7d, #11998e) !important;
+.LoginRegisterBg {
+  /* background: linear-gradient(to right, #38ef7d, #11998e) !important; */
+  height: 100vh;
+  width: 100vw;
 }
 .App {
   height: 100vh;
@@ -8,6 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("./pages/assets/images/backk.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 @media screen and (max-width: 600px) {
@@ -18,20 +24,23 @@
 
 .appForm {
   width: 100%;
-  height: 95vh;
+  height: 65vh;
   padding: 25px 40px;
   overflow: auto;
   text-align: center;
   /*background: rgb(2,5,4);
   background: linear-gradient(148deg, rgba(2,5,4,1) 1%, rgba(22,97,59,1) 10%, rgba(1,1,1,1) 20%, rgba(56,239,125,1) 40%, rgba(30,127,67,1) 54%, rgba(24,101,53,1) 58%, rgba(54,232,121,1) 72%, rgba(28,118,62,1) 81%, rgba(1,1,1,1) 92%, rgba(12,49,26,1) 100%, rgba(17,153,142,1) 100%);*/
-  background-image: url("./pages/assets/images/bluegreen.jpg");
+  /* background-image: url("./pages/assets/images/bluegreen.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
 @media screen and (max-width: 600px) {
   div.appForm {
     width: 100%;
+  }
+  div.LoginRegisterBg {
+    width: 100%;
+    padding: 0px;
   }
 }
 
@@ -80,7 +89,7 @@ div::-webkit-scrollbar {
 }
 
 div::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  /* border-radius: 10px; */
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #15ff3c;
 }
@@ -189,6 +198,12 @@ div::-webkit-scrollbar-thumb {
   .formFieldButton {
     text-align: center;
   }
+  .formFieldLabel {
+    font-size: 0.2em;
+  }
+  .formFieldInput {
+    width: 100%;
+  }
 }
 
 .styleButton {
@@ -202,7 +217,7 @@ div::-webkit-scrollbar-thumb {
 .formFieldLabel {
   display: block;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: white;
 }
 .formFieldInput {
@@ -214,7 +229,7 @@ div::-webkit-scrollbar-thumb {
     border: none;*/
   font-size: 1em;
   font-weight: 400;
-  font-family: Roboto;
+  /* font-family: Roboto; */
   padding: 1vh;
   text-align: center;
   border-radius: 5px;
@@ -229,7 +244,7 @@ div::-webkit-scrollbar-thumb {
     border: none;*/
   font-size: 1em;
   font-weight: 400;
-  font-family: Roboto;
+  /* font-family: Roboto; */
   padding: 1vh;
   text-align: center;
   border-radius: 5px;
@@ -237,7 +252,7 @@ div::-webkit-scrollbar-thumb {
 
 .formFieldInput::placeholder {
   text-align: center;
-  font-family: Roboto;
+  /* font-family: Roboto; */
 }
 
 .formFieldButton {
@@ -295,7 +310,8 @@ div::-webkit-scrollbar-thumb {
 
 .drop {
   width: 60%;
-  color: #35858b;
+  /* color: #35858b; */
+  color: black;
   padding: 0.2vh;
   justify-content: center;
   display: block;
@@ -374,68 +390,64 @@ div::-webkit-scrollbar-thumb {
   }
 }
 
-::-webkit-scrollbar {
-  width: 0.2vw;
-  height: fit-content;
-}
-.main{
+.main {
   position: relative;
   width: 400px;
   height: 400px;
 }
-.Card{
+.Card {
   position: absolute;
   width: 100%;
   height: 100%;
-  transform-style:preserve-3d ;
+  transform-style: preserve-3d;
   transition: all 1s ease;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
-.Front{
+.Front {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: aqua;
+  /* background-color: aqua; */
   color: black;
 }
-.Back{
+.Back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: yellow;
-  color: aqua;
+  /* background-color: yellow; */
+  /* color: aqua; */
   transform: rotateY(180deg);
 }
-.butchange{
+.butchange {
   background-color: #15ff3c;
-  color:white;
+  color: white;
 }
-.frontCard{
+.frontCard {
   display: flex;
   width: 25vw;
   height: 25vw;
-  background-color: blue;
+  /* background-color: blue; */
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: 1s ease;
 }
 
-.backCard{
+.backCard {
   transform: rotatey(180deg);
   transition: 1s ease;
   display: flex;
   width: 25vw;
   height: 25vw;
-  background-color: blue;
+  /* background-color: blue; */
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 
-.deactive{
+.deactive {
   display: none;
 }
 .back {
