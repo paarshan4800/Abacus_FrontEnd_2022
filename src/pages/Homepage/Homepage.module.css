@@ -112,8 +112,8 @@ border-radius: 8px;
 background-color:  #000b1d;
 
 
-background-image: url('../../images/21350.jpg');
-background-size: contain;
+background-image: url('./3d.jpg');
+background-size: cover;
 }
 
 .maindiv1::before {
