@@ -19,6 +19,7 @@ function NewPassword() {
       res_msg.innerHTML = msg;
     console.log(values);
     }
+    
   return (
     <div className={logstyle.App}>
       <div className={logstyle.appForm}>
@@ -57,10 +58,11 @@ function NewPassword() {
               name="conpass"
               onChange={(e) => {
                 setConPass(e.currentTarget.value);
-              value={confirmPass}
-              onChange={(e) => {
-                setConfirmPass(e.currentTarget.value);
               }}
+              value={confirmPass}
+              // onChange={(e) => {
+              //   setConfirmPass(e.currentTarget.value);
+              // }
             />
           </div>
           <div className={logstyle.styleButton} onClick={() => onPassword()}>

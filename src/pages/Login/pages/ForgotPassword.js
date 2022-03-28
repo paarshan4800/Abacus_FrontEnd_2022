@@ -25,11 +25,6 @@ function ForgotPassword() {
         {/* <div className={logstyle.SIOut}> */}
         {/* <div className={logstyle.SICenter}> */}
         <h1 className={logstyle.h11}>Forgot your Password?</h1>
-
-        <h3 className={logstyle.h33}>No worries! Enter your e-mail and we will send you a reset.</h3>
-        <div id="msg"></div> {/*div element prints the server's responses*/}
-        <form className={logstyle.formFields} onSubmit={() => onforgetPassword()}>
-
         <h3 className={logstyle.h33}>
           No worries! Enter your e-mail and we will send you a reset.
         </h3>
