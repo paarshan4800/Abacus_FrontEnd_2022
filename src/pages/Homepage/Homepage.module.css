@@ -112,8 +112,10 @@ z-index: 3;
 margin-top: 10%;
 border-radius: 8px;
 background-color:  #000b1d;
+/*
 
-
+background-image: url('./3d.jpg');
+background-size: cover;*/
 background-image: url('./3d.jpg');
 background-size: cover;
 }
@@ -320,8 +322,8 @@ letter-spacing: 3px;
   padding-right: 2%;
 color: white;
 letter-spacing: 1px;
-  padding-top: 8%;
-font-size: 1.1rem;
+  padding-top: 6%;
+font-size: 1.2rem;
 line-height: 40px;
 font-family: "Audiowide", sans-serif !important;
 

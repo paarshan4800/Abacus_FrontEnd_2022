@@ -121,7 +121,7 @@ const changeButton = ()=>{
                
                 ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >{item}</Link></li>
             )}
-            {!Auth ? 
+            {Auth ? 
              
               ( 
             <>
