@@ -1,4 +1,6 @@
-
+body{
+  overflow-x: hidden;
+}
 .one {
   font-family: sans-serif;
   min-height: 100vh;
@@ -1460,17 +1462,41 @@ height:120px;
   bottom: 0;
 }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 950px) {
+
+  .body{
+    overflow-x: hidden;
+  }
   .head{
-    font-size: 50px;
+    font-size: 75px;
+    padding-bottom: 40px;
+  }
+  .card{
+    height: auto;
+  }
+  .maindiv{
+    height: auto;
   }
   .heading{
-      font-size: 20px;
+      font-size: 55px;
+  }
+  .left_content{
+    padding-right: 40px;
   }
   .paragraph{
-      font-size: 20px;
+      font-size: 17px;
   }
-
+  .left_container{
+    width: 100%;
+    padding-right: 100px;
+  }
+  .right_container{
+    width:100%;
+  }
+  .blur{
+    margin: 0;
+    padding: 0;
+  }
   
   .About_Abacus {
 display: flex;
@@ -1479,7 +1505,7 @@ flex-direction: column;
 
 }
 .date{
-  font-size: 10px;
+  font-size: 35px;
 }
 
 .About_Abacus{
@@ -1710,5 +1736,6 @@ flex-direction: column;
   }
   
 }
+
 
 
