@@ -2,9 +2,24 @@
   
 @font-face {
     font-family: Future;
-    src: url(./Landing/Vist.otf);
+    src: url(../components/Heading/alien.ttf);
 }
 .nav{
     font-family: Future;
-    font-size: 25px;
+    font-size: 22px;
 }
+
+.nav_mobile{
+    background-color: #11998e;
+}
+
+@media only screen and (max-width: 960px) {
+    .nav{
+        font-family: Future;
+        font-size: 15px;
+        padding-top: 10px;
+       
+    }
+
+  
+  }

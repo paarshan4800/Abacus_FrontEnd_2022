@@ -1,11 +1,11 @@
 import React from "react";
 import PreviewCard from "../../components/PreviewCard/PreviewCard";
 import styles from "./Dashboard.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import cx from "classnames";
-import tech from "./../../images/tech.jpeg";
+import tech from "./../../images/tech.png";
 import hack from "./../../images/hack.jpeg";
-import nontech from "./../../images/nontech.jpeg";
+import nontech from "./../../images/nontech.png";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Loading from "../Loading/Loading";
 import GlassButton from "../../components/GlassButton/GlassButton";
@@ -15,12 +15,12 @@ import workshoppassimg from "../../images/workshoppassimg.png";
 import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
 import { TiTick } from "react-icons/ti";
-import axios from "axios";
+
+import { Width } from "../../App";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
-
-  let registeredList = [];
+  const width = useContext(Width);
 
   let eventList = [
     {
@@ -148,51 +148,8 @@ const Dashboard = () => {
     setWorkshopList(true);
   };
 
-  const onRegister = () => {
-    const token = localStorage.getItem("apiToken");
-    const eventName = window.location.pathname.split('/')[3];
-    console.log(eventName)
-    const eventId = eventList.find(e => e.name==eventName);
-    eventId = eventId.id;
-    console.log(eventName + eventId)
-
-    axios
-    .put("http://localhost:8000/user/registration/"+ eventId +"/add",{ headers: {"Authorization" : `Bearer ${token}`} })
-    .then((response) => {
-      if (response.status === 200) {
-        console.log(response.data.message)
-        window.location = "http://localhost:3000/dashboard/";
-      }
-    })
-    .catch((err) => {
-      console.log(err.response.data.message)
-      console.log("the error code is", err.response.status);
-    });
-  }
-
-  //get name, abacusId and list of registered events of user
-  //list of events received needs to be used to see if the user is registered or not and
-  //updated in the eventList[]
-  useEffect(() => {
-    const token = localStorage.getItem("apiToken");
-    axios
-      .get("http://localhost:8000/user/getDetails",{ headers: {"Authorization" : `Bearer ${token}`} })
-      .then((response) => {
-        if (response.status === 200) {
-          
-          var name_msg = document.getElementById("name");
-          name_msg.innerHTML = "Name: " + response.data.details.name;
-
-          var id_msg = document.getElementById("id");
-          id_msg.innerHTML = "ID: " + response.data.details.abacusId;
-
-          registeredList = response.data.details.eventList;        
-          console.log("Details received");
-        }
-      })
-      .catch((err) => {
-        console.log("the error code is", err.response.status);
-      });
+  
+  
   })
   return (
     <div>
@@ -204,10 +161,10 @@ const Dashboard = () => {
             </div>
             <div className={styles.userinfo}>
               <div className={styles.name}>
-                <p id="name"></p>
+                <p>Name : </p>
               </div>
               <div className={styles.abacusid}>
-                <p id="id"></p>
+                <p>Abacus ID : </p>
               </div>
             </div>
           </div>
@@ -282,7 +239,7 @@ const Dashboard = () => {
                         <div className={styles.hide}>
                           <Link to={`/events/${event.type}/${event.refName}`}>
                             <div className={styles.btn}>
-                              {registeredList.includes(1) ? (
+                              {event.registered ? (
                                 <GlassBtn title="View More" />
                               ) : (
                                 <GlassBtn title="Register" onClick={() => onRegister()}/>
@@ -291,20 +248,70 @@ const Dashboard = () => {
                           </Link>
                         </div>
                         <div className={styles.badge}>
-                          {registeredList.includes(1) ? <TiTick size={35} /> : <></>}
+                          {event.registered? <TiTick size={35} /> : <></>}
+                          
+              {width > 950 ? (
+                <div className={styles.webView}>
+                  {isEventList && (
+                    <div className={styles.list}>
+                      {eventList.map((event) => (
+                        <div key={event.id} className={styles.list_element}>
+                          <div className={styles.title}>{event.name}</div>
+                          <div className={styles.hide}>
+                            <Link to={`/events/${event.type}/${event.refName}`}>
+                              <div className={styles.btn}>
+                                {event.registered ? (
+                                  <GlassBtn title="View More" />
+                                ) : (
+                                  <GlassBtn title="Register" />
+                                )}
+                              </div>
+                            </Link>
+                          </div>
+                          <div className={styles.badge}>
+                            {event.registered ? <TiTick size={35} /> : <></>}
+                          </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                      ))}
+                    </div>
+                  )}
 
-                {isWorkshopList && (
-                  <div className={styles.list}>
-                    {workshopList.map((event) => (
-                      <div key={event.id} className={styles.list_element}>
-                        <div className={styles.title}>{event.name}</div>
-                        <div className={styles.hide}>
-                          <Link to={`/workshops/${event.refName}`}>
+                  {isWorkshopList && (
+                    <div className={styles.list}>
+                      {workshopList.map((event) => (
+                        <div key={event.id} className={styles.list_element}>
+                          <div className={styles.title}>{event.name}</div>
+                          <div className={styles.hide}>
+                            <Link to={`/workshops/${event.refName}`}>
+                              <div className={styles.btn}>
+                                {event.registered ? (
+                                  <GlassBtn title="View More" />
+                                ) : (
+                                  <GlassBtn title="Register" />
+                                )}
+                              </div>
+                            </Link>
+                          </div>
+                          <div className={styles.badge}>
+                            {event.registered ? <TiTick size={35} /> : <></>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className={styles.mobileView}>
+                  {isEventList && (
+                    <div className={styles.list}>
+                      {eventList.map((event) => (
+                        <Link
+                          key={event.id}
+                          to={`/events/${event.type}/${event.refName}`}
+                          className={styles.list_element}
+                        >
+                          <div className={styles.title}>{event.name}</div>
+                          <div className={styles.hide}>
                             <div className={styles.btn}>
                               {event.registered ? (
                                 <GlassBtn title="View More" />
@@ -312,49 +319,25 @@ const Dashboard = () => {
                                 <GlassBtn title="Register" />
                               )}
                             </div>
-                          </Link>
-                        </div>
-                        <div className={styles.badge}>
-                          {event.registered ? <TiTick size={35} /> : <></>}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-              
-              <div className={styles.mobileView}>
-                {isEventList && (
-                  <div className={styles.list}>
-                    {eventList.map((event) => (
-                      <div key={event.id} className={styles.list_element}>
-                        <div className={styles.title}>{event.name}</div>
-                        <div className={styles.hide}>
-                          <Link to={`/events/${event.type}/${event.refName}`}>
-                            <div className={styles.btn}>
-                              {event.registered ? (
-                                <GlassBtn title="View More" />
-                              ) : (
-                                <GlassBtn title="Register" />
-                              )}
-                            </div>
-                          </Link>
-                        </div>
-                        <div className={styles.badge}>
-                          {event.registered ? <TiTick size={35} /> : <></>}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                          </div>
+                          <div className={styles.badge}>
+                            {event.registered ? <TiTick size={35} style={{color: "black"}} /> : <></>}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
 
-                {isWorkshopList && (
-                  <div className={styles.list}>
-                    {workshopList.map((event) => (
-                      <div key={event.id} className={styles.list_element}>
-                        <div className={styles.title}>{event.name}</div>
-                        <div className={styles.hide}>
-                          <Link to={`/workshops/${event.refName}`}>
+                  {isWorkshopList && (
+                    <div className={styles.list}>
+                      {workshopList.map((event) => (
+                        <Link
+                          to={`/workshops/${event.refName}`}
+                          key={event.id}
+                          className={styles.list_element}
+                        >
+                          <div className={styles.title}>{event.name}</div>
+                          <div className={styles.hide}>
                             <div className={styles.btn}>
                               {event.registered ? (
                                 <GlassBtn title="View More" />
@@ -362,16 +345,16 @@ const Dashboard = () => {
                                 <GlassBtn title="Register" />
                               )}
                             </div>
-                          </Link>
-                        </div>
-                        <div className={styles.badge}>
-                          {event.registered ? <TiTick size={35} /> : <></>}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+                          </div>
+                          <div className={styles.badge}>
+                            {event.registered ? <TiTick size={35} style={{color: "black"}}/> : <></>}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </>
         )}

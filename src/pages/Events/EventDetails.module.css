@@ -1,9 +1,9 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: consolas;
-}
+} */
 
 body {
   /* display: flex;*/
@@ -43,7 +43,7 @@ body {
   margin: 40px 30px;
   left: 20px;
 
-  //transition: 0.5s;
+  /* transition: 0.5s; */
 }
 
 .container .box::before {
@@ -56,8 +56,8 @@ body {
   text-decoration: none;
   background: rgb(0, 0, 0);
   border-radius: 8px;
-  //transform: skewX(15deg);
-  //transition: 0.5s;
+  /* transform: skewX(15deg);
+  transition: 0.5s; */
 }
 
 .container .box::after {
@@ -65,22 +65,22 @@ body {
   position: absolute;
   top: 0;
   left: 50;
-  //width: 80%;
+  /* width: 80%; */
   width: calc(100% - 90px);
   height: 100%;
   background: #fff;
   border-radius: 8px;
-  //transform: skewX(15deg);
-  //transition: 0.5s;
-  //filter: blur(30px);
+  /* transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(30px); */
 }
 
-.container .box:hover:before,
+/* .container .box:hover:before,
 .container .box:hover:after {
-  /* transform: skewX(0deg);
+  transform: skewX(0deg);
   left: 20px;
-  width: calc(100% - 90px); */
-}
+  width: calc(100% - 90px);
+} */
 
 .container .box:nth-child(1):before,
 .container .box:nth-child(1):after {
@@ -217,14 +217,16 @@ body {
 
 .container .box .content h2 {
   font-size: 2em;
-  color: rgb(0, 0, 0);
+  color: white;
   margin-bottom: 10px;
+  padding-top: 5%;
 }
 
 .container .box .content p {
   font-size: 1.1em;
   margin-bottom: 10px;
   line-height: 1.4em;
+  color: white;
 }
 
 /* .container .box .content a {
@@ -249,4 +251,9 @@ body {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff,
     0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff; */
   color: #fff;
+}
+@media only screen and (max-width: 500px) {
+  .container .box {
+    width: 500px !important;
+  }
 }

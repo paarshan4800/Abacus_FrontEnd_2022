@@ -1,4 +1,6 @@
-
+body{
+  overflow-x: hidden;
+}
 .one {
   font-family: sans-serif;
   min-height: 100vh;
@@ -87,13 +89,15 @@ margin-top: -90px;
   height: 70%;
   box-sizing: border-box;
   border-radius: 16px;
-  margin-top: 15%;
+  margin-top: 13%;
   padding-top: 0%;
   margin-right: 10%;
+  height: 75%;
   background-color: transparent;
   background-color:   #060c1f;
   /* background-color:  #e1ad01; */
   background: linear-gradient(to right, #35be69, #11998e); 
+ 
 
 }
 .card{
@@ -110,8 +114,8 @@ border-radius: 8px;
 background-color:  #000b1d;
 
 
-background-image: url('../../images/21350.jpg');
-background-size: contain;
+background-image: url('./3d.jpg');
+background-size: cover;
 }
 
 .maindiv1::before {
@@ -290,13 +294,15 @@ background-size: contain;
 .heading{
   z-index: 2;
 font-weight: bolder;
-margin-top: 3%;
+
 font-family: 'Open Sans', sans-serif;   
-font-size: 3.7rem;
+font-size: 3.3rem;
   text-align: center;
   color: white;
 line-height: 0px;
 text-transform: uppercase;
+font-family: alien;
+letter-spacing: 3px;
 
 
   animation: flicker 3s infinite;
@@ -313,11 +319,12 @@ text-transform: uppercase;
   padding-left: 2%;
   padding-right: 2%;
 color: white;
-
+letter-spacing: 1px;
   padding-top: 8%;
-font-size: 1.3rem;
+font-size: 1.1rem;
 line-height: 40px;
-font-family: 'Open Sans';
+ font-family: alien;
+
 }
 
 
@@ -405,7 +412,7 @@ margin-right: 10%;
 body {
   margin: 0;
   background-color: #060c1f;
-  font-family: "Almarai", sans-serif;
+  /* font-family: "Almarai", sans-serif; */
 }
 
 .wrapper {
@@ -963,15 +970,16 @@ padding-bottom: 3%;
   position: relative; 
   letter-spacing: 13px;
   font-family: alien;
-  font-size: 120px;
-
+  font-size: 115px;
+  margin-top: 3%;
  color: lightskyblue;
- animation: flicker 3s infinite;
+ animation: flicker 1s infinite;
  color: white;
  font-weight: bolder;
  text-transform: uppercase;
- text-shadow: 0 0 5px rgb(192 219 255 / 75%), 0 0 5px rgb(65 120 255 / 24%);  
- padding-bottom: 4%;
+ text-shadow: 0 0 10px rgb(192 219 255 / 75%), 0 0 10px rgb(65 120 255 / 24%);  
+ padding-bottom: 3%;
+
 }
 
 
@@ -979,12 +987,12 @@ padding-bottom: 3%;
 
 .letter_a{
   font-family: alien;
-  font-size: 160px;
+  font-size: 120px;
 }
 
 .date {
   color: gold;
-  font-size: 2.2rem !important;
+  font-size: 2.2rem ;
   font-family: alien;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -997,9 +1005,17 @@ padding-bottom: 3%;
  
 }
 
+.countup{
+ 
+  font-size:30px;
+  font-family: 'Montserrat Alternates';      
+ animation: flicker 3s infinite;
+  color:white;
+  
+  
+}
 
-
-
+/*
 
 
 @media only screen and (min-width:850px) and (max-width: 1290px) {
@@ -1021,7 +1037,7 @@ padding-bottom: 3%;
      animation: flicker 3s infinite;
       color:white;
       
-  }
+  }*/
   @keyframes flicker {
       from {
           opacity: 1;
@@ -1167,11 +1183,7 @@ padding-bottom: 3%;
      
   }
   
-   
-  @media only screen and (max-width:1025px){
-  
 
-  }
   .img2{
       margin-left: 25%;
       width:250px;
@@ -1237,9 +1249,13 @@ height:120px;
 
   }
   
-  @media only screen and (max-width: 1100px) {
+  
+
+/*
+
+@media only screen and (max-width: 1100px) {
       ._about_event {
-          /* flex-direction: column; */
+         
           align-items: center;
           margin-top: 40px;
           flex-wrap: wrap;
@@ -1251,7 +1267,7 @@ height:120px;
       }
   
       ._glowCardDiv {
-          /* width: 80%; */
+         
           flex-basis: 100% !important;
           order: 2 !important;
       }
@@ -1266,6 +1282,7 @@ height:120px;
       }
       
   }
+
   @media only screen and (max-width:980px){
       .head{
           font-size: 85px;
@@ -1277,7 +1294,6 @@ height:120px;
           font-size: 30px;
       }
   }
-
   @media only screen and (max-width:1200px){
 
       .head{
@@ -1309,26 +1325,10 @@ height:120px;
         }
 
   }
-  @media only screen and (max-width: 768px) {
-
-      .heading{
-          font-size: 30px;
-      }
-      .paragraph{
-          font-size: 20px;
-      }
-      
-      .About_Abacus {
-          height : 180vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  
-}
 
 
-.left_container{
+
+.left_container{ 
     height: 150vh;
 }
 .right_container{
@@ -1355,8 +1355,11 @@ height:120px;
     height:220px;
     width:200px;
 }
-  }
- 
+
+.date{
+  font-size: 20px;
+}
+  
  
 
   .underline {
@@ -1388,7 +1391,7 @@ height:120px;
         }
   }
 
-
+*/
 
   
 @keyframes yellow-shadow {
@@ -1460,32 +1463,121 @@ height:120px;
 }
 }
 
+@media only screen and (max-width: 1200px) {
+.maindiv{
+  height: auto;
+}
+.card{
+  height:auto
+}
+.blur{
+  padding-top: 10vh;
+}
+.head{
+  font-size: 95px;
+}
+}
+@media only screen and (max-width: 950px) {
 
-@media only screen and (max-width: 1290px) {
- 
-  .eve{
-    flex-direction: column;
+  .body{
+    overflow-x: hidden;
   }
+  .head{
+    font-size: 75px;
+    padding-bottom: 40px;
+  }
+  .card{
+    height: auto;
+  }
+  .maindiv{
+    height: auto;
+  }
+  .heading{
+      font-size: 55px;
+  }
+  .left_content{
+    padding-right: 40px;
+  }
+  .paragraph{
+      font-size: 17px;
+  }
+  .left_container{
+    width: 100%;
+    padding-right: 100px;
+  }
+  .right_container{
+    width:100%;
+  }
+  .blur{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .About_Abacus {
+display: flex;
+flex-direction: column;
 
-  .top{
-    width:100%;
-    margin: 3%;
+
+}
+.date{
+  font-size: 35px;
+}
+
+.About_Abacus{
+  flex-direction: column;
+
+}
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .heading{
+      font-size: 30px;
   }
-  .bottom{
-    width:100%;
-    margin: 3%;
+  .paragraph{
+      font-size: 20px;
   }
-  .one_count{
-    width:50%;
-    text-align: center;
-  }
+  
+  .About_Abacus {
+display: flex;
+flex-direction: column;
+
+
+}
+.date{
+  font-size: 10px;
+}
 }
 
 
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width:640px) {
   .title{
       margin-left: auto;
+  }
+  .date{
+    font-size: 25px;
+  }
+  .heading{
+    font-size: 2.5rem;
+  }
+  .paragraph{
+    font-size: 0.9rem;
+    line-height: 32px;
+  }
+  .card{
+    padding: 30px;
+  }
+
+  .left_container{
+    width: 100%;
+  }
+  .left_content{
+    padding-right: 15%;
+  }
+  .right_container{
+    width: 100%;
   }
 
   .margin{
@@ -1512,9 +1604,7 @@ height:120px;
   .letter_a{
   font-size: 50px;
   }
-  .date{
-    font-size: 13px;
-  }
+
   .left_container{
     margin: 0;
     padding: 0;
@@ -1539,7 +1629,7 @@ height:120px;
   }
 
   .maindiv{
-    height: 100vh;
+    
   }
 
   .blur{
@@ -1547,5 +1637,120 @@ height:120px;
     text-align: center;
   }
 }
+
+
+
+
+
+@media only screen and (max-width: 480px) { 
+  body{
+    overflow-x: hidden;
+  }
+  .head{
+    font-size: 30px;
+  }
+  .title{
+      margin-left: auto;
+  }
+  .heading{
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+  .paragraph{
+    font-size: 0.8rem;
+ 
+  }
+
+  .left_container{
+    width: 100%;
+    
+  }
+  .left_content{
+    padding-right: 15%;
+    padding-bottom: 50%;
+  }
+  .right_container{
+    width: 100%;
+  }
+
+  .margin{
+    margin:0;
+    padding: 0;
+  }
+  .left_content{
+    margin: 0%; 
+    padding: 0%;
+  }
+  .head{
+    font-size:50px;
+  }
+  .landing_heading{
+    width: 100%;
+    padding-top: 10%;
+  padding-bottom: 10%;  }
+
+  .a{
+    margin: 0%;
+    padding: 0%;
+
+  }
+  .letter_a{
+  font-size: 50px;
+  }
+  .date{
+    font-size: 0.3em;
+  }
+  .left_container{
+    margin: 0;
+    padding: 0;
+    margin-bottom:100px;
+  }
+
+  .eve{
+    flex-direction: column;
+    width: 100%;
+    padding-right:50px;
+  
+  }
+  .top{
+    width:100%;
+   
+  }
+  .bottom{
+    margin-top: 20px;
+    width:100%;
+  
+  }
+  .one_count{
+    width:50%;
+    text-align: center;
+  
+  }
+
+  .maindiv{
+    height: auto;
+  }
+
+  .blur{
+    margin-top: 70%;
+    text-align: center;
+  }
+  .head{
+    font-size: 2.5rem;
+    margin: 0;
+    padding-bottom: 7%;
+
+  }
+  .date{
+   color: lightskyblue;
+    font-size: 1.2rem;
+  }
+  .landing_heading{
+    margin-bottom: 60%;
+   
+  }
+  
+}
+
 
 

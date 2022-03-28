@@ -163,7 +163,7 @@ function SignUp() {
             type="text"
             id="name"
             className={logstyle.formFieldInput}
-            placeholder="Enter your full name"
+            placeholder="Full Name"
             name="name"
             value={name}
             onChange={(e) => {
@@ -230,7 +230,7 @@ function SignUp() {
             type="email"
             id="email"
             className={logstyle.formFieldInput}
-            placeholder="Enter your email"
+            placeholder="Email"
             name="email"
             value={email}
             onChange={(e) => setEmail(e.currentTarget.value)}
@@ -242,7 +242,7 @@ function SignUp() {
             type="text"
             id="phone"
             className={logstyle.formFieldInput}
-            placeholder="Enter your Phone Number"
+            placeholder="Phone Number"
             name="phone"
             value={phone}
             onChange={(e) => setPhone(e.currentTarget.value)}
@@ -253,7 +253,7 @@ function SignUp() {
             type="password"
             id="password"
             className={logstyle.formFieldInput}
-            placeholder="Enter your password"
+            placeholder="Password"
             name="password"
             value={password}
             onChange={(e) => setPassword(e.currentTarget.value)}
@@ -265,7 +265,7 @@ function SignUp() {
             type="password"
             id="conpass"
             className={logstyle.formFieldInput}
-            placeholder="Confirm your password"
+            placeholder="Confirm password"
             name="conpass"
             value={conpass}
             onChange={(e) => setConpass(e.currentTarget.value)}

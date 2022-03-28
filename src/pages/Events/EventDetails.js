@@ -7,7 +7,7 @@ import { NonTechEvents } from "../../data/NonTechEventsData";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
 import background from "../../images/bgg.jpg";
-import nontech from "./../../images/nontech.jpeg";
+import nontech from "./../../images/nontech.png";
 
 function EventDetails() {
   const { type, title } = useParams();
@@ -38,7 +38,7 @@ function EventDetails() {
       }}
     >
       <div className={styles.container}>
-        <div className={styles.box}>
+        <div className={styles.box} style={{ height: "auto", width: "60%" }}>
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>DESCRIPTION</h2>
@@ -57,7 +57,7 @@ function EventDetails() {
           </div>
         </div>
 
-        <div className={styles.box} style={{ width: "400px" }}>
+        <div className={styles.box} style={{ height: "auto", width: "30%" }}>
           <span></span>
           <div className={styles.content}>
             {type === "tech-events" && (
@@ -74,21 +74,21 @@ function EventDetails() {
                 alt={title}
               />
             )}
-            <GlassButton  title="Register"/>
+            <GlassButton title="Register" />
           </div>
           {/* <GlassButton /> */}
         </div>
       </div>
 
       <div className={styles.container}>
-        <div className={styles.box} style={{ width: "400px" }}>
+        <div className={styles.box} style={{ height: "auto", width: "30%" }}>
           <span></span>
           <div className={styles.content}>
             <img src={nontech} style={{ width: "200px", height: "200px" }} />
           </div>
         </div>
 
-        <div className={styles.box} style={{ width: "800px" }}>
+        <div className={styles.box} style={{ height: "auto", width: "60%" }}>
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>SPONSORS</h2>
@@ -100,7 +100,7 @@ function EventDetails() {
       </div>
 
       <div className={styles.container}>
-        <div className={styles.box}>
+        <div className={styles.box} style={{ height: "auto", width: "auto" }}>
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>RULES</h2>
@@ -114,7 +114,7 @@ function EventDetails() {
       </div>
 
       <div className={styles.container}>
-        <div className={styles.box}>
+        <div className={styles.box} style={{ height: "auto", width: "auto" }}>
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>ROUNDS</h2>
@@ -123,7 +123,7 @@ function EventDetails() {
                 {round.title} - {round.description}
               </p>
             ))}
-            <GlassButton title="Scroll to Top" />
+            {/* <GlassButton title="Scroll to Top" /> */}
           </div>
         </div>
       </div>

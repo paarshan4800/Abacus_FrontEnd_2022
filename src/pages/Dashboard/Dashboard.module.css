@@ -1,13 +1,4 @@
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  /* background-color: #060c1f; */
-  font-family: "Almarai", sans-serif;
-}
 
 .infoBar {
   display: flex;
@@ -242,51 +233,32 @@ body {
     font-size: 3vw;
     /* font-size:  0.8em; */
   }
-}
 
-@media only screen and (min-width: 751px) {
-  .webView {
-    display: block;
-    /* background-color: #3d062b; */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .mobileView {
+  .list_element .hide {
     display: none;
-    /* background-color: #3d062b; */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: center;
   }
+
+  .list_element .title {
+    width: 90% !important ;
+    /* background-color: #4b4b4b !important ; */
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.2em;
+    color: #000000;
+  }
+
+  .list_element .badge {
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+    /* background-color: #4b4b4b; */
+  }
+  
 }
+
 
 @media only screen and (max-width: 750px) {
-  .webView {
-    display: none;
-    /* background-color: #3d062b; */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .mobileView {
-    display: block;
-    /* background-color: #3d062b; */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
+ 
   .infoBar {
     /* background-color: #0b1a06; */
     display: flex;
@@ -498,7 +470,7 @@ body {
 }
 
 .list_element .hide {
-  width: 35%;
+  width: 25%;
 }
 
 .list_element .btn {
@@ -511,7 +483,8 @@ body {
 .list_element .badge {
   display: flex;
   justify-content: flex-end;
-  width: 5%;
+  width: 15%;
+  text-decoration: none;
   /* background-color: #4b4b4b; */
 }
 
@@ -526,6 +499,32 @@ body {
 }
 
 .display {
+  /* background-color: #3d062b; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mobileView {
+  /* background-color: #3d062b; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mobileView a{
+  text-decoration: none;
+}
+
+.webView a{
+  text-decoration: none;
+}
+
+.webView {
   /* background-color: #3d062b; */
   display: flex;
   flex-direction: column;

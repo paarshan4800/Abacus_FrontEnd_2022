@@ -19,80 +19,58 @@ function NewPassword() {
       res_msg.innerHTML = msg;
     console.log(values);
     }
-    return (
-      <div className={logstyle.App}>
-      <div className={logstyle.appAside}>
-          {/* <center>
-            <Typography>
-              <div className={logstyle.typingDemo} width="40%">
-                <div className={logstyle.glow}>Welcome!</div>
-              </div>
-            </Typography>
-            <div className={logstyle.styleButton}>
-                <NavLink
-                exact
-                 to="/"
-                 activeclassName={logstyle.pageSwitcherItemActive}
-                >
-                <GlassButton title="Sign In" />
-                </NavLink>
-                <NavLink
-                to="/sign-up"
-                activeclassName={logstyle.pageSwitcherItemActive}
-                >
-                <GlassButton title="Sign Up" />
-                </NavLink>
-
-                </div>
-          </center> */}
-    </div>
-
-    <div className={logstyle.appForm}>
-      <div className={logstyle.SIOut}>
-      <div className={logstyle.SICenter}>
-      <div id="alert_msg" className={logstyle.formFieldLabel}></div> {/*div element needs to be properly positioned*/}
+  return (
+    <div className={logstyle.App}>
+      <div className={logstyle.appForm}>
+        {/* <div className={logstyle.SIOut}> */}
+        {/* <div className={logstyle.SICenter}> */}
+        <div id="alert_msg" className={logstyle.formFieldLabel}></div>{" "}
+        {/*div element needs to be properly positioned*/}
         <h2>Enter New Password</h2>
-        <br></br>
-        <form className={logstyle.formFields}  onSubmit={() => onPassword()}>
-        <div className={logstyle.formField}>
+        <form className={logstyle.formFields}>
+          <div className={logstyle.formField}>
             <label className={logstyle.formFieldLabel} htmlFor="password">
               Password
             </label>
             <input
               type="password"
               id="password"
-              className={logstyle.formFieldInput}
+              className={logstyle.formFieldInputNp}
               placeholder="Enter your password"
               name="password"
+              value={pass}
               onChange={(e) => {
                 setPass(e.currentTarget.value);
               }}
             />
           </div>
-           {/*confirm password*/}
-           <div className={logstyle.formField}>
+          {/*confirm password*/}
+          <div className={logstyle.formField}>
             <label className={logstyle.formFieldLabel} htmlFor="conpass">
               Confirm Password
             </label>
             <input
               type="password"
               id="conpass"
-              className={logstyle.formFieldInput}
+              className={logstyle.formFieldInputNp}
               placeholder="Confirm your password"
               name="conpass"
               onChange={(e) => {
                 setConPass(e.currentTarget.value);
+              value={confirmPass}
+              onChange={(e) => {
+                setConfirmPass(e.currentTarget.value);
               }}
             />
           </div>
           <div className={logstyle.styleButton} onClick={() => onPassword()}>
-              <GlassButton title="Submit"/>
+            <GlassButton title="Submit" />
           </div>
         </form>
+        {/* </div> */}
+        {/* </div> */}
       </div>
-      </div>
-      </div>
-      </div>
-    );
+    </div>
+  );
 }
 export default NewPassword;

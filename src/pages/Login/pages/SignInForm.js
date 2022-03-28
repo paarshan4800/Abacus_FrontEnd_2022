@@ -54,7 +54,7 @@ function SignInForm() {
             type="email"
             id="email"
             className={logstyle.formFieldInputSI}
-            placeholder="Enter your email"
+            placeholder="Email"
             name="email"
             value={email}
             onChange={(e) => {
@@ -71,7 +71,7 @@ function SignInForm() {
             type="password"
             id="password"
             className={logstyle.formFieldInputSI}
-            placeholder="Enter your password"
+            placeholder="Password"
             name="password"
             value={password}
             onChange={(e) => {
