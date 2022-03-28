@@ -64,7 +64,12 @@ const AppRoutes = () => {
       <Route path="/login" exact component={LoginRegister} />
       <Route path="/signUp" exact component={SignUp} />
       <Route path="/ForgotPassword" exact component={ForgotPassword} />
-      <Route path="/NewPassword" exact component={NewPassword} />
+      <Route
+        path="/resetPassword/:resetPassword"
+        exact
+        component={NewPassword}
+      />
+      {/* <Route path="/NewPassword" exact component={NewPassword} /> */}
       <Route path="/ComingSoon" exact component={ComingSoon} />
       <Route path="/hackathon-register" exact component={HackathonRegister} />
       <Route component={PageNotFound} />
