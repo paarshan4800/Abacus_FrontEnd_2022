@@ -15,7 +15,7 @@ import workshoppassimg from "../../images/workshoppassimg.png";
 import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
 import { TiTick } from "react-icons/ti";
-
+import ComingSoon from "../ComingSoon/ComingSoon";
 import { Width } from "../../App";
 
 const Dashboard = () => {
@@ -130,6 +130,8 @@ const Dashboard = () => {
     },
   ];
 
+  let isComingSoon = true; /*Set this as false when registrations are open for workshops */
+
   const [isEventList, setEventList] = useState(true);
   const [isWorkshopList, setWorkshopList] = useState(true);
 
@@ -158,10 +160,10 @@ const Dashboard = () => {
             </div>
             <div className={styles.userinfo}>
               <div className={styles.name}>
-                <p>Name : </p>
+                <p>Name : Harry Tomlinson</p>
               </div>
               <div className={styles.abacusid}>
-                <p>Abacus ID : </p>
+                <p>Abacus ID : 4101</p>
               </div>
             </div>
           </div>
@@ -251,7 +253,8 @@ const Dashboard = () => {
                   </div>
                 )}
 
-                {isWorkshopList && (
+                {isWorkshopList && isComingSoon && <ComingSoon />}
+                {isWorkshopList && !isComingSoon && (
                   <div className={styles.list}>
                     {workshopList.map((event) => (
                       <div key={event.id} className={styles.list_element}>
@@ -307,7 +310,8 @@ const Dashboard = () => {
                   </div>
                 )}
 
-                {isWorkshopList && (
+                {isWorkshopList && isComingSoon && <ComingSoon />}
+                {isWorkshopList && !isComingSoon && (
                   <div className={styles.list}>
                     {workshopList.map((event) => (
                       <Link
