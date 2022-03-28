@@ -1537,7 +1537,7 @@ flex-direction: column;
 
 
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width:640px) {
   .title{
       margin-left: auto;
   }
