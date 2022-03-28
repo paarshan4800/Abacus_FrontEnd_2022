@@ -6,7 +6,7 @@ import years from "./assets/years";
 import colleges from "./assets/colleges";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton.js";
-import axios from "axios";
+import {signUp} from "../../../api/auth";
 import GoogleButton from "react-google-button";
 import { googleSignIn } from "../../../api/auth";
 import { BrowserRouter, Route, Switch, Redirect, NavLink } from "react-router-dom";
@@ -128,38 +128,13 @@ function SignUp() {
       ? BASE_URL + "user/signup/googleSignUp"
       : BASE_URL + "user/signup/newUser";
 
-    axios
-      .post(signupURL, values)
-      .then((response) => {
-        if (response.status === 201 || response.status === 200) {
-          alert(response.data.message);
-          // setMessage(response.data.message);
-          window.location = "http://localhost:3000/Login#/sign-in";
-        }
-        console.log(response);
-      })
-      .catch((err) => {
-        if (err.response.data.code === 11000) {
-          alert(
-            err.response.data.keyValue.email +
-              "is already registered. Go to login"
-          );
-          setTimeout(() => {
-            window.location = "http://localhost:3000/Login#/sign-in";
-          }, 300);
-        } else {
-          console.log(err.response.data);
-        }
-      });
-
-    console.log(values);
+    signUp(signupURL, values);
     }
     else
     {
       console.log(validationError);
     }
-  };
-  // console.log(year); 
+  }
   return (
     <div className={logstyle.appForm}>
     <div className={logstyle.formCenter}>

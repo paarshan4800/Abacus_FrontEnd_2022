@@ -2,35 +2,20 @@ import React, { useState, Component } from "react";
 import { Typography } from "@material-ui/core";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton";
-import axios from "axios";
+import { forgetPassword } from "../../../api/auth";
 import fpic from "./assets/images/forgot.png";
 function ForgotPassword() {
   const [email, setEmail] = useState("");
 
-  const onforgetPassword = () => {
+  const onforgetPassword = async() => {
     var values = {
       email
     };
+    console.log(values)
 
-    axios
-    .post("http://localhost:8000/forgetPassword", values)
-    .then((response) => {
-      if (response.status === 200) {
-        var res_msg = document.getElementById("msg");
-        res_msg.innerHTML = response.data.message;
-
-        console.log(response.data.message)
-        console.log("Forget Password successful");
-      }
-    })
-    .catch((err) => {
-      console.log("the error code is", err.response.status);
-      
-      var err_msg = document.getElementById("msg");
-      err_msg.innerHTML = err.response.data.message;
-    });
-
-  console.log(values);
+    const msg =  await forgetPassword(values);
+    var res_msg = document.getElementById("msg");
+    res_msg.innerHTML = msg;
   }
     return (
       <div className={logstyle.App}>

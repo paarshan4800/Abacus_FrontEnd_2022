@@ -4,9 +4,8 @@ import { BrowserRouter, Route, Switch, Redirect, NavLink } from "react-router-do
 import ForgotPassword from "./ForgotPassword";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton.js";
-import { googleSignIn } from "../../../api/auth";
+import { googleSignIn, normalSignIn, afterGoogleSignIn } from "../../../api/auth";
 import GoogleButton from "react-google-button";
-import axios from "axios";
 import LoginRegister from "../LoginRegister";
 
 function SignInForm() {
@@ -19,7 +18,7 @@ function SignInForm() {
     window.location = `${baseURL}${url_gAuth}`
    }*/
   //handle normal signin
-  const onSubmitSignIn = () => {
+  const onSubmitSignIn = async () => {
     console.log("in on submit signin");
     var values = {
       email,
@@ -27,46 +26,10 @@ function SignInForm() {
     };
     console.log(values);
 
-    axios//.post("http://localhost:8000/user/login", values)
-      .post("https://abacus-22-backend.herokuapp.com/user/login", values)
-      .then((response) => {
-        if (response.status === 200) {
-          console.log("Token ==", response.data.token);
-          localStorage.setItem("apiToken", response.data.token)
-          alert(" token has been generated, check console");
-        }
-      })
-      .catch((err) => {
-        console.log("the error code is", err.response.status);
-        alert(err.response.data.message);
-        if (err.response.status === 404) {
-          setTimeout(() => {
-            window.location = "http://localhost:3000/Login#/";
-          }, 1000);
-        }
-      });
-
-    console.log(values);
+    const details = await normalSignIn(values);
+    console.log(details);
   };
 
-  const afterGoogleSignIn = () => {
-    // console.log("function after g sign called");
-    const url = new URL(window.location.href);
-    // console.log("url is", url);
-    const searchparams = new URLSearchParams(url.search);
-    // console.log("search params is", searchparams);
-    if (searchparams.has("message")) {
-      const msg = searchparams.get("message");
-      // console.log(msg);
-      window.alert(msg);
-    }
-    if (searchparams.has("token")) {
-      setToken(searchparams.get("token"));
-      localStorage.setItem("apiToken", token);
-      // console.log("token is ", searchparams.get("token"));
-      console.log("token is : ", localStorage.getItem("apiToken")); 
-    }
-  };
   useEffect(afterGoogleSignIn);
   return (
     <div  className={logstyle.appForm}>
