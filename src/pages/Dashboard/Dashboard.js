@@ -15,7 +15,9 @@ import workshoppassimg from "../../images/workshoppassimg.png";
 import { FaUserCircle } from "react-icons/fa";
 import userimg from "../../images/usericonimg.jpg";
 import { TiTick } from "react-icons/ti";
+
 import { Width } from "../../App";
+
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
   const width = useContext(Width);
@@ -26,14 +28,14 @@ const Dashboard = () => {
       refName: "reverse-engineering",
       name: "Reverse Engineering",
       type: "tech-events",
-      registered: true,
+      registered: registeredList.includes(1),
     },
     {
       id: 2,
       refName: "code-for-crown",
       name: "Code for Crown",
       type: "tech-events",
-      registered: false,
+      registered: registeredList.includes(2),
     },
     {
       id: 3,
@@ -146,6 +148,9 @@ const Dashboard = () => {
     setWorkshopList(true);
   };
 
+  
+  
+  })
   return (
     <div>
       <div className={styles.infoBar}>
@@ -156,10 +161,10 @@ const Dashboard = () => {
             </div>
             <div className={styles.userinfo}>
               <div className={styles.name}>
-                <p>Name: Harry Edward Styles Louis Tomlinson</p>
+                <p>Name : </p>
               </div>
               <div className={styles.abacusid}>
-                <p>Abacus-ID: 4101</p>
+                <p>Abacus ID : </p>
               </div>
             </div>
           </div>
@@ -225,6 +230,26 @@ const Dashboard = () => {
                 />
               </div>
 
+              <div className={styles.webView}>
+                {isEventList && (
+                  <div className={styles.list}>
+                    {eventList.map((event) => (
+                      <div key={event.id} className={styles.list_element}>
+                        <div className={styles.title}>{event.name}</div>
+                        <div className={styles.hide}>
+                          <Link to={`/events/${event.type}/${event.refName}`}>
+                            <div className={styles.btn}>
+                              {event.registered ? (
+                                <GlassBtn title="View More" />
+                              ) : (
+                                <GlassBtn title="Register" onClick={() => onRegister()}/>
+                              )}
+                            </div>
+                          </Link>
+                        </div>
+                        <div className={styles.badge}>
+                          {event.registered? <TiTick size={35} /> : <></>}
+                          
               {width > 950 ? (
                 <div className={styles.webView}>
                   {isEventList && (

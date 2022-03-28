@@ -69,7 +69,6 @@ const AppRoutes = () => {
         exact
         component={NewPassword}
       />
-      {/* <Route path="/NewPassword" exact component={NewPassword} /> */}
       <Route path="/ComingSoon" exact component={ComingSoon} />
       <Route path="/hackathon-register" exact component={HackathonRegister} />
       <Route component={PageNotFound} />
