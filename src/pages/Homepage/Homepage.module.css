@@ -1462,6 +1462,21 @@ height:120px;
   bottom: 0;
 }
 }
+
+@media only screen and (max-width: 1200px) {
+.maindiv{
+  height: auto;
+}
+.card{
+  height:auto
+}
+.blur{
+  padding-top: 10vh;
+}
+.head{
+  font-size: 95px;
+}
+}
 @media only screen and (max-width: 950px) {
 
   .body{
