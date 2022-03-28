@@ -92,7 +92,7 @@ const Homepage = (props)=>{
 
                 <div className={`${styles.one_count}`}>
                 <div className={`${styles.countup}`}>
-                    <CountUp start={0} end={7} redraw={true} suffix=" +">
+                    <CountUp  className={`${styles.font}`}start={0} end={7} redraw={true} suffix=" +">
                       {({ countUpRef, start }) => (
                         <VisibilitySensor onChange={start} delayedCall>
                           <span ref={countUpRef} />
