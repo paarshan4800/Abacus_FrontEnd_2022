@@ -101,7 +101,7 @@ margin-top: -90px;
 
 }
 .card{
-  padding-top: 5px;
+  padding-top: 10px;
   background-color:  #051429;
   background: linear-gradient(rgba(0,0, 0, 0.3)  , rgba(0,0, 0, 0.3) ,url(../../images/bgg.jpg)) ;
  padding: 5%;
@@ -301,7 +301,7 @@ font-size: 3.3rem;
   color: white;
 line-height: 0px;
 text-transform: uppercase;
-font-family: alien;
+font-family: "Audiowide", sans-serif !important;
 letter-spacing: 3px;
 
 
@@ -323,7 +323,7 @@ letter-spacing: 1px;
   padding-top: 8%;
 font-size: 1.1rem;
 line-height: 40px;
- font-family: alien;
+font-family: "Audiowide", sans-serif !important;
 
 }
 
@@ -1008,7 +1008,7 @@ padding-bottom: 3%;
 .countup{
  
   font-size:30px;
-  font-family: 'Montserrat Alternates';      
+  font-family: "Audiowide", sans-serif !important;      
  animation: flicker 3s infinite;
   color:white;
   
@@ -1546,7 +1546,7 @@ flex-direction: column;
 
 }
 .date{
-  font-size: 10px;
+  font-size: 25px;
 }
 }
 

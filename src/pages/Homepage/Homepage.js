@@ -100,7 +100,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Events" fontSize="15px" />
+                   <Heading1 text="Events" fontSize="17px" />
                 </div>
                
             <div className={`${styles.one_count}`}>
@@ -113,7 +113,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Workshops" fontSize="15px" />
+                   <Heading1 text="Workshops" fontSize="17px" />
                 </div>
 
                 </div>
@@ -130,7 +130,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Cash Prize" fontSize="15px" />
+                   <Heading1 text="Cash Prize" fontSize="17px" />
 
                 </div>
                <div className={`${styles.one_count}`}>
@@ -143,7 +143,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Hackathon" fontSize="15px" />
+                   <Heading1 text="Hackathon" fontSize="17px" />
                </div>
                    
                 </div>

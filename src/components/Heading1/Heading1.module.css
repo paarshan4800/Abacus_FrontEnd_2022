@@ -4,7 +4,7 @@
   }
 
 ._heading {
-    font-family: alien;
+  font-family: "Audiowide", sans-serif !important;
     letter-spacing: 1px;
     animation: flicker 3s infinite;
     color: white;
