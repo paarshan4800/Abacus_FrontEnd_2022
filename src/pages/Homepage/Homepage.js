@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
 import cx from 'classnames'
-import {Footer} from '../../components/'
+// import {Footer} from '../../components/'
 
 
 //NeonButton
@@ -92,7 +92,7 @@ const Homepage = (props)=>{
 
                 <div className={`${styles.one_count}`}>
                 <div className={`${styles.countup}`}>
-                    <CountUp  className={`${styles.font}`}start={0} end={7} redraw={true} suffix=" +">
+                    <CountUp  className={`${styles.font}`}start={0} end={10} redraw={true} suffix=" +">
                       {({ countUpRef, start }) => (
                         <VisibilitySensor onChange={start} delayedCall>
                           <span ref={countUpRef} />
@@ -307,7 +307,7 @@ const Homepage = (props)=>{
 
   
 </main>
-<Footer/>
+{/* <Footer/> */}
       </>
     );
   }

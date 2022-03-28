@@ -51,7 +51,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   ._404 {
     margin-top: 25px;
   }
@@ -75,7 +75,7 @@
   }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 480px) {
   ._404 {
     margin-top: 0px;
   }
@@ -99,7 +99,7 @@
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 380px) {
   ._404 {
     margin-top: 0px;
   }
