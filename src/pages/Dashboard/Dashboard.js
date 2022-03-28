@@ -253,7 +253,7 @@ const Dashboard = () => {
                   </div>
                 )}
 
-                {isComingSoon && <ComingSoon />}
+                {isWorkshopList && isComingSoon && <ComingSoon />}
                 {isWorkshopList && !isComingSoon && (
                   <div className={styles.list}>
                     {workshopList.map((event) => (
@@ -310,7 +310,7 @@ const Dashboard = () => {
                   </div>
                 )}
 
-                {isComingSoon && <ComingSoon />}
+                {isWorkshopList && isComingSoon && <ComingSoon />}
                 {isWorkshopList && !isComingSoon && (
                   <div className={styles.list}>
                     {workshopList.map((event) => (

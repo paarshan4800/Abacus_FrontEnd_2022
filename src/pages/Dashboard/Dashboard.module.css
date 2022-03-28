@@ -429,6 +429,7 @@
   align-items: center;
   flex-direction: column;
   width: 75%;
+  margin-bottom: 95px;
 }
 
 .list_element {
