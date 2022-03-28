@@ -51,7 +51,7 @@
   }
 }
 
-@media only screen and (max-width: 578px) {
+@media only screen and (max-width: 600px) {
   ._404 {
     margin-top: 25px;
   }
@@ -75,7 +75,7 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 460px) {
   ._404 {
     margin-top: 0px;
   }
@@ -85,6 +85,30 @@
     /* font-family: Iceland; */
     text-transform: uppercase;
     font-size: 70px !important;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
+      -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+      0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+  }
+
+  ._404_text_addi p {
+    color: white;
+    font-size: 15px !important;
+    /* font-family: Iceland; */
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  ._404 {
+    margin-top: 0px;
+  }
+
+  ._404_text {
+    letter-spacing: 10px;
+    /* font-family: Iceland; */
+    text-transform: uppercase;
+    font-size: 50px !important;
     color: #ffe6ff;
     text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
       -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,

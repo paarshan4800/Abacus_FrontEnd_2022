@@ -25,7 +25,8 @@ code {
 
 body {
   margin: 0;
-  font-family: 'Lobster', cursive;
+  /* font-family: 'Lobster', cursive; */
+  font-family: "Audiowide", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   overflow-y: auto;
   -moz-osx-font-smoothing: grayscale;
