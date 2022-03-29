@@ -2,7 +2,7 @@ import { responsiveFontSizes } from "@material-ui/core";
 import axios from "axios";
 
 // const BASE_API_URL = "https://abacus-22-backend.herokuapp.com/";
-const BASE_API_URL = "https://localhost:800";
+const BASE_API_URL = "https://localhost:8000";
 
 export const googleSignIn = () => {
   window.location = BASE_API_URL + "user/login/google";
