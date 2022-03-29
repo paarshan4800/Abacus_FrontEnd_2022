@@ -51,13 +51,7 @@ const Navbar = () => {
       )
       
     }
-    else if (window.innerWidth <= 750 ){
-      return (
-        <Link to={`/`} style={{textDecoration:"none", color:"#fff"}}   className={styles.font} >
-        ABACUS '22
-        </Link>
-      )
-    }
+    
   }
 
   window.addEventListener('scroll', changeBackground);
@@ -84,7 +78,7 @@ const changeButton = ()=>{
         {widthChange()}
 
       </div>
-      <ul className={`text-white md:flex hidden list-none flex-row justify-between items-center flex-initial ${styles.nav}`}>
+      <ul className={`text-white md:flex hidden list-none flex-row justify-between items-center flex-initial ${styles.nav} ml-6`}>
         {["Home", "aboutus", "Events", "workshops"].map((item, index) =>
 
           // <NavBarItem key={item + index} title={item.toUpperCase()} className={styles.nav} link={`/${item}`}/>

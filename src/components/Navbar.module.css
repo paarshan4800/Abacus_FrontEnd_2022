@@ -11,6 +11,12 @@
     src: url(./Aquire-Bold.otf);
 }
 
+.mob{
+    padding-top: 40px;
+    padding-left: 20px;
+    font-family: BOLD;
+}
+
 .font{
     text-align: justify;
     font-family: BOLD;
@@ -37,8 +43,6 @@
 
   
   }
-
-
 
   @media only screen and (max-width: 766px) {
     .nav{
