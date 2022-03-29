@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import React, { useState, useEffect, Component } from "react";
 import { BrowserRouter, Route, Switch, Redirect, NavLink } from "react-router-dom";
 import logstyle from "./../logstyle.module.css";
+import "./../logstyle.module.css";
 import SignUp from "../pages/SignUp";
 import SignInForm from "../pages/SignInForm";
 import Flippy, { FrontSide, BackSide } from 'react-flippy';

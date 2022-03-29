@@ -1,8 +1,17 @@
 .LoginRegisterBg {
   /* background: linear-gradient(to right, #38ef7d, #11998e) !important; */
   height: 100vh;
-  width: 100vw;
+  width: 100vw
+  
+  ;
 }
+
+*{
+  font-family: "Audiowide", sans-serif;
+
+}
+
+
 .App {
   height: 100vh;
   width: 100vw;
@@ -191,7 +200,7 @@ div::-webkit-scrollbar-thumb { */
 }
 
 .formField {
-  margin-bottom: 3vh;
+  margin-bottom: 4vh;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -376,7 +385,7 @@ div::-webkit-scrollbar-thumb { */
   overflow: hidden;
   border-right: 3px solid;
   /* font-family: Roboto; */
-  font-size: 5em;
+  font-size: 4em;
   color: white;
 }
 

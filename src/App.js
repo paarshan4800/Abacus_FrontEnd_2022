@@ -69,7 +69,7 @@ function App() {
                       <Navbar />
                       <div
                         style={{
-                          paddingTop: "70px",
+                          paddingTop: "90px",
                           backgroundImage: `url(${background})`,
                           backgroundSize: "contain",
                           backgroundRepeat: 1,

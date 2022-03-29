@@ -9,10 +9,11 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 import footerStyles from "./footer.module.css"
+import "./footer.module.css"
 export default function Footer() {
   return (
-    <MDBFooter className='text-center' color='white' bgColor='dark'>
-      <MDBContainer className='p-4'>
+    <MDBFooter className='text-center bg-dark' color='white' bgColor='dark'>
+      <MDBContainer className='p-4' >
         <section className='mb-4'>
           <h3>
             Contact Us
@@ -79,7 +80,7 @@ export default function Footer() {
             <MDBCol lg='4' md='6' className='mb-4 mb-md-0'>
               {/* <h5 className='text-uppercase'>Links</h5> */}
               <div className={footerStyles.contact}>Pothikkannan G</div>
-              <a href="tel:+91 9500702003" target="_blank" className={footerStyles.contact}><i class="fa fa-phone" aria-hidden="true"></i> 9500702083</a>
+              <a href="tel:+91 9500702003" target="_blank" className={`${footerStyles.contact} ${footerStyles.num} `}><i class="fa fa-phone" aria-hidden="true"></i> 9500702083</a>
               {/* <ul className='list-unstyled mb-0'>
                 <li>
                   <a href='#!' className='text-white'>
@@ -107,7 +108,7 @@ export default function Footer() {
             <MDBCol lg='4' md='6' className='mb-4 mb-md-0'>
               {/* <h5 className='text-uppercase'>Links</h5> */}
               <div className={footerStyles.contact}>Pothikkannan G</div>
-              <a href="tel:+91 9500702003" target="_blank" className={footerStyles.contact}><i class="fa fa-phone" aria-hidden="true"></i> 9500702083</a>
+              <a href="tel:+91 9500702003" target="_blank" className={`${footerStyles.contact} ${footerStyles.num} `}><i class="fa fa-phone" aria-hidden="true"></i> 9500702083</a>
               {/* <ul className='list-unstyled mb-0'>
                 <li>
                   <a href='#!' className='text-white'>
@@ -135,7 +136,7 @@ export default function Footer() {
             <MDBCol lg='4' md='6' className='mb-4 mb-md-0'>
               {/* <h5 className='text-uppercase'>Links</h5> */}
               <div className={footerStyles.contact}>Pothikkannan G</div>
-              <a href="tel:+91 9500702003" target="_blank" className={footerStyles.contact}><i class="fa fa-phone" aria-hidden="true"></i> 9500702083</a>
+              <a href="tel:+91 9500702003" target="_blank" className={`${footerStyles.contact} ${footerStyles.num} `}><i class="fa fa-phone" aria-hidden="true"></i> 9500702083</a>
               {/* <ul className='list-unstyled mb-0'>
                 <li>
                   <a href='#!' className='text-white'>

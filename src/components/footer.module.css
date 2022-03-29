@@ -11,9 +11,20 @@
 
 .contact {
   color: grey;
-  font-size: 20px;
+  font-size: 17px;
 }
 .contact:hover {
+  color: whitesmoke;
+  cursor: pointer;
+  transform: scale(1.5);
+  text-decoration: none;
+}
+
+.num{
+  font-size: 14px;
+}
+
+.num:hover {
   color: whitesmoke;
   cursor: pointer;
   transform: scale(1.5);
