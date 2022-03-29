@@ -44,10 +44,19 @@ const Navbar = () => {
 
   const widthChange = () => {
     if (window.innerWidth > 1150 ) {
-      return <img src={logo} alt="logo" className="w-[5.6rem] cursor-pointer" />
+      return (
+      <Link to={`/`} style={{textDecoration:"none", color:"#fff"}}   className={styles.font} >
+      ABACUS '22
+      </Link>
+      )
+      
     }
     else if (window.innerWidth <= 750 ){
-      return <img src={logo} alt="logo" className="w-[4.5rem] cursor-pointer" />
+      return (
+        <Link to={`/`} style={{textDecoration:"none", color:"#fff"}}   className={styles.font} >
+        ABACUS '22
+        </Link>
+      )
     }
   }
 
@@ -57,10 +66,10 @@ const Navbar = () => {
 const changeButton = ()=>{
   
     return(<>
-    <li className="bg-[#11998e] py-2 px-4 mx-2 mt-1 rounded-full cursor-pointer hover:bg-[#2546bd]">
+    <li className="bg-[#11998e] py-2 px-4 mx-2 mt-3 rounded-full cursor-pointer hover:bg-[#2546bd]">
         <Link to={`/dashboard`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Dashboard</Link>
         </li>
-      <li className="bg-[#890F0D] py-2 px-3 mx-4 mt-1 rounded-full cursor-pointer hover:bg-[#2546bd]">
+      <li className="bg-[#890F0D] py-2 px-3 mx-4 mt-3 rounded-full cursor-pointer hover:bg-[#2546bd]">
       <Link to={`/logout`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Logout</Link>
       </li>
 
@@ -80,7 +89,7 @@ const changeButton = ()=>{
 
           // <NavBarItem key={item + index} title={item.toUpperCase()} className={styles.nav} link={`/${item}`}/>
 
-          <li className={`hover:bg-[#8A2BD6] py-2 px-3 mx-4 hover:rounded-full hover:cursor-pointer  ${styles.nav}`}
+          <li className={`hover:bg-[#8A2BD6] py-2 px-3 mx-4 mt-3 hover:rounded-full hover:cursor-pointer  ${styles.nav}`}
             
           ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >{item}</Link></li>
         )}
@@ -91,7 +100,7 @@ const changeButton = ()=>{
             changeButton()
             ) 
             :
-            (  <li className="bg-[#11998e] py-2 px-7 mx-2 mt-1 rounded-full cursor-pointer hover:bg-[#2546bd]">
+            (  <li className="bg-[#11998e] py-2 px-7 mx-2 mt-3 rounded-full cursor-pointer hover:bg-[#2546bd]">
             <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Login</Link>
             </li>)
             }

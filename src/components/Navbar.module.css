@@ -2,7 +2,21 @@
   
 @font-face {
     font-family: Future;
-    src: url(../components/Heading/alien.ttf);
+    src: url(./Aquire.otf);
+    
+}
+
+@font-face {
+    font-family: BOLD;
+    src: url(./Aquire-Bold.otf);
+}
+
+.font{
+    text-align: justify;
+    font-family: BOLD;
+    font-size: 25px;
+    padding:10px;
+    font-weight: bolder;
 }
 .nav{
     font-family: Future;

@@ -102,9 +102,10 @@ margin-top: -90px;
 }
 .card{
   padding-top: 10px;
+ text-align: justify;
   background-color:  #051429;
   background: linear-gradient(rgba(0,0, 0, 0.3)  , rgba(0,0, 0, 0.3) ,url(../../images/bgg.jpg)) ;
- padding: 5%;
+ padding: 6%;
   width: 100%;
   height: 100%;
   position: relative;
@@ -298,7 +299,7 @@ background-size: cover;
 font-weight: bolder;
 
 font-family: 'Open Sans', sans-serif;   
-font-size: 3.3rem;
+font-size: 3.4rem;
   text-align: center;
   color: white;
 line-height: 0px;
