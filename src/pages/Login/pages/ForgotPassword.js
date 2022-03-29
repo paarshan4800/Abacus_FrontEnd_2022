@@ -8,17 +8,17 @@ import fpic from "./assets/images/forgot.png";
 function ForgotPassword() {
   const [email, setEmail] = useState("");
 
-  const onforgetPassword = async() => {
+  const onforgetPassword = async () => {
     var values = {
-      email
+      email,
     };
-    console.log(values)
+    console.log(values);
 
-    const msg =  await forgetPassword(values);
+    const msg = await forgetPassword(values);
     var res_msg = document.getElementById("msg");
     res_msg.innerHTML = msg;
-  }
-  
+  };
+
   return (
     <div className={logstyle.App}>
       <div className={logstyle.appForm}>
@@ -28,8 +28,11 @@ function ForgotPassword() {
         <h3 className={logstyle.h33}>
           No worries! Enter your e-mail and we will send you a reset.
         </h3>
-        <div id="msg"></div>
-        <form className={logstyle.formFields}>
+        <div id="msg"></div> {/*div element prints the server's responses*/}
+        <form
+          className={logstyle.formFields}
+          onSubmit={() => onforgetPassword()}
+        >
           <div className={logstyle.formField}>
             <label className={logstyle.formFieldLabel} htmlFor="email">
               E-Mail Address
@@ -48,8 +51,11 @@ function ForgotPassword() {
           </div>
           {/*<button className={logstyle.formFieldButton}>Submit</button>{" "}*/}
 
-          <div className={logstyle.styleButton} onClick={() => onforgetPassword()}>
-              <GlassButton title="Submit"/>
+          <div
+            className={logstyle.styleButton}
+            onClick={() => onforgetPassword()}
+          >
+            <GlassButton title="Submit" />
           </div>
         </form>
         {/* </div> */}

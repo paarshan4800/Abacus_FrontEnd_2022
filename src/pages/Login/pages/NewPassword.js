@@ -1,25 +1,24 @@
 import React, { useState, Component } from "react";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton";
-import {resetPassword} from "../../../api/auth";
+import { resetPassword } from "../../../api/auth";
 
 function NewPassword() {
   const [pass, setPass] = useState("");
   const [confirmPass, setConPass] = useState("");
 
-    const onPassword = async() => {
-      var values = {
-        pass,
-        confirmPass
-      };
+  const onPassword = async () => {
+    var values = {
+      pass,
+      confirmPass,
+    };
 
-      const token = window.location.pathname.split('/')[2];
-      const msg = await resetPassword(token,values);
-      var res_msg = document.getElementById("alert_msg");
-      res_msg.innerHTML = msg;
+    const token = window.location.pathname.split("/")[2];
+    const msg = await resetPassword(token, values);
+    var res_msg = document.getElementById("alert_msg");
+    res_msg.innerHTML = msg;
     console.log(values);
-    }
-    
+  };
   return (
     <div className={logstyle.App}>
       <div className={logstyle.appForm}>

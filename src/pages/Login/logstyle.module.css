@@ -35,15 +35,17 @@
 .appForm {
   width: 100%;
   height: 65vh;
-  /* height: 100%; */
   padding: 25px 40px;
-  overflow: auto;
   text-align: center;
-  /*background: rgb(2,5,4);
-  background: linear-gradient(148deg, rgba(2,5,4,1) 1%, rgba(22,97,59,1) 10%, rgba(1,1,1,1) 20%, rgba(56,239,125,1) 40%, rgba(30,127,67,1) 54%, rgba(24,101,53,1) 58%, rgba(54,232,121,1) 72%, rgba(28,118,62,1) 81%, rgba(1,1,1,1) 92%, rgba(12,49,26,1) 100%, rgba(17,153,142,1) 100%);*/
-  /* background-image: url("./pages/assets/images/bluegreen.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: hidden;
+}
+.formCenter{
+  height: 100%;
+  margin-right: -5vw;
+  padding-right: 50px;
+  overflow-y: scroll;
 }
 @media screen and (max-width: 600px) {
   div.appForm {
