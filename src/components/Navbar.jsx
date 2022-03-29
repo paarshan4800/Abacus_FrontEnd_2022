@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useContext} from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from 'react-router-dom'
 import logo from "./CSEA.png";
 import styles from './Navbar.module.css'
+import { AuthApi } from '../App'
+
 
 import { StylesContext } from "@material-ui/styles";
 
@@ -26,8 +28,10 @@ const LinksList = [{
   link: "/signup"
 }]
 const Navbar = () => {
+  const Auth = useContext(AuthApi)
   const [toggleMenu, setToggleMenu] = React.useState(false);
   const [navbar, setNavbar] = React.useState(false);
+  const [currentPage , setCurrentPage] = React.useState('/')
 
   const changeBackground = () => { 
     if (window.scrollY >= 80) {
@@ -50,6 +54,19 @@ const Navbar = () => {
   window.addEventListener('scroll', changeBackground);
   window.addEventListener('resize', widthChange);
 
+const changeButton = ()=>{
+  
+    return(<>
+    <li className="bg-[#11998e] py-2 px-4 mx-2 mt-1 rounded-full cursor-pointer hover:bg-[#2546bd]">
+        <Link to={`/dashboard`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Dashboard</Link>
+        </li>
+      <li className="bg-[#890F0D] py-2 px-3 mx-4 mt-1 rounded-full cursor-pointer hover:bg-[#2546bd]">
+      <Link to={`/logout`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Logout</Link>
+      </li>
+
+    
+  </>)
+  }
 
   return (
     <nav className={navbar ? `w-full flex md:justify-center justify-between items-center fixed gradient-bg-welcome z-10 text-2xl font-sans` : `font-sans w-full flex md:justify-center justify-between items-center fixed z-10 text-2xl nav`}>
@@ -63,13 +80,21 @@ const Navbar = () => {
 
           // <NavBarItem key={item + index} title={item.toUpperCase()} className={styles.nav} link={`/${item}`}/>
 
-          <li className={`hover:bg-[#8A2BD6] py-2 px-7 mx-4 hover:rounded-full hover:cursor-pointer  ${styles.nav}`}
+          <li className={`hover:bg-[#8A2BD6] py-2 px-3 mx-4 hover:rounded-full hover:cursor-pointer  ${styles.nav}`}
             
           ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >{item}</Link></li>
         )}
-        <li className={`bg-[#11998e] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[blue]  ${styles.nav}`}>
-        <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >Login</Link>
-        </li>
+         {Auth ?
+
+          
+            ( 
+            changeButton()
+            ) 
+            :
+            (  <li className="bg-[#11998e] py-2 px-7 mx-2 mt-1 rounded-full cursor-pointer hover:bg-[#2546bd]">
+            <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Login</Link>
+            </li>)
+            }
       </ul>
       <div className="flex relative">
         {!toggleMenu && (
@@ -96,9 +121,26 @@ const Navbar = () => {
                
                 ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >{item}</Link></li>
             )}
-            <li className="bg-[#2952e3] py-2 px-7 mx-4 mt-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-            <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Login</Link>
+            {Auth ? 
+             
+              ( 
+            <>
+            <li className="bg-[#00008b] py-2 px-7 mx-4 mt-2 rounded-full cursor-pointer hover:bg-[#2546bd]">
+            <Link to={`/dashboard`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Dashboard</Link>
             </li>
+
+            <li className="bg-[#890F0D] py-2 px-7 mx-4 mt-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+            <Link to={`/logout`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Logout</Link>
+            </li>
+            </>
+            ) 
+            
+            :
+            (  <li className="bg-[#2952e3] py-2 px-7 mx-4 mt-2 rounded-full cursor-pointer hover:bg-[#2546bd]">
+            <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Login</Link>
+            </li>)
+            }
+           
           </ul>
         )}
       </div>

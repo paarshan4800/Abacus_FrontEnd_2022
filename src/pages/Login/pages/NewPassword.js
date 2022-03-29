@@ -59,6 +59,9 @@ function NewPassword() {
                 setConPass(e.currentTarget.value);
               }}
               value={confirmPass}
+              // onChange={(e) => {
+              //   setConfirmPass(e.currentTarget.value);
+              // }
             />
           </div>
           <div className={logstyle.styleButton} onClick={() => onPassword()}>

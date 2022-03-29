@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
 import cx from 'classnames'
-import {Footer} from '../../components/'
+// import {Footer} from '../../components/'
 
 
 //NeonButton
@@ -92,7 +92,7 @@ const Homepage = (props)=>{
 
                 <div className={`${styles.one_count}`}>
                 <div className={`${styles.countup}`}>
-                    <CountUp  className={`${styles.font}`}start={0} end={7} redraw={true} suffix=" +">
+                    <CountUp  className={`${styles.font}`}start={0} end={10} redraw={true} suffix=" +">
                       {({ countUpRef, start }) => (
                         <VisibilitySensor onChange={start} delayedCall>
                           <span ref={countUpRef} />
@@ -100,7 +100,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Events" fontSize="15px" />
+                   <Heading1 text="Events" fontSize="17px" />
                 </div>
                
             <div className={`${styles.one_count}`}>
@@ -113,7 +113,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Workshops" fontSize="15px" />
+                   <Heading1 text="Workshops" fontSize="17px" />
                 </div>
 
                 </div>
@@ -130,7 +130,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Cash Prize" fontSize="15px" />
+                   <Heading1 text="Cash Prize" fontSize="17px" />
 
                 </div>
                <div className={`${styles.one_count}`}>
@@ -143,7 +143,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Hackathon" fontSize="15px" />
+                   <Heading1 text="Hackathon" fontSize="17px" />
                </div>
                    
                 </div>
@@ -307,7 +307,7 @@ const Homepage = (props)=>{
 
   
 </main>
-<Footer/>
+{/* <Footer/> */}
       </>
     );
   }

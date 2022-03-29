@@ -45,8 +45,8 @@ export const afterGoogleSignIn = () => {
     window.alert(msg);
   }
   if (searchparams.has("token")) {
-    setToken(searchparams.get("token"));
-    localStorage.setItem("apiToken", token);
+    // setToken(searchparams.get("token"));
+    // localStorage.setItem("apiToken", token);
     // console.log("token is ", searchparams.get("token"));
     console.log("token is : ", localStorage.getItem("apiToken"));
   }

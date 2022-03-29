@@ -16,8 +16,21 @@
 @media only screen and (max-width: 960px) {
     .nav{
         font-family: Future;
-        font-size: 15px;
+        font-size: 13px;
         padding-top: 10px;
+       
+    }
+
+  
+  }
+
+
+
+  @media only screen and (max-width: 766px) {
+    .nav{
+        font-family: Future;
+        font-size: 22px;
+        padding-top: 15px;
        
     }
 

@@ -11,6 +11,7 @@ import { Navbar } from "./components";
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 import background from "./images/bgg.jpg";
+import Footer from "./components/Footer";
 
 const rootReducer = combineReducers({
   Reducer: Reducer,
@@ -65,15 +66,20 @@ function App() {
                 <NewLoadWorkshop.Provider value={newloadworkshop}>
                   <SetNewLoadWorkshop.Provider value={setnewloadworkshop}>
                     <BrowserRouter>
-                    <Navbar />
-                      <div style={{ paddingTop: "80px", backgroundImage: `url(${background})`, backgroundSize: "contain", backgroundRepeat: 1 }}>
+                      <Navbar />
+                      <div
+                        style={{
+                          paddingTop: "90px",
+                          backgroundImage: `url(${background})`,
+                          backgroundSize: "contain",
+                          backgroundRepeat: 1,
+                        }}
+                      >
                         <AppRoutes />
-                      </div> 
-                      {/* <div className="gradient-bg-welcome">
-                                           
-
+                      </div>
+                      <div>
                         <Footer />
-                      </div> */}
+                      </div>
                     </BrowserRouter>
                   </SetNewLoadWorkshop.Provider>
                 </NewLoadWorkshop.Provider>
