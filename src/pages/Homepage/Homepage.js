@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
 import cx from 'classnames'
-import {Footer} from '../../components/'
+// import {Footer} from '../../components/'
 
 
 //NeonButton
@@ -25,7 +25,7 @@ const Homepage = (props)=>{
   
       
   <div className={`${styles.landing_heading} `} >
-                <h1 className={`${styles.head}`}  ><span className={styles.letter_a}>A</span>BACUS   '22</h1>
+                <h1 className={`${styles.head}`} > ABACUS   '22</h1>
                 <h2 className={`${styles.date}`}>April 28, 29 and 30</h2>
             </div>
 
@@ -75,7 +75,7 @@ const Homepage = (props)=>{
             <div className={`${styles.left_content}`}>
               <div className={`${styles.logo}`}>
                 <img
-                  src={`${process.env.PUBLIC_URL}/images/about-us/abacus logo sponsors page.png`}
+                  src={`${process.env.PUBLIC_URL}/images/about-us/ab.png`}
                   alt=""
                   style={{
                     width: "330px",
@@ -92,7 +92,7 @@ const Homepage = (props)=>{
 
                 <div className={`${styles.one_count}`}>
                 <div className={`${styles.countup}`}>
-                    <CountUp start={0} end={7} redraw={true} suffix=" +">
+                    <CountUp  className={`${styles.font}`}start={0} end={10} redraw={true} suffix=" +">
                       {({ countUpRef, start }) => (
                         <VisibilitySensor onChange={start} delayedCall>
                           <span ref={countUpRef} />
@@ -100,7 +100,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Events" fontSize="20px" />
+                   <Heading1 text="Events" fontSize="17px" />
                 </div>
                
             <div className={`${styles.one_count}`}>
@@ -113,7 +113,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Workshops" fontSize="20px" />
+                   <Heading1 text="Workshops" fontSize="17px" />
                 </div>
 
                 </div>
@@ -130,7 +130,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Cash Prize" fontSize="20px" />
+                   <Heading1 text="Cash Prize" fontSize="17px" />
 
                 </div>
                <div className={`${styles.one_count}`}>
@@ -143,7 +143,7 @@ const Homepage = (props)=>{
                       )}
                     </CountUp>
                   </div>{" "}
-                   <Heading1 text="Hackathon" fontSize="20px" />
+                   <Heading1 text="Hackathon" fontSize="17px" />
                </div>
                    
                 </div>
@@ -211,17 +211,17 @@ const Homepage = (props)=>{
   <div>
        
           <div className={`${styles.blur}`}>
-            <div className="text-center ">
-              <Heading text="Sponsors" fontSize="40px" />
+            <div className="text-center mb-20">
+              <Heading text="Sponsors" fontSize="3rem"  />
               
              
             </div>
             <div className="container-fluid mx-auto d-flex justify-content-center align-self-center mt-0">
               <div className="m-auto row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
                 <div className="col text-center">
-                  <Heading text="Title Sponsors" fontSize="30px" />
+                  <Heading text="Title Sponsors" fontSize="1.4rem" />
                   <div className="row row-cols-lg-2 d-flex justify-content-center align-self-center ">
-                    <div className="col text-center">
+                    <div className="col text-center pb-4">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/motorq.svg`}
                         className={`${styles.img2}`}
@@ -229,7 +229,7 @@ const Homepage = (props)=>{
                       />
                     </div>
 
-                    <div className="col text-center pb-4">
+                    <div className="col text-center pb-5">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/visa_modified.svg`}
                         className={`${styles.img2}`}
@@ -241,7 +241,7 @@ const Homepage = (props)=>{
 
                 <div className="m-auto row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
                   <div className="col text-center ">
-                    <Heading text="Merchandise Sponsors" fontSize="28px" />
+                    <Heading text="Merchandise Sponsors" fontSize="1.4rem" />
                     <div className="row  d-flex justify-content-center align-self-center">
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
@@ -253,7 +253,7 @@ const Homepage = (props)=>{
                     </div>
                   </div>
                   <div className="col text-center ">
-                    <Heading text="Workshops Sponsors" fontSize="28px" />
+                    <Heading text="Workshops Sponsors" fontSize="1.4rem" />
                    
                     <div className="row d-flex justify-content-center align-self-center">
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
@@ -266,7 +266,7 @@ const Homepage = (props)=>{
                     </div>
                   </div>
                   <div className="col text-center ">
-                    <Heading text="Platform Sponsors" fontSize="28px" />
+                    <Heading text="Platform Sponsors" fontSize="1.4rem" />
                     <div className="row  d-flex justify-content-center align-self-center">
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
@@ -278,7 +278,7 @@ const Homepage = (props)=>{
                     </div>
                   </div>
                   <div className="col text-center">
-                    <Heading text="Internship Sponsors" fontSize="28px" />
+                    <Heading text="Internship Sponsors" fontSize="1.4rem" />
                     <div className="row row-cols-lg-2 d-flex justify-content-center align-self-center  pb-5 pt-4">
                       <div className="col text-center pt-5 mb-5">
                         <img
@@ -307,7 +307,7 @@ const Homepage = (props)=>{
 
   
 </main>
-<Footer/>
+{/* <Footer/> */}
       </>
     );
   }

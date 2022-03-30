@@ -5,8 +5,8 @@ import Button from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 //import TechEventsList from "./TechEventsList";
 
-import tech from "./../../images/tech.jpeg";
-import nontech from "./../../images/nontech.jpeg";
+import tech from "./../../images/tech.png";
+import nontech from "./../../images/nontech.png";
 import hack from "./../../images/hack.jpeg";
 import styles from "./WorkshopsList.module.css";
 import { useHistory } from "react-router-dom";

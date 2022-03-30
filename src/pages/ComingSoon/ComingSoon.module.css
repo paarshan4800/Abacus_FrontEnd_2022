@@ -1,40 +1,38 @@
 ._404_wrapper {
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bg{
-  background-color:#060c21;
-  background-image:url("../../images/bgg.jpg");
-  background-repeat:no-repeat;
-  background-size:cover
+.bg {
+  background-color: #060c21;
+  background-image: url("../../images/bgg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.bg1{
-  background-color:#060c21;
-  background-image:url("../../images/bgg.jpg");
-  background-repeat:no-repeat;
-  background-size:cover
+.bg1 {
+  background-color: #060c21;
+  background-image: url("../../images/bgg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-
-@media only screen and (max-width:1025px){
-  .bg{
-      background-color:#060c21;
-      background-image:url("../../images/bgg.jpg");
-      background-repeat:no-repeat;
-      background-size:cover
+@media only screen and (max-width: 1025px) {
+  .bg {
+    background-color: #060c21;
+    background-image: url("../../images/bgg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  .bg1{
-      background-color:#060c21;
-      background-image:url("../../images/bgg.jpg");
-      background-repeat:no-repeat;
-      background-size:cover
+  .bg1 {
+    background-color: #060c21;
+    background-image: url("../../images/bgg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-
 }
 
 ._404 {
@@ -48,17 +46,80 @@
 
 @media only screen and (max-width: 1100px) {
   ._404 {
-      flex-direction: column;
-      min-height: max-content;
+    flex-direction: column;
+    min-height: max-content;
   }
-
-
-
 }
 
-@media only screen and (max-width: 578px) {
+@media only screen and (max-width: 650px) {
   ._404 {
-      margin-top: 25px;
+    margin-top: 25px;
+  }
+
+  ._404_text {
+    letter-spacing: 10px;
+    /* font-family: Iceland; */
+    text-transform: uppercase;
+    font-size: 90px !important;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
+      -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+      0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+  }
+
+  ._404_text_addi p {
+    color: white;
+    font-size: 15px !important;
+    /* font-family: Iceland; */
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  ._404 {
+    margin-top: 0px;
+  }
+
+  ._404_text {
+    letter-spacing: 10px;
+    /* font-family: Iceland; */
+    text-transform: uppercase;
+    font-size: 70px !important;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
+      -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+      0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+  }
+
+  ._404_text_addi p {
+    color: white;
+    font-size: 15px !important;
+    /* font-family: Iceland; */
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  ._404 {
+    margin-top: 0px;
+  }
+
+  ._404_text {
+    letter-spacing: 10px;
+    /* font-family: Iceland; */
+    text-transform: uppercase;
+    font-size: 50px !important;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
+      -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+      0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+  }
+
+  ._404_text_addi p {
+    color: white;
+    font-size: 15px !important;
+    /* font-family: Iceland; */
+    margin-bottom: 5px;
   }
 }
 
@@ -73,17 +134,15 @@
 }
 
 ._404_text {
-
   letter-spacing: 10px;
-  font-family: Iceland;
+  /* font-family: Iceland; */
   text-transform: uppercase;
   font-size: 125px;
   color: #ffe6ff;
   text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
-  -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
-  0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+    -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+    0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
 }
-
 
 ._404_text_addi p {
   color: white;
@@ -101,165 +160,161 @@
 }
 
 .slowFlicker2 {
-    animation: slowFlickerAnime2 2s infinite;
-  }
-  
+  animation: slowFlickerAnime2 2s infinite;
+}
 
 @keyframes flickerAnime {
   from {
-      opacity: 1;
+    opacity: 1;
   }
 
   4% {
-      opacity: 0.9;
+    opacity: 0.9;
   }
 
   6% {
-      opacity: 0.85;
+    opacity: 0.85;
   }
 
   8% {
-      opacity: 0.95;
+    opacity: 0.95;
   }
 
   10% {
-      opacity: 0.9;
+    opacity: 0.9;
   }
 
   11% {
-      opacity: 0.922;
+    opacity: 0.922;
   }
 
   12% {
-      opacity: 0.9;
+    opacity: 0.9;
   }
 
   14% {
-      opacity: 0.95;
+    opacity: 0.95;
   }
 
   16% {
-      opacity: 0.98;
+    opacity: 0.98;
   }
 
   17% {
-      opacity: 0.9;
+    opacity: 0.9;
   }
 
   19% {
-      opacity: 0.93;
+    opacity: 0.93;
   }
 
   20% {
-      opacity: 0.99;
+    opacity: 0.99;
   }
 
   24% {
-      opacity: 1;
+    opacity: 1;
   }
 
   26% {
-      opacity: 0.94;
+    opacity: 0.94;
   }
 
   28% {
-      opacity: 0.98;
+    opacity: 0.98;
   }
 
   37% {
-      opacity: 0.93;
+    opacity: 0.93;
   }
 
   38% {
-      opacity: 0.5;
+    opacity: 0.5;
   }
 
   39% {
-      opacity: 0.96;
+    opacity: 0.96;
   }
 
   42% {
-      opacity: 1;
+    opacity: 1;
   }
 
   44% {
-      opacity: 0.97;
+    opacity: 0.97;
   }
 
   46% {
-      opacity: 0.94;
+    opacity: 0.94;
   }
 
   56% {
-      opacity: 0.9;
+    opacity: 0.9;
   }
 
   58% {
-      opacity: 0.9;
+    opacity: 0.9;
   }
 
   60% {
-      opacity: 0.99;
+    opacity: 0.99;
   }
 
   68% {
-      opacity: 1;
+    opacity: 1;
   }
 
   70% {
-      opacity: 0.9;
+    opacity: 0.9;
   }
 
   72% {
-      opacity: 0.95;
+    opacity: 0.95;
   }
 
   93% {
-      opacity: 0.93;
+    opacity: 0.93;
   }
 
   95% {
-      opacity: 0.95;
+    opacity: 0.95;
   }
 
   97% {
-      opacity: 0.93;
+    opacity: 0.93;
   }
 
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
-
 @keyframes slowFlickerAnime {
-
   0%,
   100% {
-      color: #186b60;
-      text-shadow: none;
+    color: #186b60;
+    text-shadow: none;
   }
 
   50% {
-      color: #ffe6ff;
-      text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
-          -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
-          0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
+      -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+      0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
   }
 }
 
 @keyframes slowFlickerAnime2 {
-
-    50%,
-    100% {
-        color: #186b60;
-        text-shadow: none;
-    }
-  
-    0% {
-        color: #ffe6ff;
-        text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
-            -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
-            0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
-    }
+  50%,
+  100% {
+    color: #186b60;
+    text-shadow: none;
   }
+
+  0% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #88f1ff, 0 0 1.5rem #65faff,
+      -0.2rem 0.1rem 1rem #65ffb7, 0.2rem 0.1rem 1rem #65ffbf,
+      0 -0.5rem 2rem #24ff99, 0 0.5rem 3rem #24ffa4;
+  }
+}

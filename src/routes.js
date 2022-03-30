@@ -14,6 +14,7 @@ import Hackathon from "./pages/Events/Hackathon";
 import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 import LoginRegister from "./pages/Login/LoginRegister";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import HackathonRegister from "./pages/Events/HackathonRegister";
 import { Aboutus } from "./components/";
 import SignInForm from "./pages/Login/pages/SignInForm";
 import SignUp from "./pages/Login/pages/SignUp";
@@ -46,7 +47,7 @@ const AppRoutes = () => {
       </Route> */}
       <Route path="/" exact component={Homepage} />
       <Route path="/Home" exact component={Homepage} />
-      <Route path="/about-us" exact component={Aboutus} />
+      <Route path="/aboutus" exact component={Aboutus} />
       <Route path="/events" exact component={EventsHome} />
       <Route path="/events/hackathon" exact component={Hackathon} />
       <Route path="/events/tech-events" exact component={TechEventsList} />
@@ -59,13 +60,18 @@ const AppRoutes = () => {
       <Route path="/workshops" exact component={WorkshopsList} />
       <Route path="/workshops/:title" exact component={WorkshopDetails} />
       <Route path="/dashboard" exact component={Dashboard} />
-      <Route path="/404" exact component={PageNotFound} />
       <Route path="/test/:type/:title" exact component={Test} />
-      <Route path="/Login" exact component={LoginRegister} />
+      <Route path="/login" exact component={LoginRegister} />
       <Route path="/signUp" exact component={SignUp} />
       <Route path="/ForgotPassword" exact component={ForgotPassword} />
-      <Route path="/NewPassword" exact component={NewPassword} />
+      <Route
+        path="/resetPassword/:resetPassword"
+        exact
+        component={NewPassword}
+      />
       <Route path="/ComingSoon" exact component={ComingSoon} />
+      <Route path="/hackathon-register" exact component={HackathonRegister} />
+      <Route component={PageNotFound} />
       {/* <Route path="/Login" exact component={LoginRegister} /> */}
 
       {/*

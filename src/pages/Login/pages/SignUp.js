@@ -6,7 +6,7 @@ import years from "./assets/years";
 import colleges from "./assets/colleges";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton.js";
-import axios from "axios";
+import {signUp} from "../../../api/auth";
 import GoogleButton from "react-google-button";
 import { googleSignIn } from "../../../api/auth";
 import { BrowserRouter, Route, Switch, Redirect, NavLink } from "react-router-dom";
@@ -77,9 +77,9 @@ function SignUp() {
 
   const checkWhichPage = () => {
     const url = new URL(window.location.href);
-    console.log(url);
+    // console.log(url);
     const searchparams = new URLSearchParams(url.search);
-    console.log(searchparams);
+    // console.log(searchparams);
     // console.log("hello");
     if (searchparams.has("email")) {
       //
@@ -128,38 +128,13 @@ function SignUp() {
       ? BASE_URL + "user/signup/googleSignUp"
       : BASE_URL + "user/signup/newUser";
 
-    axios
-      .post(signupURL, values)
-      .then((response) => {
-        if (response.status === 201 || response.status === 200) {
-          alert(response.data.message);
-          // setMessage(response.data.message);
-          window.location = "http://localhost:3000/Login#/sign-in";
-        }
-        console.log(response);
-      })
-      .catch((err) => {
-        if (err.response.data.code === 11000) {
-          alert(
-            err.response.data.keyValue.email +
-              "is already registered. Go to login"
-          );
-          setTimeout(() => {
-            window.location = "http://localhost:3000/Login#/sign-in";
-          }, 300);
-        } else {
-          console.log(err.response.data);
-        }
-      });
-
-    console.log(values);
+    signUp(signupURL, values);
     }
     else
     {
       console.log(validationError);
     }
-  };
-  console.log(year);
+  }
   return (
     <div className={logstyle.appForm}>
     <div className={logstyle.formCenter}>
@@ -188,7 +163,7 @@ function SignUp() {
             type="text"
             id="name"
             className={logstyle.formFieldInput}
-            placeholder="Enter your full name"
+            placeholder="Full Name"
             name="name"
             value={name}
             onChange={(e) => {
@@ -255,7 +230,7 @@ function SignUp() {
             type="email"
             id="email"
             className={logstyle.formFieldInput}
-            placeholder="Enter your email"
+            placeholder="Email"
             name="email"
             value={email}
             onChange={(e) => setEmail(e.currentTarget.value)}
@@ -267,7 +242,7 @@ function SignUp() {
             type="text"
             id="phone"
             className={logstyle.formFieldInput}
-            placeholder="Enter your Phone Number"
+            placeholder="Phone Number"
             name="phone"
             value={phone}
             onChange={(e) => setPhone(e.currentTarget.value)}
@@ -278,7 +253,7 @@ function SignUp() {
             type="password"
             id="password"
             className={logstyle.formFieldInput}
-            placeholder="Enter your password"
+            placeholder="Password"
             name="password"
             value={password}
             onChange={(e) => setPassword(e.currentTarget.value)}
@@ -290,7 +265,7 @@ function SignUp() {
             type="password"
             id="conpass"
             className={logstyle.formFieldInput}
-            placeholder="Confirm your password"
+            placeholder="Confirm password"
             name="conpass"
             value={conpass}
             onChange={(e) => setConpass(e.currentTarget.value)}

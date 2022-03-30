@@ -3,12 +3,9 @@ import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import TechEventsList from "./TechEventsList";
 
-// import tech from "./../../images/tech.jpeg";
-import tech from "./../../images/TechEvents/web-design.png";
-// import nontech from "./../../images/nontech.jpeg";
-import nontech from "./../../images/NonTechEvents/gamindrome.png";
-// import hack from "./../../images/hack.jpeg";
-import hack from "./../../images/TechEvents/code-for-crown.png";
+import tech from "./../../images/tech.png";
+import nontech from "./../../images/nontech.png";
+import hack from "./../../images/hack.png";
 import styles from "./EventsHome.module.css";
 import eventpassimg from "../../images/eventpassimg.png";
 

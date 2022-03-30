@@ -2,10 +2,12 @@ import React from "react";
 
 
 import styles from './about.module.css'
-
-
+import ceg from './ceg.png'
+import csea from './CSEA.png'
+import abacus from './ab.png'
 
 const Aboutus = () => {
+  let img;
   const INFO = [
     {
       title: "Abacus",
@@ -16,7 +18,7 @@ const Aboutus = () => {
       title: "CSEA",
       content:
         "The Computer Science and Engineering Association, CEG is a team of students and faculty members. We perform multiple activities throughout the year, the most notable ones being SYNC (intra college symposium), periodic coding contests to encourage students to code more and weekly classes for juniors for subjects they find difficult, placement assistance and competitive coding. CSEA is a forum of dedicated members who want to inculcate interest and good programming practices amongst the students.",
-      image: "ctf_full.png",
+      image: "csea_white.png",
     },
   
     {
@@ -28,12 +30,21 @@ const Aboutus = () => {
   ];
     return (
       <div className={`${styles.about_root}`}>
-    
       <div className={`${styles.wrapper}`}>
       <div name="main" className={`${styles.content_wrapper}`}>
       
       <h1 className={`${styles.heading}`}>About Us</h1>
           {INFO.map((item, index) => {
+            if(index == 0){
+              img = abacus;
+            }
+            else if( index == 1){
+              img = csea;
+            }
+            else{
+              img = ceg;
+            }
+
             return (
               <div
                 
@@ -46,6 +57,9 @@ const Aboutus = () => {
                 >
                   <img
                     alt={`${item.title}`}
+                    src={img}
+                    width="275px"
+                    height="275px"
                   />
                 </div>
                 <div className={`${styles.text_box}`}>

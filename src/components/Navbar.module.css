@@ -2,9 +2,55 @@
   
 @font-face {
     font-family: Future;
-    src: url(./Landing/Vist.otf);
+    src: url(./Aquire.otf);
+    
+}
+
+@font-face {
+    font-family: BOLD;
+    src: url(./Aquire-Bold.otf);
+}
+
+.mob{
+    padding-top: 40px;
+    padding-left: 20px;
+    font-family: BOLD;
+}
+
+.font{
+    text-align: justify;
+    font-family: BOLD;
+    font-size: 25px;
+    padding:10px;
+    font-weight: bolder;
 }
 .nav{
     font-family: Future;
-    font-size: 25px;
+    font-size: 21px;
 }
+
+.nav_mobile{
+    background-color: #11998e;
+}
+
+@media only screen and (max-width: 960px) {
+    .nav{
+        font-family: Future;
+        font-size: 13px;
+        padding-top: 10px;
+       
+    }
+
+  
+  }
+
+  @media only screen and (max-width: 766px) {
+    .nav{
+        font-family: Future;
+        font-size: 22px;
+        padding-top: 15px;
+       
+    }
+
+  
+  }
