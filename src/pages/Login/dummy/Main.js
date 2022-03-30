@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 import React, { useState, useEffect, Component } from "react";
 import { BrowserRouter, Route, Switch, Redirect, NavLink } from "react-router-dom";
 import logstyle from "./../logstyle.module.css";
+import "./../logstyle.module.css";
 import SignUp from "../pages/SignUp";
 import SignInForm from "../pages/SignInForm";
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import { Left } from "react-bootstrap/lib/Media";
-
+import GlassButton from "../../../components/GlassButton/GlassButton.js";
 
 // const FlippyStyle = {
 //     width: width={flipPageWidth},
@@ -121,8 +122,9 @@ class Main extends React.Component{
           flexDirection: 'column'
           }}
           >
-        <input type="button" value="To SignUp" style={{fontFamily: 'sans-serif',
-    fontSize: '3vh'}} onClick={() => this.flippyHorizontal.toggle()}></input>
+        <div className={logstyle.styleButton}>
+            <GlassButton title="To SignUp" onClick={() => this.flippyHorizontal.toggle()} />
+        </div>
         <SignInForm />
       </FrontSide>
       <BackSide
@@ -133,8 +135,9 @@ class Main extends React.Component{
           justifyContent: 'center',
           flexDirection: 'column'
         }}>
-        <input type="button" value="To Login" style={{fontFamily: 'sans-serif',
-    fontSize: '3vh'}} onClick={() => this.flippyHorizontal.toggle()}></input>
+        <div className={logstyle.styleButton}>
+            <GlassButton title="To Login" onClick={() => this.flippyHorizontal.toggle()} />
+        </div>
         <SignUp />
       </BackSide>
           </Flippy>

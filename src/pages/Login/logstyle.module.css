@@ -1,8 +1,17 @@
 .LoginRegisterBg {
   /* background: linear-gradient(to right, #38ef7d, #11998e) !important; */
   height: 100vh;
-  width: 100vw;
+  width: 100vw
+  
+  ;
 }
+
+*{
+  font-family: "Audiowide", sans-serif;
+
+}
+
+
 .App {
   height: 100vh;
   width: 100vw;
@@ -14,6 +23,7 @@
   background-repeat: repeat;
   background-size: cover;
   background-attachment: fixed;
+  font-family: "Audiowide", sans-serif;
 }
 
 @media screen and (max-width: 600px) {
@@ -26,13 +36,16 @@
   width: 100%;
   height: 65vh;
   padding: 25px 40px;
-  overflow: auto;
   text-align: center;
-  /*background: rgb(2,5,4);
-  background: linear-gradient(148deg, rgba(2,5,4,1) 1%, rgba(22,97,59,1) 10%, rgba(1,1,1,1) 20%, rgba(56,239,125,1) 40%, rgba(30,127,67,1) 54%, rgba(24,101,53,1) 58%, rgba(54,232,121,1) 72%, rgba(28,118,62,1) 81%, rgba(1,1,1,1) 92%, rgba(12,49,26,1) 100%, rgba(17,153,142,1) 100%);*/
-  /* background-image: url("./pages/assets/images/bluegreen.jpg"); */
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: hidden;
+}
+.formCenter{
+  height: 100%;
+  margin-right: -5vw;
+  padding-right: 50px;
+  overflow-y: scroll;
 }
 @media screen and (max-width: 600px) {
   div.appForm {
@@ -77,7 +90,7 @@
   border-bottom-right-radius: 25px;
 }
 
-div::-webkit-scrollbar-track {
+/* div::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: black;
@@ -88,11 +101,12 @@ div::-webkit-scrollbar {
   background-color: black;
 }
 
-div::-webkit-scrollbar-thumb {
-  /* border-radius: 10px; */
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+div::-webkit-scrollbar-thumb { */
+/* border-radius: 10px; */
+/* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #15ff3c;
-}
+} */
+
 /* @media all and (max-width: 700px) {
   div {
     overflow-y: hidden;
@@ -173,7 +187,7 @@ div::-webkit-scrollbar-thumb {
   color: #707c8b;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.7em;
+  font-size: 1.5em;
   margin: 0 10px;
   padding-bottom: 5px;
 }
@@ -188,7 +202,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .formField {
-  margin-bottom: 40px;
+  margin-bottom: 4vh;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -208,22 +222,19 @@ div::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   margin-bottom: 3vh;
-  margin-top: 7vh;
+  /* margin-top: 7vh; */
 }
 
 .formFieldLabel {
   display: block;
   text-transform: uppercase;
-  font-size: 0.8em;
+  font-size: 1em;
   color: white;
 }
 .formFieldInput {
-  width: 50%;
+  width: 40vw;
   color: black;
   outline: none;
-  /*border-bottom: 1px solid #445366;
-    background-color: transparent;
-    border: none;*/
   font-size: 1em;
   font-weight: 400;
   /* font-family: Roboto; */
@@ -233,12 +244,9 @@ div::-webkit-scrollbar-thumb {
 }
 
 .formFieldInputSI {
-  width: 60%;
+  width: 40vw;
   color: black;
   outline: none;
-  /*border-bottom: 1px solid #445366;
-    background-color: transparent;
-    border: none;*/
   font-size: 1em;
   font-weight: 400;
   /* font-family: Roboto; */
@@ -254,6 +262,9 @@ div::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 600px) {
   .formFieldInput {
+    width: 100%;
+  }
+  .drop {
     width: 100%;
   }
   .formFieldInputSI {
@@ -315,15 +326,21 @@ div::-webkit-scrollbar-thumb {
 }
 
 .drop {
-  width: 60%;
-  /* color: #35858b; */
+  width: 40vw;
   color: black;
-  padding: 0.2vh;
   justify-content: center;
   display: block;
   margin: 0 auto;
 }
-
+@media screen and (max-width: 600px) {
+  .drop {
+    width: 68vw;
+    color: black;
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
+  }
+}
 .typed-out {
   font-size: 10vh;
   color: papayawhip;
@@ -369,8 +386,8 @@ div::-webkit-scrollbar-thumb {
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: Roboto;
-  font-size: 5em;
+  /* font-family: Roboto; */
+  font-size: 4em;
   color: white;
 }
 

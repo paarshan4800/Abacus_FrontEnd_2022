@@ -14,6 +14,7 @@ import Hackathon from "./pages/Events/Hackathon";
 import WorkshopDetails from "./pages/Workshops/WorkshopDetails";
 import LoginRegister from "./pages/Login/LoginRegister";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import HackathonRegister from "./pages/Events/HackathonRegister";
 import { Aboutus } from "./components/";
 import SignInForm from "./pages/Login/pages/SignInForm";
 import SignUp from "./pages/Login/pages/SignUp";
@@ -21,6 +22,7 @@ import ForgotPassword from "./pages/Login/pages/ForgotPassword";
 import NewPassword from "./pages/Login/pages/NewPassword";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
 import Test from "./pages/Test/Test";
+import VerifyEmail from "./pages/Login/pages/VerifyEmail";
 
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
 // import Navbar from "./components/Navbar/Navbar";
@@ -61,10 +63,16 @@ const AppRoutes = () => {
       <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/test/:type/:title" exact component={Test} />
       <Route path="/login" exact component={LoginRegister} />
+      <Route path="/Login/VerifyEmail" exact component={VerifyEmail} />
       <Route path="/signUp" exact component={SignUp} />
       <Route path="/ForgotPassword" exact component={ForgotPassword} />
-      <Route path="/NewPassword" exact component={NewPassword} />
+      <Route
+        path="/resetPassword/:resetPassword"
+        exact
+        component={NewPassword}
+      />
       <Route path="/ComingSoon" exact component={ComingSoon} />
+      <Route path="/hackathon-register" exact component={HackathonRegister} />
       <Route component={PageNotFound} />
       {/* <Route path="/Login" exact component={LoginRegister} /> */}
 

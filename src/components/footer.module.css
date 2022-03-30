@@ -1,0 +1,32 @@
+.Links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.Links1 {
+  margin-right: 2vw;
+}
+
+.contact {
+  color: grey;
+  font-size: 17px;
+}
+.contact:hover {
+  color: whitesmoke;
+  cursor: pointer;
+  transform: scale(1.5);
+  text-decoration: none;
+}
+
+.num{
+  font-size: 14px;
+}
+
+.num:hover {
+  color: whitesmoke;
+  cursor: pointer;
+  transform: scale(1.5);
+  text-decoration: none;
+}

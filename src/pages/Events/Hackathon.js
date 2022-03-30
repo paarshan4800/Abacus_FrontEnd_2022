@@ -1,21 +1,23 @@
 import React from "react";
 import styles from "./../Events/EventDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
-import { Hackathon as HackathonData} from "../../data/HackathonData";
+import { Hackathon as HackathonData } from "../../data/HackathonData";
 import nontech from "./../../images/nontech.png";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 
 function Hackathon() {
-
   const data = HackathonData;
 
   return (
     <div
-      style={{
-        // backgroundImage: `url(${background})`,
-        // backgroundSize: "cover",
-        // height: "100vh",
-        // color: "#f5f5f5",
-      }}
+      style={
+        {
+          // backgroundImage: `url(${background})`,
+          // backgroundSize: "cover",
+          // height: "100vh",
+          // color: "#f5f5f5",
+        }
+      }
     >
       <div className={styles.container}>
         <div className={styles.box} style={{ width: "800px" }}>
@@ -41,7 +43,9 @@ function Hackathon() {
           <span></span>
           <div className={styles.content}>
             <img src={nontech} style={{ width: "200px", height: "200px" }} />
-            <GlassButton title="Register" />
+            <Link to={`/hackathon-register`}>
+              <GlassButton title="Register" />
+            </Link>
           </div>
         </div>
       </div>
@@ -78,7 +82,6 @@ function Hackathon() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

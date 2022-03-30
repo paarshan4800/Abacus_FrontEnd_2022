@@ -38,7 +38,7 @@ function EventDetails() {
       }}
     >
       <div className={styles.container}>
-        <div className={styles.box}>
+        <div className={styles.box} style={{ height: "auto", width: "60%" }}>
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>DESCRIPTION</h2>
@@ -57,7 +57,7 @@ function EventDetails() {
           </div>
         </div>
 
-        <div className={styles.box} style={{ width: "400px" }}>
+        <div className={styles.box} style={{ height: "auto", width: "30%" }}>
           <span></span>
           <div className={styles.content}>
             {type === "tech-events" && (
@@ -81,14 +81,14 @@ function EventDetails() {
       </div>
 
       <div className={styles.container}>
-        <div className={styles.box} style={{ width: "400px" }}>
+        <div className={styles.box} style={{ height: "auto", width: "30%" }}>
           <span></span>
           <div className={styles.content}>
             <img src={nontech} style={{ width: "200px", height: "200px" }} />
           </div>
         </div>
 
-        <div className={styles.box} style={{ width: "800px" }}>
+        <div className={styles.box} style={{ height: "auto", width: "60%" }}>
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>SPONSORS</h2>
@@ -100,7 +100,7 @@ function EventDetails() {
       </div>
 
       <div className={styles.container}>
-        <div className={styles.box} style={{ height: 800 }}>
+        <div className={styles.box} style={{ height: "auto", width: "auto" }}>
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>RULES</h2>
@@ -114,7 +114,7 @@ function EventDetails() {
       </div>
 
       <div className={styles.container}>
-        <div className={styles.box}>
+        <div className={styles.box} style={{ height: "auto", width: "auto" }}>
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>ROUNDS</h2>

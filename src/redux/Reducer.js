@@ -4,6 +4,7 @@ const initialState = {
   height: 0,
   newload: true,
   newloadworkshop: true,
+  
 };
 
 const Reducer = (state = initialState, action) => {
