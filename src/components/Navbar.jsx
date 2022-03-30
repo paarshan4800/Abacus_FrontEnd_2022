@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import logo from "./CSEA.png";
 import styles from './Navbar.module.css'
 import { AuthApi } from '../App'
-
+import {logOut} from "../api/auth"
 
 import { StylesContext } from "@material-ui/styles";
 
@@ -64,7 +64,7 @@ const changeButton = ()=>{
         <Link to={`/dashboard`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Dashboard</Link>
         </li>
       <li className="bg-[#890F0D] py-2 px-3 mx-4 mt-3 rounded-full cursor-pointer hover:bg-[#2546bd]">
-      <Link to={`/logout`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Logout</Link>
+      <Link style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>{logOut();setToggleMenu(false);}} className={styles.nav}>Logout</Link>
       </li>
 
     
