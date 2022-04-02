@@ -46,7 +46,7 @@ const Navbar = () => {
     if (window.innerWidth > 1150 ) {
       return (
       <Link to={`/`} style={{textDecoration:"none", color:"#fff"}}   className={styles.font} >
-      ABACUS '22
+      AB
       </Link>
       )
       

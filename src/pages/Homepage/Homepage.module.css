@@ -112,13 +112,16 @@ margin-top: -90px;
 z-index: 3;
 margin-top: 10%;
 border-radius: 8px;
-background-color:  #000b1d;
+background-color:  #000b1d; 
 /*
 
 background-image: url('./3d.jpg');
 background-size: cover;*/
-background-image: url('./3d.jpg');
+background: url(../../images/globe.jpg)  no-repeat center center;
 background-size: cover;
+background-repeat: no-repeat;
+
+
 }
 
 .maindiv1::before {
@@ -197,7 +200,7 @@ background-size: cover;
   }
   100% {
     right: 0;
-    bottom: 0;
+    bottom: 0; 
   }
 }
 
@@ -967,21 +970,29 @@ padding-bottom: 3%;
   src: url(../../components/Heading/alien.ttf);
 }
 
+@font-face {
+  font-family: glitch;
+  src: url(./Space\ Boards.ttf);
+}
+@font-face {
+  font-family: aq;
+  src: url(../../components/Aquire.otf);
+}
+
 
 .head{
-  
+  font-weight: bolder;
   position: relative; 
-  letter-spacing: 13px;
-  font-family: alien;
+  letter-spacing: 0px;
+  font-family: glitch;
   font-size: 115px;
-  margin-top: 3%;
- color: lightskyblue;
- animation: flicker 1s infinite;
+  margin-top: 4%;
  color: white;
- font-weight: bolder;
+ animation: flicker 1s infinite;
+ letter-spacing: 8px;
  text-transform: uppercase;
- text-shadow: 0 0 10px rgb(192 219 255 / 75%), 0 0 10px rgb(65 120 255 / 24%);  
- padding-bottom: 3%;
+ text-shadow: 0 0 10px rgb(192 219 255 / 75%), 0 0 15px rgb(65 120 255 / 24%);  
+ padding-bottom: 2%;
 
 }
 
@@ -995,11 +1006,10 @@ padding-bottom: 3%;
 
 .date {
   color: gold;
-  font-size: 2.2rem ;
-  font-family: alien;
+  font-size: 2.15rem ;
+  font-family: glitch;
   text-transform: uppercase;
-  letter-spacing: 1px;
-      margin-top: 0%;
+
   padding-top: 0%;
   box-sizing: border-box;
   color: lightskyblue;
