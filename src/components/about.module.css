@@ -8,6 +8,11 @@
     src: url(../components/Heading/alien.ttf);
 } */
 
+@font-face {
+  font-family: aquire;
+  src: url(./Aquire.otf);
+}
+
 /*  Originak */
 .content_wrapper {
   display: flex;
@@ -190,6 +195,7 @@ text-transform: uppercase;
 filter: drop-shadow(0 3px 4px);
 margin-top: 2%;
 margin-bottom: 2%;
+font-family: aquire;
 /* font-family: Future; */
 }
 
@@ -202,6 +208,7 @@ margin-bottom: 2%;
    z-index: 2;
    line-height: 1;
    font-weight: bolder;
+   font-family: aquire;
    margin-bottom: 2rem;
    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    font-family: Future; */

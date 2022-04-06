@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: Slim;
-    src: url(./alien.ttf);
+    src: url(../Aquire.otf);
 }
 ._heading {
     font-family: 'Open sans';
@@ -12,7 +12,7 @@
     text-transform: uppercase;
     text-shadow: 0 0 10px rgb(192 219 255 / 75%), 0 0 10px rgb(65 120 255 / 24%);
     font-family: Slim;
-    font-family: "Audiowide", sans-serif !important;
+    font-family: Slim;
 }
 
 
