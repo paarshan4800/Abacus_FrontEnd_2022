@@ -1,13 +1,26 @@
 body{
   overflow-x: hidden;
 }
+.mgin{
+  margin-top: 20vh;  
+}
+
 .one {
-  font-family: sans-serif;
+  font-family: sans-serif; 
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
+}
+
+.sponsors {
+  font-family: sans-serif; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
 }
 .land{
   background: linear-gradient( rgba(0,0, 0, 0.6)  , rgba(0,0, 0, 0.6) , url(../../components/Landing/rays.png) no-repeat center center fixed ); 
@@ -299,7 +312,7 @@ background-repeat: no-repeat;
 }
 .heading{
   z-index: 2;
-font-weight: bolder;
+font-weight: 0;
 
 font-family: 'Open Sans', sans-serif;   
 font-size: 3.4rem;
@@ -963,6 +976,7 @@ border-radius: 50px;
 width: 75%;
 padding:1%;
 padding-bottom: 3%;
+z-index: 5;
 }
 
 @font-face {
@@ -972,7 +986,7 @@ padding-bottom: 3%;
 
 @font-face {
   font-family: glitch;
-  src: url(./Space\ Boards.ttf);
+  src: url(../../components/Aquire.otf);
 }
 @font-face {
   font-family: aq;
@@ -981,17 +995,17 @@ padding-bottom: 3%;
 
 
 .head{
-  font-weight: bolder;
+  font-weight: 500;
   position: relative; 
   letter-spacing: 0px;
   font-family: glitch;
-  font-size: 115px;
-  margin-top: 4%;
- color: white;
+  font-size: 120px;
+  margin-top: 7%;
+  color: white;
  animation: flicker 1s infinite;
- letter-spacing: 8px;
+ letter-spacing: 10px;
  text-transform: uppercase;
- text-shadow: 0 0 10px rgb(192 219 255 / 75%), 0 0 15px rgb(65 120 255 / 24%);  
+ text-shadow: 0 0 5x rgb(192 219 255 / 75%), 0 0 10px rgb(68 85 90 / 24%);  
  padding-bottom: 2%;
 
 }
@@ -1013,7 +1027,7 @@ padding-bottom: 3%;
   padding-top: 0%;
   box-sizing: border-box;
   color: lightskyblue;
-
+z-index: 3;
   position: top;
  
 }
@@ -1198,7 +1212,7 @@ padding-bottom: 3%;
   
 
   .img2{
-      margin-left: 25%;
+      align-items: center;
       width:250px;
       height:150px;
   }
@@ -1755,7 +1769,7 @@ flex-direction: column;
 
   }
   .date{
-   color: lightskyblue;
+   color: skyblue;
     font-size: 1.2rem;
   }
   .landing_heading{
@@ -1764,6 +1778,39 @@ flex-direction: column;
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
