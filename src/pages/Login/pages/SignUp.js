@@ -6,10 +6,16 @@ import years from "./assets/years";
 import colleges from "./assets/colleges";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton.js";
-import {signUp} from "../../../api/auth";
+import { signUp } from "../../../api/auth";
 import GoogleButton from "react-google-button";
-import { googleSignIn } from "../../../api/auth";
-import { BrowserRouter, Route, Switch, Redirect, NavLink } from "react-router-dom";
+import { googleSignIn, BASE_API_URL } from "../../../api/auth";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
+  NavLink,
+} from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import { FaApple } from "react-icons/fa";
 import LoginRegister from "../LoginRegister";
@@ -31,49 +37,40 @@ function SignUp() {
   const [validationError, setvalidationError] = useState("");
 
   const validate = () => {
-      let validationError = '';
+    let validationError = "";
 
-        if (!name) {
-          validationError = 'Name field cannot be blank';
-        } 
-        else if (!email) {
-          validationError = 'Email field cannot be blank';
-        }
-        else if (!email.includes('@')) {
-          validationError = 'Invalid Email! Try a different one!';
-        }
-        else if (!phone) {
-          validationError = 'Phone field cannot be blank';
-        }
-        else if (phone < 1000000000 || phone > 9999999999) {
-          validationError = 'Invalid Phone Number';
-        }
-        else if (!password) {
-          validationError = 'Password field cannot be blank';
-        }
-        else if (!conpass) {
-          validationError = 'Confirm Password field cannot be blank';
-        }
-        else if (!department) {
-          validationError = 'Department field cannot be blank'
-        }
-        else if (!college) {
-          validationError = 'College field cannot be blank'
-        }
-        else if (!year) {
-          validationError = 'Year field cannot be blank'
-        }
+    if (!name) {
+      validationError = "Name field cannot be blank";
+    } else if (!email) {
+      validationError = "Email field cannot be blank";
+    } else if (!email.includes("@")) {
+      validationError = "Invalid Email! Try a different one!";
+    } else if (!phone) {
+      validationError = "Phone field cannot be blank";
+    } else if (phone < 1000000000 || phone > 9999999999) {
+      validationError = "Invalid Phone Number";
+    } else if (!password) {
+      validationError = "Password field cannot be blank";
+    } else if (!conpass) {
+      validationError = "Confirm Password field cannot be blank";
+    } else if (!department) {
+      validationError = "Department field cannot be blank";
+    } else if (!college) {
+      validationError = "College field cannot be blank";
+    } else if (!year) {
+      validationError = "Year field cannot be blank";
+    }
 
-        if (!validationError && (conpass !== password)) {
-          validationError = 'Passwords do not match';
-        }
+    if (!validationError && conpass !== password) {
+      validationError = "Passwords do not match";
+    }
 
-        if (validationError) {
-          setvalidationError(validationError);
-          return false;
-        }
-        return true;
-  }
+    if (validationError) {
+      setvalidationError(validationError);
+      return false;
+    }
+    return true;
+  };
 
   const checkWhichPage = () => {
     const url = new URL(window.location.href);
@@ -105,179 +102,181 @@ function SignUp() {
 
   useEffect(checkWhichPage, []);
   const handleSubmit = () => {
+    console.log("hello");
     const isValid = validate();
     if (isValid) {
-    var values = {
-      email,
-      name,
-      phoneNumber: phone,
-      college: college.value,
-      year: year.value,
-      department: department.value,
-      password,
-      googleAuth,
-    };
-    if (verificationCode != "") {
-      values.verificationCode = verificationCode;
-    }
+      var values = {
+        email,
+        name,
+        phoneNumber: phone,
+        college: college.value,
+        year: year.value,
+        department: department.value,
+        password,
+        googleAuth,
+      };
+      if (verificationCode != "") {
+        values.verificationCode = verificationCode;
+      }
 
+      // const BASE_URL = "https://abacus-22-backend.herokuapp.com/";
+      // // const BASE_URL = "http://localhost:8000/";
+      const signupURL = googleAuth
+        ? BASE_API_URL + "/user/signup/googleSignUp"
+        : BASE_API_URL + "/user/signup/newUser";
 
-    const BASE_URL = "https://abacus-22-backend.herokuapp.com/";
-    // const BASE_URL = "http://localhost:8000/";
-    const signupURL = googleAuth
-      ? BASE_URL + "user/signup/googleSignUp"
-      : BASE_URL + "user/signup/newUser";
-
-    signUp(signupURL, values);
-    }
-    else
-    {
+      signUp(signupURL, values);
+    } else {
       console.log(validationError);
     }
-  }
+  };
   return (
     <div className={logstyle.appForm}>
-    <div className={logstyle.formCenter}>
-      <div className={logstyle.styleButton}>
-        {googleAuth ? (
-          <p>{message}</p>
-        ) : (
-          <GoogleButton
-            className="google-button"
-            onClick={() => {
-              googleSignIn();
-            }}
-            label="Sign Up with Google"
-            type="dark"
-          />
-        )}
-      </div>
-
-      <p>or </p>
-      <form onSubmit={() => handleSubmit()} className={logstyle.formFields}>
-        {/*name*/}
-
-        <div className={logstyle.formField}>
-          <div style={{}}>
-          <input
-            type="text"
-            id="name"
-            className={logstyle.formFieldInput}
-            placeholder="Full Name"
-            name="name"
-            value={name}
-            onChange={(e) => {
-              setName(e.currentTarget.value);
-            }}
-            disabled={nonChangable ? true : false}
-          />
-          </div>
-        </div>
-
-        {/*year*/}
-        <div className={logstyle.formField}>
-          <Select
-            className={logstyle.drop}
-            components={{
-              DropdownIndicator: () => null,
-              IndicatorSeparator: () => null,
-            }}
-            options={years.map((opt) => ({ label: opt, value: opt }))}
-            value={year}
-            onChange={(e) => {
-              setYear(e);
-            }}
-            placeholder="Year"
-          />
-        </div>
-
-        {/*department*/}
-        <div className={logstyle.formField}>
-          <Select
-            className={logstyle.drop}
-            components={{
-              DropdownIndicator: () => null,
-              IndicatorSeparator: () => null,
-            }}
-            options={departments.map((opt) => ({ label: opt, value: opt }))}
-            value={department}
-            onChange={(e) => {
-              setDepartment(e);
-            }}
-            placeholder="Department"
-          />
-        </div>
-
-        {/*college*/}
-        <div className={logstyle.formField}>
-          <Select
-            className={logstyle.drop}
-            components={{
-              DropdownIndicator: () => null,
-              IndicatorSeparator: () => null,
-            }}
-            options={colleges.map((opt) => ({ label: opt, value: opt }))}
-            value={college}
-            onChange={(e) => {
-              setCollege(e);
-            }}
-            placeholder="College"
-          />
-        </div>
-
-        <div className={logstyle.formField}>
-          <input
-            type="email"
-            id="email"
-            className={logstyle.formFieldInput}
-            placeholder="Email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.currentTarget.value)}
-            disabled={nonChangable ? true : false}
-          />
-        </div>
-        <div className={logstyle.formField}>
-          <input
-            type="text"
-            id="phone"
-            className={logstyle.formFieldInput}
-            placeholder="Phone Number"
-            name="phone"
-            value={phone}
-            onChange={(e) => setPhone(e.currentTarget.value)}
-          />
-        </div>
-        <div className={logstyle.formField}>
-          <input
-            type="password"
-            id="password"
-            className={logstyle.formFieldInput}
-            placeholder="Password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.currentTarget.value)}
-          />
-        </div>
-        {/*confirm password*/}
-        <div className={logstyle.formField}>
-          <input
-            type="password"
-            id="conpass"
-            className={logstyle.formFieldInput}
-            placeholder="Confirm password"
-            name="conpass"
-            value={conpass}
-            onChange={(e) => setConpass(e.currentTarget.value)}
-          />
-        </div>
-
+      <div className={logstyle.formCenter}>
         <div className={logstyle.styleButton}>
-            <GlassButton title="Sign Up" />
+          {googleAuth ? (
+            <p>{message}</p>
+          ) : (
+            <GoogleButton
+              className="google-button"
+              onClick={() => {
+                googleSignIn();
+              }}
+              label="Sign Up with Google"
+              type="dark"
+            />
+          )}
         </div>
 
-      </form>
-    </div>
+        <p>or </p>
+        <form onSubmit={() => handleSubmit()} className={logstyle.formFields}>
+          {/*name*/}
+
+          <div className={logstyle.formField}>
+            <div style={{}}>
+              <input
+                type="text"
+                id="name"
+                className={logstyle.formFieldInput}
+                placeholder="Full Name"
+                name="name"
+                value={name}
+                onChange={(e) => {
+                  setName(e.currentTarget.value);
+                }}
+                disabled={nonChangable ? true : false}
+              />
+            </div>
+          </div>
+
+          {/*year*/}
+          <div className={logstyle.formField}>
+            <Select
+              className={logstyle.drop}
+              components={{
+                DropdownIndicator: () => null,
+                IndicatorSeparator: () => null,
+              }}
+              options={years.map((opt) => ({ label: opt, value: opt }))}
+              value={year}
+              onChange={(e) => {
+                setYear(e);
+              }}
+              placeholder="Year"
+            />
+          </div>
+
+          {/*department*/}
+          <div className={logstyle.formField}>
+            <Select
+              className={logstyle.drop}
+              components={{
+                DropdownIndicator: () => null,
+                IndicatorSeparator: () => null,
+              }}
+              options={departments.map((opt) => ({ label: opt, value: opt }))}
+              value={department}
+              onChange={(e) => {
+                setDepartment(e);
+              }}
+              placeholder="Department"
+            />
+          </div>
+
+          {/*college*/}
+          <div className={logstyle.formField}>
+            <Select
+              className={logstyle.drop}
+              components={{
+                DropdownIndicator: () => null,
+                IndicatorSeparator: () => null,
+              }}
+              options={colleges.map((opt) => ({ label: opt, value: opt }))}
+              value={college}
+              onChange={(e) => {
+                setCollege(e);
+              }}
+              placeholder="College"
+            />
+          </div>
+
+          <div className={logstyle.formField}>
+            <input
+              type="email"
+              id="email"
+              className={logstyle.formFieldInput}
+              placeholder="Email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.currentTarget.value)}
+              disabled={nonChangable ? true : false}
+            />
+          </div>
+          <div className={logstyle.formField}>
+            <input
+              type="text"
+              id="phone"
+              className={logstyle.formFieldInput}
+              placeholder="Phone Number"
+              name="phone"
+              value={phone}
+              onChange={(e) => setPhone(e.currentTarget.value)}
+            />
+          </div>
+          <div className={logstyle.formField}>
+            <input
+              type="password"
+              id="password"
+              className={logstyle.formFieldInput}
+              placeholder="Password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.currentTarget.value)}
+            />
+          </div>
+          {/*confirm password*/}
+          <div className={logstyle.formField}>
+            <input
+              type="password"
+              id="conpass"
+              className={logstyle.formFieldInput}
+              placeholder="Confirm password"
+              name="conpass"
+              value={conpass}
+              onChange={(e) => setConpass(e.currentTarget.value)}
+            />
+          </div>
+
+          <div
+            className={logstyle.styleButton}
+            onClick={() => {
+              handleSubmit();
+            }}
+          >
+            <GlassButton title="Sign Up" />
+          </div>
+        </form>
+      </div>
     </div>
   );
   //}

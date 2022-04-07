@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton";
 import { green } from "@material-ui/core/colors";
+import { verifyUserAPI } from "../../../api/auth";
 import axios from "axios";
 
 function VerifyEmail(props) {
@@ -9,31 +10,19 @@ function VerifyEmail(props) {
   const [emailID, setEmailID] = useState("");
   const [message, setMessage] = useState("");
 
-  const verifyUser = () => {
+  const verifyUser = async () => {
     const search = props.location.search;
     const email = new URLSearchParams(search).get("email");
     setEmailID(email);
     const code = new URLSearchParams(search).get("code");
-
-    axios
-      .post("http://abacus-22-backend.herokuapp.com/user/signup/verifyUser", {
-        email,
-        code,
-      })
-      .then((response) => {
-        if (response.status == 200) {
-          setMessage(response.data.message);
-          setStatus("verified");
-          setTimeout(() => {
-            window.location = "http://localhost:3000/Login#/sign-in";
-          }, 2000);
-        }
-      })
-      .catch((err) => {
-        console.log(err.response);
-        setMessage(err.response.data.message);
-        setStatus("checking");
-      });
+    const res = await verifyUserAPI(email, code);
+    setMessage(res.message);
+    setStatus(res.status);
+    if (res.status === "verified") {
+      setTimeout(() => {
+        window.location = "http://localhost:3000/Login#/sign-in";
+      }, 2000);
+    }
   };
 
   useEffect(verifyUser, []);

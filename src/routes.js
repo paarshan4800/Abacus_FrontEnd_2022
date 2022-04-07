@@ -22,6 +22,7 @@ import ForgotPassword from "./pages/Login/pages/ForgotPassword";
 import NewPassword from "./pages/Login/pages/NewPassword";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
 import Test from "./pages/Test/Test";
+import VerifyEmail from "./pages/Login/pages/VerifyEmail";
 
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
 // import Navbar from "./components/Navbar/Navbar";
@@ -62,6 +63,7 @@ const AppRoutes = () => {
       <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/test/:type/:title" exact component={Test} />
       <Route path="/login" exact component={LoginRegister} />
+      <Route path="/Login/VerifyEmail" exact component={VerifyEmail} />
       <Route path="/signUp" exact component={SignUp} />
       <Route path="/ForgotPassword" exact component={ForgotPassword} />
       <Route

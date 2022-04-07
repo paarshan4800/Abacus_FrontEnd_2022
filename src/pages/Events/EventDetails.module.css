@@ -42,8 +42,14 @@
   position: absolute;
   top: 0;
   left: 50;
+<<<<<<< HEAD
   width: 50%;
   height: 100%;
+=======
+  /* width: 80%; */
+  /* width: calc(100% - 90px);
+  height: 100%; */
+>>>>>>> 63ea29bc969bf89839ffe3add74213cfa316e0ef
   background: #fff;
   border-radius: 8px;
   transform: skewX(15deg);

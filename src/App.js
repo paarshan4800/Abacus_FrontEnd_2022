@@ -12,7 +12,8 @@ import { Navbar } from "./components";
 // import "react-toastify/dist/ReactToastify.css";
 import background from "./images/bgg.jpg";
 import Footer from "./components/Footer";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const rootReducer = combineReducers({
   Reducer: Reducer,
 });
@@ -38,8 +39,9 @@ function App() {
 
   useEffect(() => {
     if (
-      Cookies.get("token") !== undefined &&
-      Cookies.get("details") !== undefined
+      // Cookies.get("token") !== undefined &&
+      // Cookies.get("details") !== undefined
+      localStorage.getItem("apiToken") !== null
     ) {
       setauth(true);
     }
@@ -77,6 +79,18 @@ function App() {
                       >
                         <AppRoutes />
                       </div>
+                      <ToastContainer
+                        position="top-right"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="dark"
+                      />
                       <div>
                         <Footer />
                       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./Homepage.module.css";
+import styles1 from "./Landing.module.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,6 +23,39 @@ const Homepage = (props)=>{
       <>
      <main>
   <section className={`${styles.one} ${styles.a} ${styles.land}` }>
+
+
+  <div className={styles1.scene}>
+	<div className={styles1.space}>
+		<span></span>
+		<span></span>
+		<span></span>
+		<div className={styles1.comet}>
+			<div className={styles1.comet_inner}></div>
+		</div>
+	</div>
+	<div className={styles1.ufo_contain}>
+  <div class={styles1.tractor_beam}></div>
+
+	 
+		<div className={styles1.ufo_lower}>
+			<div className={styles1.lights}>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div className={styles1.ufo_upper}>
+			<div className={styles1.cockpit}>
+				<div className={styles1.glass}></div>
+				<div className={styles1.alien}>
+					<div className={styles1.eye}></div>
+				</div>
+				<div className={styles1.glass_edge}></div>
+			</div>
+		</div>
+	</div>
+</div>
   
       
   <div className={`${styles.landing_heading} `} >
@@ -206,107 +240,152 @@ const Homepage = (props)=>{
 
 
 
-  <section className={`${styles.one}` }>
+  <section className={`${styles.sponsors}` }>
 
-  <div>
+
+  <div className="container-fluid">
+<div className="text-center mb-20">
+        <Heading text="Sponsors" fontSize="3rem"  />
+        
        
-          <div className={`${styles.blur}`}>
-            <div className="text-center mb-20">
-              <Heading text="Sponsors" fontSize="3rem"  />
+      </div>
+
+      <div className="col text-center">
+            <Heading text="Title Sponsors" fontSize="1.6rem" />
+            <div className=" d-flex justify-content-center align-self-center ">
+              <div className="text-center pb-4">
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/about-us/motorq.svg`}
+                  className={`${styles.img2}`}
+                  alt="Motorq"
+                />
+              </div>
+
               
-             
             </div>
-            <div className="container-fluid mx-auto d-flex justify-content-center align-self-center mt-0">
-              <div className="m-auto row row-cols-lg-1 row-cols-md-1 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
-                <div className="col text-center">
-                  <Heading text="Title Sponsors" fontSize="1.4rem" />
-                  <div className="row row-cols-lg-2 d-flex justify-content-center align-self-center ">
-                    <div className="col text-center pb-4">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/images/about-us/motorq.svg`}
-                        className={`${styles.img2}`}
-                        alt="Motorq"
-                      />
-                    </div>
-
-                    <div className="col text-center pb-5">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/images/about-us/visa_modified.svg`}
-                        className={`${styles.img2}`}
-                        alt="Visa"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="m-auto row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
-                  <div className="col text-center ">
-                    <Heading text="Merchandise Sponsors" fontSize="1.4rem" />
-                    <div className="row  d-flex justify-content-center align-self-center">
-                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/images/about-us/Career Crafter.jpg`}
-                          className={`${styles.img4}`}
-                          alt="Career Crafter"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col text-center ">
-                    <Heading text="Workshops Sponsors" fontSize="1.4rem" />
-                   
-                    <div className="row d-flex justify-content-center align-self-center">
-                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/images/about-us/Tamilpreneur Logo.png`}
-                          className={`${styles.img}`}
-                          alt="Tamilpreneur"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col text-center ">
-                    <Heading text="Platform Sponsors" fontSize="1.4rem" />
-                    <div className="row  d-flex justify-content-center align-self-center">
-                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                        <img
-                          src="https://codechef_shared.s3.amazonaws.com/download/New%20CodeChef%20Logo/cc-logo.svg"
-                          className={`${styles.img}`}
-                          alt="Codechef"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col text-center">
-                    <Heading text="Internship Sponsors" fontSize="1.4rem" />
-                    <div className="row row-cols-lg-2 d-flex justify-content-center align-self-center  pb-5 pt-4">
-                      <div className="col text-center pt-5 mb-5">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/images/about-us/amazon.jpeg`}
-                          className={`${styles.img1}`}
-                          alt="Amazon"
-                        />
-                      </div>
-                      <div className="col text-center">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/images/about-us/Saj.jpeg`}
-                          className={`${styles.img5}`}
-                          alt="YouthInU"
-                        />
-                      </div>
-                    </div>
-                  </div>
+          </div>
+ 
+ 
+          <div className="col text-center mb-5 ">
+            <Heading text="Internship Partners" fontSize="1.6rem" />
+          
+          </div>
+  <div className="m-auto row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
+            <div className="col text-center ">
+             
+              <div className="row  d-flex justify-content-center align-self-center">
+                <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/images/about-us/Lumel-logo-Orange.png`}
+                    className={`${styles.img1}`}
+                    alt="Career Crafter"
+                  />
                 </div>
               </div>
             </div>
-            <div></div>
+            <div className="col text-center ">
+             
+             
+              <div className="row d-flex justify-content-center align-self-center">
+                <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                <img
+                    src={`${process.env.PUBLIC_URL}/images/about-us/COSGrid_Network.jpg`}
+                    className={`${styles.img4}`}
+                    alt="Career Crafter"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="col text-center ">
+             
+              <div className="row  d-flex justify-content-center align-self-center">
+                <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                <img
+                    src={`${process.env.PUBLIC_URL}/images/about-us/unnamed.jpg`}
+                    className={`${styles.img4}`}
+                    alt="Career Crafter"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="col text-center ">
+             
+              <div className="row  d-flex justify-content-center align-self-center">
+                <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                <img
+                    src={`${process.env.PUBLIC_URL}/images/about-us/acl_logo.png`}
+                    className={`${styles.img1} bg-white px-2 py-2`}
+                    alt="Career Crafter"
+                  />
+                </div>
+              </div>
+            </div>
+            
           </div>
-          </div> 
+
+          <div className="col text-center mt-5">
+              <Heading text="Platform and Workshop Sponsor" fontSize="1.4rem" />
+              <div className="row  d-flex justify-content-center align-self-center">
+                <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                  <img
+                  src  = {`${process.env.PUBLIC_URL}/images/about-us/CodingNinjasLogo.jpg`}
+                                      className={`${styles.img4}`}
+                    alt="Coding Ningas"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="col text-center mt-5">
+            
+            <Heading text="Knowledge Partners" fontSize="1.6rem" />
+          
+          
+
+          <div className="m-auto row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
+            <div className="col text-center ">
+             
+              <div className="row  d-flex justify-content-center align-self-center">
+                <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                  <img 
+                    src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
+                    className={`${styles.img4}`}
+                    alt="Career Crafter"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="col text-center ">
+             
+             
+              <div className="row d-flex justify-content-center align-self-center">
+                <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                <img
+                    src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
+                    className={`${styles.img4}`}
+                    alt="Career Crafter"
+                  />
+                </div>
+              </div>
+            </div>
+       
+
+         
+          </div>
+            </div>
+          </div>
+ 
   </section>
 
 
   
 </main>
+
+ 
+      
+
+            
+ 
 {/* <Footer/> */}
       </>
     );

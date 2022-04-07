@@ -10,11 +10,7 @@ import { AuthApi } from "../../App"
 import Cookies from "js-cookie"
 */
 
-
-import { toast } from "react-toastify"
-import 'react-toastify/dist/ReactToastify.css'
-
-toast.configure()
+import {logOut} from "../../api/auth"
 function Navbar({ width }) {
 /*
     const SetAuth = useContext(SetAuthApi)
@@ -37,7 +33,7 @@ function Navbar({ width }) {
 */
     return (
         <>
-            { width < 903 ? (<NavbarSmall  />) : (<NavbarBig  />)}
+            { width < 903 ? (<NavbarSmall clickLogout={()=>{logOut()}}  />) : (<NavbarBig clickLogout={()=>{logOut()}}  />)}
         </>
     )
 
