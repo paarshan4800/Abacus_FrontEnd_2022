@@ -1,66 +1,68 @@
 export const TechEvents = {
-  // Tenet
   "reverse-engineering": {
-    name: "Tenet",
+    id: "1",
+    name: "Reverse Engineering",
     imgName: "Saj.jpeg",
-    refName: "tenet",
-    about: `TENET is a challenge where the participants have to identify and resolve bugs, thus making the system unproblematic. Logical thinking of the programmer is tested through this event where the participant has to come up with unique solutions to produce an expected output.`,
-    fee: `Registration Fee - RS.150`,
-    dateTime: ["Date:March 26th", "Time:2pm"],
+    refName: "reverseengineering",
+    about: `A precipitous fast-tracked programming contest, where the coding minds get
+the chance to put their problem-solving skills to test.The participants shift into
+reverse gear and race against the clock along with the fellow coders to reverse
+engineer the code. The contest calls for participants being able to come up
+with a code that fulfills some hidden test cases.`,
+    //dateTime: ["Date:March 26th", "Time:2pm"],
+    teamSize: "2-3",
+    rounds: "2",
+    duration: "Round 1 - 30 minutes, Round 2 - 1 hour",
+    //platform: "Yet to decide",
+    // contact: [
+    //   {
+    //     name: "Arshak Shan ",
+    //     mobile: "  8129583239",
+    //   },
+    //   {
+    //     name: "Shruthi S ",
+    //     mobile: "  7358325784",
+    //   },
+    //   {
+    //     name: "Darrshana R ",
+    //     mobile: "  9123590345",
+    //   },
+    //   {
+    //     name: "Shakkthi ",
+    //     mobile: "  7299084122",
+    //   },
+    // ],
 
-    contact: [
-      {
-        name: "Arshak Shan ",
-        mobile: "  8129583239",
-      },
-      {
-        name: "Shruthi S ",
-        mobile: "  7358325784",
-      },
-      {
-        name: "Darrshana R ",
-        mobile: "  9123590345",
-      },
-      {
-        name: "Shakkthi ",
-        mobile: "  7299084122",
-      },
-    ],
+    //sponsor: "YouthInU",
 
-    sponsor: "YouthInU",
-
-    rules: [
-      "This event is for individual participants only.",
-      "Candidates involved in any kind of malpractice will be disqualified immediately",
-      "Marks will be provided based on the efficiency of the solution and the number of test cases passed (debugging and reverse coding).",
-      "There will be no negative marking for MCQs.",
-      "Decisions made by the administrators will be final",
-      "Participants must ensure that they have laptop with good internet connectivity for their convenience",
-      "Participants must ensure that they have microsoft account",
-    ],
+    // rules: [
+    //   "This event is for individual participants only.",
+    //   "Candidates involved in any kind of malpractice will be disqualified immediately",
+    //   "Marks will be provided based on the efficiency of the solution and the number of test cases passed (debugging and reverse coding).",
+    //   "There will be no negative marking for MCQs.",
+    //   "Decisions made by the administrators will be final",
+    //   "Participants must ensure that they have laptop with good internet connectivity for their convenience",
+    //   "Participants must ensure that they have microsoft account",
+    // ],
 
     rounds: {
       number: 3,
       roundDetails: [
         {
-          title: "Prelims",
-          description:
-            "Participants will be given 25 mins to answer MCQs which is a combination of technical (OS,DBMS,OOPS..) and general aptitude questions.",
+          title: "Round-1",
+          description: [
+            "30 questions will be given.",
+            "Tie will be resolved by the time taken to complete the test.",
+            "Questions will be based on Output and error correction.",
+          ],
         },
         {
-          title: "Semi-Finals",
-          description:
-            "A debugging round where candidates have to find the logical and syntactical errors in the given code snippets and run the correct code  in the platform provided for various test cases. (30 minutes)",
-        },
-        {
-          title: "Finals",
-          description:
-            "A reverse coding round where candidates have to analyze the given input-output sequences and decode the logic behind it. Write a code snippet that will generate the corresponding input output pattern. (30 mins)",
-        },
-        {
-          title: "Prize",
-          description:
-            "The winners will get exciting cash prizes, internship opportunities, T shirts and many more goodies",
+          title: "Round-2",
+          description: [
+            "8-10 teams will be selected.",
+            "3 questions will be given (.exe files )",
+            "Tie will be resolved by time taken to complete the test.",
+          ],
         },
       ],
     },
@@ -68,62 +70,468 @@ export const TechEvents = {
     purpose: "EVENTS",
   },
 
-  // Novice
   "web-design": {
-    name: "Novice.init()",
-    refName: "novice",
-    about: `Novice.init() is an exclusive event for the first year students of various colleges. It provides scope for the young minds to explore the coding world and to assess their logical reasoning abilities. This event introduces newbies to the technical contests.`,
-    fee: `Registration Fee - RS.150`,
-    dateTime: ["Date:March 26th", "Time:9:30am"],
+    id: "2",
+    name: "web-design",
+    refName: "webdesign",
+    about: `An inventive event, where the creative and devious minds compete to
+showcase their skills in developing a website. The participants delve into the
+magic of creating alluring websites as they beat the race against time. The
+contest calls for testing the knowledge in web development and being able to
+replicate a given website.`,
+    //dateTime: ["Date:March 26th", "Time:2pm"],
+    teamSize: "2-3",
+    rounds: "2",
+    duration: "Round 1 - 30 minutes, Round 2 - 1 hour",
+    //platform: "Yet to decide",
+    //fee: `Registration Fee - RS.150`,
+    //dateTime: ["Date:March 26th", "Time:9:30am"],
 
-    contact: [
-      {
-        name: "Gabrio Mascarnas A",
-        mobile: "9488394416",
-      },
-      {
-        name: "Vasanthakumar R",
-        mobile: "6379841032",
-      },
-      {
-        name: "Sabhari P",
-        mobile: "8220265629",
-      },
-    ],
+    // contact: [
+    //   {
+    //     name: "Gabrio Mascarnas A",
+    //     mobile: "9488394416",
+    //   },
+    //   {
+    //     name: "Vasanthakumar R",
+    //     mobile: "6379841032",
+    //   },
+    //   {
+    //     name: "Sabhari P",
+    //     mobile: "8220265629",
+    //   },
+    // ],
 
     // sponsor: "",
 
-    rules: [
-      "Students other than first years are not allowed to take this event.",
-      "Participants involved in any kind of malpractice will be disqualified.",
-      "Marks will be provided based on the difficulty of the questions.",
-      "Decisions made by the administrators will be final.",
-      "Participants must ensure that they have laptop with good internet connectivity for their convenience.",
-      "Participants must ensure that they have microsoft account.",
-    ],
+    // rules: [
+    //   "Students other than first years are not allowed to take this event.",
+    //   "Participants involved in any kind of malpractice will be disqualified.",
+    //   "Marks will be provided based on the difficulty of the questions.",
+    //   "Decisions made by the administrators will be final.",
+    //   "Participants must ensure that they have laptop with good internet connectivity for their convenience.",
+    //   "Participants must ensure that they have microsoft account.",
+    // ],
 
     rounds: {
       number: 3,
       roundDetails: [
         {
-          title: "Prelims",
-          description:
-            "Participants will be given 45 minutes to answer MCQs on puzzles, basics of programming and verbal reasoning.",
+          title: "Round-1",
+          description: [
+            "30 questions will be given.",
+            "Tie will be resolved by the time taken to complete the test.",
+            "Questions based on web development,",
+          ],
         },
         {
-          title: "Semi-Finals",
-          description:
-            "Focuses on logical reasoning, finding the output of a program, completing the code and puzzles (45 minutes)",
+          title: "Round-2",
+          description: [
+            "8-10 teams will be selected.",
+            "Image of the website to be replicated will be given or screen record.",
+          ],
+        },
+      ],
+    },
+    registration: true,
+    purpose: "EVENTS",
+  },
+
+  ".Capture the flag (Pre event)": {
+    id: "3",
+    name: ".Capture the flag",
+    refName: "capture-the-flag",
+    about: `This is a jeopardy style capture the flag event where cyber security enthusiasts
+solve labyrinths in order to score points. The competitors are pitted against each
+other in a quest to capture the 'flag', whilst demonstrating their expertise in
+OSINT, Cryptanalysis, Reverse Engineering and various other Cyber security
+domains.`,
+    //dateTime: ["Date:March 26th", "Time:2pm"],
+    teamSize: "2-3",
+    rounds: "2",
+    duration: "Round 1 - 30 minutes, Round 2 - 1 hour",
+    //platform: "Yet to decide",
+    //fee: `Registration Fee - RS.150`,
+    //dateTime: ["Date:March 26th", "Time:9:30am"],
+
+    // contact: [
+    //   {
+    //     name: "Gabrio Mascarnas A",
+    //     mobile: "9488394416",
+    //   },
+    //   {
+    //     name: "Vasanthakumar R",
+    //     mobile: "6379841032",
+    //   },
+    //   {
+    //     name: "Sabhari P",
+    //     mobile: "8220265629",
+    //   },
+    // ],
+
+    // sponsor: "",
+
+    // rules: [
+    //   "Students other than first years are not allowed to take this event.",
+    //   "Participants involved in any kind of malpractice will be disqualified.",
+    //   "Marks will be provided based on the difficulty of the questions.",
+    //   "Decisions made by the administrators will be final.",
+    //   "Participants must ensure that they have laptop with good internet connectivity for their convenience.",
+    //   "Participants must ensure that they have microsoft account.",
+    // ],
+
+    rounds: {
+      number: 3,
+      roundDetails: [
+        {
+          title: "Round-1",
+          description: [
+            "30 questions will be given.",
+            "Tie will be resolved by the time taken to complete the test.",
+            "Questions based on web development,",
+          ],
         },
         {
-          title: "Finals",
-          description:
-            "Concentrates on programming, code debugging, algorithm, rapid-fire questions on puzzles (45 minutes)",
+          title: "Round-2",
+          description: [
+            "8-10 teams will be selected.",
+            "Image of the website to be replicated will be given or screen record.",
+          ],
+        },
+      ],
+    },
+    registration: true,
+    purpose: "EVENTS",
+  },
+
+  "web-design": {
+    id: "2",
+    name: "web-design",
+    refName: "webdesign",
+    about: `An inventive event, where the creative and devious minds compete to
+showcase their skills in developing a website. The participants delve into the
+magic of creating alluring websites as they beat the race against time. The
+contest calls for testing the knowledge in web development and being able to
+replicate a given website.`,
+    dateTime: ["Date:March 26th", "Time:2pm"],
+    teamSize: "2-3",
+    rounds: "2",
+    duration: "Round 1 - 30 minutes, Round 2 - 1 hour",
+    //platform: "Yet to decide",
+    //fee: `Registration Fee - RS.150`,
+    //dateTime: ["Date:March 26th", "Time:9:30am"],
+
+    // contact: [
+    //   {
+    //     name: "Gabrio Mascarnas A",
+    //     mobile: "9488394416",
+    //   },
+    //   {
+    //     name: "Vasanthakumar R",
+    //     mobile: "6379841032",
+    //   },
+    //   {
+    //     name: "Sabhari P",
+    //     mobile: "8220265629",
+    //   },
+    // ],
+
+    // sponsor: "",
+
+    // rules: [
+    //   "Students other than first years are not allowed to take this event.",
+    //   "Participants involved in any kind of malpractice will be disqualified.",
+    //   "Marks will be provided based on the difficulty of the questions.",
+    //   "Decisions made by the administrators will be final.",
+    //   "Participants must ensure that they have laptop with good internet connectivity for their convenience.",
+    //   "Participants must ensure that they have microsoft account.",
+    // ],
+
+    rounds: {
+      number: 3,
+      roundDetails: [
+        {
+          title: "Round-1",
+          description: [
+            "30 questions will be given.",
+            "Tie will be resolved by the time taken to complete the test.",
+            "Questions based on web development,",
+          ],
         },
         {
-          title: "Prize",
-          description:
-            "The winners will get exciting cash prizes, internship opportunities, T shirts and many more goodies",
+          title: "Round-2",
+          description: [
+            "8-10 teams will be selected.",
+            "Image of the website to be replicated will be given or screen record.",
+          ],
+        },
+      ],
+    },
+    registration: true,
+    purpose: "EVENTS",
+  },
+
+  "web-design": {
+    id: "2",
+    name: "web-design",
+    refName: "webdesign",
+    about: `An inventive event, where the creative and devious minds compete to
+showcase their skills in developing a website. The participants delve into the
+magic of creating alluring websites as they beat the race against time. The
+contest calls for testing the knowledge in web development and being able to
+replicate a given website.`,
+    dateTime: ["Date:March 26th", "Time:2pm"],
+    teamSize: "2-3",
+    rounds: "2",
+    duration: "Round 1 - 30 minutes, Round 2 - 1 hour",
+    //platform: "Yet to decide",
+    //fee: `Registration Fee - RS.150`,
+    //dateTime: ["Date:March 26th", "Time:9:30am"],
+
+    // contact: [
+    //   {
+    //     name: "Gabrio Mascarnas A",
+    //     mobile: "9488394416",
+    //   },
+    //   {
+    //     name: "Vasanthakumar R",
+    //     mobile: "6379841032",
+    //   },
+    //   {
+    //     name: "Sabhari P",
+    //     mobile: "8220265629",
+    //   },
+    // ],
+
+    // sponsor: "",
+
+    // rules: [
+    //   "Students other than first years are not allowed to take this event.",
+    //   "Participants involved in any kind of malpractice will be disqualified.",
+    //   "Marks will be provided based on the difficulty of the questions.",
+    //   "Decisions made by the administrators will be final.",
+    //   "Participants must ensure that they have laptop with good internet connectivity for their convenience.",
+    //   "Participants must ensure that they have microsoft account.",
+    // ],
+
+    rounds: {
+      number: 3,
+      roundDetails: [
+        {
+          title: "Round-1",
+          description: [
+            "30 questions will be given.",
+            "Tie will be resolved by the time taken to complete the test.",
+            "Questions based on web development,",
+          ],
+        },
+        {
+          title: "Round-2",
+          description: [
+            "8-10 teams will be selected.",
+            "Image of the website to be replicated will be given or screen record.",
+          ],
+        },
+      ],
+    },
+    registration: true,
+    purpose: "EVENTS",
+  },
+
+  "web-design": {
+    id: "2",
+    name: "web-design",
+    refName: "webdesign",
+    about: `An inventive event, where the creative and devious minds compete to
+showcase their skills in developing a website. The participants delve into the
+magic of creating alluring websites as they beat the race against time. The
+contest calls for testing the knowledge in web development and being able to
+replicate a given website.`,
+    dateTime: ["Date:March 26th", "Time:2pm"],
+    teamSize: "2-3",
+    rounds: "2",
+    duration: "Round 1 - 30 minutes, Round 2 - 1 hour",
+    //platform: "Yet to decide",
+    //fee: `Registration Fee - RS.150`,
+    //dateTime: ["Date:March 26th", "Time:9:30am"],
+
+    // contact: [
+    //   {
+    //     name: "Gabrio Mascarnas A",
+    //     mobile: "9488394416",
+    //   },
+    //   {
+    //     name: "Vasanthakumar R",
+    //     mobile: "6379841032",
+    //   },
+    //   {
+    //     name: "Sabhari P",
+    //     mobile: "8220265629",
+    //   },
+    // ],
+
+    // sponsor: "",
+
+    // rules: [
+    //   "Students other than first years are not allowed to take this event.",
+    //   "Participants involved in any kind of malpractice will be disqualified.",
+    //   "Marks will be provided based on the difficulty of the questions.",
+    //   "Decisions made by the administrators will be final.",
+    //   "Participants must ensure that they have laptop with good internet connectivity for their convenience.",
+    //   "Participants must ensure that they have microsoft account.",
+    // ],
+
+    rounds: {
+      number: 3,
+      roundDetails: [
+        {
+          title: "Round-1",
+          description: [
+            "30 questions will be given.",
+            "Tie will be resolved by the time taken to complete the test.",
+            "Questions based on web development,",
+          ],
+        },
+        {
+          title: "Round-2",
+          description: [
+            "8-10 teams will be selected.",
+            "Image of the website to be replicated will be given or screen record.",
+          ],
+        },
+      ],
+    },
+    registration: true,
+    purpose: "EVENTS",
+  },
+
+  "web-design": {
+    id: "2",
+    name: "web-design",
+    refName: "webdesign",
+    about: `An inventive event, where the creative and devious minds compete to
+showcase their skills in developing a website. The participants delve into the
+magic of creating alluring websites as they beat the race against time. The
+contest calls for testing the knowledge in web development and being able to
+replicate a given website.`,
+    dateTime: ["Date:March 26th", "Time:2pm"],
+    teamSize: "2-3",
+    rounds: "2",
+    duration: "Round 1 - 30 minutes, Round 2 - 1 hour",
+    //platform: "Yet to decide",
+    //fee: `Registration Fee - RS.150`,
+    //dateTime: ["Date:March 26th", "Time:9:30am"],
+
+    // contact: [
+    //   {
+    //     name: "Gabrio Mascarnas A",
+    //     mobile: "9488394416",
+    //   },
+    //   {
+    //     name: "Vasanthakumar R",
+    //     mobile: "6379841032",
+    //   },
+    //   {
+    //     name: "Sabhari P",
+    //     mobile: "8220265629",
+    //   },
+    // ],
+
+    // sponsor: "",
+
+    // rules: [
+    //   "Students other than first years are not allowed to take this event.",
+    //   "Participants involved in any kind of malpractice will be disqualified.",
+    //   "Marks will be provided based on the difficulty of the questions.",
+    //   "Decisions made by the administrators will be final.",
+    //   "Participants must ensure that they have laptop with good internet connectivity for their convenience.",
+    //   "Participants must ensure that they have microsoft account.",
+    // ],
+
+    rounds: {
+      number: 3,
+      roundDetails: [
+        {
+          title: "Round-1",
+          description: [
+            "30 questions will be given.",
+            "Tie will be resolved by the time taken to complete the test.",
+            "Questions based on web development,",
+          ],
+        },
+        {
+          title: "Round-2",
+          description: [
+            "8-10 teams will be selected.",
+            "Image of the website to be replicated will be given or screen record.",
+          ],
+        },
+      ],
+    },
+    registration: true,
+    purpose: "EVENTS",
+  },
+
+  "web-design": {
+    id: "2",
+    name: "web-design",
+    refName: "webdesign",
+    about: `An inventive event, where the creative and devious minds compete to
+showcase their skills in developing a website. The participants delve into the
+magic of creating alluring websites as they beat the race against time. The
+contest calls for testing the knowledge in web development and being able to
+replicate a given website.`,
+    dateTime: ["Date:March 26th", "Time:2pm"],
+    teamSize: "2-3",
+    rounds: "2",
+    duration: "Round 1 - 30 minutes, Round 2 - 1 hour",
+    //platform: "Yet to decide",
+    //fee: `Registration Fee - RS.150`,
+    //dateTime: ["Date:March 26th", "Time:9:30am"],
+
+    // contact: [
+    //   {
+    //     name: "Gabrio Mascarnas A",
+    //     mobile: "9488394416",
+    //   },
+    //   {
+    //     name: "Vasanthakumar R",
+    //     mobile: "6379841032",
+    //   },
+    //   {
+    //     name: "Sabhari P",
+    //     mobile: "8220265629",
+    //   },
+    // ],
+
+    // sponsor: "",
+
+    // rules: [
+    //   "Students other than first years are not allowed to take this event.",
+    //   "Participants involved in any kind of malpractice will be disqualified.",
+    //   "Marks will be provided based on the difficulty of the questions.",
+    //   "Decisions made by the administrators will be final.",
+    //   "Participants must ensure that they have laptop with good internet connectivity for their convenience.",
+    //   "Participants must ensure that they have microsoft account.",
+    // ],
+
+    rounds: {
+      number: 3,
+      roundDetails: [
+        {
+          title: "Round-1",
+          description: [
+            "30 questions will be given.",
+            "Tie will be resolved by the time taken to complete the test.",
+            "Questions based on web development,",
+          ],
+        },
+        {
+          title: "Round-2",
+          description: [
+            "8-10 teams will be selected.",
+            "Image of the website to be replicated will be given or screen record.",
+          ],
         },
       ],
     },
@@ -133,6 +541,7 @@ export const TechEvents = {
 
   // Code for Crown - OLPC
   "code-for-crown": {
+    id: "3",
     imgName: "code-for-crown_sponsor1.jpeg",
     name: "Code for Crown - OLPC",
     refName: "code-for-crown",
@@ -178,6 +587,7 @@ export const TechEvents = {
 
   // X-Domain Combat
   "get-hired": {
+    id: "4",
     imgName: "Saj.jpeg",
     name: "X-Domain Combat",
     refName: "x-domain-combat",

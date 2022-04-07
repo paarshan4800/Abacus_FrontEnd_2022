@@ -8,6 +8,7 @@ import PageNotFound from "../PageNotFound/PageNotFound";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
 import background from "../../images/bgg.jpg";
 import nontech from "./../../images/nontech.png";
+import { registerEvent } from "../../api/events";
 
 function EventDetails() {
   const { type, title } = useParams();
@@ -177,7 +178,12 @@ function EventDetails() {
                 alt={title}
               />
             )}
-            <GlassButton title="Register" />
+            <GlassButton
+              title="Register"
+              onClick={() => {
+                registerEvent(data.id);
+              }}
+            />
           </div>
         </div>
       </div>
