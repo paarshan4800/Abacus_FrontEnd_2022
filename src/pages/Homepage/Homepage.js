@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 import styles from "./Homepage.module.css";
 import styles1 from "./Landing.module.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
 import cx from 'classnames'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import {Footer} from '../../components/'
 
 
@@ -62,6 +64,9 @@ const Homepage = (props)=>{
                 <h1 className={`${styles.head}`} > ABACUS   '22</h1>
                 <h2 className={`${styles.date}`}>April 28, 29 and 30</h2>
             </div>
+
+            <Link to="/homepage##" spy="true" smooth={true}> </Link>
+            <FontAwesomeIcon icon="fa-regular fa-angles-down" />
 
             
  

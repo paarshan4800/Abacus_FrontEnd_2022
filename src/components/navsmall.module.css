@@ -1,0 +1,421 @@
+
+@font-face {
+    font-family: Future;
+    src: url(./Aquire.otf);
+    
+}
+
+/*
+.abacus_nav_container,.abacus_nav_container * {
+    z-index: 999 !important;
+}
+
+.abacus_text {
+    text-transform: uppercase;
+    font-family: 'Audiowide';
+}
+.buttoncolor{
+    animation: flicker 3s infinite;
+    color: white;
+    font-size: 25px;
+    padding-bottom: 10px;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    
+}
+.abacus_nav_btn {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.abacus_open_btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.abacus_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in-out;
+}
+
+.abacus_nav.visible {
+    transform: translateX(0);
+}
+
+.abacus_nav_black {
+    background-color: #060c21;
+    width: 60%;
+    max-width: 480px;
+    min-width: 320px;
+    transition-delay: .4s;
+}
+
+.abacus_nav_black.visible {
+    transition-delay: 0s;
+}
+
+.abacus_nav_red {
+    background-color:#b3005f;
+    transition-delay: .2s;
+    width: 95%;
+}
+
+.abacus_nav-red.visible {
+    transition-delay: .2s;
+}
+
+.abacus_nav_white {
+    background-color: black;
+    padding: 40px;
+    position: relative;
+    transition-delay: 0s;
+    width: 95%;
+}
+
+.abacus_nav_white.visible {
+    transition-delay: .4s;
+}
+
+.abacus_close_btn {
+    opacity: 0.5;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    color: white !important;
+}
+
+.abacus_close_btn:hover {
+    color: #ff2483 !important;
+    opacity: 1;
+}
+
+.abacus_logo {
+    /* width: 150px; 
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-family: NavbarMain;
+    letter-spacing: 5px;
+}
+
+.abacus_list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.abacus_list li {
+    margin: 20px 0;
+}
+
+.abacus_list ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.abacus_list_link {
+    font-size: 20px !important;
+    font-family: NavbarMain;
+    letter-spacing: 5px;
+    color: grey !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.abacus_list_link:hover {
+    color: #ff2483 !important;
+    text-decoration: none;
+}
+@keyframes flicker {
+    from {
+        opacity: 1;
+    }
+
+    4% {
+        opacity: 0.9;
+    }
+
+    6% {
+        opacity: 0.85;
+    }
+
+    8% {
+        opacity: 0.95;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    11% {
+        opacity: 0.922;
+    }
+
+    12% {
+        opacity: 0.9;
+    }
+
+    14% {
+        opacity: 0.95;
+    }
+
+    16% {
+        opacity: 0.98;
+    }
+
+    17% {
+        opacity: 0.9;
+    }
+
+    19% {
+        opacity: 0.93;
+    }
+
+    20% {
+        opacity: 0.99;
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    26% {
+        opacity: 0.94;
+    }
+
+    28% {
+        opacity: 0.98;
+    }
+
+    37% {
+        opacity: 0.93;
+    }
+
+    38% {
+        opacity: 0.5;
+    }
+
+    39% {
+        opacity: 0.96;
+    }
+
+    42% {
+        opacity: 1;
+    }
+
+    44% {
+        opacity: 0.97;
+    }
+
+    46% {
+        opacity: 0.94;
+    }
+
+    56% {
+        opacity: 0.9;
+    }
+
+    58% {
+        opacity: 0.9;
+    }
+
+    60% {
+        opacity: 0.99;
+    }
+
+    68% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.9;
+    }
+
+    72% {
+        opacity: 0.95;
+    }
+
+    93% {
+        opacity: 0.93;
+    }
+
+    95% {
+        opacity: 0.95;
+    }
+
+    97% {
+        opacity: 0.93;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+*/
+
+
+body
+{
+
+  
+  /* make it look decent enough */
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.menuToggle
+{
+
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 50;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+.menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+.menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 50; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+.menuToggle .span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 50;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.menuToggle .span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+.menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+.menuToggle input:checked ~ .span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+.menuToggle input:checked ~ .span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+.menuToggle input:checked ~ .span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+.menu
+{
+    font-family: Future; 
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  height: 100vh;
+  position: fixed;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  z-index: 25;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+  font-family: Future; 
+}
+
+/*
+ * And let's slide it in from the left
+ */
+.menuToggle input:checked ~ ul
+{
+  transform: none;
+}

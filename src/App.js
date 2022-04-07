@@ -68,7 +68,7 @@ function App() {
                 <NewLoadWorkshop.Provider value={newloadworkshop}>
                   <SetNewLoadWorkshop.Provider value={setnewloadworkshop}>
                     <BrowserRouter>
-                      <Navbar />
+                      <Navbar width={width}/>
                       <div
                         style={{
                           paddingTop: "90px",
