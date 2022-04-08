@@ -30,11 +30,8 @@ function EventDetails() {
   return (
     <div
       style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
+        backgroundSize: "fit",
         backgroundRepeat: 1,
-        //height: "100vh",
-        // color: "#f5f5f5",
       }}
     >
       <div className={styles.container}>
@@ -62,7 +59,7 @@ function EventDetails() {
         <div className={styles.box} style={{ height: "auto", width: "60%" }}>
           <span></span>
           <div className={styles.content}>
-            <h2 className={styles.neon}>DESCRIPTION</h2>
+            <h2 className={styles.neon}>{data.name}</h2>
             <p>{data.about}</p>
             {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
             {/* {data.dateTime.map((obj) => (
@@ -114,7 +111,15 @@ function EventDetails() {
             <h2 className={styles.neon}>ROUNDS</h2>
             {data.rounds.roundDetails.map((round, index) => (
               <p key={index + 1} className={styles.glowCardName}>
-                {round.title} : {round.description}
+                <h4>
+                  <b>{round.title}</b>
+                </h4>
+                {round.description.map((desc, index) => (
+                  <p key={index + 1} className={styles.glowCardName}>
+                    ► {desc}
+                  </p>
+                ))}
+                {/* {round.description} */}
               </p>
             ))}
 

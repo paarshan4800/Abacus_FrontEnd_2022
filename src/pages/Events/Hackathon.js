@@ -20,6 +20,15 @@ function Hackathon() {
       }
     >
       <div className={styles.container}>
+        <div className={styles.box} style={{ width: "400px" }}>
+          <span></span>
+          <div className={styles.content}>
+            <img src={nontech} style={{ width: "200px", height: "200px" }} />
+            <Link to={`/hackathon-register`}>
+              <GlassButton title="Register" />
+            </Link>
+          </div>
+        </div>
         <div className={styles.box} style={{ width: "800px" }}>
           <span></span>
           <div className={styles.content}>
@@ -36,16 +45,6 @@ function Hackathon() {
                 {person.mobile}
               </p>
             ))}
-          </div>
-        </div>
-
-        <div className={styles.box} style={{ width: "400px" }}>
-          <span></span>
-          <div className={styles.content}>
-            <img src={nontech} style={{ width: "200px", height: "200px" }} />
-            <Link to={`/hackathon-register`}>
-              <GlassButton title="Register" />
-            </Link>
           </div>
         </div>
       </div>

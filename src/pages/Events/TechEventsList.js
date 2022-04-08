@@ -14,22 +14,22 @@ function TechEventsList() {
     },
     {
       id: 2,
-      refName: "code-for-crown",
-      name: "Code for Crown",
-    },
-    {
-      id: 3,
       refName: "web-design",
       name: "Web Design",
     },
     {
-      id: 4,
+      id: 3,
       refName: "capture-the-flag",
-      name: "Capture the Flag",
+      name: "Capture the flag (Pre event)",
+    },
+    {
+      id: 4,
+      refName: "ospc",
+      name: "OSPC",
     },
     {
       id: 5,
-      refName: "she-codes",
+      refName: "she++",
       name: "She Codes",
     },
     {
@@ -40,7 +40,17 @@ function TechEventsList() {
     {
       id: 7,
       refName: "get-hired",
-      name: "Get Hired",
+      name: "Get-Hired",
+    },
+    {
+      id: 8,
+      refName: "brainstormiz-technicalQuiz",
+      name: "Brainstormiz - Technical Quiz",
+    },
+    {
+      id: 9,
+      refName: "deadlock-opener",
+      name: "Deadlock Opener",
     },
   ];
 
@@ -51,14 +61,7 @@ function TechEventsList() {
   // }
 
   return (
-    <div
-    // style={{
-    //   backgroundImage: `url(${background})`,
-    //   backgroundSize: "cover",
-    //   height: "100vh",
-    //   color: "#f5f5f5",
-    // }}
-    >
+    <div>
       <div className={styles.wrapper}>
         {techEventsList.map((event) => (
           <Link
@@ -67,7 +70,8 @@ function TechEventsList() {
           >
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
               <img
-                src={require(`./../../images/TechEvents/${event.refName}.png`)}
+                //src={require(`./../../images/TechEvents/${event.refName}.png`)}
+                src={require(`./../../images/TechEvents/web-design.png`)}
                 style={{
                   width: "350px",
                   height: "250px",
@@ -81,29 +85,6 @@ function TechEventsList() {
           </Link>
         ))}
       </div>
-
-      {/* {techEventsList.map((event) => (
-        <div className={cx(styles.container, styles.list)}>
-          <div className={styles.box}>
-            <span></span>
-            <div className={styles.content}>
-              <Link
-                to={`/events/tech-events/${event.refName}`}
-                className={stylesnew.linkTag}
-              >
-                <div key={event.id}>
-                  <img
-                    src={require(`./../../images/TechEvents/${event.refName}.png`)}
-                    style={{ width: "200px", height: "200px" }}
-                    alt={event.refName}
-                  />
-                  <div className={styles.neon}>{event.name}</div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      ))} */}
     </div>
   );
 }

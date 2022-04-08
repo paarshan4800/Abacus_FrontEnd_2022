@@ -12,7 +12,7 @@ import footerStyles from "./footer.module.css"
 import "./footer.module.css"
 export default function Footer() {
   return (
-    <MDBFooter className='text-center bg-dark' color='white' bgColor='dark'>
+    <MDBFooter className='text-center' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }} color='white'>
       <MDBContainer className='p-4' >
         <section className='mb-4'>
           <h3>
@@ -21,7 +21,7 @@ export default function Footer() {
         </section>
         <section className='mb-4'>
         <div className={footerStyles.Links}>
-        <div className={footerStyles.Links1}>
+        <div>
           <a href="https://www.facebook.com/csea.ceg" target="_blank" className='btn btn-outline-light btn-floating m-1' role='button'>
             <i class="fa fa-facebook-f"></i>
             {/* <MDBIcon  icon='fa fa-facebook-f' /> */}
@@ -40,7 +40,7 @@ export default function Footer() {
           <a className='btn btn-outline-light btn-floating m-1' href='#!' role='button'>
             <MDBIcon fab icon='instagram' />
           </a>
-*/}     <div className={footerStyles.Links1}>
+*/}     <div>
           <a href="https://www.linkedin.com/company/abacus-cse" target="_blank" className='btn btn-outline-light btn-floating m-1' role='button'>
             <i class="fa fa-linkedin"></i>
           </a> 
@@ -77,10 +77,10 @@ export default function Footer() {
 
         <section className=''>
           <MDBRow>
-            <MDBCol lg='4' md='6' className='mb-4 mb-md-0'>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
               {/* <h5 className='text-uppercase'>Links</h5> */}
-              <div className={footerStyles.contact}>Pothikkannan G</div>
-              <a href="tel:+91 9500702003" target="_blank" className={`${footerStyles.contact} ${footerStyles.num} `}><i class="fa fa-phone" aria-hidden="true"></i> 9500702083</a>
+              <div className={footerStyles.contact}>Adhithya K</div>
+              <a href="tel:+91 8883018311" target="_blank" className={`${footerStyles.contact} ${footerStyles.num} `}><i class="fa fa-phone" aria-hidden="true"></i> 8883018311</a>
               {/* <ul className='list-unstyled mb-0'>
                 <li>
                   <a href='#!' className='text-white'>
@@ -105,10 +105,10 @@ export default function Footer() {
               </ul> */}
             </MDBCol>
 
-            <MDBCol lg='4' md='6' className='mb-4 mb-md-0'>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
               {/* <h5 className='text-uppercase'>Links</h5> */}
-              <div className={footerStyles.contact}>Pothikkannan G</div>
-              <a href="tel:+91 9500702003" target="_blank" className={`${footerStyles.contact} ${footerStyles.num} `}><i class="fa fa-phone" aria-hidden="true"></i> 9500702083</a>
+              <div className={footerStyles.contact}>Usha Varshini Saravanan</div>
+              <a href="tel:+91 9894560778" target="_blank" className={`${footerStyles.contact} ${footerStyles.num} `}><i class="fa fa-phone" aria-hidden="true"></i> 9894560778</a>
               {/* <ul className='list-unstyled mb-0'>
                 <li>
                   <a href='#!' className='text-white'>
@@ -133,10 +133,38 @@ export default function Footer() {
               </ul> */}
             </MDBCol>
 
-            <MDBCol lg='4' md='6' className='mb-4 mb-md-0'>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
               {/* <h5 className='text-uppercase'>Links</h5> */}
-              <div className={footerStyles.contact}>Pothikkannan G</div>
-              <a href="tel:+91 9500702003" target="_blank" className={`${footerStyles.contact} ${footerStyles.num} `}><i class="fa fa-phone" aria-hidden="true"></i> 9500702083</a>
+              <div className={footerStyles.contact}>Shankar Kumar S</div>
+              <a href="tel:+91 9600568627" target="_blank" className={`${footerStyles.contact} ${footerStyles.num} `}><i class="fa fa-phone" aria-hidden="true"></i> 9600568627</a>
+              {/* <ul className='list-unstyled mb-0'>
+                <li>
+                  <a href='#!' className='text-white'>
+                    Link 1
+                  </a>
+                </li>
+                <li>
+                  <a href='#!' className='text-white'>
+                    Link 2
+                  </a>
+                </li>
+                <li>
+                  <a href='#!' className='text-white'>
+                    Link 3
+                  </a>
+                </li>
+                <li>
+                  <a href='#!' className='text-white'>
+                    Link 4
+                  </a>
+                </li>
+              </ul> */}
+            </MDBCol>
+
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
+              {/* <h5 className='text-uppercase'>Links</h5> */}
+              <div className={footerStyles.contact}>Thivyha Siv</div>
+              <a href="tel:+91 6383645287" target="_blank" className={`${footerStyles.contact} ${footerStyles.num} `}><i class="fa fa-phone" aria-hidden="true"></i> 6383645287</a>
               {/* <ul className='list-unstyled mb-0'>
                 <li>
                   <a href='#!' className='text-white'>

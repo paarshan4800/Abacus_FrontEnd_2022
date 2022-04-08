@@ -196,8 +196,10 @@ body {
   background-color: #000000;
 
   text-align: center;
-  color: #ffffff;
-  text-shadow: 0 0 1px #fff, 0 0 1px #fff;
+      color: white;
+      text-shadow:
+      0 0 20px #0fe69e,
+      0 0 20px #0fe69e;
   border-radius: 0 0 7px 7px;
 }
 
@@ -205,6 +207,13 @@ img {
   position: relative;
   z-index: 3;
   border-radius: 7px 7px 0 0;
+}
+
+@media only screen and (max-width: 500px) {
+  img {
+    width: 300px !important;
+    height: 210px !important;
+  }
 }
 
 @-webkit-keyframes green-shadow {
