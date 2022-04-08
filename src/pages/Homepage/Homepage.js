@@ -281,7 +281,7 @@ const Homepage = (props) => {
           </div>
         </section>
 
-        <section>
+        <section className={`${styles.developers}`}>
           <Developers />
         </section>
       </main>
