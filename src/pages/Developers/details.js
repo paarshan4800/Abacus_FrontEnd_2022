@@ -9,7 +9,7 @@ export const developerDetails = [
     {
         title: "Sneha S",
         title1: "Frontend",
-        img: "dev/Sneha S.jpg",
+        img: "dev/Sneha S.png",
         href:
           "https://www.linkedin.com/in/darrshana-rajkumar-6a36aa1ba",
     },
@@ -24,6 +24,13 @@ export const developerDetails = [
         title: "Ajitesh M",
         title1: "Backend",
         img: "dev/Ajitesh M.jpg",
+        href:
+          "https://www.linkedin.com/in/darrshana-rajkumar-6a36aa1ba",
+    },
+    {
+        title: "Bharath M",
+        title1: "Design",
+        img: "dev/Bharath M.png",
         href:
           "https://www.linkedin.com/in/darrshana-rajkumar-6a36aa1ba",
     },

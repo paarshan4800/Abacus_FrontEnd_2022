@@ -9,7 +9,7 @@ import { developerDetails } from "./details";
 export default function Developers() {
   return(
     <div>
-    <Heading text="Developers and Design Team" fontSize="3rem" />
+    <Heading text="Developers and Design Team" fontSize="3rem" className="text-center mt-5 p-5"/>
       <div className="container-fluid m-auto d-flex justify-content-center pt-5 align-self-center pb-5">
             <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5  d-flex justify-content-center align-self-center pb-5">
               {developerDetails.map((item, index)=> {return (

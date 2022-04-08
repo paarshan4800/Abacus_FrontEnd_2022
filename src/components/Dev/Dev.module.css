@@ -10,7 +10,7 @@
   }
 }
 
-.inner {
+/* .inner {
   background-color: transparent;
   width: 10em;
   height: 10em;
@@ -18,7 +18,7 @@
   box-shadow: 0 0 8px #ffff, inset 0 0 8px #ffff;
   animation: pulse 2s linear 1s infinite;
   margin: auto;
-}
+} */
 .hover :hover {
   text-decoration: none;
   color: #0fe69e;
@@ -37,7 +37,7 @@
   letter-spacing: 5px;
   text-align: center;
   font-size: 15px;
-  color: #006BAC;
+  color: #006bac;
 }
 /*@media only screen and (max-width:540px){
   .inner{
