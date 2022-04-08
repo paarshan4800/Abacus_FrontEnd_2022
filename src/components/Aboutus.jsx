@@ -4,7 +4,7 @@ import React from "react";
 import styles from './about.module.css'
 import ceg from './ceg.png'
 import csea from './CSEA.png'
-import abacus from './ab.png'
+import abacus from './ABACUS22LOGO-03.png'
 
 const Aboutus = () => {
   let img;
@@ -12,7 +12,7 @@ const Aboutus = () => {
     {
       title: "Abacus",
       content:"ABACUS is the annual intercollege symposium of the Department of Computer Science and Engineering conducted by Computer Science and Engineering Association (CSEA), College of Engineering Guindy. It is an event where people from multiple colleges demonstrate their technical prowess to win exciting prizes and internships.",
-      image: "ceg.png",
+      image: "ABACUS22LOGO-03.png",
     },
     {
       title: "CSEA",
@@ -58,8 +58,8 @@ const Aboutus = () => {
                   <img
                     alt={`${item.title}`}
                     src={img}
-                    width="275px"
-                    height="275px"
+                    width="300px"
+                    height="280px"
                   />
                 </div>
                 <div className={`${styles.text_box}`}>
