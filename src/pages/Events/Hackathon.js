@@ -32,7 +32,7 @@ function Hackathon() {
         <div className={styles.box} style={{ width: "800px" }}>
           <span></span>
           <div className={styles.content}>
-            <h2 className={styles.neon}>DESCRIPTION</h2>
+            <h2 className={styles.neon}>HACKATHON</h2>
             <p>{data.about}</p>
             {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
             {data.dateTime.map((obj) => (
