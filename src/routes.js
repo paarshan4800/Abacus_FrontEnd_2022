@@ -60,8 +60,21 @@ const AppRoutes = () => {
       <Route path="/events/:type/:title" exact component={EventDetails} />
       <Route path="/workshops" exact component={WorkshopsList} />
       <Route path="/workshops/:title" exact component={WorkshopDetails} />
-      <Route path="/dashboard" exact component={Dashboard} />
+
       <Route path="/test/:type/:title" exact component={Test} />
+      <Route path="/dashboard" exact component={ComingSoon} />
+      <Route path="/login" exact component={ComingSoon} />
+      <Route path="/Login/VerifyEmail" exact component={ComingSoon} />
+      <Route path="/signUp" exact component={ComingSoon} />
+      <Route path="/ForgotPassword" exact component={ComingSoon} />
+      <Route
+        path="/resetPassword/:resetPassword"
+        exact
+        component={ComingSoon}
+      />
+      <Route path="/ComingSoon" exact component={ComingSoon} />
+      <Route path="/hackathon-register" exact component={ComingSoon} />
+      {/* <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/login" exact component={LoginRegister} />
       <Route path="/Login/VerifyEmail" exact component={VerifyEmail} />
       <Route path="/signUp" exact component={SignUp} />
@@ -72,7 +85,7 @@ const AppRoutes = () => {
         component={NewPassword}
       />
       <Route path="/ComingSoon" exact component={ComingSoon} />
-      <Route path="/hackathon-register" exact component={HackathonRegister} />
+      <Route path="/hackathon-register" exact component={HackathonRegister} /> */}
       <Route component={PageNotFound} />
       {/* <Route path="/Login" exact component={LoginRegister} /> */}
 

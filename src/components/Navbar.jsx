@@ -83,11 +83,9 @@ const changeButton = ()=>{
 
           // <NavBarItem key={item + index} title={item.toUpperCase()} className={styles.nav} link={`/${item}`}/>
 
-          <li className={`hover:bg-[#8A2BD6] py-2 px-3 mx-4 mt-3 hover:rounded-full hover:cursor-pointer  ${styles.nav}`}
-            
-          ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >{item}</Link></li>
+         <Link className={`hover:bg-[#8A2BD6] py-2 px-3 mx-4 mt-3 hover:rounded-full hover:cursor-pointer  ${styles.nav}`} to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   >{item}</Link>
         )}
-         {Auth ?
+         {/* {Auth ?
 
           
             ( 
@@ -97,7 +95,7 @@ const changeButton = ()=>{
             (  <li className="bg-[#11998e] py-2 px-7 mx-2 mt-3 rounded-full cursor-pointer hover:bg-[#2546bd]">
             <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Login</Link>
             </li>)
-            }
+            } */}
       </ul>
       <div className="flex relative">
         {!toggleMenu && (
@@ -117,14 +115,12 @@ const changeButton = ()=>{
               (item, index) =>
 
                 // <NavBarItem key={item + index} title={item.toUpperCase()} classprops="my-2 text-lg" link={`/${item}`} />
-                <li className={`
+                <Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={`
                 hover:bg-[#8A2BD6]
                 py-2 
-                px-7 mx-4 hover:rounded-full hover:cursor-pointer  ${styles.nav}`} 
-               
-                ><Link to={`/${item}`} style={{textDecoration:"none", color:"#fff"}}   className={styles.nav} >{item}</Link></li>
+                px-7 mx-4 hover:rounded-full hover:cursor-pointer  ${styles.nav}`} >{item}</Link>
             )}
-            {Auth ? 
+            {/* {Auth ? 
              
               ( 
             <>
@@ -142,7 +138,7 @@ const changeButton = ()=>{
             (  <li className="bg-[#2952e3] py-2 px-7 mx-4 mt-2 rounded-full cursor-pointer hover:bg-[#2546bd]">
             <Link to={`/LOGIN`} style={{textDecoration:"none", color:"#fff",textAlign:"center"}}   onClick={()=>setToggleMenu(false)} className={styles.nav}>Login</Link>
             </li>)
-            }
+              */ }
            
           </ul>
         )}
