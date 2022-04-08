@@ -1,5 +1,25 @@
+@font-face {
+    font-family: Future;
+    src: url(./Aquire.otf);
+    
+}
 
+._navbar_main_link_text{
+    font-family: Future;
+    color: white;
+}
+
+._navbar_brand{
+    font-weight: bold;
+    font-family: Future;
+    color: white;
+    font-size: 25px;
+    text-align: center;
   
+
+}
+
+/*
 @font-face {
     font-family: Future;
     src: url(./Aquire.otf);
@@ -11,6 +31,7 @@
     src: url(./Aquire-Bold.otf);
 }
 
+
 .mob{
     padding-top: 40px;
     padding-left: 20px;
@@ -20,8 +41,10 @@
 .font{
     text-align: justify;
     font-family: BOLD;
-    font-size: 40px;
-    padding:10px;
+    font-size: 25px;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom: 10px;
     font-weight: bolder;
 }
 .nav{
@@ -54,3 +77,118 @@
 
   
   }
+
+  */
+
+  ._navbar_main_link {
+      font-family: Future;
+}
+
+
+  ._navbar {
+    display: flex;
+    background-color: transparent;
+    background: none;
+    position: fixed;
+    width: 100vw;
+    padding-left: 3%;
+    padding-right: 5%;
+    top: 0;
+    font-family: Future;
+    margin: 15px;
+    margin-top: 15px;
+    z-index: 600;
+    color:white;
+}
+
+._navbar *{
+    z-index: 600;
+}
+@media only screen and (max-width: 1100px) {
+    ._navbar {
+        padding-bottom: 50px;
+      
+    }
+}
+@media only screen and (min-width:1101) and (max-width: 1300px) {
+    ._navbar {
+        padding-bottom: 20px;
+    }}
+._navbar_brand {
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+._navbar_brand_link {
+    text-decoration: none;
+    font-family: NavbarMain;
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+._navbar_brand_link:hover {
+    text-decoration: none;
+}
+
+
+._navbar_main {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 15px;
+}
+
+._navbar_main_link {
+    margin: 10px;
+    margin-right: 50px;
+    text-transform: uppercase;
+    color: grey;
+    font-family: Future;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hover Effect */
+
+._navbar_main_link {
+    position: relative;
+    text-decoration: none;
+}
+
+._navbar_main_link:before,
+._navbar_main_link:after {
+    position: absolute;
+    opacity: 0;
+    font-size: 20px;
+    top:-2px;
+    transition: all 0.3s;
+}
+
+._navbar_main_link:before {
+    content: '<';
+    color: honeydew;
+    left: -12px;
+    transform: translateX(20px);
+}
+
+._navbar_main_link:after {
+    content: '/>';
+    color: honeydew;
+    right: -23px;
+    transform: translateX(-20px);
+}
+
+._navbar_main_link:hover:before,
+._navbar_main_link:hover:after {
+    opacity: 1;
+    transform: translateX(0px);
+    
+}
+
+._navbar_main_link:hover {
+    /* text-shadow: -1px -1px 0, 1px -1px 0, -1px 1px 0, 1px 1px 0, 0 -2px 8px, 0 0 2px, 0 0 5px #ff7e00, 0 0 15px #ff4444, 0 0 2px #ff7e00, 0 2px 3px #000; */
+    color: #ff2483;
+    text-decoration: none;
+}

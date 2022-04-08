@@ -619,7 +619,7 @@
   -o-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
   }
-  .ufo_upper .cockpit .glass-edge {
+  .ufo_upper .cockpit .glass_edge {
   background-color: transparent;
   width: 50px;
   height: 7.5px;
@@ -634,7 +634,7 @@
   -o-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
   }
-  .ufo_upper .cockpit .glass-edge:before {
+  .ufo_upper .cockpit .glass_edge:before {
   content: "";
   background-color: transparent;
   width: 50px;

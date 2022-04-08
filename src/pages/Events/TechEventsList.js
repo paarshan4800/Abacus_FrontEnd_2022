@@ -89,7 +89,7 @@ function TechEventsList() {
             <div className={styles.content}>
               <Link
                 to={`/events/tech-events/${event.refName}`}
-                className={styles.linkTag}
+                className={stylesnew.linkTag}
               >
                 <div key={event.id}>
                   <img

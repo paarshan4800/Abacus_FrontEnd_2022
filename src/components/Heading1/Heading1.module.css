@@ -1,10 +1,10 @@
 @font-face {
     font-family: alien;
-    src: url(../../components/Heading/alien.ttf);
+    src: url(../Aquire.otf);
   }
 
 ._heading {
-  font-family: "Audiowide", sans-serif !important;
+  font-family: alien;
     letter-spacing: 1px;
     animation: flicker 3s infinite;
     color: white;
