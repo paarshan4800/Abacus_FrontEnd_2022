@@ -23,6 +23,7 @@ import NewPassword from "./pages/Login/pages/NewPassword";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
 import Test from "./pages/Test/Test";
 import VerifyEmail from "./pages/Login/pages/VerifyEmail";
+import Loading from "./pages/Loading/Loading";
 
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
 // import Navbar from "./components/Navbar/Navbar";
@@ -74,6 +75,7 @@ const AppRoutes = () => {
       />
       <Route path="/ComingSoon" exact component={ComingSoon} />
       <Route path="/hackathon-register" exact component={ComingSoon} />
+      <Route path="/loading" exact component={Loading} />
       {/* <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/login" exact component={LoginRegister} />
       <Route path="/Login/VerifyEmail" exact component={VerifyEmail} />

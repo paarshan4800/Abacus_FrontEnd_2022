@@ -15,6 +15,7 @@ import Sphere from "../../components/Sphere/Sphere";
 import Heading from "../../components/Heading/Heading";
 import Heading1 from "../../components/Heading1/Heading1";
 import Developers from "../Developers/Developers";
+import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 
 const Homepage = (props) => {
   return (
@@ -56,11 +57,10 @@ const Homepage = (props) => {
             <h1 className={`${styles.head}`}> ABACUS '22</h1>
             <h2 className={`${styles.date}`}>April 28, 29 and 30</h2>
           </div>
-
-          <Link to="/homepage##" spy="true" smooth={true}>
+          {/* <Link to="#mainDiv" spy="true" smooth={true}>
             {" "}
-          </Link>
-          <FontAwesomeIcon icon="fa-regular fa-angles-down" />
+            <FontAwesomeIcon icon={faAngleDoubleDown} />
+          </Link> */}
         </section>
         <section className={`${styles.one} ${styles.b}`}>
           <div className={`${styles.About_Abacus} ${styles.bg}`}>
