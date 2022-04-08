@@ -90,7 +90,7 @@ export default function Footer() {
 
         <section className="">
           <MDBRow>
-            <MDBCol lg="4" md="6" className="mb-4 mb-md-0">
+            <MDBCol lg="3" md="6" className="mb-4 mb-md-0">
               {/* <h5 className='text-uppercase'>Links</h5> */}
               <div className={footerStyles.contact}>Adhithya K</div>
               <a
@@ -124,7 +124,7 @@ export default function Footer() {
               </ul> */}
             </MDBCol>
 
-            <MDBCol lg="4" md="6" className="mb-4 mb-md-0">
+            <MDBCol lg="3" md="6" className="mb-4 mb-md-0 pr-4">
               {/* <h5 className='text-uppercase'>Links</h5> */}
               <div className={footerStyles.contact}>
                 Usha Varshini Saravanan
@@ -160,7 +160,7 @@ export default function Footer() {
               </ul> */}
             </MDBCol>
 
-            <MDBCol lg="4" md="6" className="mb-4 mb-md-0">
+            <MDBCol lg="3" md="6" className="mb-4 mb-md-0 pl-4">
               {/* <h5 className='text-uppercase'>Links</h5> */}
               <div className={footerStyles.contact}>Shankar Kumar S</div>
               <a
@@ -172,7 +172,7 @@ export default function Footer() {
               </a>
             </MDBCol>
 
-            <MDBCol lg="4" md="6" className="mb-4 mb-md-0">
+            <MDBCol lg="3" md="6" className="mb-4 mb-md-0">
               {/* <h5 className='text-uppercase'>Links</h5> */}
               <div className={footerStyles.contact}>Thivyha Siv</div>
               <a
