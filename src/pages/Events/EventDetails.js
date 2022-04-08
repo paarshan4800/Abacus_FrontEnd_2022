@@ -10,6 +10,15 @@ import background from "../../images/bgg.jpg";
 import nontech from "./../../images/nontech.png";
 import { eventRegistration } from "../../api/registrations";
 
+import { Icon } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCalendarDays,
+  faClock,
+  faFlag,
+  faPeopleGroup,
+} from "@fortawesome/free-solid-svg-icons";
+
 function EventDetails() {
   const { type, title } = useParams();
 
@@ -39,6 +48,7 @@ function EventDetails() {
         <div className={styles.box} style={{ height: "auto", width: "30%" }}>
           <span></span>
           <div className={styles.content}>
+            <h2>{data.name}</h2>
             {type === "tech-events" && (
               <img
                 src={require(`./../../images/TechEvents/${title}.png`)}
@@ -88,8 +98,6 @@ function EventDetails() {
           <div className={styles.content}>
             <h2 className={styles.neon}>SPONSORS</h2>
             <img src={nontech} style={{ width: "200px", height: "200px" }} />
-
-            {/* <a href="#">Read More</a> */}
           </div>
         </div>
       </div>
@@ -104,8 +112,32 @@ function EventDetails() {
                 ► {rule}
               </p>
             ))}
-            <p>Team size: {data.teamSize}</p>
-            <p>Rounds: {data.roundsNumber}</p>
+            {data.teamSize ? (
+              <p>
+                <FontAwesomeIcon icon={faPeopleGroup} />
+                {"  "}Team size: {data.teamSize}
+              </p>
+            ) : null}
+            {data.dateTime ? (
+              <div>
+                <p>
+                  <FontAwesomeIcon icon={faCalendarDays} />
+                  {"  "}
+                  {data.dateTime[0]}
+                </p>
+                <p>
+                  <FontAwesomeIcon icon={faClock} />
+                  {"  "}
+                  {data.dateTime[1]}
+                </p>
+              </div>
+            ) : null}
+            {data.roundsNumber ? (
+              <p>
+                <FontAwesomeIcon icon={faFlag} />
+                {"  "}Rounds: {data.roundsNumber}
+              </p>
+            ) : null}
           </div>
         </div>
       </div>

@@ -8,8 +8,6 @@ import { Provider, useSelector } from "react-redux";
 import Reducer from "./redux/Reducer";
 import { useDispatch } from "react-redux";
 import { Navbar } from "./components";
-// import { toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 import background from "./images/bgg.jpg";
 import Footer from "./components/Footer";
 import { ToastContainer, toast } from "react-toastify";
@@ -68,7 +66,7 @@ function App() {
                 <NewLoadWorkshop.Provider value={newloadworkshop}>
                   <SetNewLoadWorkshop.Provider value={setnewloadworkshop}>
                     <BrowserRouter>
-                      <Navbar width={width}/>
+                      <Navbar width={width} />
                       <div
                         style={{
                           paddingTop: "90px",
