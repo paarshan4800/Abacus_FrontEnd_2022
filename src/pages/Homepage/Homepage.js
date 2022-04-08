@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Sphere from "../../components/Sphere/Sphere";
 import Heading from "../../components/Heading/Heading";
 import Heading1 from "../../components/Heading1/Heading1";
+import Developers from "../Developers/Developers";
 
 const Homepage = (props) => {
   return (
@@ -296,8 +297,6 @@ const Homepage = (props) => {
               </div>
             </div> */}
 
-            
-
             <div className="col text-center mt-5 p-5 mb-1">
               <Heading
                 text="Knowledge Partners"
@@ -343,15 +342,6 @@ const Homepage = (props) => {
               </div>
             </div>
 
-
-
-
-
-
-
-
-
-
             <div class="row container m-auto p-5 ">
               <div class="col-xl-6 col-sm-12 mb-5 text-center">
                 <Heading
@@ -359,7 +349,7 @@ const Homepage = (props) => {
                   fontSize="1.7rem"
                   className="text-center mt-5 p-5"
                 />
-                 <div className="col text-center ">
+                <div className="col text-center ">
                   <div className="row  mt-5 d-flex justify-content-center align-self-center">
                     <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
@@ -378,7 +368,7 @@ const Homepage = (props) => {
                   fontSize="1.7rem"
                   className="text-center mt-5 p-5"
                 />
-                 <div className="col text-center ">
+                <div className="col text-center ">
                   <div className="row  mt-5 d-flex justify-content-center align-self-center">
                     <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
@@ -411,6 +401,10 @@ const Homepage = (props) => {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className={`${styles.sponsors}`}>
+          <Developers />
         </section>
       </main>
 

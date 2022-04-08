@@ -24,7 +24,7 @@
   color: #0fe69e;
 }
 .text {
-  font-family: NavbarMain;
+  font-family: aquire;
   letter-spacing: 5px;
   text-align: center;
   font-size: 18px;
@@ -33,11 +33,11 @@
   margin-bottom: 0px;
 }
 .text1 {
-  font-family: NavbarMain;
+  font-family: "Audiowide";
   letter-spacing: 5px;
   text-align: center;
   font-size: 15px;
-  color: #0fe69e;
+  color: #006BAC;
 }
 /*@media only screen and (max-width:540px){
   .inner{
