@@ -41,6 +41,7 @@ function NonTechEventsList() {
     //   color: "#f5f5f5",
     // }}
     >
+      <div className={styles.mainTitle}>Non-Tech Events</div>
       <div className={styles.wrapper}>
         {nonTechEventsList.map((event) => (
           <Link
@@ -50,7 +51,12 @@ function NonTechEventsList() {
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
               <img
                 src={require(`./../../images/NonTechEvents/${event.refName}.png`)}
-                style={{ width: "350px", height: "250px" , padding: "20px", backgroundColor: "black"}}
+                style={{
+                  width: "350px",
+                  height: "250px",
+                  padding: "20px",
+                  backgroundColor: "black",
+                }}
                 alt={event.refName}
                 className={stylesnew.linkBackground}
               />

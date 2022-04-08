@@ -4,6 +4,10 @@ body {
   min-height: 100vh;
 }
 
+@font-face {
+  font-family: aquire;
+  src: url(../../components/Aquire.otf);
+}
 .datetime {
   display: flex;
   justify-content: space-between;
@@ -166,7 +170,7 @@ body {
   font-size: 2em;
   color: white;
   margin-bottom: 10px;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 .container .box .content p {
@@ -182,7 +186,7 @@ body {
     color: #0fe69e;
   text-shadow:0 0 20px #0fe69e,
   0 0 20px #0fe69e;
-  
+  font-family: aquire;
 }
 .neontitle {
   color: #0fe69e;

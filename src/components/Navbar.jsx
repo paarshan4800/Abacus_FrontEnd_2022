@@ -38,8 +38,8 @@ function NavbarBig({ clickLogout }) {
 
   return (
       <div className={`${styles._navbar}`}>
-          <div className={`${styles._navbar_brand}`}>
-              <Link to="/">
+          <div className={`${styles._navbar_brand}`} >
+              <Link to="/" className={`${styles._navbar_brand}`}>
                  <span className={`${styles._navbar_brand} `} >ABACUS '22 </span>
               </Link>
           </div>
@@ -50,23 +50,23 @@ activeStyle={{ color: '#ff2483' }}>
                   <span className={`${styles._navbar_main_link_text}`}>Home</span>
               </Link>
 
-              <Link className={`${styles._navbar_main_link}`} to="/aboutus##" 
+              <Link className={`${styles._navbar_main_link}`} to="/aboutus" 
 activeStyle={{ color: '#ff2483' }}>
                   <span className={`${styles._navbar_main_link_text}`}>About Us</span> 
               </Link>
 
-              <Link className={`${styles._navbar_main_link}`} to="/events##" 
+              <Link className={`${styles._navbar_main_link}`} to="/events" 
 activeStyle={{ color: '#ff2483' }}>
                   <span className={`${styles._navbar_main_link_text}`}>Events</span>
               </Link>
 
-              <Link className={`${styles._navbar_main_link}`} to="/workshops##" 
+              <Link className={`${styles._navbar_main_link}`} to="/workshops" 
 activeStyle={{ color: '#ff2483' }}>
                   <span className={`${styles._navbar_main_link_text}`}>Workshops</span> 
               </Link>
 
               {/* Conditionally rendering based on Authentication */}
-              {Auth ?
+              {/* {Auth ?
                   (<><Link className={`${styles._navbar_main_link}`} to="/dashboard" 
                   activeStyle={{ color: '#ff2483' }}>
                       <span className={`${styles._navbar_main_link_text}`}>Dashboard</span>
@@ -80,7 +80,7 @@ activeStyle={{ color: '#ff2483' }}>
                   (<Link className={`${styles._navbar_main_link}`} to="/login-register" activeClassName="selected"
                   activeStyle={{ color: '#ff2483' }}>
                       <span className={`${styles._navbar_main_link_text}`}>Login</span>
-                  </Link>)}
+                  </Link>)} */}
 
 
           </div>
@@ -110,7 +110,7 @@ function NavbarSmall({clickLogout}) {
       <Link to="/aboutus"><li>About us</li></Link>
       <Link to="/events"><li>Events</li></Link>
       <Link to="/workshops"><li>Workshops</li></Link>
-      <Link to="/login"><li>Login</li></Link>
+      {/* <Link to="/login"><li>Login</li></Link> */}
     </ul>
   </div>
 </nav>

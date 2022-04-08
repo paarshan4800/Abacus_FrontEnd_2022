@@ -8,6 +8,7 @@ import PageNotFound from "../PageNotFound/PageNotFound";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
 import background from "../../images/bgg.jpg";
 import nontech from "./../../images/nontech.png";
+import { eventRegistration } from "../../api/registrations";
 
 function EventDetails() {
   const { type, title } = useParams();
@@ -52,7 +53,12 @@ function EventDetails() {
                 alt={title}
               />
             )}
-            <GlassButton title="Register" />
+            <GlassButton
+              title="Register"
+              onClick={() => {
+                eventRegistration();
+              }}
+            />
           </div>
           {/* <GlassButton /> */}
         </div>
