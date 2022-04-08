@@ -7,7 +7,7 @@ function Dev({ props }) {
     <>
       <FadeInSection>
         <div style={{ justifyContent: "center", alignItems: "center" }}>
-          <div className={`${styles.inner}`}>
+          <div className={styles.inner}>
             <img
               src={`${process.env.PUBLIC_URL}/images/` + `${props.img}`}
               alt=""
