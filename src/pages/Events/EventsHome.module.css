@@ -1,6 +1,7 @@
 .neon {
-  color: #ffffff;
-  text-shadow: 0 0 1px #fff, 0 0 1px #fff;
+    color: white;
+  text-shadow: 0 0 20px #0fe69e,
+  0 0 20px #0fe69e;
   text-align: center;
   font-size: x-large !important;
   /* text-decoration: none !important; */

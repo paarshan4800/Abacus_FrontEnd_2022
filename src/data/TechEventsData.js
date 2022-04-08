@@ -3,9 +3,9 @@ export const TechEvents = {
     id: "1",
     name: "Reverse Engineering",
     imgName: "Saj.jpeg",
-    refName: "reverseengineering",
+    refName: "reverse-engineering",
     about: `A precipitous fast-tracked programming contest, where the coding minds get
-the chance to put their problem-solving skills to test.The participants shift into
+the chance to put their problem-solving skills to test. The participants shift into
 reverse gear and race against the clock along with the fellow coders to reverse
 engineer the code. The contest calls for participants being able to come up
 with a code that fulfills some hidden test cases.`,
@@ -72,16 +72,16 @@ with a code that fulfills some hidden test cases.`,
 
   "web-design": {
     id: "2",
-    name: "web-design",
-    refName: "webdesign",
+    name: "Web Design",
+    refName: "web-design",
     about: `An inventive event, where the creative and devious minds compete to
 showcase their skills in developing a website. The participants delve into the
 magic of creating alluring websites as they beat the race against time. The
 contest calls for testing the knowledge in web development and being able to
 replicate a given website.`,
-    //dateTime: ["Date:March 26th", "Time:2pm"],
+    dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
-    rounds: "2",
+    roundsNumber: "2",
     duration: "Round 1 - 30 minutes, Round 2 - 2 hours",
     //platform: "Yet to decide",
     participants: "All 4 years",
@@ -138,9 +138,9 @@ replicate a given website.`,
     purpose: "EVENTS",
   },
 
-  "Capture the flag (Pre event)": {
+  "capture-the-flag": {
     id: "3",
-    name: "Capture the flag",
+    name: "Capture the flag (Pre event)",
     refName: "capture-the-flag",
     about: `This is a jeopardy style capture the flag event where cyber security enthusiasts
 solve labyrinths in order to score points. The competitors are pitted against each
@@ -149,7 +149,7 @@ OSINT, Cryptanalysis, Reverse Engineering and various other Cyber security
 domains.`,
     //dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
-    rounds: "2",
+    roundsNumber: "2",
     duration: "Round 1 - 1 Hour, Round 2 - 1 Hour",
     //platform: "Yet to decide",
     participants: "All 4 years",
@@ -207,7 +207,7 @@ domains.`,
 
   ospc: {
     id: "4",
-    name: "ospc",
+    name: "OSPC",
     refName: "ospc",
     about: `A high-stakes fast-paced programming contest, where the innovative minds
 come together to resolve challenges in the most complicated coding
@@ -217,7 +217,7 @@ contestants. The contest calls for your competitive programming ability and
 approach towards problem solving.`,
     //dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
-    rounds: "2",
+    roundsNumber: "2",
     duration:
       "Round 1 - 30 to 45 minutes, Round 2 - 75 minutes(1 hr 15 minutes)",
     //platform: "Yet to decide",
@@ -278,7 +278,7 @@ approach towards problem solving.`,
 
   "she++": {
     id: "5",
-    name: "she++",
+    name: "She++",
     refName: "she++",
     about: `A women-only event, where the participants put forth their ingenious solutions
 to grab the crown. The contestants are put up with an idiosyncratic
@@ -286,7 +286,7 @@ combination of maths, puzzles, aptitude and coding with a clock ticking in the
 background while they compete to win the race towards the tiara.`,
     //dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
-    rounds: "2",
+    roundsNumber: "2",
     duration: "Round 1 - 30 minutes, Round 2 - 75 minutes",
     //platform: "Yet to decide",
     //fee: `Registration Fee - RS.150`,
@@ -345,7 +345,7 @@ background while they compete to win the race towards the tiara.`,
 
   booting: {
     id: "6",
-    name: "booting",
+    name: "Booting",
     refName: "booting",
     about: `Introducing the newbies to coding contests, geeks from the freshman year, start
 exploring the hurdles in logical reasoning, arithmetic and programming
@@ -354,7 +354,7 @@ mathematical calculations will be tested. The event aims to introduce novice
 coders to the coding world.`,
     //dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
-    rounds: "2",
+    roundsNumber: "2",
     duration: "Round 1- 45 minutes, Round 2-75 minutes",
     //platform: "Yet to decide",
     participants: "Freshmen (Only Orange Tags) exclusive",
@@ -414,7 +414,7 @@ coders to the coding world.`,
 
   "get-hired": {
     id: "7",
-    name: "get-hired",
+    name: "Get-Hired",
     refName: "get-hired",
     about: `An illuminating practical event, where the participants are given an opportunity
 to see what the placement drive is actually like. This event consists of an
@@ -424,7 +424,7 @@ logical and programming questions in the first screening round, following which
 the chosen contestants avail the experience of interviews.`,
     //dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "Individual Event",
-    rounds: "",
+    roundsNumber: "",
     duration: "Round 1- 75 minutes, Round 2-30-45 minutes",
     platform:
       "Round 1: Hackerrank/ AMCAT, Round 2: Teams meet, Shared Platform: CodePair/ GoogleDocs",
@@ -481,7 +481,7 @@ the chosen contestants avail the experience of interviews.`,
 
   "brainstormiz-technicalQuiz": {
     id: "8",
-    name: "brainstormiz-technicalQuiz",
+    name: "Brainstormiz - Technical Quiz",
     refName: "brainstormiz-technicalQuiz",
     about: `Get ready to test your knowledge and the speed at which you can come up with
 the solutions.This quiz is based on the Computer Science topics like, Operating
@@ -494,7 +494,7 @@ day lives. Come on and show your technical prowess and be crowned the most
 tech savvy quizzer of them all in this technical quiz event.`,
     //dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
-    rounds: "2",
+    roundsNumber: "2",
     duration: "Round 1 - 30 minutes, Round 2: 30 minutes",
     //platform: "Yet to decide",
     //fee: `Registration Fee - RS.150`,
@@ -547,7 +547,7 @@ tech savvy quizzer of them all in this technical quiz event.`,
   "deadlock-opener": {
     id: "9",
     //imgName: "deadlock-opener",
-    name: "deadlock-opener",
+    name: "Deadlock Opener",
     refName: "deadlock-opener",
     about: `A mind-boggling database management system event primarily aimed at testing
 your fundamentals in this booming field. The event provides a platform for
@@ -570,7 +570,7 @@ database and users. It also deals with concurrency and transaction issues.`,
       "Participants need not carry their laptops.",
     ],
     teamSize: "1-2",
-    rounds: "2",
+    roundsNumber: "2",
     duration: "Round 1: 45 minutes, Round 2: 1 hr",
     rounds: {
       number: 2,

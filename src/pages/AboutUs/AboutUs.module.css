@@ -66,6 +66,7 @@
   align-self: center;
   flex-basis: 65%;
   margin-left: 2%;
+  height: auto;
 }
 
 .text_box > p {

@@ -8,6 +8,16 @@ import PageNotFound from "../PageNotFound/PageNotFound";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
 import background from "../../images/bgg.jpg";
 import nontech from "./../../images/nontech.png";
+import { eventRegistration } from "../../api/registrations";
+
+import { Icon } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCalendarDays,
+  faClock,
+  faFlag,
+  faPeopleGroup,
+} from "@fortawesome/free-solid-svg-icons";
 
 function EventDetails() {
   const { type, title } = useParams();
@@ -30,17 +40,15 @@ function EventDetails() {
   return (
     <div
       style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
+        backgroundSize: "fit",
         backgroundRepeat: 1,
-        //height: "100vh",
-        // color: "#f5f5f5",
       }}
     >
       <div className={styles.container}>
         <div className={styles.box} style={{ height: "auto", width: "30%" }}>
           <span></span>
           <div className={styles.content}>
+            {/* <h2>{data.name}</h2> */}
             {type === "tech-events" && (
               <img
                 src={require(`./../../images/TechEvents/${title}.png`)}
@@ -55,14 +63,19 @@ function EventDetails() {
                 alt={title}
               />
             )}
-            <GlassButton title="Register" />
+            <GlassButton
+              title="Register"
+              onClick={() => {
+                eventRegistration();
+              }}
+            />
           </div>
           {/* <GlassButton /> */}
         </div>
         <div className={styles.box} style={{ height: "auto", width: "60%" }}>
           <span></span>
           <div className={styles.content}>
-            <h2 className={styles.neon}>DESCRIPTION</h2>
+            <h2 className={styles.neon}>{data.name}</h2>
             <p>{data.about}</p>
             {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
             {/* {data.dateTime.map((obj) => (
@@ -85,8 +98,6 @@ function EventDetails() {
           <div className={styles.content}>
             <h2 className={styles.neon}>SPONSORS</h2>
             <img src={nontech} style={{ width: "200px", height: "200px" }} />
-
-            {/* <a href="#">Read More</a> */}
           </div>
         </div>
       </div>
@@ -101,8 +112,32 @@ function EventDetails() {
                 ► {rule}
               </p>
             ))}
-            <p>Team size: {data.teamSize}</p>
-            <p>Rounds: {data.roundsNumber}</p>
+            {data.teamSize ? (
+              <p>
+                <FontAwesomeIcon icon={faPeopleGroup} />
+                {"  "}Team size: {data.teamSize}
+              </p>
+            ) : null}
+            {data.dateTime ? (
+              <div>
+                <p>
+                  <FontAwesomeIcon icon={faCalendarDays} />
+                  {"  "}
+                  {data.dateTime[0]}
+                </p>
+                <p>
+                  <FontAwesomeIcon icon={faClock} />
+                  {"  "}
+                  {data.dateTime[1]}
+                </p>
+              </div>
+            ) : null}
+            {data.roundsNumber ? (
+              <p>
+                <FontAwesomeIcon icon={faFlag} />
+                {"  "}Rounds: {data.roundsNumber}
+              </p>
+            ) : null}
           </div>
         </div>
       </div>
@@ -114,7 +149,15 @@ function EventDetails() {
             <h2 className={styles.neon}>ROUNDS</h2>
             {data.rounds.roundDetails.map((round, index) => (
               <p key={index + 1} className={styles.glowCardName}>
-                {round.title} : {round.description}
+                <h4>
+                  <b>{round.title}</b>
+                </h4>
+                {round.description.map((desc, index) => (
+                  <p key={index + 1} className={styles.glowCardName}>
+                    ► {desc}
+                  </p>
+                ))}
+                {/* {round.description} */}
               </p>
             ))}
 
