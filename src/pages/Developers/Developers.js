@@ -13,7 +13,7 @@ export default function Developers() {
         <Heading text="Developers and Design Team" fontSize="2.7rem" />
       </div>
       <div className="container-fluid m-auto d-flex justify-content-center pt-5 align-self-center pb-5">
-        <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-5  d-flex justify-content-center align-self-center pb-5">
+        <div className="row row-cols-sm-12 row-cols-md-12 row-cols-lg-6  d-flex justify-content-center align-self-center pb-5">
           {developerDetails.map((item, index) => {
             return (
               <div className="col   pb-5 ">
