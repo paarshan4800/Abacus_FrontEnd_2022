@@ -6,7 +6,10 @@ body {
   overflow: hidden;
   position: relative;
   height: 100vh;
-  background: linear-gradient(to right, #35be69, #11998e);
+  background: linear-gradient(to right, #000000, #0B0B0B);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 canvas {
@@ -16,6 +19,7 @@ canvas {
 
 .loader {
   position: relative;
+  margin: auto;
   width: 180px;
   height: 180px;
   overflow: hidden;
