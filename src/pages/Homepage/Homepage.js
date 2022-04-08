@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Sphere from "../../components/Sphere/Sphere";
 import Heading from "../../components/Heading/Heading";
 import Heading1 from "../../components/Heading1/Heading1";
+import Developers from "../Developers/Developers";
 
 const Homepage = (props) => {
   return (
@@ -278,6 +279,10 @@ const Homepage = (props) => {
               </div>
             </div>
           </div>
+        </section>
+
+        <section>
+          <Developers />
         </section>
       </main>
 

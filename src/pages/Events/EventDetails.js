@@ -48,7 +48,7 @@ function EventDetails() {
         <div className={styles.box} style={{ height: "auto", width: "30%" }}>
           <span></span>
           <div className={styles.content}>
-            <h2>{data.name}</h2>
+            {/* <h2>{data.name}</h2> */}
             {type === "tech-events" && (
               <img
                 src={require(`./../../images/TechEvents/${title}.png`)}
