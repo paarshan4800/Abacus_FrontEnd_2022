@@ -62,6 +62,8 @@ function TechEventsList() {
 
   return (
     <div>
+      <div className={styles.mainTitle}>Tech Events</div>
+
       <div className={styles.wrapper}>
         {techEventsList.map((event) => (
           <Link

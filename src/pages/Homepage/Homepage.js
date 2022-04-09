@@ -1,20 +1,22 @@
 import React, { Component } from "react";
-import { HashLink } from "react-router-hash-link"
 import { Link } from "react-router-dom";
 import styles from "./Homepage.module.css";
 import styles1 from "./Landing.module.css";
-import Dev from "../../components/Dev/Dev"
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
 import cx from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import {Footer} from '../../components/'
+import FadeInSection from "../../components/FadeInSection/FadeInSection";
 
 //NeonButton
+
 import Sphere from "../../components/Sphere/Sphere";
 import Heading from "../../components/Heading/Heading";
 import Heading1 from "../../components/Heading1/Heading1";
+import Developers from "../Developers/Developers";
+import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 
 const Homepage = (props) => {
   return (
@@ -51,23 +53,17 @@ const Homepage = (props) => {
               </div>
             </div>
           </div>
- 
+
           <div className={`${styles.landing_heading} `}>
             <h1 className={`${styles.head}`}> ABACUS '22</h1>
-            <h2 className={`${styles.date}`}> April 28, 29 and 30</h2>
-            
-            
-             
-            
+            <h2 className={`${styles.date}`}>April 28, 29 and 30</h2>
           </div>
-          <a  href="#abacus22"> 
-          <h2 className={`${styles.arrow}`}><i className=" fa fa-angle-double-down"></i></h2>
-          </a>
-          
-
-          
+          {/* <Link to="#mainDiv" spy="true" smooth={true}>
+            {" "}
+            <FontAwesomeIcon icon={faAngleDoubleDown} />
+          </Link> */}
         </section>
-        <section className={`${styles.one} ${styles.b}`} id="abacus22"> 
+        <section className={`${styles.one} ${styles.b}`}>
           <div className={`${styles.About_Abacus} ${styles.bg}`}>
             <div className={`${styles.left_container}`}>
               <div className={`${styles.left_content}`}>
@@ -173,9 +169,9 @@ const Homepage = (props) => {
             </div>
           </div>
         </section>
-
+      <FadeInSection>
         <section className={`${styles.sponsors}`}>
-          <div className="container-fluid mt-5">
+          <div className="container-fluid">
             <div className="text-center mb-5 pb-5">
               <Heading text="Sponsors" fontSize="3.5rem" />
             </div>
@@ -214,7 +210,7 @@ const Homepage = (props) => {
                 <div class="col-xl-3 col-sm-6  col-md-6">
                   <div className="col text-center ">
                     <div className="row  d-flex justify-content-center align-self-center">
-                      <div className="col text-center mt-3 pb-3  p-2 d-flex justify-content-center align-self-center ">
+                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/COSGrid_Network.jpg`}
                           className={`${styles.img4}`}
@@ -231,7 +227,7 @@ const Homepage = (props) => {
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/Lumel-logo-Orange.png`}
-                          className={`${styles.img1} mt-1`}
+                          className={`${styles.img1}`}
                           alt="Career Crafter"
                         />
                       </div>
@@ -303,70 +299,93 @@ const Homepage = (props) => {
               </div>
             </div> */}
 
-            
-
-            <div className="text-center mt-5 p-5 mb-1 container">
+            <div className="col text-center mt-5 p-5 mb-1">
               <Heading
                 text="Knowledge Partners"
                 fontSize="1.7rem"
                 className="text-center mt-5 p-5"
               />
 
-              <div className="m-auto mt-5  p-5 row   d-flex justify-content-center align-self-center">
-
-              <div class="col-xl-3 col-md-6 col-sm-12 mt-2">
-                  <div className="text-center ">
-                    
+              <div class="row mb-5">
+                <div class="col-xl-4 col-sm-12 col-md-4">
+                  <div className="col text-center ">
+                    <div className="row  d-flex justify-content-center align-self-center">
+                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
-                          className={`${styles.img4} mt-5`}
-                          alt="2IIM"
-                        />
-                
-                  </div>
-                </div>
-
-
-                <div class="col-xl-3 col-md-6 col-sm-12 ">
-                  <div className="text-center ">
-                    
-                        <img
-                          src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
-                          className={`${styles.img4} mt-5`}
-                          alt="Tech Z"
+                          className={`${styles.img4}`}
+                          alt="Career Crafter"
                         />
                       </div>
-                  
+                    </div>
+                  </div>
                 </div>
-
-
-                <div class="col-xl-3 col-md-6 col-sm-12 ">
-                  <div className="text-center ">
-                    
+                <div class="col-xl-4 col-sm-12 col-md-4">
+                  <div className="col text-center ">
+                    <div className="row  d-flex justify-content-center align-self-center">
+                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
+                          className={`${styles.img4}`}
+                          alt="Career Crafter"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-sm-12 col-md-4">
+                  {" "}
+                  <div className="col text-center ">
+                    <div className="d-flex justify-content-center align-self-center">
+                      <div className="text-center mt-3 pb-3  justify-content-center align-self-center ">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/iip.png`}
-                          className={`${styles.img4} mt-5`}
+                          className={`${styles.img4}`}
                           alt="IIP"
                         />
                       </div>
-                  
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* <div className="m-auto mt-5  p-5 row   d-flex justify-content-center align-self-center">
+                <div className="text-center  ">
+                  <div className="d-flex justify-content-center align-self-center">
+                    <div className="text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
+                        className={`${styles.img4}`}
+                        alt="Career Crafter"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className=" col-sm-12 col-md-6 col-lg-3 text-center">
+                  <div className="d-flex justify-content-center align-self-center">
+                    <div className="text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
+                        className={`${styles.img4}`}
+                        alt="Career Crafter"
+                      />
+                    </div>
+                  </div>
                 </div>
 
-          
-               
-
-  
-              </div>
+                <div className=" col-sm-12 col-md-6 col-lg-3 text-center ">
+                  <div className="d-flex justify-content-center align-self-center">
+                    <div className="text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/about-us/iip.png`}
+                        className={`${styles.img4}`}
+                        alt="IIP"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div> */}
             </div>
-
-
-
-
-
-
-
-
-
 
             <div class="row container m-auto p-5 ">
               <div class="col-xl-6 col-sm-12 mb-5 text-center">
@@ -375,7 +394,7 @@ const Homepage = (props) => {
                   fontSize="1.7rem"
                   className="text-center mt-5 p-5"
                 />
-                 <div className="col text-center ">
+                <div className="col text-center ">
                   <div className="row  mt-5 d-flex justify-content-center align-self-center">
                     <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
@@ -394,7 +413,7 @@ const Homepage = (props) => {
                   fontSize="1.7rem"
                   className="text-center mt-5 p-5"
                 />
-                 <div className="col text-center ">
+                <div className="col text-center ">
                   <div className="row  mt-5 d-flex justify-content-center align-self-center">
                     <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
@@ -428,11 +447,11 @@ const Homepage = (props) => {
             </div>
           </div>
         </section>
+      </FadeInSection>
+        <section className={`${styles.sponsors}`}>
+          <Developers />
+        </section>
       </main>
-
-     
-
-      
 
       {/* <Footer/> */}
     </>

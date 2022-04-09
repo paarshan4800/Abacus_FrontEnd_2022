@@ -212,14 +212,14 @@ body {
   text-shadow: 0 0 1px #fff, 0 0 1px #fff;
   border-radius: 0 0 7px 7px;
 }
-img {
+.mainDiv > img {
   position: relative;
   z-index: 3;
   border-radius: 7px 7px 0 0;
 }
 
 @media only screen and (max-width: 500px) {
-  img {
+  .mainDiv > img, .maindiv1 > img {
     width: 300px !important;
     height: 210px !important;
   }

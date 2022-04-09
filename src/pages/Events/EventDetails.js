@@ -21,7 +21,7 @@ import {
 
 function EventDetails() {
   const { type, title } = useParams();
-
+  // console.log(type, title);
   let Hash;
 
   if (type === "tech-events") {
@@ -31,7 +31,8 @@ function EventDetails() {
   }
 
   const data = Hash[title];
-  const history = useHistory();
+  console.log(data);
+  // const history = useHistory();
   if (!data) {
     // history.push("/404")
     return <PageNotFound />;
