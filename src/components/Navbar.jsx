@@ -100,7 +100,7 @@ function NavbarSmall({clickLogout}) {
     return (
         <nav role="navigation">
   <div className={styles1.menuToggle}>
-    <input type="checkbox" />
+    <input type="checkbox" className={styles1.check}/>
     <span className={styles1.span}></span>
     <span className={styles1.span}></span>
     <span className={styles1.span}></span>
