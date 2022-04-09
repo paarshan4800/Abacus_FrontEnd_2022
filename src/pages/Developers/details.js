@@ -30,14 +30,14 @@ export const developerDetails = [
   {
     title: "Sreeratcha B",
     title1: "Frontend",
-    img: "../../../build/images/Dev/Sree.jpg",
+    img: "dev/Sree.jpg",
     href:
       "https://www.linkedin.com/in/sreeratcha-b-5a8026195",
   },
   {
     title: "Anusree V",
     title1: "Frontend",
-    img: "dev/Anu1.jpeg",
+    img: "dev/Anu.jpg",
     href:
       "https://www.linkedin.com/in/anusree-varadharaj-bb43471a1",
   },
@@ -82,5 +82,12 @@ export const developerDetails = [
     img: "dev/Bharath M.png",
     href:
       "https://www.linkedin.com/in/bharath-mohan-65a51020b/",
+  },
+  {
+    title: "AKASH MURUGESH K",
+    title1: "Design",
+    img: "dev/Akash.jpg",
+    href:
+      "https://www.linkedin.com/in/akashmurugesh/",
   }
 ]
