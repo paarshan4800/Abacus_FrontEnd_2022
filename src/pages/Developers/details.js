@@ -24,12 +24,23 @@ export const developerDetails = [
     href: "https://www.linkedin.com/in/sanjeev-karthick-96910571/",
   },
   {
-    title: "Shafeeq Ur Rahman PA",
+    title: "Shafeeq Ur Rahman P A",
     title1: "Frontend",
     img: "dev/Shafeeq Ur Rahman P A.png",
     href: "https://www.linkedin.com/in/darrshana-rajkumar-6a36aa1ba",
   },
-
+  {
+    title: "Sreeratcha B",
+    title1: "Frontend",
+    img: "dev/Sree.jpg",
+    href: "https://www.linkedin.com/in/sreeratcha-b-5a8026195",
+  },
+  {
+    title: "Anusree V",
+    title1: "Frontend",
+    img: "dev/Anu.jpg",
+    href: "https://www.linkedin.com/in/anusree-varadharaj-bb43471a1",
+  },
   {
     title: "Jyotir Aditya Giri A",
     title1: "Frontend",
@@ -48,18 +59,28 @@ export const developerDetails = [
     img: "dev/Ajitesh M.jpg",
     href: "https://www.linkedin.com/in/ajitesh-mahalingam",
   },
-
   {
     title: "Safiya Fathima Syed",
     title1: "Backend",
     img: "dev/Safiya Fathima Syed.png",
     href: "https://www.linkedin.com/in/safiya-fathima-syed",
   },
-
+  {
+    title: "Diya Dhandapani",
+    title1: "Backend",
+    img: "dev/Diya.png",
+    href: "https://www.linkedin.com/in/diya-dhandapani",
+  },
   {
     title: "Bharath M",
     title1: "Design",
     img: "dev/Bharath M.png",
     href: "https://www.linkedin.com/in/bharath-mohan-65a51020b/",
+  },
+  {
+    title: "AKASH MURUGESH K",
+    title1: "Design",
+    img: "dev/Akash.jpg",
+    href: "https://www.linkedin.com/in/akashmurugesh/",
   },
 ];
