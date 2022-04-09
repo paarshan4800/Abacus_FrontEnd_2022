@@ -306,9 +306,9 @@ const Homepage = (props) => {
               />
 
               <div className="m-auto mt-5  p-5 row   d-flex justify-content-center align-self-center">
-                <div className="text-center  ">
+                <div className="col-sm-12 col-md-6 col-lg-3 text-center  ">
                   <div className="d-flex justify-content-center align-self-center">
-                    <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                    <div className="text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
                         className={`${styles.img4}`}
@@ -317,9 +317,9 @@ const Homepage = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="text-center">
+                <div className=" col-sm-12 col-md-6 col-lg-3 text-center">
                   <div className="d-flex justify-content-center align-self-center">
-                    <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                    <div className="text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
                         className={`${styles.img4}`}
@@ -329,9 +329,9 @@ const Homepage = (props) => {
                   </div>
                 </div>
 
-                <div className="text-center ">
+                <div className=" col-sm-12 col-md-6 col-lg-3 text-center ">
                   <div className="d-flex justify-content-center align-self-center">
-                    <div className="col-sm-12 col-md-6 col-lg-3 text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                    <div className="text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/iip.png`}
                         className={`${styles.img4}`}
