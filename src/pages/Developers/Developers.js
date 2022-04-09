@@ -16,7 +16,7 @@ export default function Developers() {
         <div className="row d-flex justify-content-center align-self-center pb-5">
           {developerDetails.map((item, index) => {
             return (
-              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 ">
+              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <FadeInSection>
                   <Dev props={item} />
                 </FadeInSection>
