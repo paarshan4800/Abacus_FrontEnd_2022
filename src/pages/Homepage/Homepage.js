@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import cx from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import {Footer} from '../../components/'
+import FadeInSection from "../../components/FadeInSection/FadeInSection";
 
 //NeonButton
 
@@ -168,7 +169,7 @@ const Homepage = (props) => {
             </div>
           </div>
         </section>
-
+      <FadeInSection>
         <section className={`${styles.sponsors}`}>
           <div className="container-fluid">
             <div className="text-center mb-5 pb-5">
@@ -305,8 +306,51 @@ const Homepage = (props) => {
                 className="text-center mt-5 p-5"
               />
 
-              <div className="m-auto mt-5  p-5 row   d-flex justify-content-center align-self-center">
-                <div className="col-sm-12 col-md-6 col-lg-3 text-center  ">
+              <div class="row mb-5">
+                <div class="col-xl-4 col-sm-12 col-md-4">
+                  <div className="col text-center ">
+                    <div className="row  d-flex justify-content-center align-self-center">
+                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
+                          className={`${styles.img4}`}
+                          alt="Career Crafter"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-sm-12 col-md-4">
+                  <div className="col text-center ">
+                    <div className="row  d-flex justify-content-center align-self-center">
+                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
+                          className={`${styles.img4}`}
+                          alt="Career Crafter"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-sm-12 col-md-4">
+                  {" "}
+                  <div className="col text-center ">
+                    <div className="d-flex justify-content-center align-self-center">
+                      <div className="text-center mt-3 pb-3  justify-content-center align-self-center ">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/about-us/iip.png`}
+                          className={`${styles.img4}`}
+                          alt="IIP"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* <div className="m-auto mt-5  p-5 row   d-flex justify-content-center align-self-center">
+                <div className="text-center  ">
                   <div className="d-flex justify-content-center align-self-center">
                     <div className="text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
@@ -340,7 +384,7 @@ const Homepage = (props) => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div class="row container m-auto p-5 ">
@@ -403,7 +447,7 @@ const Homepage = (props) => {
             </div>
           </div>
         </section>
-
+      </FadeInSection>
         <section className={`${styles.sponsors}`}>
           <Developers />
         </section>

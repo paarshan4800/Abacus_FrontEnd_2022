@@ -13,8 +13,8 @@ import "./footer.module.css";
 export default function Footer() {
   return (
     <MDBFooter
-      className="text-center"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.9)" }}
+      className="text-center bg"
+      style={{ backgroundColor: "#1a1b1c" }}
       color="white"
     >
       <MDBContainer className="p-4">
