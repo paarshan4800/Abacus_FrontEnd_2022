@@ -76,8 +76,8 @@ function EventDetails() {
         <div className={styles.box} style={{ height: "auto", width: "60%" }}>
           <span></span>
           <div className={styles.content}>
-            <h2 className={styles.neon}>{data.name}</h2>
-            <p>{data.about}</p>
+            <h2 className={styles.neon}>{data.name ? data.name : null}</h2>
+            <p>{data.about ? data.about : null}</p>
             {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
             {/* {data.dateTime.map((obj) => (
               <p key={1}> {obj}</p>
@@ -148,19 +148,21 @@ function EventDetails() {
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>ROUNDS</h2>
-            {data.rounds.roundDetails.map((round, index) => (
-              <p key={index + 1} className={styles.glowCardName}>
-                <h4>
-                  <b>{round.title}</b>
-                </h4>
-                {round.description.map((desc, index) => (
+            {data.rounds
+              ? data.rounds.roundDetails.map((round, index) => (
                   <p key={index + 1} className={styles.glowCardName}>
-                    ► {desc}
+                    <h4>
+                      <b>{round.title}</b>
+                    </h4>
+                    {round.description.map((desc, index) => (
+                      <p key={index + 1} className={styles.glowCardName}>
+                        ► {desc}
+                      </p>
+                    ))}
+                    {/* {round.description} */}
                   </p>
-                ))}
-                {/* {round.description} */}
-              </p>
-            ))}
+                ))
+              : null}
 
             {/* <GlassButton title="Scroll to Top" /> */}
           </div>
