@@ -11,6 +11,15 @@ import nontech from "./../../images/nontech.png";
 import { eventRegistration } from "../../api/registrations";
 import FadeInSection from "../../components/FadeInSection/FadeInSection";
 
+import { Icon } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCalendarDays,
+  faClock,
+  faFlag,
+  faPeopleGroup,
+} from "@fortawesome/free-solid-svg-icons";
+
 function EventDetails() {
   const { type, title } = useParams();
 

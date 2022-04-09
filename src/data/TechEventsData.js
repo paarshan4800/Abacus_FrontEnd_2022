@@ -79,7 +79,7 @@ showcase their skills in developing a website. The participants delve into the
 magic of creating alluring websites as they beat the race against time. The
 contest calls for testing the knowledge in web development and being able to
 replicate a given website.`,
-    //dateTime: ["Date:March 26th", "Time:2pm"],
+    dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
     roundsNumber: "2",
     duration: "Round 1 - 30 minutes, Round 2 - 2 hours",

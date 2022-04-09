@@ -3,7 +3,6 @@ import cx from "classnames";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import styles from "./EventsList.module.css";
 // import styles from "./../Events/EventDetails.module.css";
-import background from "../../images/bgg.jpg";
 
 function TechEventsList() {
   let techEventsList = [
@@ -24,12 +23,12 @@ function TechEventsList() {
     },
     {
       id: 4,
-      refName: "ospc",
+      refName: "get-hired",
       name: "OSPC",
     },
     {
       id: 5,
-      refName: "she++",
+      refName: "she-codes",
       name: "She Codes",
     },
     {
@@ -44,12 +43,12 @@ function TechEventsList() {
     },
     {
       id: 8,
-      refName: "brainstormiz-technicalQuiz",
+      refName: "get-hired",
       name: "Brainstormiz - Technical Quiz",
     },
     {
       id: 9,
-      refName: "deadlock-opener",
+      refName: "get-hired",
       name: "Deadlock Opener",
     },
   ];
@@ -62,6 +61,8 @@ function TechEventsList() {
 
   return (
     <div>
+      <div className={styles.mainTitle}>Tech Events</div>
+
       <div className={styles.wrapper}>
         {techEventsList.map((event) => (
           <Link
@@ -70,8 +71,7 @@ function TechEventsList() {
           >
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
               <img
-                //src={require(`./../../images/TechEvents/${event.refName}.png`)}
-                src={require(`./../../images/TechEvents/web-design.png`)}
+                src={require(`./../../images/TechEvents/${event.refName}.png`)}
                 style={{
                   width: "350px",
                   height: "250px",

@@ -8,12 +8,11 @@ import { Provider, useSelector } from "react-redux";
 import Reducer from "./redux/Reducer";
 import { useDispatch } from "react-redux";
 import { Navbar } from "./components";
-// import { toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 import background from "./images/bgg.jpg";
 import Footer from "./components/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loading from "./pages/Loading/Loading";
 const rootReducer = combineReducers({
   Reducer: Reducer,
 });
@@ -36,6 +35,7 @@ function App() {
   const [height, setheight] = useState(0);
   const [newload, setnewload] = useState(true);
   const [newloadworkshop, setnewloadworkshop] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (
@@ -48,6 +48,7 @@ function App() {
 
     updateWindowDimensions();
     window.addEventListener("resize", updateWindowDimensions);
+    setLoading(false);
     return () => {
       window.removeEventListener("resize", updateWindowDimensions);
     };
@@ -57,6 +58,14 @@ function App() {
     setwidth(window.innerWidth);
     setheight(window.innerHeight);
   };
+
+  if (loading) {
+    return (
+      <div clasName="App">
+        <Loading />
+      </div>
+    );
+  }
 
   return (
     <div className="App">
@@ -68,7 +77,7 @@ function App() {
                 <NewLoadWorkshop.Provider value={newloadworkshop}>
                   <SetNewLoadWorkshop.Provider value={setnewloadworkshop}>
                     <BrowserRouter>
-                      <Navbar width={width}/>
+                      <Navbar width={width} />
                       <div
                         style={{
                           paddingTop: "90px",
