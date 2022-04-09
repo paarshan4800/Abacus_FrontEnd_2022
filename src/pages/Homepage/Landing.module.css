@@ -791,7 +791,7 @@
   .tractor_beam:before {
   content: "";
   z-index: -1;
-  
+  filter: brightness(70%);
   background-color: red;
   width: 70px;
   height: 500px;

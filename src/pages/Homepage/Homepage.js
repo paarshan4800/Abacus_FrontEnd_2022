@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { HashLink } from "react-router-hash-link"
 import { Link } from "react-router-dom";
 import styles from "./Homepage.module.css";
 import styles1 from "./Landing.module.css";
+import Dev from "../../components/Dev/Dev"
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -49,18 +51,23 @@ const Homepage = (props) => {
               </div>
             </div>
           </div>
-
+ 
           <div className={`${styles.landing_heading} `}>
             <h1 className={`${styles.head}`}> ABACUS '22</h1>
-            <h2 className={`${styles.date}`}>April 28, 29 and 30</h2>
+            <h2 className={`${styles.date}`}> April 28, 29 and 30</h2>
+            
+            
+             
+            
           </div>
+          <a  href="#abacus22"> 
+          <h2 className={`${styles.arrow}`}><i className=" fa fa-angle-double-down"></i></h2>
+          </a>
+          
 
-          <Link to="/homepage##" spy="true" smooth={true}>
-            {" "}
-          </Link>
-          <FontAwesomeIcon icon="fa-regular fa-angles-down" />
+          
         </section>
-        <section className={`${styles.one} ${styles.b}`}>
+        <section className={`${styles.one} ${styles.b}`} id="abacus22"> 
           <div className={`${styles.About_Abacus} ${styles.bg}`}>
             <div className={`${styles.left_container}`}>
               <div className={`${styles.left_content}`}>
@@ -168,7 +175,7 @@ const Homepage = (props) => {
         </section>
 
         <section className={`${styles.sponsors}`}>
-          <div className="container-fluid">
+          <div className="container-fluid mt-5">
             <div className="text-center mb-5 pb-5">
               <Heading text="Sponsors" fontSize="3.5rem" />
             </div>
@@ -207,7 +214,7 @@ const Homepage = (props) => {
                 <div class="col-xl-3 col-sm-6  col-md-6">
                   <div className="col text-center ">
                     <div className="row  d-flex justify-content-center align-self-center">
-                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                      <div className="col text-center mt-3 pb-3  p-2 d-flex justify-content-center align-self-center ">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/COSGrid_Network.jpg`}
                           className={`${styles.img4}`}
@@ -224,7 +231,7 @@ const Homepage = (props) => {
                       <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                         <img
                           src={`${process.env.PUBLIC_URL}/images/about-us/Lumel-logo-Orange.png`}
-                          className={`${styles.img1}`}
+                          className={`${styles.img1} mt-1`}
                           alt="Career Crafter"
                         />
                       </div>
@@ -298,7 +305,7 @@ const Homepage = (props) => {
 
             
 
-            <div className="col text-center mt-5 p-5 mb-1">
+            <div className="text-center mt-5 p-5 mb-1 container">
               <Heading
                 text="Knowledge Partners"
                 fontSize="1.7rem"
@@ -306,40 +313,49 @@ const Homepage = (props) => {
               />
 
               <div className="m-auto mt-5  p-5 row   d-flex justify-content-center align-self-center">
-                <div className="col text-center  ">
-                  <div className="row  d-flex justify-content-center align-self-center">
-                    <div className="col col-sm-12 text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
-                        className={`${styles.img4}`}
-                        alt="Career Crafter"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="col text-center">
-                  <div className="row   d-flex justify-content-center align-self-center">
-                    <div className="col col-sm-12 text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
-                        className={`${styles.img4}`}
-                        alt="Career Crafter"
-                      />
-                    </div>
+
+              <div class="col-xl-3 col-md-6 col-sm-12 mt-2">
+                  <div className="text-center ">
+                    
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
+                          className={`${styles.img4} mt-5`}
+                          alt="2IIM"
+                        />
+                
                   </div>
                 </div>
 
-                <div className="col text-center ">
-                  <div className="row  d-flex justify-content-center align-self-center">
-                    <div className="col col-sm-12 text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/images/about-us/iip.png`}
-                        className={`${styles.img4}`}
-                        alt="IIP"
-                      />
-                    </div>
-                  </div>
+
+                <div class="col-xl-3 col-md-6 col-sm-12 ">
+                  <div className="text-center ">
+                    
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
+                          className={`${styles.img4} mt-5`}
+                          alt="Tech Z"
+                        />
+                      </div>
+                  
                 </div>
+
+
+                <div class="col-xl-3 col-md-6 col-sm-12 ">
+                  <div className="text-center ">
+                    
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/about-us/iip.png`}
+                          className={`${styles.img4} mt-5`}
+                          alt="IIP"
+                        />
+                      </div>
+                  
+                </div>
+
+          
+               
+
+  
               </div>
             </div>
 
@@ -413,6 +429,10 @@ const Homepage = (props) => {
           </div>
         </section>
       </main>
+
+     
+
+      
 
       {/* <Footer/> */}
     </>
