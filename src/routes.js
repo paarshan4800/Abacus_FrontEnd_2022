@@ -54,13 +54,14 @@ const AppRoutes = () => {
         <Route path="/Home" exact component={Homepage} />
         <Route path="/aboutus" exact component={Aboutus} />
         <Route path="/events" exact component={EventsHome} />
-        <Route path="/events/coding-hungama" exact component={Hackathon} />
+        <Route path="/events/coding-hungama" exact component={ComingSoon} />
         <Route path="/events/tech-events" exact component={TechEventsList} />
-        <Route
+        {/* <Route
           path="/events/non-tech-events"
           exact
           component={NonTechEventsList}
-        />
+        /> */}
+        <Route path="/events/non-tech-events" exact component={ComingSoon} />
         <Route path="/events/:type/:title" exact component={EventDetails} />
         <Route path="/workshops" exact component={ComingSoon} />
         <Route path="/workshops/:title" exact component={ComingSoon} />

@@ -24,13 +24,13 @@ function ComingSoon() {
             <div className={`${styles._404_text}`}>
               <span className={`${styles.normalFlicker}`}>C</span>
               <span className={`${styles.slowFlicker}`}>O</span>
-              <span className={`${styles.normalFlicker}`}>MING</span>             
+              <span className={`${styles.normalFlicker}`}>MING</span>
               <span className={`${styles.normalFlicker}`}> SO</span>
               <span className={`${styles.slowFlicker2}`}>O</span>
               <span className={`${styles.normalFlicker}`}>N</span>
             </div>
             <div className={`${styles._404_text_addi}`}>
-              <p>The registrations will be open soon.</p>
+              {/* <p>The registrations will be open soon.</p> */}
               {/* <div onClick={redirect}>
                 <GlassButton title="Homepage" />
               </div> */}
