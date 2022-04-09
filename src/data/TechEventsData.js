@@ -215,7 +215,7 @@ questions, involving data structures and algorithms. The participants set out to
 pitch their geekiness and compete both against the clock and other seasoned
 contestants. The contest calls for your competitive programming ability and
 approach towards problem solving.`,
-    //dateTime: ["Date:March 26th", "Time:2pm"],
+    dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
     roundsNumber: "2",
     duration:

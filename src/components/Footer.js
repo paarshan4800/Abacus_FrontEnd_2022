@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <MDBFooter
       className="text-center"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+      style={{ backgroundColor: "rgba(0, 0, 0, 0.9)" }}
       color="white"
     >
       <MDBContainer className="p-4">
