@@ -28,7 +28,14 @@ function PageNotFound() {
             </div>
             <div className={`${styles._404_text_addi}`}>
               <p>The page you requested could not be found.</p>
-              <div onClick={redirect}>
+              <div
+                onClick={redirect}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <GlassButton title="Homepage" />
               </div>
             </div>

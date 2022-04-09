@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import cx from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import {Footer} from '../../components/'
+import FadeInSection from "../../components/FadeInSection/FadeInSection";
 
 //NeonButton
 
@@ -54,7 +55,7 @@ const Homepage = (props) => {
           </div>
 
           <div className={`${styles.landing_heading} `}>
-            <h1 className={`${styles.head}`}> ABACUS '22</h1>
+            <h1 className={`${styles.head}`}> ABACUS'22</h1>
             <h2 className={`${styles.date}`}>April 28, 29 and 30</h2>
           </div>
           {/* <Link to="#mainDiv" spy="true" smooth={true}>
@@ -84,7 +85,7 @@ const Homepage = (props) => {
                           <CountUp
                             className={`${styles.font}`}
                             start={0}
-                            end={10}
+                            end={20}
                             redraw={true}
                             suffix=" +"
                           >
@@ -117,7 +118,7 @@ const Homepage = (props) => {
                         <div className={`${styles.countup}`}>
                           <CountUp
                             start={0}
-                            end={90}
+                            end={100}
                             redraw={true}
                             suffix=" K+"
                           >
@@ -140,7 +141,7 @@ const Homepage = (props) => {
                             )}
                           </CountUp>
                         </div>{" "}
-                        <Heading1 text="Hackathon" fontSize="15px" />
+                        <Heading1 text="Night Event" fontSize="15px" />
                       </div>
                     </div>
                   </div>
@@ -150,7 +151,7 @@ const Homepage = (props) => {
             <div className={`${styles.right_container}`}>
               <div key={1} className={cx(styles.maindiv, styles.maindiv1)}>
                 <div className={styles.card}>
-                  <h1 className={`${styles.heading}`}>Abacus '22</h1>
+                  <h1 className={`${styles.heading}`}>ABACUS'22</h1>
                   <p className={`${styles.paragraph} mt-1`}>
                     CSEA takes immense pleasure in organizing Abacus'22. This
                     version is going to be one of its kind - a symposium
@@ -168,88 +169,92 @@ const Homepage = (props) => {
             </div>
           </div>
         </section>
-
-        <section className={`${styles.sponsors}`}>
-          <div className="container-fluid">
-            <div className="text-center mb-5 pb-5">
-              <Heading text="Sponsors" fontSize="3.5rem" />
-            </div>
-
-            <div className="col text-center mb-3">
-              <Heading text="Title Sponsors" fontSize="1.7rem" />
-              <div className=" d-flex justify-content-center align-self-center ">
-                <div className="text-center pb-4">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/images/about-us/motorq.svg`}
-                    className={`${styles.img2}`}
-                    alt="Motorq"
-                  />
-                </div>
+        <FadeInSection>
+          <section className={`${styles.sponsors}`}>
+            <div className="container-fluid">
+              <div className="text-center mb-5 pb-5">
+                <Heading text="Sponsors" fontSize="3rem" />
               </div>
-            </div>
 
-            <div class="container">
-              <div className="col text-center mb-5 ">
-                <Heading text="Internship Partners" fontSize="1.7rem" />
+              <div className="col text-center mb-3">
+                <FadeInSection>
+                  <Heading text="Title Sponsors" fontSize="1.7rem" />
+                  <div className=" d-flex justify-content-center align-self-center ">
+                    <div className="text-center pb-4">
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/about-us/motorq.svg`}
+                        className={`${styles.img2}`}
+                        alt="Motorq"
+                      />
+                    </div>
+                  </div>
+                </FadeInSection>
               </div>
-              <div class="row mb-5">
-                <div class="col-xl-3 col-sm-6 col-md-6">
-                  <div className="col text-center ">
-                    <div className="row  d-flex justify-content-center align-self-center">
-                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/images/about-us/unnamed.jpg`}
-                          className={`${styles.img4}`}
-                          alt="Career Crafter"
-                        />
+
+              <div class="container">
+                <FadeInSection>
+                  <div className="col text-center mb-5 ">
+                    <Heading text="Internship Partners" fontSize="1.7rem" />
+                  </div>
+                  <div class="row mb-5">
+                    <div class="col-xl-3 col-sm-6 col-md-6">
+                      <div className="col text-center ">
+                        <div className="row  d-flex justify-content-center align-self-center">
+                          <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/images/about-us/unnamed.jpg`}
+                              className={`${styles.img4}`}
+                              alt="Career Crafter"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6  col-md-6">
+                      <div className="col text-center ">
+                        <div className="row  d-flex justify-content-center align-self-center">
+                          <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/images/about-us/COSGrid_Network.jpg`}
+                              className={`${styles.img4}`}
+                              alt="Career Crafter"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-md-6">
+                      {" "}
+                      <div className="col text-center ">
+                        <div className="row  d-flex justify-content-center align-self-center">
+                          <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/images/about-us/Lumel-logo-Orange.png`}
+                              className={`${styles.img1}`}
+                              alt="Career Crafter"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-3 col-md-6 ">
+                      {" "}
+                      <div className="col text-center ">
+                        <div className="d-flex justify-content-center align-self-center">
+                          <div className="text-center mt-3 pb-3  justify-content-center align-self-center ">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/images/about-us/acl_logo.png`}
+                              className={`${styles.img4} bg-white px-2 py-2`}
+                              alt="Alpha Cloud Labs"
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-xl-3 col-sm-6  col-md-6">
-                  <div className="col text-center ">
-                    <div className="row  d-flex justify-content-center align-self-center">
-                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/images/about-us/COSGrid_Network.jpg`}
-                          className={`${styles.img4}`}
-                          alt="Career Crafter"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 col-md-6">
-                  {" "}
-                  <div className="col text-center ">
-                    <div className="row  d-flex justify-content-center align-self-center">
-                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/images/about-us/Lumel-logo-Orange.png`}
-                          className={`${styles.img1}`}
-                          alt="Career Crafter"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-xl-3 col-md-6 ">
-                  {" "}
-                  <div className="col text-center ">
-                    <div className="d-flex justify-content-center align-self-center">
-                      <div className="text-center mt-3 pb-3  justify-content-center align-self-center ">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/images/about-us/acl_logo.png`}
-                          className={`${styles.img4} bg-white px-2 py-2`}
-                          alt="Alpha Cloud Labs"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </FadeInSection>
               </div>
-            </div>
-            {/*
+              {/*
             <div className="m-auto row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-xs-1  d-flex justify-content-center align-self-center">
               <div className="col text-center ">
                 <div className="row  d-flex justify-content-center align-self-center">
@@ -298,17 +303,61 @@ const Homepage = (props) => {
               </div>
             </div> */}
 
-            <div className="col text-center mt-5 p-5 mb-1">
-              <Heading
-                text="Knowledge Partners"
-                fontSize="1.7rem"
-                className="text-center mt-5 p-5"
-              />
+              <div className="col text-center mt-5 p-5 mb-1">
+                <FadeInSection>
+                  <Heading
+                    text="Knowledge Partners"
+                    fontSize="1.7rem"
+                    className="text-center mt-5 p-5"
+                  />
 
-              <div className="m-auto mt-5  p-5 row   d-flex justify-content-center align-self-center">
-                <div className="col text-center  ">
-                  <div className="row  d-flex justify-content-center align-self-center">
-                    <div className="col col-sm-12 text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                  <div class="row mb-5">
+                    <div class="col-xl-4 col-sm-12 col-md-4">
+                      <div className="col text-center ">
+                        <div className="row  d-flex justify-content-center align-self-center">
+                          <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
+                              className={`${styles.img4}`}
+                              alt="Career Crafter"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-12 col-md-4">
+                      <div className="col text-center ">
+                        <div className="row  d-flex justify-content-center align-self-center">
+                          <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
+                              className={`${styles.img4}`}
+                              alt="Career Crafter"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-12 col-md-4">
+                      {" "}
+                      <div className="col text-center ">
+                        <div className="d-flex justify-content-center align-self-center">
+                          <div className="text-center mt-3 pb-3  justify-content-center align-self-center ">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/images/about-us/iip.png`}
+                              className={`${styles.img4}`}
+                              alt="IIP"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* <div className="m-auto mt-5  p-5 row   d-flex justify-content-center align-self-center">
+                <div className="text-center  ">
+                  <div className="d-flex justify-content-center align-self-center">
+                    <div className="text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
                         className={`${styles.img4}`}
@@ -317,9 +366,9 @@ const Homepage = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="col text-center">
-                  <div className="row   d-flex justify-content-center align-self-center">
-                    <div className="col col-sm-12 text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                <div className=" col-sm-12 col-md-6 col-lg-3 text-center">
+                  <div className="d-flex justify-content-center align-self-center">
+                    <div className="text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
                         className={`${styles.img4}`}
@@ -329,9 +378,9 @@ const Homepage = (props) => {
                   </div>
                 </div>
 
-                <div className="col text-center ">
-                  <div className="row  d-flex justify-content-center align-self-center">
-                    <div className="col col-sm-12 text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                <div className=" col-sm-12 col-md-6 col-lg-3 text-center ">
+                  <div className="d-flex justify-content-center align-self-center">
+                    <div className="text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/iip.png`}
                         className={`${styles.img4}`}
@@ -340,70 +389,77 @@ const Homepage = (props) => {
                     </div>
                   </div>
                 </div>
+              </div> */}
+                </FadeInSection>
               </div>
-            </div>
 
-            <div class="row container m-auto p-5 ">
-              <div class="col-xl-6 col-sm-12 mb-5 text-center">
-                <Heading
-                  text="Hack partner"
-                  fontSize="1.7rem"
-                  className="text-center mt-5 p-5"
-                />
-                <div className="col text-center ">
-                  <div className="row  mt-5 d-flex justify-content-center align-self-center">
-                    <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/images/about-us/GitHub_Logo_White.png`}
-                        className={`${styles.img1}`}
-                        alt="Career Crafter"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-6 col-sm-12 text-center">
-                <Heading
-                  text="Promotional partner
-                  "
-                  fontSize="1.7rem"
-                  className="text-center mt-5 p-5"
-                />
-                <div className="col text-center ">
-                  <div className="row  mt-5 d-flex justify-content-center align-self-center">
-                    <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/images/about-us/ACM.png`}
-                        className={`${styles.img21}`}
-                        alt="Career Crafter"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col text-center ">
-              <Heading
-                text="Platform and Workshop Sponsor"
-                fontSize="1.7rem"
-                className="text-center mt-5 p-5"
-              />
-              <div className="col text-center ">
-                <div className="row mt-5 d-flex justify-content-center align-self-center">
-                  <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/images/about-us/CodingNinjasLogo.jpg`}
-                      className={`${styles.img4}`}
-                      alt="Coding Ninjas Logo"
+              <div class="row container m-auto p-5 ">
+                <div class="col-xl-6 col-sm-12 mb-5 text-center">
+                  <FadeInSection>
+                    <Heading
+                      text="Hack partner"
+                      fontSize="1.7rem"
+                      className="text-center mt-5 p-5"
                     />
-                  </div>
+                    <div className="col text-center ">
+                      <div className="row  mt-5 d-flex justify-content-center align-self-center">
+                        <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                          <img
+                            src={`${process.env.PUBLIC_URL}/images/about-us/GitHub_Logo_White.png`}
+                            className={`${styles.img1}`}
+                            alt="Career Crafter"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </FadeInSection>
+                </div>
+                <div class="col-xl-6 col-sm-12 text-center">
+                  <FadeInSection>
+                    <Heading
+                      text="Promotional partner
+                  "
+                      fontSize="1.7rem"
+                      className="text-center mt-5 p-5"
+                    />
+                    <div className="col text-center ">
+                      <div className="row  mt-5 d-flex justify-content-center align-self-center">
+                        <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                          <img
+                            src={`${process.env.PUBLIC_URL}/images/about-us/ACM.png`}
+                            className={`${styles.img21}`}
+                            alt="Career Crafter"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </FadeInSection>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
+              <div className="col text-center ">
+                <FadeInSection>
+                  <Heading
+                    text="Platform and Workshop Sponsor"
+                    fontSize="1.7rem"
+                    className="text-center mt-5 p-5"
+                  />
+                  <div className="col text-center ">
+                    <div className="row mt-5 d-flex justify-content-center align-self-center">
+                      <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/about-us/CodingNinjasLogo.jpg`}
+                          className={`${styles.img4}`}
+                          alt="Coding Ninjas Logo"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </FadeInSection>
+              </div>
+            </div>
+          </section>
+        </FadeInSection>
         <section className={`${styles.sponsors}`}>
           <Developers />
         </section>

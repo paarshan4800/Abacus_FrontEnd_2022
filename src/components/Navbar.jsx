@@ -40,7 +40,7 @@ function NavbarBig({ clickLogout }) {
       <div className={`${styles._navbar}`}>
           <div className={`${styles._navbar_brand}`} >
               <Link to="/" className={`${styles._navbar_brand}`}>
-                 <span className={`${styles._navbar_brand} `} >ABACUS '22 </span>
+                 <span className={`${styles._navbar_brand} `} >ABACUS'22 </span>
               </Link>
           </div>
 

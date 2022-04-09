@@ -32,6 +32,7 @@ function EventDetails() {
   }
 
   const data = Hash[title];
+  console.log(data);
   const history = useHistory();
   if (!data) {
     // history.push("/404")
@@ -49,7 +50,15 @@ function EventDetails() {
         <div className={styles.container}>
           <div className={styles.box} style={{ height: "auto", width: "30%" }}>
             <span></span>
-            <div className={styles.content}>
+            <div
+              className={styles.content}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               {type === "tech-events" && (
                 <img
                   src={require(`./../../images/TechEvents/${title}.png`)}
@@ -64,20 +73,21 @@ function EventDetails() {
                   alt={title}
                 />
               )}
-              <GlassButton
+              {/* Change this later <GlassButton
                 title="Register"
                 onClick={() => {
                   eventRegistration();
                 }}
-              />
+              /> */}
+              <p className="text-center pt-3">Registrations Opening Soon</p>
             </div>
             {/* <GlassButton /> */}
           </div>
           <div className={styles.box} style={{ height: "auto", width: "60%" }}>
             <span></span>
             <div className={styles.content}>
-              <h2 className={styles.neon}>{data.name}</h2>
-              <p>{data.about}</p>
+              <h2 className={styles.neon}>{data.name ? data.name : null}</h2>
+              <p>{data.about ? data.about : null}</p>
               {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
               {/* {data.dateTime.map((obj) => (
               <p key={1}> {obj}</p>
@@ -114,13 +124,15 @@ function EventDetails() {
             <span></span>
             <div className={styles.content}>
               <h2 className={styles.neon}>RULES</h2>
-              {data.rules.map((rule, index) => (
-                <p key={index + 1} className={styles.glowCardName}>
-                  ► {rule}
-                </p>
-              ))}
-              <p>Team size: {data.teamSize}</p>
-              <p>Rounds: {data.roundsNumber}</p>
+              {data.rules
+                ? data.rules.map((rule, index) => (
+                    <p key={index + 1} className={styles.glowCardName}>
+                      ► {rule}
+                    </p>
+                  ))
+                : null}
+              <p>Team size: {data.teamSize ? data.teamSize : null}</p>
+              <p>Rounds: {data.roundsNumber ? data.roundsNumber : null}</p>
             </div>
           </div>
         </div>
@@ -132,19 +144,20 @@ function EventDetails() {
             <span></span>
             <div className={styles.content}>
               <h2 className={styles.neon}>ROUNDS</h2>
-              {data.rounds.roundDetails.map((round, index) => (
-                <p key={index + 1} className={styles.glowCardName}>
-                  <h4>
-                    <b>{round.title}</b>
-                  </h4>
-                  {round.description.map((desc, index) => (
+              {data.rounds
+                ? data.rounds.roundDetails.map((round, index) => (
                     <p key={index + 1} className={styles.glowCardName}>
-                      ► {desc}
+                      <h4>
+                        <b>{round.title}</b>
+                      </h4>
+                      <p> ► {round.description}</p>
+                      {/* {round.description.map((desc, index) => (
+                        <p key={index + 1} className={styles.glowCardName}></p>
+                      ))} */}
+                      {/* {round.description} */}
                     </p>
-                  ))}
-                  {/* {round.description} */}
-                </p>
-              ))}
+                  ))
+                : null}
 
               {/* <GlassButton title="Scroll to Top" /> */}
             </div>

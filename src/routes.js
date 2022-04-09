@@ -33,13 +33,15 @@ import Loading from "./pages/Loading/Loading";
 
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 const AppRoutes = () => {
   //   const Auth = React.useContext(AuthApi);
 
   return (
-    <Switch>
-      {/* <Route path="/" exact>
+    <ScrollToTop>
+      <Switch>
+        {/* <Route path="/" exact>
         {Cookies.get("token") !== undefined &&
         Cookies.get("details") !== undefined ? (
           <Redirect to="/dashboard" />
@@ -47,36 +49,37 @@ const AppRoutes = () => {
           <Redirect to="/homepage" />
         )}
       </Route> */}
-      <Route path="/" exact component={Homepage} />
-      <Route path="/Home" exact component={Homepage} />
-      <Route path="/aboutus" exact component={Aboutus} />
-      <Route path="/events" exact component={EventsHome} />
-      <Route path="/events/hackathon" exact component={Hackathon} />
-      <Route path="/events/tech-events" exact component={TechEventsList} />
-      <Route
-        path="/events/non-tech-events"
-        exact
-        component={NonTechEventsList}
-      />
-      <Route path="/events/:type/:title" exact component={EventDetails} />
-      <Route path="/workshops" exact component={WorkshopsList} />
-      <Route path="/workshops/:title" exact component={WorkshopDetails} />
 
-      <Route path="/test/:type/:title" exact component={Test} />
-      <Route path="/dashboard" exact component={ComingSoon} />
-      <Route path="/login" exact component={ComingSoon} />
-      <Route path="/Login/VerifyEmail" exact component={ComingSoon} />
-      <Route path="/signUp" exact component={ComingSoon} />
-      <Route path="/ForgotPassword" exact component={ComingSoon} />
-      <Route
-        path="/resetPassword/:resetPassword"
-        exact
-        component={ComingSoon}
-      />
-      <Route path="/ComingSoon" exact component={ComingSoon} />
-      <Route path="/hackathon-register" exact component={ComingSoon} />
-      <Route path="/loading" exact component={Loading} />
-      {/* <Route path="/dashboard" exact component={Dashboard} />
+        <Route path="/" exact component={Homepage} />
+        <Route path="/Home" exact component={Homepage} />
+        <Route path="/aboutus" exact component={Aboutus} />
+        <Route path="/events" exact component={EventsHome} />
+        <Route path="/events/coding-hungama" exact component={Hackathon} />
+        <Route path="/events/tech-events" exact component={TechEventsList} />
+        <Route
+          path="/events/non-tech-events"
+          exact
+          component={NonTechEventsList}
+        />
+        <Route path="/events/:type/:title" exact component={EventDetails} />
+        <Route path="/workshops" exact component={ComingSoon} />
+        <Route path="/workshops/:title" exact component={ComingSoon} />
+
+        <Route path="/test/:type/:title" exact component={Test} />
+        <Route path="/dashboard" exact component={ComingSoon} />
+        <Route path="/login" exact component={ComingSoon} />
+        <Route path="/Login/VerifyEmail" exact component={ComingSoon} />
+        <Route path="/signUp" exact component={ComingSoon} />
+        <Route path="/ForgotPassword" exact component={ComingSoon} />
+        <Route
+          path="/resetPassword/:resetPassword"
+          exact
+          component={ComingSoon}
+        />
+        <Route path="/ComingSoon" exact component={ComingSoon} />
+        <Route path="/hackathon-register" exact component={ComingSoon} />
+        <Route path="/loading" exact component={Loading} />
+        {/* <Route path="/dashboard" exact component={Dashboard} />
       <Route path="/login" exact component={LoginRegister} />
       <Route path="/Login/VerifyEmail" exact component={VerifyEmail} />
       <Route path="/signUp" exact component={SignUp} />
@@ -88,24 +91,25 @@ const AppRoutes = () => {
       />
       <Route path="/ComingSoon" exact component={ComingSoon} />
       <Route path="/hackathon-register" exact component={HackathonRegister} /> */}
-      <Route component={PageNotFound} />
-      {/* <Route path="/Login" exact component={LoginRegister} /> */}
+        <Route component={PageNotFound} />
+        {/* <Route path="/Login" exact component={LoginRegister} /> */}
 
-      {/*
+        {/*
       <Route path="/Login" exact component={LoginRegister} />
       <Route path="/reset-password" exact component={ResetPassword} />
       <Route path="/forgot-password" exact component={ForgotPassword} />
       <Route path="/login-register" exact component={LoginRegister} />
       <Route path="/google-form-data" exact component={GoogleFormData} />  */}
 
-      {/* <ProtectedRoute
+        {/* <ProtectedRoute
         path="/dashboard"
         auth={Auth}
         exact
         component={Dashboard}
       /> */}
-      {/* <Route component={PageNotFound} /> */}
-    </Switch>
+        {/* <Route component={PageNotFound} /> */}
+      </Switch>
+    </ScrollToTop>
   );
 };
 

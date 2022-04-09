@@ -61,7 +61,7 @@ function App() {
 
   if (loading) {
     return (
-      <div clasName="App">
+      <div className="App">
         <Loading />
       </div>
     );
@@ -77,7 +77,6 @@ function App() {
                 <NewLoadWorkshop.Provider value={newloadworkshop}>
                   <SetNewLoadWorkshop.Provider value={setnewloadworkshop}>
                     <BrowserRouter>
-                      <Navbar width={width} />
                       <div
                         style={{
                           paddingTop: "90px",
@@ -86,22 +85,24 @@ function App() {
                           backgroundRepeat: 1,
                         }}
                       >
+                        {" "}
+                        <Navbar width={width} />
                         <AppRoutes />
-                      </div>
-                      <ToastContainer
-                        position="top-right"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="dark"
-                      />
-                      <div>
-                        <Footer />
+                        <ToastContainer
+                          position="top-right"
+                          autoClose={5000}
+                          hideProgressBar={false}
+                          newestOnTop={false}
+                          closeOnClick
+                          rtl={false}
+                          pauseOnFocusLoss
+                          draggable
+                          pauseOnHover
+                          theme="dark"
+                        />
+                        <div>
+                          <Footer />
+                        </div>
                       </div>
                     </BrowserRouter>
                   </SetNewLoadWorkshop.Provider>

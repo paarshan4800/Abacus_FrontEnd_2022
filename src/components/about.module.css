@@ -259,6 +259,7 @@ font-family: aquire;
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .content_container {
     width: 80%;
+    text-align: justify;
   }
   .txt{
     margin-top: 20%;
@@ -274,16 +275,20 @@ font-family: aquire;
     width: 90%;
   }
   .text_box > p {
-    text-align: left;
+    text-align: justify;
   }
 
   .text_box{
     margin-bottom: var(--mb-6);
   }
+  .text_box > h1{
+    text-align: center;
+  }
 
 }
 
 .content{
+    text-align: justify;
     /* font-family: Arial, Helvetica, sans-serif; */
     color: white;
     font-size: 1rem;
@@ -299,6 +304,7 @@ font-family: aquire;
   .content_container{
     margin-bottom: 4%;
     padding: 3%;
+    text-align: justify !important;
   }
   .image_box{
     margin-bottom: 10%;
@@ -306,5 +312,7 @@ font-family: aquire;
   .subheading{
     padding-bottom: 6%;
   }
-
+  .content {
+    text-align: justify;
+  }
 }

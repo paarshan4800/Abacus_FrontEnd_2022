@@ -24,9 +24,9 @@ function EventsHome() {
       </Link>
     </div>,
     <div className={styles.linkBackground}>
-      <Link to="/events/hackathon" className={styles.linkTag}>
+      <Link to="/events/coding-hungama" className={styles.linkTag}>
         <img src={hack} alt="3" />
-        <h1 className={styles.neon}>Hackathon</h1>
+        <h1 className={styles.neon}>All Night Event</h1>
       </Link>
     </div>,
   ];
@@ -39,11 +39,11 @@ function EventsHome() {
         // color: "#f5f5f5",
       }}
     >
-      <Link to={`/dashboard`}>
+      {/* <Link to={`/dashboard`}>
         <div className={styles.pass}>
           <img src={eventpassimg} />
         </div>
-      </Link>
+      </Link> */}
       <div className={styles.displaylist}>
         <Carousel
           style={{ paddingTop: "400px" }}

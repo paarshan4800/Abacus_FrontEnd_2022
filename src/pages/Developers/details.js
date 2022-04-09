@@ -54,5 +54,12 @@ export const developerDetails = [
     img: "dev/Jyotir Aditya Giri A.png",
     href:
       "https://www.linkedin.com/in/jyotir-aditya-giri",
-},
+  },
+  {
+    title: "Sreeratcha B",
+    title1: "Frontend",
+    img: "dev/Sreeratcha B.png",
+    href:
+      "https://www.linkedin.com/in/sreeratcha-b-5a8026195",
+  },
 ]
