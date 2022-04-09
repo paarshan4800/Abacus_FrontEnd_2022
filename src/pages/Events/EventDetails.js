@@ -31,6 +31,7 @@ function EventDetails() {
   }
 
   const data = Hash[title];
+  // console.log(data);
   const history = useHistory();
   if (!data) {
     // history.push("/404")

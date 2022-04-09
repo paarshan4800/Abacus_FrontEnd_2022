@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
 
 .sponsors {
@@ -289,6 +290,7 @@ body {
   text-transform: uppercase;
   font-family: aq;
   letter-spacing: 3px;
+  margin-top: 10px;
 
   animation: flicker 3s infinite;
   font-weight: bolder;
@@ -325,7 +327,7 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(70px); */
 
-  height: 100vh;
+  height: auto;
 
   width: 60%;
 }

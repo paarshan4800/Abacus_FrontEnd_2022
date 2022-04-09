@@ -278,8 +278,8 @@ body
 
   display: block;
   position: fixed;
-  top: 50px;
-  left: 50px;
+  top: 35px;
+  left: 35px;
   
   z-index: 50;
   
@@ -307,8 +307,8 @@ body
   width: 40px;
   height: 32px;
   position: absolute;
-  top: -7px;
-  left: -5px;
+  top: -3px;
+  left: -3px;
   
   cursor: pointer;
   
@@ -359,7 +359,7 @@ body
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #ede9e9;
 }
 
 /*
@@ -394,7 +394,7 @@ body
   height: 100vh;
   position: fixed;
   
-  background: #ededed;
+  background-color: rgba(0,0,0,.9);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -410,6 +410,11 @@ body
   padding: 10px 0;
   font-size: 22px;
   font-family: Future; 
+  color: #ffffff;
+}
+
+.menu li :hover{
+    color: #0fe69e;
 }
 
 /*
