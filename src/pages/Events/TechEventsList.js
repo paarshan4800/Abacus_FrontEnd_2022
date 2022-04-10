@@ -45,8 +45,8 @@ function TechEventsList() {
     },
     {
       id: 8,
-      refName: "brainstorm",
-      name: "Brainstormiz - Technical Quiz",
+      refName: "brainstormiz-technicalQuiz",
+      name: "Brainstormiz - Tech Quiz",
     },
     {
       id: 9,

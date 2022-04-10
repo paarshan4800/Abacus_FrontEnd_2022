@@ -1,6 +1,6 @@
 export const Hackathon = {
-    name: "HACKATHON",
-    refName: "hackathon",
+    name: "CODING HUNGAMA - ALL NIGHT EVENT",
+    refName: "coding-hungama",
     about: `Are you a tech-savvy individual who can collaborate intensively to
             innovate and develop influential solutions to a problem using technology?
             Then why do you wait? Fasten your belts and bump into the signature event of Abacus,
