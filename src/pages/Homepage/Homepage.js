@@ -153,16 +153,16 @@ const Homepage = (props) => {
                 <div className={styles.card}>
                   <h1 className={`${styles.heading}`}>ABACUS'22</h1>
                   <p className={`${styles.paragraph} mt-1`}>
-                  The conglomeration of the brightest minds enhancing 
-                  the participant’s knowledge and creative potentials. 
-                  The 3 day annual symposium showcases 15+ events and 
-                  flagship contests of crystal gazing technology. 
-                  Abacus's coverage and deliberations of earlier 
-                  symposia have been a grand success with insatiable 
-                  thirst for technological development. Here's the upgraded 
-                  chronicle of Abacus '22 rejuvenating the technology with 
-                  innovation. This year, Abacus is back offline on a 
-                  grander scale with an innovative edge to all the events.
+                    The conglomeration of the brightest minds enhancing the
+                    participant’s knowledge and creative potentials. The 3 day
+                    annual symposium showcases 15+ events and flagship contests
+                    of crystal gazing technology. Abacus's coverage and
+                    deliberations of earlier symposia have been a grand success
+                    with insatiable thirst for technological development. Here's
+                    the upgraded chronicle of Abacus '22 rejuvenating the
+                    technology with innovation. This year, Abacus is back
+                    offline on a grander scale with an innovative edge to all
+                    the events.
                   </p>
                 </div>
               </div>
@@ -364,7 +364,7 @@ const Homepage = (props) => {
                             <img
                               src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
                               className={`${styles.img4}`}
-                              alt="Career Crafter"
+                              alt="2 IIM"
                             />
                           </div>
                         </div>
@@ -377,7 +377,7 @@ const Homepage = (props) => {
                             <img
                               src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
                               className={`${styles.img4}`}
-                              alt="Career Crafter"
+                              alt="Tech Z Academy"
                             />
                           </div>
                         </div>

@@ -5,7 +5,6 @@ import styles from './about.module.css'
 import ceg from './ceg.png'
 import csea from './CSEA.png'
 import abacus from './ABACUS22LOGO-03.png'
-
 const Aboutus = () => {
   let img;
   const INFO = [
@@ -58,18 +57,22 @@ const Aboutus = () => {
                   
                   className={`${styles.image_box}`}
                 >
+                  <FadeInSection>
                   <img
                     alt={`${item.title}`}
                     src={img}
                     width="300px"
                     height="280px"
                   />
+                  </FadeInSection>
                 </div>
                 
                 <div className={`${styles.text_box}`}>
+                  <FadeInSection>
                 <h1 className={`${styles.subheading}`}>{item.title}</h1>
                   <p className={`${styles.content}`}>{item.content}</p>
 
+                  </FadeInSection>
                 </div>
                 
               </div>
