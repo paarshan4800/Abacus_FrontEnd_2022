@@ -13,6 +13,11 @@ function PageNotFound() {
 
   return (
     <>
+    <div className={styles.space}>
+              <span className={styles.star1}></span>
+              <span className={styles.star2}></span>
+              <span className={styles.star3}></span>
+
       <div className={`${styles._404_wrapper} ${styles.bg}`}>
         <div className={`${styles._404}`}>
           {/* Image */}
@@ -41,6 +46,7 @@ function PageNotFound() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
