@@ -12,22 +12,22 @@ function SignInForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
-  // console.log("token from cookie is ", localStorage.getItem("apiToken"));
+  // //console.log("token from cookie is ", localStorage.getItem("apiToken"));
   /*
    const clickGoogleIcon = () => {
     window.location = `${baseURL}${url_gAuth}`
    }*/
   //handle normal signin
   const onSubmitSignIn = async () => {
-    console.log("in on submit signin");
+    //console.log("in on submit signin");
     var values = {
       email,
       password,
     };
-    console.log(values);
+    //console.log(values);
 
     const details = await normalSignIn(values);
-    console.log(details);
+    //console.log(details);
   };
 
   useEffect(afterGoogleSignIn);
@@ -38,7 +38,7 @@ function SignInForm() {
           <GoogleButton
             className="google-button"
             onClick={() => {
-              console.log("Google button clicked");
+              //console.log("Google button clicked");
               googleSignIn();
             }}
             type="dark"

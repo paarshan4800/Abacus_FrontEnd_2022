@@ -173,7 +173,7 @@ domains.`,
     // ],
 
     sponsorName: "Alpha Cloud Labs",
-    sponsor: "acl_logo.png",
+    sponsor: "alpha.jpg",
 
     rules: [
       "The event is for both individuals and teams of two",

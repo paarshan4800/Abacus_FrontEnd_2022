@@ -7,7 +7,7 @@ import Dev from "../../components/Dev/Dev";
 import FadeInSection from "../../components/FadeInSection/FadeInSection";
 import { developerDetails } from "./details";
 export default function Developers() {
-  console.log(process.env);
+  //console.log(process.env);
   return (
     <div>
       <div style={{ textAlign: "center" }}>

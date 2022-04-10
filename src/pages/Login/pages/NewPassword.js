@@ -17,7 +17,7 @@ function NewPassword() {
     const msg = await resetPassword(token, values);
     var res_msg = document.getElementById("alert_msg");
     res_msg.innerHTML = msg;
-    console.log(values);
+    //console.log(values);
   };
   return (
     <div className={logstyle.App}>

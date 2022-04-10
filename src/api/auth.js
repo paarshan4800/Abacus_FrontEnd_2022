@@ -16,7 +16,7 @@ export const normalSignIn = async (values) => {
     //.post("https://abacus-22-backend.herokuapp.com/user/login", values)
     .then((response) => {
       if (response.status === 200) {
-        console.log("Token ==", response.data.token);
+        //console.log("Token ==", response.data.token);
         localStorage.setItem("apiToken", response.data.token);
         // alert(" token has been generated, check console");
         toast("Token has been generated, check console");
@@ -25,7 +25,7 @@ export const normalSignIn = async (values) => {
       }
     })
     .catch((err) => {
-      console.log("the error is", err);
+      //console.log("the error is", err);
       alert(err.response.data.message);
       if (err.response.status === 404) {
         setTimeout(() => {
@@ -38,21 +38,21 @@ export const normalSignIn = async (values) => {
 };
 
 export const afterGoogleSignIn = () => {
-  // console.log("function after g sign called");
+  // //console.log("function after g sign called");
   const url = new URL(window.location.href);
-  // console.log("url is", url);
+  // //console.log("url is", url);
   const searchparams = new URLSearchParams(url.search);
-  // console.log("search params is", searchparams);
+  // //console.log("search params is", searchparams);
   if (searchparams.has("message")) {
     const msg = searchparams.get("message");
-    // console.log(msg);
+    // //console.log(msg);
     window.alert(msg);
   }
   if (searchparams.has("token")) {
     // setToken(searchparams.get("token"));
     // localStorage.setItem("apiToken", token);
-    // console.log("token is ", searchparams.get("token"));
-    console.log("token is : ", localStorage.getItem("apiToken"));
+    // //console.log("token is ", searchparams.get("token"));
+    //console.log("token is : ", localStorage.getItem("apiToken"));
   }
 };
 
@@ -64,13 +64,13 @@ export const forgetPassword = async (values) => {
         // var res_msg = document.getElementById("msg");
         // res_msg.innerHTML = response.data.message;
 
-        console.log(response.data.message);
-        console.log("Forget Password successful");
+        //console.log(response.data.message);
+        //console.log("Forget Password successful");
         return response.data.message;
       }
     })
     .catch((err) => {
-      console.log("the error code is", err.response.status);
+      //console.log("the error code is", err.response.status);
 
       var err_msg = document.getElementById("msg");
       err_msg.innerHTML = err.response.data.message;
@@ -83,16 +83,16 @@ export const resetPassword = async (token, values) => {
     .put("http://localhost:8000/resetPassword/" + token, values)
     .then((response) => {
       if (response.status === 200) {
-        console.log(response.data.message);
-        console.log("Reset Password Successful");
+        //console.log(response.data.message);
+        //console.log("Reset Password Successful");
         return response.data.message;
       }
     })
     .catch((err) => {
       var msg = document.getElementById("alert_msg");
       msg.innerHTML = err.response.data.message;
-      console.log(err.response.data.message);
-      console.log("the error code is", err.response.status);
+      //console.log(err.response.data.message);
+      //console.log("the error code is", err.response.status);
     });
   return msg;
 };
@@ -109,7 +109,7 @@ export const verifyUserAPI = async (email, code) => {
       }
     })
     .catch((err) => {
-      console.log(err.response);
+      //console.log(err.response);
       return { status: "error", message: err.response.data.message };
     });
 
@@ -125,10 +125,10 @@ export const signUp = (signupURL, values) => {
         // setMessage(response.data.message);
         window.location = "http://localhost:3000/Login";
       }
-      console.log(response);
+      //console.log(response);
     })
     .catch((err) => {
-      console.log(err);
+      //console.log(err);
       if (err.response.data.code === 11000) {
         alert(
           err.response.data.keyValue.email +
@@ -138,7 +138,7 @@ export const signUp = (signupURL, values) => {
           window.location = "http://localhost:3000/Login";
         }, 300);
       } else {
-        console.log(err.response.data);
+        //console.log(err.response.data);
       }
     });
 };

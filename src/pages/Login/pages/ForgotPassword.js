@@ -12,7 +12,7 @@ function ForgotPassword() {
     var values = {
       email,
     };
-    console.log(values);
+    //console.log(values);
 
     const msg = await forgetPassword(values);
     var res_msg = document.getElementById("msg");

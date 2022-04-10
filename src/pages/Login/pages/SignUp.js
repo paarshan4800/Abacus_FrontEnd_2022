@@ -74,10 +74,10 @@ function SignUp() {
 
   const checkWhichPage = () => {
     const url = new URL(window.location.href);
-    // console.log(url);
+    // //console.log(url);
     const searchparams = new URLSearchParams(url.search);
-    // console.log(searchparams);
-    // console.log("hello");
+    // //console.log(searchparams);
+    // //console.log("hello");
     if (searchparams.has("email")) {
       //
       setEmail(searchparams.get("email"));
@@ -87,7 +87,7 @@ function SignUp() {
       setNonChangable(true);
     }
     if (searchparams.has("message")) {
-      console.log(searchparams.get("message"));
+      //console.log(searchparams.get("message"));
       window.alert(searchparams.get("message"));
       setMessage(searchparams.get("message"));
     }
@@ -97,12 +97,12 @@ function SignUp() {
 
     if (searchparams.has("verificationCode"))
       setVerificationCode(searchparams.get("verificationCode"));
-    // console.log(searchparams.get("id_token"));
+    // //console.log(searchparams.get("id_token"));
   };
 
   useEffect(checkWhichPage, []);
   const handleSubmit = () => {
-    console.log("hello");
+    //console.log("hello");
     const isValid = validate();
     if (isValid) {
       var values = {
@@ -127,7 +127,7 @@ function SignUp() {
 
       signUp(signupURL, values);
     } else {
-      console.log(validationError);
+      //console.log(validationError);
     }
   };
   return (

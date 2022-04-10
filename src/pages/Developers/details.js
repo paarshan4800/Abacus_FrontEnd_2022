@@ -38,7 +38,7 @@ export const developerDetails = [
   {
     title: "Jyotir Aditya Giri A",
     title1: "Frontend",
-    img: "Dev/Jyotir Aditya Giri A.png",
+    img: "Dev/Jyotir Aditya Giri A.jpg",
     href: "https://www.linkedin.com/in/jyotir-aditya-giri",
   },
   {
