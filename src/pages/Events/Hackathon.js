@@ -108,10 +108,10 @@ function Hackathon() {
                     </p>
                   ))
                 : null}
-              <p>Team size: {data.teamSize ? data.teamSize : null}</p>
+              {/* <p>Team size: {data.teamSize ? data.teamSize : null}</p>
               <p>
                 Participants: {data.participants ? data.participants : null}
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
