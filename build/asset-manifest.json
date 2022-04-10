@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e2e9f16f.css",
-    "main.js": "/static/js/main.a8af741e.js",
+    "main.css": "/static/css/main.f51ca33f.css",
+    "main.js": "/static/js/main.c2029303.js",
     "static/media/spin.mp4": "/static/media/spin.241660180385baff701c.mp4",
     "static/media/backk.jpg": "/static/media/backk.d81605ff49e72d49feaf.jpg",
     "static/media/bgg.jpg": "/static/media/bgg.da030cdc2be11992fcc3.jpg",
@@ -15,8 +15,8 @@
     "static/media/CSEA.png": "/static/media/CSEA.e33855806ca17b0399ee.png",
     "static/media/thadam.png": "/static/media/thadam.aff60b8f58766423fd7a.png",
     "static/media/ceg.png": "/static/media/ceg.f86f8e1f354bb72a6ff7.png",
-    "static/media/nontech.png": "/static/media/nontech.a3872854b8fa1aedddb0.png",
-    "static/media/tech.png": "/static/media/tech.a3265658edacd2eedca8.png",
+    "static/media/nontech.png": "/static/media/nontech.992826959d7d402d41ba.png",
+    "static/media/tech.png": "/static/media/tech.34d0c5c80d8a14bbf079.png",
     "static/media/Aquire.otf": "/static/media/Aquire.a37a828dd20a35dc68d2.otf",
     "static/media/forgot.png": "/static/media/forgot.e6415bba1c9712b669b9.png",
     "static/media/code-for-crown.png": "/static/media/code-for-crown.de45b71892bcde5c424c.png",
@@ -37,11 +37,11 @@
     "static/media/capture-the-flag.png": "/static/media/capture-the-flag.0376cf8fd1e727400898.png",
     "static/media/alien.ttf": "/static/media/alien.b3fec7b397b54820e850.ttf",
     "index.html": "/index.html",
-    "main.e2e9f16f.css.map": "/static/css/main.e2e9f16f.css.map",
-    "main.a8af741e.js.map": "/static/js/main.a8af741e.js.map"
+    "main.f51ca33f.css.map": "/static/css/main.f51ca33f.css.map",
+    "main.c2029303.js.map": "/static/js/main.c2029303.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2e9f16f.css",
-    "static/js/main.a8af741e.js"
+    "static/css/main.f51ca33f.css",
+    "static/js/main.c2029303.js"
   ]
 }
