@@ -582,7 +582,8 @@ tech savvy quizzer of them all in this technical quiz event.`,
     //   },
     // ],
 
-    // sponsor: "",
+    sponsorName: "Cosgrid Networks",
+    sponsor: "cos.jpg",
 
     rules: [
       "This event is for individuals and teams of 2",
@@ -609,7 +610,6 @@ tech savvy quizzer of them all in this technical quiz event.`,
     registration: true,
     purpose: "EVENTS",
   },
-
 
   olpc: {
     id: "10",

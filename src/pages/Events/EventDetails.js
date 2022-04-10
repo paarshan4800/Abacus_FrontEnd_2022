@@ -121,7 +121,13 @@ function EventDetails() {
                 </h2>
                 <img
                   src={require(`./../../../public/images/about-us/${data.sponsor}`)}
-                  style={{ width: "450px", height: "250px" }}
+                  style={{
+                    width: "450px",
+                    height: "270px",
+                    display: "block",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
                 />
 
                 {/* <a href="#">Read More</a> */}
