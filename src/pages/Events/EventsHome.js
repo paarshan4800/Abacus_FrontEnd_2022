@@ -1,5 +1,5 @@
 import { Carousel } from "3d-react-carousal";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import TechEventsList from "./TechEventsList";
 
@@ -10,26 +10,30 @@ import styles from "./EventsHome.module.css";
 import eventpassimg from "../../images/eventpassimg.png";
 
 function EventsHome() {
-  let slides = [
-    <div className={styles.linkBackground}>
-      <Link to="/events/tech-events" className={styles.linkTag}>
-        <img src={tech} alt="1" />
-        <h1 className={styles.neon}>Tech Events</h1>
-      </Link>
-    </div>,
-    <div className={styles.linkBackground}>
-      <Link to="/events/non-tech-events" className={styles.linkTag}>
-        <img src={nontech} alt="2" />
-        <h1 className={styles.neon}>Non-Tech Events</h1>
-      </Link>
-    </div>,
-    <div className={styles.linkBackground}>
-      <Link to="/events/coding-hungama" className={styles.linkTag}>
-        <img src={hack} alt="3" />
-        <h1 className={styles.neon}>All Night Event</h1>
-      </Link>
-    </div>,
-  ];
+  const [slides, setSlides] = useState([]);
+
+  useEffect(() => {
+    setSlides([
+      <div className={styles.linkBackground}>
+        <Link to="/events/tech-events" className={styles.linkTag}>
+          <img src={tech} alt="1" className="img-fluid" />
+          <h1 className={styles.neon}>Tech Events</h1>
+        </Link>
+      </div>,
+      <div className={styles.linkBackground}>
+        <Link to="/events/non-tech-events" className={styles.linkTag}>
+          <img src={nontech} alt="2" className="img-fluid" />
+          <h1 className={styles.neon}>Non-Tech Events</h1>
+        </Link>
+      </div>,
+      <div className={styles.linkBackground}>
+        <Link to="/events/coding-hungama" className={styles.linkTag}>
+          <img src={hack} alt="3" className="img-fluid" />
+          <h1 className={styles.neon}>All Night Event</h1>
+        </Link>
+      </div>,
+    ]);
+  }, []);
   return (
     <div
       style={{
