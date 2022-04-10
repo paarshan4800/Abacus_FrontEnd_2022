@@ -544,16 +544,15 @@ tech savvy quizzer of them all in this technical quiz event.`,
   },
 
   // Code for Crown - OLPC
-  "deadlock-opener": {
-    id: "9",
+  
+  "olpc": {
+    id: "10",
     //imgName: "deadlock-opener",
-    name: "Deadlock Opener",
-    refName: "deadlock-opener",
-    about: `A mind-boggling database management system event primarily aimed at testing
-your fundamentals in this booming field. The event provides a platform for
-challenging the complex database queries. It tests for injections and deadlock
-situations. The participation finds ways to improve the interface between
-database and users. It also deals with concurrency and transaction issues.`,
+    name: "OLPC - Online Programming Contest",
+    refName: "olpc",
+    about: `An high paced programming contest, to  enthrall, challenge, and test coders. 
+    The participants will have to solve questions based on algorithms and data structures, on a timer. 
+    `,
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:11am"],
 
@@ -562,33 +561,22 @@ database and users. It also deals with concurrency and transaction issues.`,
     //sponsor: "Amazon",
 
     rules: [
-      "This event is for individuals or teams of two.",
+      "This event is an individual event.",
       "Candidates involved in any kind of malpractice will be disqualified immediately.",
-      "There will be no negative marking for MCQs.",
-      "Marks will be provided based on problem solving skills and efficiency of query.",
+      "Marks will be provided based on based on Leaderboard and code.",
       "Decisions made by the administrators will be final.",
-      "Participants need not carry their laptops.",
     ],
-    teamSize: "1-2",
-    roundsNumber: "2",
-    duration: "Round 1: 45 minutes, Round 2: 1 hr",
+    teamSize: "1",
+    roundsNumber: "1",
+    duration: "Round 1: 30 minutes",
     rounds: {
-      number: 2,
+      number: 1,
       roundDetails: [
         {
-          title: "Prelims",
+          title: "Round 1",
           description:
-            "The participants are expected to answer a set of MCQs and a few standard coding questions.",
-        },
-        {
-          title: "Finals",
-          description: "Candidates must answer a few coding questions",
-        },
-        {
-          title: "Prize",
-          description:
-            "The winners will get exciting cash prizes, internship opportunities, T shirts and many more goodies",
-        },
+            "3 Coding Questions will be given. Score based on time and space complexity. Questions will be based on Data Structures and Algorithms"
+          },
       ],
     },
     registration: true,

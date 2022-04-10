@@ -2,6 +2,7 @@ import React from "react";
 import cx from "classnames";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import styles from "./EventsList.module.css";
+import FadeInSection from "../../components/FadeInSection/FadeInSection";
 // import styles from "./../Events/EventDetails.module.css";
 
 function TechEventsList() {
@@ -20,7 +21,7 @@ function TechEventsList() {
       id: 3,
       refName: "capture-the-flag",
       name: "Capture the flag",
-      subname: "(Pre-event)",
+      subname: "Pre-event",
     },
     {
       id: 4,
@@ -52,6 +53,12 @@ function TechEventsList() {
       refName: "deadlock-opener",
       name: "Deadlock Opener",
     },
+    {
+      id: 10,
+      refName: "olpc",
+      name: "OLPC",
+      subname: "Pre-event",
+    },
   ];
 
   // const history = useHistory();
@@ -63,31 +70,64 @@ function TechEventsList() {
   return (
     <div>
       <div className={styles.mainTitle}>Tech Events</div>
-
       <div className={styles.wrapper}>
-        {techEventsList.map((event) => (
+        {techEventsList.map((event) => (( event.subname != "Pre-event" &&
           <Link
             to={`/events/tech-events/${event.refName}`}
             className={styles.linkTag}
           >
-            <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
-              <img
-                src={require(`./../../images/TechEvents/${event.refName}.png`)}
-                style={{
-                  width: "350px",
-                  height: "250px",
-                  padding: "20px",
-                  backgroundColor: "black",
-                }}
-                alt={event.refName}
-              />
-              <div className={styles.title}>
-                {event.name}
-                <div className={styles.subtitle}> {event.subname} </div>
+            <FadeInSection>
+              <div
+                key={event.id}
+                className={cx(styles.maindiv, styles.maindiv1)}
+              >
+                <img
+                  src={require(`./../../images/TechEvents/${event.refName}.png`)}
+                  style={{
+                    width: "350px",
+                    height: "250px",
+                    padding: "20px",
+                    backgroundColor: "black",
+                  }}
+                  alt={event.refName}
+                />
+                <div className={styles.title}>{event.name}</div>
               </div>
-            </div>
+            </FadeInSection>
           </Link>
-        ))}
+        )))}
+      </div>
+      <FadeInSection><div className={styles.mainTitle}>Pre Events</div></FadeInSection>
+      
+      <div className={styles.wrapper}>
+        {techEventsList.map(
+          (event) =>
+            event.subname == "Pre-event" && (
+              <Link
+                to={`/events/tech-events/${event.refName}`}
+                className={styles.linkTag}
+              >
+                <FadeInSection>
+                  <div
+                    key={event.id}
+                    className={cx(styles.maindiv, styles.maindiv1)}
+                  >
+                    <img
+                      src={require(`./../../images/TechEvents/${event.refName}.png`)}
+                      style={{
+                        width: "350px",
+                        height: "250px",
+                        padding: "20px",
+                        backgroundColor: "black",
+                      }}
+                      alt={event.refName}
+                    />
+                    <div className={styles.title}>{event.name}</div>
+                  </div>
+                </FadeInSection>
+              </Link>
+            )
+        )}
       </div>
     </div>
   );

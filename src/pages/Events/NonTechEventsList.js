@@ -3,6 +3,7 @@ import cx from "classnames";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import styles from "./EventsList.module.css";
 import stylesnew from "./EventsHome.module.css";
+import FadeInSection from "../../components/FadeInSection/FadeInSection";
 function NonTechEventsList() {
   let nonTechEventsList = [
     {
@@ -48,6 +49,7 @@ function NonTechEventsList() {
             to={`/events/non-tech-events/${event.refName}`}
             className={styles.linkTag}
           >
+            <FadeInSection>
             <div key={event.id} className={cx(styles.maindiv, styles.maindiv1)}>
               <img
                 src={require(`./../../images/NonTechEvents/${event.refName}.png`)}
@@ -62,6 +64,7 @@ function NonTechEventsList() {
               />
               <div className={styles.title}>{event.name}</div>
             </div>
+            </FadeInSection>
           </Link>
         ))}
       </div>

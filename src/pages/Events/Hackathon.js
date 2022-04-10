@@ -2,27 +2,34 @@ import React from "react";
 import styles from "./../Events/EventDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { Hackathon as HackathonData } from "../../data/HackathonData";
-import nontech from "./../../images/nontech.png";
+import nontech from "./../../images/hack.png";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import FadeInSection from "../../components/FadeInSection/FadeInSection";
+
+
 function Hackathon() {
   const data = HackathonData;
 
   return (
     <div
-      style={
-        {
-          // backgroundImage: `url(${background})`,
-          // backgroundSize: "cover",
-          // height: "100vh",
-          // color: "#f5f5f5",
-        }
-      }
+      style={{
+        backgroundSize: "fit",
+        backgroundRepeat: 1,
+      }}
     >
-      <div className={styles.container}>
-        <div className={styles.box} style={{ width: "400px" }}>
-          <span></span>
-          <div className={styles.content}>
+<FadeInSection>
+        <div className={styles.container}>
+          <div className={styles.box} style={{ height: "auto", width: "30%" }}>
+            <span></span>
+            <div
+              className={styles.content}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
             <img src={nontech} style={{ width: "200px", height: "200px" }} />
             <Link to={`/hackathon-register`}>
               <GlassButton title="Register" />
@@ -48,6 +55,8 @@ function Hackathon() {
           </div>
         </div>
       </div>
+      </FadeInSection>
+
       <FadeInSection>
         <div className={styles.container}>
           <div className={styles.box} style={{ height: "auto", width: "60%" }}>
