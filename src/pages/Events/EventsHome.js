@@ -15,15 +15,15 @@ function EventsHome() {
   useEffect(() => {
     setSlides([
       <div className={styles.linkBackground}>
-        <Link to="/events/tech-events" className={styles.linkTag}>
-          <img src={tech} alt="1" className="img-fluid" />
-          <h1 className={styles.neon}>Tech Events</h1>
-        </Link>
-      </div>,
-      <div className={styles.linkBackground}>
         <Link to="/events/non-tech-events" className={styles.linkTag}>
           <img src={nontech} alt="2" className="img-fluid" />
           <h1 className={styles.neon}>Non-Tech Events</h1>
+        </Link>
+      </div>,
+      <div className={styles.linkBackground}>
+        <Link to="/events/tech-events" className={styles.linkTag}>
+          <img src={tech} alt="1" className="img-fluid" />
+          <h1 className={styles.neon}>Tech Events</h1>
         </Link>
       </div>,
       <div className={styles.linkBackground}>
