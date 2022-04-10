@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loading from "./pages/Loading/Loading";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 const rootReducer = combineReducers({
   Reducer: Reducer,
 });
@@ -48,7 +49,6 @@ function App() {
 
     updateWindowDimensions();
     window.addEventListener("resize", updateWindowDimensions);
-    setLoading(false);
     return () => {
       window.removeEventListener("resize", updateWindowDimensions);
     };
@@ -58,6 +58,12 @@ function App() {
     setwidth(window.innerWidth);
     setheight(window.innerHeight);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   if (loading) {
     return (
