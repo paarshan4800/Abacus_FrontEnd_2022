@@ -112,6 +112,11 @@ body {
   text-decoration: none !important;
 }
 
+.subtitle {
+  font-size: 15px !important;
+  text-decoration: none !important;
+}
+
 /* .maindiv2::before {
   content: "";
   position: absolute;

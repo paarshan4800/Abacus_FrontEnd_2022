@@ -19,17 +19,18 @@ function TechEventsList() {
     {
       id: 3,
       refName: "capture-the-flag",
-      name: "Capture the flag (Pre event)",
+      name: "Capture the flag",
+      subname: "(Pre-event)",
     },
     {
       id: 4,
-      refName: "get-hired",
+      refName: "ospc",
       name: "OSPC",
     },
     {
       id: 5,
-      refName: "she-codes",
-      name: "She Codes",
+      refName: "she-plus-plus",
+      name: "She++",
     },
     {
       id: 6,
@@ -43,12 +44,12 @@ function TechEventsList() {
     },
     {
       id: 8,
-      refName: "get-hired",
+      refName: "brainstorm",
       name: "Brainstormiz - Technical Quiz",
     },
     {
       id: 9,
-      refName: "get-hired",
+      refName: "deadlock-opener",
       name: "Deadlock Opener",
     },
   ];
@@ -80,7 +81,10 @@ function TechEventsList() {
                 }}
                 alt={event.refName}
               />
-              <div className={styles.title}>{event.name}</div>
+              <div className={styles.title}>
+                {event.name}
+                <div className={styles.subtitle}> {event.subname} </div>
+              </div>
             </div>
           </Link>
         ))}

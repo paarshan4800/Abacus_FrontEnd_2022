@@ -109,7 +109,7 @@ function EventDetails() {
           <div className={styles.box} style={{ height: "auto", width: "60%" }}>
             <span></span>
             <div className={styles.content}>
-              <h2 className={styles.neon}>SPONSORS</h2>
+              <h2 className={styles.neon} style={{display: "flex", justifyContent: "center"}}>SPONSOR</h2>
               <img src={nontech} style={{ width: "200px", height: "200px" }} />
 
               {/* <a href="#">Read More</a> */}

@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 
 import tech from "./../../images/tech.png";
 import nontech from "./../../images/nontech.png";
-import hack from "./../../images/hack.jpeg";
+import hack from "./../../images/hack.png";
 import styles from "./WorkshopsList.module.css";
 import { useHistory } from "react-router-dom";
 
