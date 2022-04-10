@@ -1,10 +1,10 @@
 export const Hackathon = {
   name: "CODING HUNGAMA - ALL NIGHT EVENT",
   refName: "coding-hungama",
-  about: `Are you a tech-savvy individual who can collaborate intensively to
-            innovate and develop influential solutions to a problem using technology?
-            Then why do you wait? Fasten your belts and bump into the signature event of Abacus,
-            where you need to team up and brainstorm your ideas to create a prototype.`,
+  about: `An interesting all-night event conducted to test the programming and trouble-shooting 
+  abilities of the participants. The main components of this event are the fundamentals of 
+  DSA coding, reverse engineering, and complex coding. You are invited to exhibit your 
+  problem-solving skills with perseverance throughout the night.`,
   //   fee: `Registration Fee - Rs.100`,
   //   dateTime: ["25/03/2021 and 26/03/2021"],
 
@@ -19,29 +19,32 @@ export const Hackathon = {
   sponsor: "lister.png",
 
   rules: [
-    "The event is for a team of three participants (At Least 2 participants)",
-    "Problem statement will be provided on 25th March, 2021 and participants are expected to present their prototype on 26th March, 2021",
-    "Decisions made by the administrators will be final",
-    "Participants must ensure that they have laptop with good internet connectivity for their convenience",
-    "Participants must ensure that they have microsoft account",
+    "This event is an all-night event for which contestants can participate in teams of two.",
+"Candidates involved in any kind of malpractice will be disqualified immediately",
+"Marks will be provided based on spontaneity, problem solving skills and capability to code complex problems",
+"Decisions made by the administrators will be final",
+"Participants need not carry their laptop",
   ],
 
-  /* rounds: {
+   teamSize: "2",
+   participants: "All 4 years",
+   roundsNumber: "3",
+  rounds: {
         number: 3,
         roundDetails: [
             {
-                title: "Prelims",
-                description: "Participants will be given 25 mins to answer MCQs which is a combination of technical (OS,DBMS,OOPS..) and general aptitude questions."
+                title: "Round 1",
+                description: ["Coding contest on fundamentals of DSA",]
             },
             {
-                title: "Semi-Finals",
-                description: "A debugging round where candidates have to find the logical and syntactical errors in the given code snippets and run the correct code  in the platform provided for various test cases. (30 minutes)"
+                title: "Round 2",
+                description: ["Reverse Coding where contestants will be judged based on time taken to resolve the logic",],
             },
             {
-                title: "Finals",
-                description: "A reverse coding round where candidates have to analyze the given input-output sequences and decode the logic behind it. Write a code snippet that will generate the corresponding input output pattern. (30 mins)"
+                title: "Round 3",
+                description: ["Complex coding",],
             },
         ]
-    }, */
+    }, 
   registration: true,
 };

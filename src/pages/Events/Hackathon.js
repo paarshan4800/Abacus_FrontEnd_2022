@@ -108,10 +108,40 @@ function Hackathon() {
                     </p>
                   ))
                 : null}
-              {/* <p>Team size: {data.teamSize ? data.teamSize : null}</p>
+              <p>Team size: {data.teamSize ? data.teamSize : null}</p>
               <p>
                 Participants: {data.participants ? data.participants : null}
-              </p> */}
+              </p> 
+            </div>
+          </div>
+        </div>
+      </FadeInSection>
+
+      <FadeInSection>
+        <div className={styles.container}>
+          <div className={styles.box} style={{ height: "auto", width: "auto" }}>
+            <span></span>
+            <div className={styles.content}>
+              <h2 className={styles.neon}>ROUNDS</h2>
+              <p>Rounds: {data.roundsNumber ? data.roundsNumber : null}</p>
+              {/* <p>Duration: {data.duration ? data.duration : null}</p> */}
+              {data.rounds
+                ? data.rounds.roundDetails.map((round, index) => (
+                    <p key={index + 1} className={styles.glowCardName}>
+                      <h4>
+                        <b>{round.title}</b>
+                      </h4>
+                      {round.description
+                        ? round.description.map((desc, index) => (
+                            <p key={index + 1} className={styles.glowCardName}>
+                              ► {desc}
+                            </p>
+                          ))
+                        : null}
+                    </p>
+                  ))
+                : null}
+              {/* <p>Platform: {data.platform ? data.platform : null}</p> */}
             </div>
           </div>
         </div>
