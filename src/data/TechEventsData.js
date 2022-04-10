@@ -34,7 +34,8 @@ with a code that fulfills some hidden test cases.`,
     //   },
     // ],
 
-    //sponsor: "YouthInU",
+    sponsorName: "Whizzcorps",
+    sponsor: "unnamed.jpg",
 
     rules: [
       "The event is for a team of three participants (At Least 2 participants)",
@@ -171,7 +172,8 @@ domains.`,
     //   },
     // ],
 
-    // sponsor: "",
+    sponsorName: "Alpha Cloud Labs",
+    sponsor: "acl_logo.png",
 
     rules: [
       "The event is for both individuals and teams of two",
@@ -240,7 +242,8 @@ approach towards problem solving.`,
     //   },
     // ],
 
-    // sponsor: "",
+    sponsorName: "Samsung",
+    sponsor: "samsung.png",
 
     rules: [
       "The event is for both individuals and teams of two",
@@ -307,7 +310,8 @@ background while they compete to win the race towards the tiara.`,
     //   },
     // ],
 
-    // sponsor: "",
+    sponsorName: "Pandocorp",
+    sponsor: "pando.jpeg",
 
     rules: [
       "The event is exclusively for girls who can participate either individually or in teams of two.",
@@ -447,7 +451,8 @@ the chosen contestants avail the experience of interviews.`,
     //   },
     // ],
 
-    // sponsor: "",
+    sponsorName: "M2P",
+    sponsor: "m2p.jpg",
 
     rules: [
       "This event is for individual participants only.",
@@ -515,7 +520,8 @@ tech savvy quizzer of them all in this technical quiz event.`,
     //   },
     // ],
 
-    // sponsor: "",
+    sponsorName: "Tredence",
+    sponsor: "tredence.png",
 
     rules: [
       "This event is for individuals and teams of 2",
@@ -547,7 +553,6 @@ tech savvy quizzer of them all in this technical quiz event.`,
 
   olpc: {
     id: "10",
-    //imgName: "deadlock-opener",
     name: "OLPC - Online Programming Contest",
     refName: "olpc",
     about: `An high paced programming contest, to  enthrall, challenge, and test coders. 
@@ -558,7 +563,8 @@ tech savvy quizzer of them all in this technical quiz event.`,
 
     //contact: [],
 
-    //sponsor: "Amazon",
+    sponsorName: "Lumel",
+    sponsor: "Lumel-logo-Orange.png",
 
     rules: [
       "This event is an individual event.",

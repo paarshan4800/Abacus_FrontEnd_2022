@@ -104,25 +104,32 @@ function EventDetails() {
         </div>
       </FadeInSection>
 
-      <FadeInSection>
-        <div className={styles.container}>
-          <div className={styles.box} style={{ height: "auto", width: "60%" }}>
-            <span></span>
-            <div className={styles.content}>
-              <h2
-                className={styles.neon}
-                style={{ display: "flex", justifyContent: "center" }}
-              >
-                SPONSOR
-              </h2>
-              <img src={nontech} style={{ width: "200px", height: "200px" }} />
+      {data.sponsor ? (
+        <FadeInSection>
+          <div className={styles.container}>
+            <div
+              className={styles.box}
+              style={{ height: "auto", width: "60%" }}
+            >
+              <span></span>
+              <div className={styles.content}>
+                <h2
+                  className={styles.neon}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  SPONSOR - {data.sponsorName}
+                </h2>
+                <img
+                  src={require(`./../../../public/images/about-us/${data.sponsor}`)}
+                  style={{ width: "450px", height: "250px" }}
+                />
 
-              {/* <a href="#">Read More</a> */}
+                {/* <a href="#">Read More</a> */}
+              </div>
             </div>
           </div>
-        </div>
-      </FadeInSection>
-
+        </FadeInSection>
+      ) : null}
       <FadeInSection>
         <div className={styles.container}>
           <div className={styles.box} style={{ height: "auto", width: "auto" }}>
@@ -137,12 +144,13 @@ function EventDetails() {
                   ))
                 : null}
               <p>Team size: {data.teamSize ? data.teamSize : null}</p>
-              <p>Participants: {data.participants ? data.participants : null}</p>
+              <p>
+                Participants: {data.participants ? data.participants : null}
+              </p>
             </div>
           </div>
         </div>
       </FadeInSection>
-
       <FadeInSection>
         <div className={styles.container}>
           <div className={styles.box} style={{ height: "auto", width: "auto" }}>
@@ -174,7 +182,6 @@ function EventDetails() {
           </div>
         </div>
       </FadeInSection>
-      
     </div>
   );
 }
