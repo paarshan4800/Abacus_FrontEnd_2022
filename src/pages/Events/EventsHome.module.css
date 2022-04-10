@@ -13,10 +13,11 @@
   text-decoration: none !important;
 }
 
+
 .linkTag img {
-  height: 50vh;
-  width: 25vw;
-} 
+  max-height: 50vh;
+  max-width: 50vw;
+}
 
 .linkBackground {
   background-color: black;
@@ -51,7 +52,7 @@
   border-bottom: 2px solid #ffffff;
   border-left: 2px solid #ffffff;
 } */
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
 .linkTag img {
   height: 30vh;
   width: 100vw;
@@ -60,4 +61,4 @@
   background-color: black;
   /* margin-top: 60px; */
 }
-}
+} */
