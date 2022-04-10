@@ -153,16 +153,8 @@ const Homepage = (props) => {
                 <div className={styles.card}>
                   <h1 className={`${styles.heading}`}>ABACUS'22</h1>
                   <p className={`${styles.paragraph} mt-1`}>
-                    CSEA takes immense pleasure in organizing Abacus'22. This
-                    version is going to be one of its kind - a symposium
-                    completely online. We operate with a vision – to bring
-                    together students from multiple engineering colleges
-                    globally and give them a chance to demonstrate their
-                    technical prowess, ignite their passion for learning and to
-                    win exciting prizes and internships.
-                    <br></br> <br></br>
-                    Grab this opportunity and win cash prizes, Intern
-                    opportunities, T shirts and many more prizes.
+                  The conglomeration of the brightest minds enhancing the participant’s knowledge and creative potentials. The 3 day annual symposium showcases 15+ events and flagship contests of crystal gazing technology. Abacus's coverage and deliberations of earlier symposia have been a grand success with insatiable thirst for technological development. Here's the upgraded chronicle of Abacus '22 rejuvenating the technology with innovation. This year, Abacus is back offline on a grander scale with an innovative edge to all the events.
+              
                   </p>
                 </div>
               </div>
