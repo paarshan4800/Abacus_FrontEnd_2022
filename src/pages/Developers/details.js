@@ -32,7 +32,7 @@ export const developerDetails = [
   {
     title: "Anusree V",
     title1: "Frontend",
-    img: "Dev/Anu.jpeg",
+    img: "Dev/Anu.jpg",
     href: "https://www.linkedin.com/in/anusree-varadharaj-bb43471a1",
   },
   {
