@@ -113,10 +113,9 @@ export const NonTechEvents = {
     registration: false,
   },
 
-  // Graphic Traffic
-  thadam: {
-    name: "Graphic Traffic",
-    refName: "graphic-traffic",
+  "fandom-quiz": {
+    name: "Fandom Quiz",
+    refName: "fandom-quiz",
     about: `Hello Designers, get your sketch ready and start portraying the moment.
                 Abacus’21 brings you the online poster designing contest.
                 It is a social media based (Instagram) event where the contestant competes 
