@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./../Events/EventDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { Hackathon as HackathonData } from "../../data/HackathonData";
+import sponsor from "./../../images/Lumel-logo-Orange.png";
 import nontech from "./../../images/hack.png";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import FadeInSection from "../../components/FadeInSection/FadeInSection";
@@ -31,16 +32,18 @@ function Hackathon() {
               }}
             >
             <img src={nontech} style={{ width: "200px", height: "200px" }} />
-            <Link to={`/hackathon-register`}>
+            <p className="text-center pt-3">Registrations Opening Soon</p>
+
+            {/* <Link to={`/hackathon-register`}>
               <GlassButton title="Register" />
-            </Link>
+            </Link> */}
           </div>
         </div>
-        <div className={styles.box} style={{ width: "800px" }}>
-          <span></span>
-          <div className={styles.content}>
-            <h2 className={styles.neon}>CODING HUNGAMA - ALL NIGHT EVENT</h2>
-            <p>{data.about}</p>
+        <div className={styles.box} style={{ height: "auto", width: "60%" }}>
+            <span></span>
+            <div className={styles.content}>
+            <h2 className={styles.neon}>{data.name}</h2>
+              <p>{data.about ? data.about : null}</p>
             {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
             {/* {data.dateTime.map((obj) => (
               <p key={1}> {obj}</p>
@@ -62,8 +65,13 @@ function Hackathon() {
           <div className={styles.box} style={{ height: "auto", width: "60%" }}>
             <span></span>
             <div className={styles.content}>
-              <h2 className={styles.neon}>SPONSORS</h2>
-              <img src={nontech} style={{ width: "200px", height: "200px" }} />
+              <h2
+                className={styles.neon}
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+                SPONSOR
+              </h2>
+              <img src={sponsor} style={{ width: "200px", height: "100px" }} />
 
               {/* <a href="#">Read More</a> */}
             </div>
@@ -71,19 +79,26 @@ function Hackathon() {
         </div>
       </FadeInSection>
 
-      <div className={styles.container}>
-        <div className={styles.box}>
-          <span></span>
-          <div className={styles.content}>
-            <h2 className={styles.neon}>RULES</h2>
-            {data.rules.map((rule, index) => (
-              <p key={index + 1} className={styles.glowCardName}>
-                {index + 1}. {rule}
-              </p>
-            ))}
+
+      <FadeInSection>
+        <div className={styles.container}>
+          <div className={styles.box} style={{ height: "auto", width: "auto" }}>
+            <span></span>
+            <div className={styles.content}>
+              <h2 className={styles.neon}>RULES</h2>
+              {data.rules
+                ? data.rules.map((rule, index) => (
+                    <p key={index + 1} className={styles.glowCardName}>
+                      ► {rule}
+                    </p>
+                  ))
+                : null}
+              <p>Team size: {data.teamSize ? data.teamSize : null}</p>
+              <p>Participants: {data.participants ? data.participants : null}</p>
+            </div>
           </div>
         </div>
-      </div>
+      </FadeInSection>
     </div>
   );
 }

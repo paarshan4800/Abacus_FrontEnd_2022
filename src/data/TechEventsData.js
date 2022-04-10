@@ -549,7 +549,67 @@ tech savvy quizzer of them all in this technical quiz event.`,
     purpose: "EVENTS",
   },
 
-  // Code for Crown - OLPC
+  "deadlock-opener": {
+    id: "9",
+    name: "Deadlock Opener",
+    refName: "deadlock-opener",
+    about: `A mind-boggling database management system event primarily aimed at testing your
+    fundamentals in this booming field. The event provides a platform for challenging the
+    complex database queries. It tests for injections and deadlock situations. The
+    participation finds ways to improve the interface between database and users. It also
+    deals with concurrency and transaction issues.`,
+    // dateTime: ["Date:March 26th", "Time:2pm"],
+    teamSize: "1-2",
+    roundsNumber: "2",
+    duration: "Round 1 - 45 minutes, Round 2 - 1 Hour",
+    platform: "Yet to decide",
+    participants: "All 4 years",
+    //fee: `Registration Fee - RS.150`,
+    //dateTime: ["Date:March 26th", "Time:9:30am"],
+
+    // contact: [
+    //   {
+    //     name: "Gabrio Mascarnas A",
+    //     mobile: "9488394416",
+    //   },
+    //   {
+    //     name: "Vasanthakumar R",
+    //     mobile: "6379841032",
+    //   },
+    //   {
+    //     name: "Sabhari P",
+    //     mobile: "8220265629",
+    //   },
+    // ],
+
+    // sponsor: "",
+
+    rules: [
+      "This event is for individuals and teams of 2",
+      "Candidates involved in any kind of malpractice will be disqualified immediately",
+      "There will be no negative marking for MCQs.",
+      "Marks will be provided based on problem solving skills and efficiency of query",
+      "Participants need not carry their laptops.",
+      "Decisions made by the administrators will be final.",
+    ],
+
+    rounds: {
+      number: 2,
+      roundDetails: [
+        {
+          title: "Round-1",
+          description: ["Will be updated soon."],
+        },
+        {
+          title: "Round-2",
+          description: ["Will be updated soon."],
+        },
+      ],
+    },
+    registration: true,
+    purpose: "EVENTS",
+  },
+
 
   olpc: {
     id: "10",
