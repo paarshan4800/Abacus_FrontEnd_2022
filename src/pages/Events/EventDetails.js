@@ -136,6 +136,7 @@ function EventDetails() {
           </div>
         </FadeInSection>
       ) : null}
+      
       <FadeInSection>
         <div className={styles.container}>
           <div className={styles.box} style={{ height: "auto", width: "auto" }}>

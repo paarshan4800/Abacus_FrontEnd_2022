@@ -62,32 +62,38 @@ function Hackathon() {
         </div>
       </FadeInSection>
 
-      <FadeInSection>
-        <div className={styles.container}>
-          <div className={styles.box} style={{ height: "auto", width: "60%" }}>
-            <span></span>
-            <div className={styles.content}>
-              <h2
-                className={styles.neon}
-                style={{ display: "flex", justifyContent: "center" }}
-              >
-                SPONSOR - {data.sponsorName}
-              </h2>
-              src=
-              {require(`./../../../public/images/about-us/${data.sponsor}`)}
-              style=
-              {{
-                width: "450px",
-                height: "270px",
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-              }}
-              {/* <a href="#">Read More</a> */}
+      {data.sponsor ? (
+        <FadeInSection>
+          <div className={styles.container}>
+            <div
+              className={styles.box}
+              style={{ height: "auto", width: "60%" }}
+            >
+              <span></span>
+              <div className={styles.content}>
+                <h2
+                  className={styles.neon}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  SPONSOR - {data.sponsorName}
+                </h2>
+                <img
+                  src={require(`./../../../public/images/about-us/${data.sponsor}`)}
+                  style={{
+                    width: "450px",
+                    height: "270px",
+                    display: "block",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                />
+
+                {/* <a href="#">Read More</a> */}
+              </div>
             </div>
           </div>
-        </div>
-      </FadeInSection>
+        </FadeInSection>
+      ) : null}
 
       <FadeInSection>
         <div className={styles.container}>
