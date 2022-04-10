@@ -20,7 +20,7 @@
 
 .linkBackground {
   background-color: black;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 .pass {
   width: 100%;
@@ -58,6 +58,6 @@
 }
 .linkBackground {
   background-color: black;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 }
