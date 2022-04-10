@@ -492,7 +492,7 @@ and the internet to software and big data, changes rapidly on a day-to-day
 basis, it's wise to stay updated with the technology that dominates our modern
 day lives. Come on and show your technical prowess and be crowned the most
 tech savvy quizzer of them all in this technical quiz event.`,
-    //dateTime: ["Date:March 26th", "Time:2pm"],
+    // dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
     roundsNumber: "2",
     duration: "Round 1 - 30 minutes, Round 2: 30 minutes",

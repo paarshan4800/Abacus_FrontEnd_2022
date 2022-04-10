@@ -109,7 +109,12 @@ function EventDetails() {
           <div className={styles.box} style={{ height: "auto", width: "60%" }}>
             <span></span>
             <div className={styles.content}>
-              <h2 className={styles.neon} style={{display: "flex", justifyContent: "center"}}>SPONSOR</h2>
+              <h2
+                className={styles.neon}
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+                SPONSOR
+              </h2>
               <img src={nontech} style={{ width: "200px", height: "200px" }} />
 
               {/* <a href="#">Read More</a> */}
@@ -150,11 +155,13 @@ function EventDetails() {
                       <h4>
                         <b>{round.title}</b>
                       </h4>
-                      <p> ► {round.description}</p>
-                      {/* {round.description.map((desc, index) => (
-                        <p key={index + 1} className={styles.glowCardName}></p>
-                      ))} */}
-                      {/* {round.description} */}
+                      {round.description
+                        ? round.description.map((desc, index) => (
+                            <p key={index + 1} className={styles.glowCardName}>
+                              ► {desc}
+                            </p>
+                          ))
+                        : null}
                     </p>
                   ))
                 : null}
