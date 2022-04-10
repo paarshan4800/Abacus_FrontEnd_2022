@@ -1,9 +1,12 @@
 export const NonTechEvents = {
   // House Full
   "ship-wreck": {
+    id: 11,
     name: "Shipwreck",
     refName: "ship-wreck",
-    // about: `Are you looking for a bizarre event that furnishes a crazy time?. Then get ready and jump in. This is an event for all the non technical pros out there.`,
+    about: `Got outstanding survival skills? Join this classical survival game about
+shipwrecked people. Reveal your on fleek survival instincts and Voila! You’re a true
+survivor!`,
     // fee: `Registration Fee - RS.150`,
     // dateTime: ["Date:March 26th", "Time:6pm"],
 
@@ -22,26 +25,48 @@ export const NonTechEvents = {
     //   },
     // ],
     teamSize: "Individual",
-    duration: "Round 1: 45 minutes, Round 2: 1 hr",
-    // rules: [
-    //   "This event is for individual participant only",
-    //   "Member involved in any kind of malpractice will be disqualified immediately",
-    //   "Decisions made by the administrators will be final",
-    //   "Participants must ensure that they have laptop with good internet connectivity for their convenience",
-    //   "Participants must ensure that they have microsoft account",
-    //   "The winners will get exciting cash prizes, internship opportunities, T shirts and many more goodies",
-    // ],
+    roundsNumber: "2",
+    duration: "Round 1 - 45 minutes, Round 2 - 1 hr",
+    platform: "Round 1 - Pen and Paper, Round 2 - Debate",
+    participants: "All 4 years",
+    rules: [
+      "Individual participants from any college or university are allowed to participate in the event.",
+      "Candidates involved in any kind of malpractice will be disqualified immediately.",
+      "There will be no negative markings.",
+      "Decisions made by the administrators will be final.",
+    ],
 
     rounds: {
       number: 2,
       roundDetails: [
         {
           title: "Round-1",
-          description: ["45 mcq questions based on logical thinking."],
+          description: [
+            `Another ‘pen and paper’ survival game to test your survival instincts. The
+          chances of ‘survival’ depend on their ability to rank the salvaged items in relative
+          order of importance in the limited time.`,
+            `You have chartered a yacht with friends, for the holiday trip of a lifetime across the
+        Atlantic Ocean. Because none of you have any previous sailing experience, you
+        have hired an experienced skipper and two-person crew.`,
+            `Unfortunately in mid Atlantic a fierce fire breaks out in the ships galley and the
+skipper and crew have been lost whilst trying to fight the blaze. Much of the yacht
+is destroyed and is slowly sinking.`,
+            `Your location is unclear because vital navigational and radio equipment have been
+damaged in the fire. Your best estimate is that you are many hundreds of miles from
+the nearest landfall.`,
+            `You have managed to save 15 items, undamaged and intact after the fire. In
+addition, you have salvaged a four man rubber life craft and a box of matches. Rank
+the items correctly and you will survive until rescue comes.`,
+          ],
         },
         {
           title: "Round-2",
-          description: ["Debate"],
+          description: [`10 survivors will be selected. The second round is a survival game of 10
+          shipwrecked people. You're a character (which the judging panel gives you) stuck
+          on a sinking ship. You need to convince the captain of the ship to give you the sole
+          lifejacket available before the ship sinks. You need to tell him why you're a better
+          choice for getting the lifejacket than any other character on the ship. The game is to
+          justify the decision of who will live or die.`],
         },
       ],
     },
@@ -51,62 +76,59 @@ export const NonTechEvents = {
 
   // Imagenation
   "design-a-thon": {
-    name: "Imagenation",
-    refName: "imagenation",
-    about: `Hello Photographers, get your cam ready and start capturing the moment.
-                Abacus’21 brings you the online photography contest.
-                It is a social media based (Instagram) event where the contestant competes to
-                showcase their photography talent. The photos will be displayed in the abacus 
-                official social media handle`,
-    fee: `Registration Fee - RS.150`,
+    id: 12,
+    name: "Design-a-thon",
+    refName: "design-a-thon",
+    about: `Design-a-thon is the process of creating a vision for an event or a product by
+    crafting a blueprint of all the visual details around it. The Designer shows a preview
+    of a vision which is to become reality. Join this enthralling event and showcase
+    your designer skills to win exciting prizes!`,
+    teamSize: "Individual",
+    roundsNumber: "3",
+    duration: "Round 1 - 1 Hour, Round 2 - 1 Hour, Round 3 - 90 mins",
+    platform: "Adobe Suite",
+    participants: "All 4 years",
+    // fee: `Registration Fee - RS.150`,
 
-    dateTime: ["Last Date - 20 March 2021", "Instagram - abacus21_ceg"],
+    // dateTime: ["Last Date - 20 March 2021", "Instagram - abacus21_ceg"],
 
-    contact: [
-      {
-        name: "Ritika M",
-        mobile: "7538825268",
-      },
-      {
-        name: "Preeth G",
-        mobile: "9087449366",
-      },
-    ],
+    // contact: [
+    //   {
+    //     name: "Ritika M",
+    //     mobile: "7538825268",
+    //   },
+    //   {
+    //     name: "Preeth G",
+    //     mobile: "9087449366",
+    //   },
+    // ],
 
-    theme: "Vintage Photography!",
+    // theme: "Vintage Photography!",
 
     rules: [
-      "Only one entry is allowed per contestant",
-      "The photograph must be originally taken by the contestant. The photo must not contain any watermark or copyrights.",
-      "The judge’s decisions are final based on the number of likes, shares, and creativity.",
-      "Submissions will be not accepted once the deadline lapses.",
-      "Photos which portray out of the theme mentioned or having vulgar content will be disqualified.",
-      "In case of plagiarism or any kind of malpractice, the contestant will be disqualified.",
-      "The winners will get exciting cash prizes, internship opportunities, T shirts and many more goodies",
+      "Individual participants from any college or university are allowed to participate in the event.",
+      "Candidates involved in any kind of malpractice will be disqualified immediately.",
+      "There will be no negative markings.",
+      "Decisions made by the administrators will be final.",
     ],
 
-    instructions: [
-      "The contestant must enclose the photo along with the personal details in the format:",
-      "Name",
-      "Year",
-      "Department",
-      "College",
-      "Email Id : events@abacus.org.in (tentative)",
-      "Last date for sending the photo: 20-03-2021",
-      "Send your entries to (email id) : abacus.imagenation@gmail.com",
-    ],
+ 
     rounds: {
-      number: 2,
+      number: 1,
       roundDetails: [
         {
-          title: "Prelims",
+          title: "Round 1",
           description:
-            "Participants will be given 30 minutes to answer questions from familiar topics.",
+            ["Logo designing",]
         },
         {
-          title: "Finals",
+          title: "Round 2",
           description:
-            "A round in round robin fashion. Based on Kollywood (60 minutes)",
+            ["Poster designing",]
+        },        {
+          title: "Round 3",
+          description:
+            ["Brochure designing",]
         },
       ],
     },
@@ -114,64 +136,189 @@ export const NonTechEvents = {
   },
 
   "fandom-quiz": {
+    id: 13,
     name: "Fandom Quiz",
     refName: "fandom-quiz",
-    about: `Hello Designers, get your sketch ready and start portraying the moment.
-                Abacus’21 brings you the online poster designing contest.
-                It is a social media based (Instagram) event where the contestant competes 
-                to showcase their designing talent. The posters will be displayed in the abacus 
-                official social media handle.`,
-    fee: `Registration Fee - RS.150`,
-    dateTime: ["Last Date - 20 March 2021", "Instagram - abacus21_ceg"],
+    about: `For all the admirers of movies, web series and tv shows, here is something
+    which is definitely gonna interest you, an event for all the fans out there. This is a
+    fun event where the die-hard Movies and Series Kannis (nerds) race against each
+    other in this geeky fandom quiz. Call yourself a true fan? Let’s test!`,
+    // fee: `Registration Fee - RS.150`,
+    // dateTime: ["Last Date - 20 March 2021", "Instagram - abacus21_ceg"],
 
-    contact: [
-      {
-        name: "Adhithya K",
-        mobile: "8883018311",
-      },
-      {
-        name: "Usha Varshini Saravanan",
-        mobile: "9894560778",
-      },
-    ],
+    // contact: [
+    //   {
+    //     name: "Adhithya K",
+    //     mobile: "8883018311",
+    //   },
+    //   {
+    //     name: "Usha Varshini Saravanan",
+    //     mobile: "9894560778",
+    //   },
+    // ],
 
-    theme: "Before, during and after lockdown",
+    // theme: "Before, during and after lockdown",
 
+    teamSize: "2-3",
+    roundsNumber: "2",
+    duration: "Round 1 - 35 minutes, Round 2 - 1 hr",
+    platform: "Pen and paper",
+    participants: "All 4 years",
     rules: [
-      "Only one entry is allowed per contestant",
-      "The poster must be originally designed by the contestant",
-      "The judge’s decisions are final based on the number of likes, shares, and creativity",
-      "Submissions will be not accepted once the deadline lapses",
-      "Posters which portray out of the theme mentioned or having vulgar content will be disqualified",
-      "In case of plagiarism or any kind of malpractice, the contestant will be disqualified",
-      "The winners will get exciting cash prizes, internship opportunities, T shirts and many more goodies",
+      "A team of minimum 1 and maximum 3 individuals from any college or university are allowed to participate in the quiz.",
+      "Candidates involved in any kind of malpractice will be disqualified immediately",
+      "There will be no negative marking for MCQs.",
+      "Test is to be taken on pen and paper",
+      "Decisions made by the administrators will be final.",
     ],
 
-    instructions: [
-      "The contestant must enclose the poster along with the personal details in the format:",
-      "Name",
-      "Year",
-      "Department",
-      "College",
-      "Email Id : events@abacus.org.in (tentative)",
-      "Last date for sending the poster: 20-03-2021",
-      "Send your entries to (email id) : abacus.graphictraffic@gmail.com",
-    ],
     rounds: {
       number: 2,
       roundDetails: [
         {
-          title: "Prelims",
+          title: "Round 1",
           description:
-            "Participants will be given 30 minutes to answer questions from familiar topics.",
+         [`Each participating team will be given a set of 25 questions from the fandoms
+          like MCU, GOT, STAR WARS, FRIENDS. Within 35 mins time, the teams who have a
+          high number of correct answers will get further in the event and will proceed to the
+          second round.`],
         },
         {
-          title: "Finals",
+          title: "Round 2",
           description:
-            "A round in round robin fashion. Based on Kollywood (60 minutes)",
+            [`The duration of this round is 30 mins. The teams who got through Round 1
+            are crazy fans. To test your memory further, in this round, you’ll be given a set of
+            questions again, but in a different manner. Solve most of them in 30 mins and your
+            the winner!`],
         },
       ],
     },
     registration: false,
   },
+
+  "thadam": {
+    id: 14,
+    name: "Thadam",
+    refName: "thadam",
+    about: `Are you in love with murder mysteries and the thrill of solving new cases?
+    This is the perfect event for you. In this quiz, you play as Sherlock Holmes,the
+    famous detective. Your objective is to solve this murder.... as always. This murder
+    mystery game starts with sharing a murder plot and the different characters at the
+    scene that will take you back in time with crazy clues and characters.`,
+    // fee: `Registration Fee - RS.150`,
+    // dateTime: ["Last Date - 20 March 2021", "Instagram - abacus21_ceg"],
+
+    // contact: [
+    //   {
+    //     name: "Adhithya K",
+    //     mobile: "8883018311",
+    //   },
+    //   {
+    //     name: "Usha Varshini Saravanan",
+    //     mobile: "9894560778",
+    //   },
+    // ],
+
+    // theme: "Before, during and after lockdown",
+
+    teamSize: "2-3",
+    roundsNumber: "2",
+    duration: "Round 1 - 30 minutes, Round 2 - 1 hr",
+    platform: "Pen and paper",
+    participants: "All 4 years",
+    rules: [
+      "A team of minimum 2 and maximum 3 individuals from any college or university are allowed to participate in the quiz.",
+      "Candidates involved in any kind of malpractice will be disqualified immediately",
+      "There will be no negative marking for MCQs.",
+      "Decisions made by the administrators will be final.",
+    ],
+
+    rounds: {
+      number: 2,
+      roundDetails: [
+        {
+          title: "Round 1",
+          description:
+         [`Round 1 is a detective quiz with a set of tricky questions and answers to be
+         solved in 30 mins. Teams who solve most of the questions will be shortlisted for the
+         next level.`],
+        },
+        {
+          title: "Round 2",
+          description:
+            [`There will be an actual crime scene, one deceased, and five suspects.
+            Participants will be given a case report file which contains all the details of
+            deceased, suspects and crime scene. The motive is to look for evidence in the crime
+            scene and interrogate all the suspects to connect the dots and solve the case within
+            the given 60 minutes. First team to solve the case will be the ace detective!`],
+        },
+      ],
+    },
+    registration: false,
+  },
+
+
+// "gamindrome": {
+//   id: 15,
+//   name: "Fandom Quiz",
+//   refName: "fandom-quiz",
+//   about: `For all the admirers of movies, web series and tv shows, here is something
+//   which is definitely gonna interest you, an event for all the fans out there. This is a
+//   fun event where the die-hard Movies and Series Kannis (nerds) race against each
+//   other in this geeky fandom quiz. Call yourself a true fan? Let’s test!`,
+//   // fee: `Registration Fee - RS.150`,
+//   // dateTime: ["Last Date - 20 March 2021", "Instagram - abacus21_ceg"],
+
+//   // contact: [
+//   //   {
+//   //     name: "Adhithya K",
+//   //     mobile: "8883018311",
+//   //   },
+//   //   {
+//   //     name: "Usha Varshini Saravanan",
+//   //     mobile: "9894560778",
+//   //   },
+//   // ],
+
+//   // theme: "Before, during and after lockdown",
+
+//   teamSize: "2-3",
+//   roundsNumber: "2",
+//   duration: "Round 1 - 35 minutes, Round 2 - 1 hr",
+//   platform: "Pen and paper",
+//   participants: "All 4 years",
+//   rules: [
+//     "A team of minimum 1 and maximum 3 individuals from any college or university are allowed to participate in the quiz.",
+//     "Candidates involved in any kind of malpractice will be disqualified immediately",
+//     "There will be no negative marking for MCQs.",
+//     "Test is to be taken on pen and paper",
+//     "Decisions made by the administrators will be final.",
+//   ],
+
+//   rounds: {
+//     number: 2,
+//     roundDetails: [
+//       {
+//         title: "Round 1",
+//         description:
+//        [`Each participating team will be given a set of 25 questions from the fandoms
+//         like MCU, GOT, STAR WARS, FRIENDS. Within 35 mins time, the teams who have a
+//         high number of correct answers will get further in the event and will proceed to the
+//         second round.`],
+//       },
+//       {
+//         title: "Round 2",
+//         description:
+//           [`The duration of this round is 30 mins. The teams who got through Round 1
+//           are crazy fans. To test your memory further, in this round, you’ll be given a set of
+//           questions again, but in a different manner. Solve most of them in 30 mins and your
+//           the winner!`],
+//       },
+//     ],
+//   },
+//   registration: false,
+// },
+
+
 };
+

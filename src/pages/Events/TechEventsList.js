@@ -31,7 +31,7 @@ function TechEventsList() {
     {
       id: 5,
       refName: "she-plus-plus",
-      name: "She++",
+      name: "SHE++",
     },
     {
       id: 6,

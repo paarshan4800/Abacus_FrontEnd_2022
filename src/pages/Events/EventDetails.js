@@ -137,7 +137,7 @@ function EventDetails() {
                   ))
                 : null}
               <p>Team size: {data.teamSize ? data.teamSize : null}</p>
-              <p>Rounds: {data.roundsNumber ? data.roundsNumber : null}</p>
+              <p>Participants: {data.participants ? data.participants : null}</p>
             </div>
           </div>
         </div>
@@ -149,6 +149,8 @@ function EventDetails() {
             <span></span>
             <div className={styles.content}>
               <h2 className={styles.neon}>ROUNDS</h2>
+              <p>Rounds: {data.roundsNumber ? data.roundsNumber : null}</p>
+              <p>Duration: {data.duration ? data.duration : null}</p>
               {data.rounds
                 ? data.rounds.roundDetails.map((round, index) => (
                     <p key={index + 1} className={styles.glowCardName}>
@@ -165,12 +167,14 @@ function EventDetails() {
                     </p>
                   ))
                 : null}
+              <p>Platform: {data.platform ? data.platform : null}</p>
 
               {/* <GlassButton title="Scroll to Top" /> */}
             </div>
           </div>
         </div>
       </FadeInSection>
+      
     </div>
   );
 }

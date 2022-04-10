@@ -12,8 +12,8 @@ with a code that fulfills some hidden test cases.`,
     //dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "2-3",
     roundsNumber: "2",
-    duration: "Round 1 - 30 minutes, Round 2 - 1 hour",
-    //platform: "Yet to decide",
+    duration: ["Round 1 - 30 minutes,", " Round 2 - 1 hour"],
+    platform: "Yet to decide",
     participants: "All 4 years",
     // contact: [
     //   {
@@ -46,7 +46,7 @@ with a code that fulfills some hidden test cases.`,
     ],
 
     rounds: {
-      number: 3,
+      number: 2,
       roundDetails: [
         {
           title: "Round-1",
@@ -79,11 +79,11 @@ showcase their skills in developing a website. The participants delve into the
 magic of creating alluring websites as they beat the race against time. The
 contest calls for testing the knowledge in web development and being able to
 replicate a given website.`,
-    dateTime: ["Date:March 26th", "Time:2pm"],
+    // dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
     roundsNumber: "2",
     duration: "Round 1 - 30 minutes, Round 2 - 2 hours",
-    //platform: "Yet to decide",
+    platform: "Yet to decide",
     participants: "All 4 years",
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
@@ -151,7 +151,7 @@ domains.`,
     teamSize: "1-2",
     roundsNumber: "2",
     duration: "Round 1 - 1 Hour, Round 2 - 1 Hour",
-    //platform: "Yet to decide",
+    platform: "Yet to decide",
     participants: "All 4 years",
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
@@ -220,7 +220,7 @@ approach towards problem solving.`,
     roundsNumber: "2",
     duration:
       "Round 1 - 30 to 45 minutes, Round 2 - 75 minutes(1 hr 15 minutes)",
-    //platform: "Yet to decide",
+    platform: "Yet to decide",
     participants: "All 4 years",
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
@@ -276,10 +276,10 @@ approach towards problem solving.`,
     purpose: "EVENTS",
   },
 
-  "she++": {
+  "she-plus-plus": {
     id: "5",
-    name: "She++",
-    refName: "she++",
+    name: "SHE++",
+    refName: "she-plus-plus",
     about: `A women-only event, where the participants put forth their ingenious solutions
 to grab the crown. The contestants are put up with an idiosyncratic
 combination of maths, puzzles, aptitude and coding with a clock ticking in the
@@ -288,7 +288,7 @@ background while they compete to win the race towards the tiara.`,
     teamSize: "1-2",
     roundsNumber: "2",
     duration: "Round 1 - 30 minutes, Round 2 - 75 minutes",
-    //platform: "Yet to decide",
+    platform: "Yet to decide",
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
     participants: "All 4 years (Only Girls)",
@@ -355,8 +355,8 @@ coders to the coding world.`,
     //dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "1-2",
     roundsNumber: "2",
-    duration: "Round 1- 45 minutes, Round 2-75 minutes",
-    //platform: "Yet to decide",
+    duration: "Round 1 - 45 minutes, Round 2 - 75 minutes",
+    platform: "Yet to decide",
     participants: "Freshmen (Only Orange Tags) exclusive",
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
@@ -424,11 +424,11 @@ logical and programming questions in the first screening round, following which
 the chosen contestants avail the experience of interviews.`,
     //dateTime: ["Date:March 26th", "Time:2pm"],
     teamSize: "Individual Event",
-    roundsNumber: "",
+    roundsNumber: "2",
     duration: "Round 1- 75 minutes, Round 2-30-45 minutes",
     platform:
       "Round 1: Hackerrank/ AMCAT, Round 2: Teams meet, Shared Platform: CodePair/ GoogleDocs",
-    participats: "All 4 years",
+    participants: "All 4 years",
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
 
@@ -496,7 +496,7 @@ tech savvy quizzer of them all in this technical quiz event.`,
     teamSize: "1-2",
     roundsNumber: "2",
     duration: "Round 1 - 30 minutes, Round 2: 30 minutes",
-    //platform: "Yet to decide",
+    platform: "Yet to decide",
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
 
@@ -544,8 +544,8 @@ tech savvy quizzer of them all in this technical quiz event.`,
   },
 
   // Code for Crown - OLPC
-  
-  "olpc": {
+
+  olpc: {
     id: "10",
     //imgName: "deadlock-opener",
     name: "OLPC - Online Programming Contest",
@@ -566,17 +566,22 @@ tech savvy quizzer of them all in this technical quiz event.`,
       "Marks will be provided based on based on Leaderboard and code.",
       "Decisions made by the administrators will be final.",
     ],
-    teamSize: "1",
+    participants: "1",
+    platform: "Yet to decide",
+    teamSize: "Individual event",
     roundsNumber: "1",
-    duration: "Round 1: 30 minutes",
+    duration: "Round 1 - 30 minutes",
     rounds: {
       number: 1,
       roundDetails: [
         {
           title: "Round 1",
-          description:
-            "3 Coding Questions will be given. Score based on time and space complexity. Questions will be based on Data Structures and Algorithms"
-          },
+          description: [
+            "3 Coding Questions will be given.",
+            "Score based on time and space complexity.",
+            "Questions will be based on Data Structures and Algorithms",
+          ],
+        },
       ],
     },
     registration: true,

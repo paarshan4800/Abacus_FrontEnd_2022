@@ -7,30 +7,30 @@ import FadeInSection from "../../components/FadeInSection/FadeInSection";
 function NonTechEventsList() {
   let nonTechEventsList = [
     {
-      id: 8,
+      id: 11,
       refName: "ship-wreck",
       name: "Ship-Wreck",
     },
     {
-      id: 9,
+      id: 12,
       refName: "design-a-thon",
       name: "Design-a-thon",
     },
     {
-      id: 10,
+      id: 13,
       refName: "fandom-quiz",
       name: "Fandom Quiz",
     },
     {
-      id: 11,
+      id: 14,
       refName: "thadam",
       name: "Thadam",
     },
-    {
-      id: 12,
-      refName: "gamindrome",
-      name: "Gamindrome",
-    },
+    // {
+    //   id: 15,
+    //   refName: "gamindrome",
+    //   name: "Gamindrome",
+    // },
   ];
 
   return (
