@@ -12,12 +12,6 @@ export const developerDetails = [
     href: "https://www.linkedin.com/in/sneha-s-0766761ab/?trk=public_profile_browsemap&originalSubdomain=in",
   },
   {
-    title: "Sreeratcha B",
-    title1: "Frontend",
-    img: "dev/ratcha.png",
-    href: "https://www.linkedin.com/in/sreeratcha-b-5a8026195",
-  },
-  {
     title: "Sanjeev Karthick K",
     title1: "Frontend",
     img: "dev/Sanjeev.jpg",
