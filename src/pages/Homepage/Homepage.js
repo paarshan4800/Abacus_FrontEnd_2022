@@ -153,16 +153,16 @@ const Homepage = (props) => {
                 <div className={styles.card}>
                   <h1 className={`${styles.heading}`}>ABACUS'22</h1>
                   <p className={`${styles.paragraph} mt-1`}>
-                  The conglomeration of the brightest minds enhancing 
-                  the participant’s knowledge and creative potentials. 
-                  The 3 day annual symposium showcases 15+ events and 
-                  flagship contests of crystal gazing technology. 
-                  Abacus's coverage and deliberations of earlier 
-                  symposia have been a grand success with insatiable 
-                  thirst for technological development. Here's the upgraded 
-                  chronicle of Abacus '22 rejuvenating the technology with 
-                  innovation. This year, Abacus is back offline on a 
-                  grander scale with an innovative edge to all the events.
+                    The conglomeration of the brightest minds enhancing the
+                    participant’s knowledge and creative potentials. The 3 day
+                    annual symposium showcases 15+ events and flagship contests
+                    of crystal gazing technology. Abacus's coverage and
+                    deliberations of earlier symposia have been a grand success
+                    with insatiable thirst for technological development. Here's
+                    the upgraded chronicle of Abacus '22 rejuvenating the
+                    technology with innovation. This year, Abacus is back
+                    offline on a grander scale with an innovative edge to all
+                    the events.
                   </p>
                 </div>
               </div>
@@ -176,16 +176,45 @@ const Homepage = (props) => {
                 <Heading text="Sponsors" fontSize="3rem" />
               </div>
 
-              <div className="col text-center mb-3">
+              {/* <div className="col text-center mb-3 mt-5 p-5 mb-1"> */}
+              <div className="col text-center mt-5 p-5 mb-1">
                 <FadeInSection>
                   <Heading text="Title Sponsors" fontSize="1.7rem" />
-                  <div className=" d-flex justify-content-center align-self-center ">
+                  {/* <div className=" d-flex justify-content-center align-self-center ">
                     <div className="text-center pb-4">
                       <img
                         src={`${process.env.PUBLIC_URL}/images/about-us/motorq.svg`}
                         className={`${styles.img2}`}
                         alt="Motorq"
                       />
+                    </div>
+                  </div> */}
+                  <div class="row mb-5">
+                    <div class="col-xl-6 col-sm-12 col-md-6">
+                      <div className="col text-center ">
+                        <div className="row  d-flex justify-content-center align-self-center">
+                          <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                          <img
+                            src={`${process.env.PUBLIC_URL}/images/about-us/motorq.svg`}
+                            className={`${styles.img2}`}
+                            alt="Motorq"
+                          />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-sm-12 col-md-6">
+                      <div className="col text-center ">
+                        <div className="row  d-flex justify-content-center align-self-center">
+                          <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/images/about-us/pando2.png`}
+                              className={`${styles.img5}`}
+                              alt="Pando"
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </FadeInSection>
@@ -197,7 +226,7 @@ const Homepage = (props) => {
                     <Heading text="Internship Partners" fontSize="1.7rem" />
                   </div>
                   <div class="row mb-5">
-                    <div class="col-xl-3 col-sm-6 col-md-6">
+                    <div class="col-xl-4 col-sm-12 col-md-12">
                       <div className="col text-center ">
                         <div className="row  d-flex justify-content-center align-self-center">
                           <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
@@ -210,7 +239,7 @@ const Homepage = (props) => {
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-3 col-sm-6  col-md-6">
+                    <div class="col-xl-4 col-sm-12  col-md-12">
                       <div className="col text-center ">
                         <div className="row  d-flex justify-content-center align-self-center">
                           <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
@@ -223,7 +252,7 @@ const Homepage = (props) => {
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-3 col-sm-6 col-md-6">
+                    <div class="col-xl-4 col-sm-12 col-md-12">
                       {" "}
                       <div className="col text-center ">
                         <div className="row  d-flex justify-content-center align-self-center">
@@ -237,7 +266,9 @@ const Homepage = (props) => {
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-6 col-xl-3 col-md-6 ">
+                  </div>
+                  <div class="row mb-5">
+                  <div class="col-sm-12 col-xl-6 col-md-12">
                       {" "}
                       <div className="col text-center ">
                         <div className="d-flex justify-content-center align-self-center">
@@ -251,7 +282,21 @@ const Homepage = (props) => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                    <div class="col-sm-12 col-xl-6 col-md-12">
+                      {" "}
+                      <div className="col text-center ">
+                        <div className="d-flex justify-content-center align-self-center">
+                          <div className="text-center mt-3 pb-3  justify-content-center align-self-center ">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/images/about-us/samsung.png`}
+                              className={`${styles.img4} bg-white px-2 py-2`}
+                              alt="Samsung"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
                 </FadeInSection>
               </div>
               {/*
@@ -312,33 +357,33 @@ const Homepage = (props) => {
                   />
 
                   <div class="row mb-5">
-                    <div class="col-xl-4 col-sm-12 col-md-4">
+                    <div class="col-xl-6 col-sm-12 col-md-6">
                       <div className="col text-center ">
                         <div className="row  d-flex justify-content-center align-self-center">
                           <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                             <img
                               src={`${process.env.PUBLIC_URL}/images/about-us/2IIMLogo.png`}
                               className={`${styles.img4}`}
-                              alt="Career Crafter"
+                              alt="2 IIM"
                             />
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-4 col-sm-12 col-md-4">
+                    <div class="col-xl-6 col-sm-12 col-md-6">
                       <div className="col text-center ">
                         <div className="row  d-flex justify-content-center align-self-center">
                           <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
                             <img
                               src={`${process.env.PUBLIC_URL}/images/about-us/techz.png`}
                               className={`${styles.img4}`}
-                              alt="Career Crafter"
+                              alt="Tech Z Academy"
                             />
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-4 col-sm-12 col-md-4">
+                    {/* <div class="col-xl-4 col-sm-12 col-md-4">
                       {" "}
                       <div className="col text-center ">
                         <div className="d-flex justify-content-center align-self-center">
@@ -351,7 +396,7 @@ const Homepage = (props) => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* <div className="m-auto mt-5  p-5 row   d-flex justify-content-center align-self-center">
@@ -437,6 +482,50 @@ const Homepage = (props) => {
                 </div>
               </div>
 
+              <div class="row container m-auto p-5 ">
+                <div class="col-xl-6 col-sm-12 mb-5 text-center">
+                  <FadeInSection>
+                    <Heading
+                      text="T-Shirt Sponsor"
+                      fontSize="1.7rem"
+                      className="text-center mt-5 p-5"
+                    />
+                    <div className="col text-center ">
+                      <div className="row  mt-5 d-flex justify-content-center align-self-center">
+                        <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                          <img
+                            src={`${process.env.PUBLIC_URL}/images/about-us/m2p.jpg`}
+                            className={`${styles.img4}`}
+                            style = {{height: "110px"}}
+                            alt="Career Crafter"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </FadeInSection>
+                </div>
+                <div class="col-xl-6 col-sm-12 text-center">
+                  <FadeInSection>
+                    <Heading
+                      text="Photography partner"
+                      fontSize="1.7rem"
+                      className="text-center mt-5 p-5"
+                    />
+                    <div className="col text-center ">
+                      <div className="row  mt-5 d-flex justify-content-center align-self-center">
+                        <div className="col text-center mt-3 pb-3 d-flex justify-content-center align-self-center ">
+                          <img
+                            src={`${process.env.PUBLIC_URL}/images/about-us/iip.png`}
+                            className={`${styles.img4}`}
+                            alt="Career Crafter"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </FadeInSection>
+                </div>
+              </div>
+
               <div className="col text-center ">
                 <FadeInSection>
                   <Heading
@@ -458,6 +547,7 @@ const Homepage = (props) => {
                 </FadeInSection>
               </div>
             </div>
+
           </section>
         </FadeInSection>
         <section className={`${styles.sponsors}`}>

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.07421a8e.css",
-    "main.js": "/static/js/main.edfbe5d4.js",
+    "main.css": "/static/css/main.25147b8a.css",
+    "main.js": "/static/js/main.8f205fe1.js",
     "static/media/spin.mp4": "/static/media/spin.241660180385baff701c.mp4",
     "static/media/backk.jpg": "/static/media/backk.d81605ff49e72d49feaf.jpg",
     "static/media/techz.png": "/static/media/techz.3c004a786880f33bca77.png",
@@ -58,17 +58,18 @@
     "static/media/pando.jpeg": "/static/media/pando.46e138e8bc90456a6009.jpeg",
     "static/media/iip.png": "/static/media/iip.ad71c771d3bb2d37549e.png",
     "static/media/design-a-thon.png": "/static/media/design-a-thon.2b2bddbece226c436045.png",
+    "static/media/pando2.png": "/static/media/pando2.9e8a14f8daf827c97f81.png",
     "static/media/get-hired.png": "/static/media/get-hired.93a00cb032ae87af8aff.png",
     "static/media/capture-the-flag.png": "/static/media/capture-the-flag.0376cf8fd1e727400898.png",
     "static/media/visa_modified.svg": "/static/media/visa_modified.46374bab6d7e2e81ce1e.svg",
     "static/media/alien.ttf": "/static/media/alien.b3fec7b397b54820e850.ttf",
     "static/media/motorq.svg": "/static/media/motorq.c0b950113e349dd63a49.svg",
     "index.html": "/index.html",
-    "main.07421a8e.css.map": "/static/css/main.07421a8e.css.map",
-    "main.edfbe5d4.js.map": "/static/js/main.edfbe5d4.js.map"
+    "main.25147b8a.css.map": "/static/css/main.25147b8a.css.map",
+    "main.8f205fe1.js.map": "/static/js/main.8f205fe1.js.map"
   },
   "entrypoints": [
-    "static/css/main.07421a8e.css",
-    "static/js/main.edfbe5d4.js"
+    "static/css/main.25147b8a.css",
+    "static/js/main.8f205fe1.js"
   ]
 }

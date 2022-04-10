@@ -1,11 +1,10 @@
 import React from "react";
 
-
+import FadeInSection from "./FadeInSection/FadeInSection";
 import styles from './about.module.css'
 import ceg from './ceg.png'
 import csea from './CSEA.png'
 import abacus from './ABACUS22LOGO-03.png'
-
 const Aboutus = () => {
   let img;
   const INFO = [
@@ -31,6 +30,7 @@ const Aboutus = () => {
     return (
       <div className={`${styles.about_root}`}>
       <div className={`${styles.wrapper}`}>
+        
       <div name="main" className={`${styles.content_wrapper}`}>
       
       <h1 className={`${styles.heading}`}>About Us</h1>
@@ -46,33 +46,44 @@ const Aboutus = () => {
             }
 
             return (
+              
               <div
                 
                 key={index}
                 className={`${styles.content_container}`}
               >
+                
                 <div
                   
                   className={`${styles.image_box}`}
                 >
+                  <FadeInSection>
                   <img
                     alt={`${item.title}`}
                     src={img}
                     width="300px"
                     height="280px"
                   />
+                  </FadeInSection>
                 </div>
+                
                 <div className={`${styles.text_box}`}>
+                  <FadeInSection>
                 <h1 className={`${styles.subheading}`}>{item.title}</h1>
                   <p className={`${styles.content}`}>{item.content}</p>
 
+                  </FadeInSection>
                 </div>
+                
               </div>
+              
             );
           })}
         </div>
+        
         </div>
        </div>
+       
     );
 
 };
