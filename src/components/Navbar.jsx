@@ -95,21 +95,25 @@ function NavbarSmall({clickLogout}) {
 
     const Auth = useContext(AuthApi)
 
+    const closeNavBarOnClick = ()=>{
+        var checkBox = document.getElementById("checkBox");
+        checkBox.checked=false;
+    }
    
 
     return (
         <nav role="navigation">
   <div className={styles1.menuToggle}>
-    <input type="checkbox" className={styles1.check}/>
+    <input type="checkbox" id="checkBox" className={styles1.check}/>
     <span className={styles1.span}></span>
     <span className={styles1.span}></span>
     <span className={styles1.span}></span>
     
     <ul className={styles1.menu}>
-      <Link to="/"><li>Home</li></Link>
-      <Link to="/aboutus"><li>About us</li></Link>
-      <Link to="/events"><li>Events</li></Link>
-      <Link to="/workshops"><li>Workshops</li></Link>
+      <Link to="/" onClick={closeNavBarOnClick}><li>Home</li></Link>
+      <Link to="/aboutus" onClick={closeNavBarOnClick}><li>About us</li></Link>
+      <Link to="/events" onClick={closeNavBarOnClick}> <li>Events</li></Link>
+      <Link to="/workshops" onClick={closeNavBarOnClick}><li>Workshops</li></Link>
       {/* <Link to="/login"><li>Login</li></Link> */}
     </ul>
   </div>
