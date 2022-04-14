@@ -14,6 +14,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loading from "./pages/Loading/Loading";
 import { faL } from "@fortawesome/free-solid-svg-icons";
+import { logOut } from "./api/auth";
+
 const rootReducer = combineReducers({
   Reducer: Reducer,
 });
@@ -92,10 +94,10 @@ function App() {
                         }}
                       >
                         {" "}
-                        <Navbar width={width} />
+                        <Navbar width={width} clickLogout={logOut} />
                         <AppRoutes />
                         <ToastContainer
-                          position="top-right"
+                          position="bottom-center"
                           autoClose={5000}
                           hideProgressBar={false}
                           newestOnTop={false}

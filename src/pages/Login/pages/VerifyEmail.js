@@ -4,6 +4,7 @@ import GlassButton from "../../../components/GlassButton/GlassButton";
 import { green } from "@material-ui/core/colors";
 import { verifyUserAPI } from "../../../api/auth";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 function VerifyEmail(props) {
   const [status, setStatus] = useState("checking");
@@ -19,6 +20,7 @@ function VerifyEmail(props) {
     setMessage(res.message);
     setStatus(res.status);
     if (res.status === "verified") {
+      toast.success("✅" + res.message);
       setTimeout(() => {
         window.location = "http://localhost:3000/Login#/sign-in";
       }, 2000);

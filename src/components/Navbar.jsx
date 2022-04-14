@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import styles from './Navbar.module.css'
 import styles1 from './navsmall.module.css'
 import { AuthApi } from '../App'
-import {logOut} from "../api/auth"
 
 
+import { SetAuthApi } from "../App";
 
 
 
@@ -34,6 +34,7 @@ const LinksList = [{
 function NavbarBig({ clickLogout }) {
 
   const Auth = useContext(AuthApi)
+  const SetAuth = useContext(SetAuthApi);
 
 
   return (
@@ -66,21 +67,28 @@ activeStyle={{ color: '#ff2483' }}>
               </Link>
 
               {/* Conditionally rendering based on Authentication */}
-              {/* {Auth ?
+              {Auth ?
                   (<><Link className={`${styles._navbar_main_link}`} to="/dashboard" 
                   activeStyle={{ color: '#ff2483' }}>
                       <span className={`${styles._navbar_main_link_text}`}>Dashboard</span>
                   </Link>
-                  <Link to="" className={`${styles._navbar_main_link}`} onClick={clickLogout} activeClassName="selected"
-activeStyle={{ color: '#ff2483' }}>
+                  <Link to="" className={`${styles._navbar_main_link}`} 
+                    onClick={
+                      ()=>{
+                        clickLogout();
+                        SetAuth(false)  
+                        }
+                      } 
+                    activeClassName="selected"
+                    activeStyle={{ color: '#ff2483' }}>
                       <span className={`${styles._navbar_main_link_text}`}>Logout</span>
                   </Link></>
                   )
                   :
-                  (<Link className={`${styles._navbar_main_link}`} to="/login-register" activeClassName="selected"
+                  (<Link className={`${styles._navbar_main_link}`} to="/login" activeClassName="selected"
                   activeStyle={{ color: '#ff2483' }}>
                       <span className={`${styles._navbar_main_link_text}`}>Login</span>
-                  </Link>)} */}
+                  </Link>)}
 
 
           </div>
@@ -121,7 +129,7 @@ function NavbarSmall({clickLogout}) {
 
     )
 }
-function Navbar({ width }) {
+function Navbar({ width, clickLogout }) {
 /*
   const SetAuth = useContext(SetAuthApi)
   const Auth = useContext(AuthApi)
@@ -144,7 +152,7 @@ function Navbar({ width }) {
 */
   return (
       <>
-          { width < 1350 ? (<NavbarSmall  />) : (<NavbarBig  />)}
+          { width < 1350 ? (<NavbarSmall clickLogout={clickLogout} />) : (<NavbarBig clickLogout={clickLogout} />)}
       </>
   )
 

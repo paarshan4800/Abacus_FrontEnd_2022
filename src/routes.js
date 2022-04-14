@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-// import { AuthApi } from "./App";
+import { AuthApi } from "./App";
 
 // import Cookies from "js-cookie";
 import Homepage from "./pages/Homepage/Homepage";
@@ -34,10 +34,10 @@ import Loading from "./pages/Loading/Loading";
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 import ScrollToTop from "./components/ScrollToTop";
+import ProtectedRoute from "./ProtectedRoute";
 
 const AppRoutes = () => {
-  //   const Auth = React.useContext(AuthApi);
-
+  const Auth = React.useContext(AuthApi);
   return (
     <ScrollToTop>
       <Switch>
@@ -61,7 +61,11 @@ const AppRoutes = () => {
           exact
           component={NonTechEventsList}
         /> */}
-        <Route path="/events/non-tech-events" exact component={NonTechEventsList} />
+        <Route
+          path="/events/non-tech-events"
+          exact
+          component={NonTechEventsList}
+        />
         <Route path="/events/:type/:title" exact component={EventDetails} />
         <Route path="/workshops" exact component={ComingSoon} />
         <Route path="/workshops/:title" exact component={ComingSoon} />
@@ -78,20 +82,40 @@ const AppRoutes = () => {
           component={ComingSoon}
         />
         <Route path="/ComingSoon" exact component={ComingSoon} />
-        <Route path="/hackathon-register" exact component={ComingSoon} />
+        <Route path="/hackathon-register" exact component={ComingSoon} /> */}
         <Route path="/loading" exact component={Loading} />
-        {/* <Route path="/dashboard" exact component={Dashboard} />
-      <Route path="/login" exact component={LoginRegister} />
-      <Route path="/Login/VerifyEmail" exact component={VerifyEmail} />
-      <Route path="/signUp" exact component={SignUp} />
-      <Route path="/ForgotPassword" exact component={ForgotPassword} />
-      <Route
-        path="/resetPassword/:resetPassword"
-        exact
-        component={NewPassword}
-      />
-      <Route path="/ComingSoon" exact component={ComingSoon} />
-      <Route path="/hackathon-register" exact component={HackathonRegister} /> */}
+        {Auth ? (
+          <>
+            <Route
+              path={[
+                "/login",
+                "/login/VerifyEmail",
+                "/signup",
+                "/ForgotPassword",
+                "/resetPassword/:resetPassword",
+              ]}
+              exact
+            >
+              <Redirect to="/dashboard" />
+            </Route>
+            <Route path="/dashboard" exact component={Dashboard} />
+          </>
+        ) : (
+          <>
+            <Route path="/login" exact component={LoginRegister} />
+            <Route path="/Login/VerifyEmail" exact component={VerifyEmail} />
+            <Route path="/signUp" exact component={SignUp} />
+            <Route path="/ForgotPassword" exact component={ForgotPassword} />
+            <Route
+              path="/resetPassword/:resetPassword"
+              exact
+              component={NewPassword}
+            />
+          </>
+        )}
+        {/* <Route path="/dashboard" exact component={Dashboard} /> */}
+        <Route path="/ComingSoon" exact component={ComingSoon} />
+        <Route path="/hackathon-register" exact component={HackathonRegister} />
         <Route component={PageNotFound} />
         {/* <Route path="/Login" exact component={LoginRegister} /> */}
 
@@ -102,30 +126,15 @@ const AppRoutes = () => {
       <Route path="/login-register" exact component={LoginRegister} />
       <Route path="/google-form-data" exact component={GoogleFormData} />  */}
 
-        {/* <ProtectedRoute
-        path="/dashboard"
-        auth={Auth}
-        exact
-        component={Dashboard}
-      /> */}
+        <ProtectedRoute
+          path="/dashboard"
+          auth={Auth}
+          exact
+          component={Dashboard}
+        />
         {/* <Route component={PageNotFound} /> */}
       </Switch>
     </ScrollToTop>
-  );
-};
-
-const ProtectedRoute = ({ auth, component: Component, ...rest }) => {
-  return (
-    <Route
-      {...rest}
-      render={() => {
-        if (auth) {
-          return <Component />;
-        } else {
-          return <Redirect to="/login-register"></Redirect>;
-        }
-      }}
-    />
   );
 };
 

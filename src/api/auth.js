@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 export const BASE_API_URL = "http://13.235.241.226:8000";
 
 export const googleSignIn = () => {
-  window.location = BASE_API_URL + "user/login/google";
+  window.location.href = BASE_API_URL + "/user/login/google";
 };
 
 export const normalSignIn = async (values) => {
@@ -19,14 +19,14 @@ export const normalSignIn = async (values) => {
         //console.log("Token ==", response.data.token);
         localStorage.setItem("apiToken", response.data.token);
         // alert(" token has been generated, check console");
-        toast("Token has been generated, check console");
+        toast.success("✅ Token has been generated, check console");
 
-        return response.data.token;
+        return response.data;
       }
     })
     .catch((err) => {
       //console.log("the error is", err);
-      alert(err.response.data.message);
+      toast.error(err.response.data.message);
       if (err.response.status === 404) {
         setTimeout(() => {
           window.location = "http://localhost:3000/Login/";
@@ -50,7 +50,7 @@ export const afterGoogleSignIn = () => {
   }
   if (searchparams.has("token")) {
     // setToken(searchparams.get("token"));
-    // localStorage.setItem("apiToken", token);
+    localStorage.setItem("apiToken", searchparams.get("token"));
     // //console.log("token is ", searchparams.get("token"));
     //console.log("token is : ", localStorage.getItem("apiToken"));
   }
@@ -72,6 +72,7 @@ export const forgetPassword = async (values) => {
     .catch((err) => {
       //console.log("the error code is", err.response.status);
 
+      toast.info(err.response.data.message);
       var err_msg = document.getElementById("msg");
       err_msg.innerHTML = err.response.data.message;
     });
@@ -91,6 +92,8 @@ export const resetPassword = async (token, values) => {
     .catch((err) => {
       var msg = document.getElementById("alert_msg");
       msg.innerHTML = err.response.data.message;
+      toast.info(err.response.data.message);
+
       //console.log(err.response.data.message);
       //console.log("the error code is", err.response.status);
     });
