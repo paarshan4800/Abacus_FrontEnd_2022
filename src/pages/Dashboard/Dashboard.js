@@ -17,6 +17,7 @@ import userimg from "../../images/usericonimg.jpg";
 import { TiTick } from "react-icons/ti";
 import ComingSoon from "../ComingSoon/ComingSoon";
 import { Width } from "../../App";
+import { getListOfEventRegistrations } from "../../api/registrations";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -28,7 +29,7 @@ const Dashboard = () => {
       refName: "reverse-engineering",
       name: "Reverse Engineering",
       type: "tech-events",
-      registered: true,
+      registered: false,
     },
     {
       id: 2,
@@ -49,14 +50,14 @@ const Dashboard = () => {
       refName: "capture-the-flag",
       name: "Capture the Flag",
       type: "tech-events",
-      registered: true,
+      registered: false,
     },
     {
       id: 5,
       refName: "she-codes",
       name: "She Codes",
       type: "tech-events",
-      registered: true,
+      registered: false,
     },
     {
       id: 6,
@@ -70,7 +71,7 @@ const Dashboard = () => {
       refName: "get-hired",
       name: "Get Hired",
       type: "tech-events",
-      registered: true,
+      registered: false,
     },
     {
       id: 8,
@@ -84,7 +85,7 @@ const Dashboard = () => {
       refName: "design-a-thon",
       name: "Design-a-thon",
       type: "non-tech-events",
-      registered: true,
+      registered: false,
     },
     {
       id: 10,
@@ -98,14 +99,14 @@ const Dashboard = () => {
       refName: "thadam",
       name: "Thadam",
       type: "non-tech-events",
-      registered: true,
+      registered: false,
     },
     {
       id: 12,
       refName: "gamindrome",
       name: "Gamindrome",
       type: "non-tech-events",
-      registered: true,
+      registered: false,
     },
   ];
 
@@ -114,7 +115,7 @@ const Dashboard = () => {
       id: 13,
       refName: "blockchain-and-cryptocurrency",
       name: "Blockchain and Cryptocurrency",
-      registered: true,
+      registered: false,
     },
     {
       id: 14,
@@ -126,7 +127,7 @@ const Dashboard = () => {
       id: 15,
       refName: "stock-market-and-share-market",
       name: "Stock Market and Share Market",
-      registered: true,
+      registered: false,
     },
   ];
 
@@ -138,6 +139,7 @@ const Dashboard = () => {
   useEffect(() => {
     setEventList(true);
     setWorkshopList(false);
+    getListOfEventRegistrations();
   }, []);
 
   const expandEventList = () => {
@@ -170,7 +172,19 @@ const Dashboard = () => {
         </div>
 
         <div className={styles.userstats}>
-          {1 ? (
+          <div className={styles.event_pass}>
+            <Link to={`/events`}>
+              <img src={eventpassimg} />
+            </Link>
+          </div>
+          <div className={styles.event_stats}>
+            <div className={styles.stats_card}>
+              <div className={styles.title}>Events Registered</div>
+              <div className={styles.num1}>4</div>
+              <div className={styles.num2}>/10</div>
+            </div>
+          </div>
+          {/* {1 ? (
             <div className={styles.event_pass}>
               <Link to={`/events`}>
                 <img src={eventpassimg} />
@@ -186,7 +200,6 @@ const Dashboard = () => {
               </div>
             </div>
           )}
-          {/*aaahhhhhh*/}
           {1 ? (
             <div className={styles.workshop_pass}>
               <Link to={`/workshops`}>
@@ -202,7 +215,7 @@ const Dashboard = () => {
                 <div className={styles.num2}>/23</div>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </div>
       <div className={styles.content}>
