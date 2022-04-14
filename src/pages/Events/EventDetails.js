@@ -41,13 +41,8 @@ function EventDetails() {
       event_id = eventList.nonTechEventsList[event_id].id;
     }
     console.log(event_id);
-    const status = await eventRegistration(token[1],event_id,token[3]);
-
-    if(status == 200){
-      document.getElementById("msg").setAttribute("title", "Registered!"); 
-      location.reload();
-    }
-
+    await eventRegistration(event_id,token[3]);
+    
   };
 
   const { type, title } = useParams();
@@ -103,11 +98,13 @@ function EventDetails() {
                 />
               )}
               {/* Change this later */ } 
-                <GlassButton id="msg" onClick={() => {
+                <div id="msg">
+                <GlassButton onClick={() => {
                     oneventRegistration();
                   }} 
                   title="Register"
                 /> 
+                </div>
               {/* <p className="text-center pt-3">Registrations Opening Soon</p> */}
             </div>
           </div>

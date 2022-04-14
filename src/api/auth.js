@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 // const BASE_API_URL = "https://abacus-22-backend.herokuapp.com/";
 export const BASE_API_URL = "http://13.235.241.226:8000";
-
+//export const BASE_API_URL = "http://localhost:8000";
 export const googleSignIn = () => {
   window.location.href = BASE_API_URL + "/user/login/google";
 };
@@ -16,8 +16,8 @@ export const normalSignIn = async (values) => {
     //.post("https://abacus-22-backend.herokuapp.com/user/login", values)
     .then((response) => {
       if (response.status === 200) {
-        //console.log("Token ==", response.data.token);
-        localStorage.setItem("apiToken", response.data.token);
+        //console.log("Token ==", response.data.details.token);
+        localStorage.setItem("apiToken", response.data.details.token);
         // alert(" token has been generated, check console");
         toast.success("✅ Token has been generated, check console");
 
@@ -147,19 +147,23 @@ export const signUp = (signupURL, values) => {
 };
 
 export const eventRegistration = async (id,name) => {
-  const data = await axios
-    .post("http://localhost:8000/user/registration/"+id+"/"+name)
-    .then((response) => {
-      if (response.status === 200) {
-        alert(response.data.message);
-        return 200;
-      }
-    })
-    .catch((err) => {
-      alert(response.data.message);
-      return 400;
-    });
-  return data;
+  const token = localStorage.getItem("apiToken");
+  const data = await axios({
+    method: 'put',
+    url: "http://localhost:8000/user/registration/"+id+"/"+name,
+    headers: {
+        "Authorization": "Bearer " + token
+    },
+  })
+  .then(function (response) {
+    if (response.status === 200) {
+      toast.success(response.data.message);
+    }
+  })
+  .catch((err) => {
+      toast.error(err.response.message);
+  });
+  //return data;
 };
 
 export const logOut = () => {

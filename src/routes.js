@@ -72,17 +72,17 @@ const AppRoutes = () => {
 
         <Route path="/test/:type/:title" exact component={Test} />
         <Route path="/dashboard" exact component={Dashboard} />
-        <Route path="/login" exact component={ComingSoon} />
+        <Route path="/login" exact component={LoginRegister} />
         <Route path="/Login/VerifyEmail" exact component={ComingSoon} />
         <Route path="/signUp" exact component={ComingSoon} />
-        <Route path="/ForgotPassword" exact component={ComingSoon} />
+        <Route path="/ForgotPassword" exact component={ForgotPassword} />
         <Route
           path="/resetPassword/:resetPassword"
           exact
-          component={ComingSoon}
+          component={NewPassword}
         />
         <Route path="/ComingSoon" exact component={ComingSoon} />
-        <Route path="/hackathon-register" exact component={ComingSoon} /> */}
+        <Route path="/hackathon-register" exact component={ComingSoon} /> 
         <Route path="/loading" exact component={Loading} />
         {Auth ? (
           <>
