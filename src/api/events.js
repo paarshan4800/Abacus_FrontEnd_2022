@@ -6,3 +6,86 @@
 // export const registerEvent = (id) => {
 //   BASE_API_URL + "/user/registration/" + id + "/add";
 // };
+
+exports.techEventsList = [
+    {
+      id: 1,
+      refName: "reverse-engineering",
+      name: "Reverse Engineering",
+    },
+    {
+      id: 2,
+      refName: "web-design",
+      name: "Web Design",
+    },
+    {
+      id: 3,
+      refName: "capture-the-flag",
+      name: "Capture the flag",
+      subname: "Pre-event",
+    },
+    {
+      id: 4,
+      refName: "ospc",
+      name: "OSPC",
+    },
+    {
+      id: 5,
+      refName: "she-plus-plus",
+      name: "SHE++",
+    },
+    {
+      id: 6,
+      refName: "booting",
+      name: "Booting",
+    },
+    {
+      id: 7,
+      refName: "get-hired",
+      name: "Get-Hired",
+    },
+    {
+      id: 8,
+      refName: "brainstormiz-technicalQuiz",
+      name: "Brainstormiz - Tech Quiz",
+    },
+    {
+      id: 9,
+      refName: "deadlock-opener",
+      name: "Deadlock Opener",
+    },
+    {
+      id: 10,
+      refName: "olpc",
+      name: "OLPC",
+      subname: "Pre-event",
+    },
+  ];
+
+exports.nonTechEventsList = [
+    {
+      id: 11,
+      refName: "ship-wreck",
+      name: "Ship-Wreck",
+    },
+    {
+      id: 12,
+      refName: "design-a-thon",
+      name: "Design-a-thon",
+    },
+    {
+      id: 13,
+      refName: "fandom-quiz",
+      name: "Fandom Quiz",
+    },
+    {
+      id: 14,
+      refName: "thadam",
+      name: "Thadam",
+    },
+    // {
+    //   id: 15,
+    //   refName: "gamindrome",
+    //   name: "Gamindrome",
+    // },
+  ];

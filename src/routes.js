@@ -67,7 +67,7 @@ const AppRoutes = () => {
         <Route path="/workshops/:title" exact component={ComingSoon} />
 
         <Route path="/test/:type/:title" exact component={Test} />
-        <Route path="/dashboard" exact component={ComingSoon} />
+        <Route path="/dashboard" exact component={Dashboard} />
         <Route path="/login" exact component={ComingSoon} />
         <Route path="/Login/VerifyEmail" exact component={ComingSoon} />
         <Route path="/signUp" exact component={ComingSoon} />

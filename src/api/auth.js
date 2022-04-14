@@ -143,6 +143,21 @@ export const signUp = (signupURL, values) => {
     });
 };
 
+export const eventRegistration = async (type,id,name) => {
+  const msg = await axios
+    .post("http://localhost:8000/user/registration/"+id+"/"+name)
+    .then((response) => {
+      if (response.status === 200) {
+        return response.data.message;
+      }
+    })
+    .catch((err) => {
+      var err_msg = document.getElementById("msg");
+      err_msg.innerHTML = err.response.data.message;
+    });
+  return msg;
+};
+
 export const logOut = () => {
   axios
     .post(

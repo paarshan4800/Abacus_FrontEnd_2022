@@ -8,7 +8,8 @@ import PageNotFound from "../PageNotFound/PageNotFound";
 import GlassBtn from "../../components/GlassBtn/GlassBtn";
 import background from "../../images/bgg.jpg";
 import nontech from "./../../images/nontech.png";
-import { eventRegistration } from "../../api/registrations";
+import eventList from "../../api/events";
+import { eventRegistration } from "../../api/auth";
 import FadeInSection from "../../components/FadeInSection/FadeInSection";
 
 import { Icon } from "@fortawesome/fontawesome-svg-core";
@@ -21,6 +22,31 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function EventDetails() {
+
+  const oneventRegistration = async () => {
+    const token = window.location.pathname.split("/");
+    var event_id;
+    if(token[2]=="tech-events"){
+      event_id = eventList.techEventsList.findIndex(function(event,index) {
+        if(event.refName == token[3])
+          return true;
+      });
+      event_id = eventList.techEventsList[event_id].id;
+    }
+    else {
+      event_id = eventList.nonTechEventsList.findIndex(function(event,index) {
+        if(event.refName == token[3])
+          return true;
+      });
+      event_id = eventList.nonTechEventsList[event_id].id;
+    }
+    console.log(event_id);
+    const msg = await eventRegistration(token[1],event_id,token[3]);
+
+    // var res_msg = document.getElementById("msg");
+    // res_msg.innerHTML = msg;
+  };
+
   const { type, title } = useParams();
 
   let Hash;
@@ -73,15 +99,14 @@ function EventDetails() {
                   alt={title}
                 />
               )}
-              {/* Change this later <GlassButton
-                title="Register"
-                onClick={() => {
-                  eventRegistration();
-                }}
-              /> */}
-              <p className="text-center pt-3">Registrations Opening Soon</p>
+              {/* Change this later */ } 
+                <GlassButton onClick={() => {
+                    oneventRegistration();
+                  }} 
+                  title="Register"
+                /> 
+              {/* <p className="text-center pt-3">Registrations Opening Soon</p> */}
             </div>
-            {/* <GlassButton /> */}
           </div>
           <div className={styles.box} style={{ height: "auto", width: "60%" }}>
             <span></span>
