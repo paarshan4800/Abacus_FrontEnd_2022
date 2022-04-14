@@ -4,8 +4,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // const BASE_API_URL = "https://abacus-22-backend.herokuapp.com/";
-export const BASE_API_URL = "http://13.235.241.226:8000";
-//export const BASE_API_URL = "http://localhost:8000";
+//export const BASE_API_URL = "http://13.235.241.226:8000";
+export const BASE_API_URL = "http://localhost:8000";
 // export const BASE_API_URL = "https://abacus.org.in/api";
 
 export const googleSignIn = () => {
@@ -21,7 +21,7 @@ export const normalSignIn = async (values) => {
         // localStorage.setItem("apiToken", response.data.details.token);
         // // alert(" token has been generated, check console");
         // toast.success("✅ Token has been generated, check console");
-        const data = response.data;
+        const data = response.data.details;
         localStorage.setItem("name", data.name);
         localStorage.setItem("abacusId", data.abacusId);
         localStorage.setItem("apiToken", data.token);
