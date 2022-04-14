@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // const BASE_API_URL = "https://abacus-22-backend.herokuapp.com/";
-export const BASE_API_URL = "http://13.235.241.226:8000";
+export const BASE_API_URL = "https://abacus.org.in/api";
 
 export const googleSignIn = () => {
   window.location.href = BASE_API_URL + "/user/login/google";
@@ -13,13 +13,10 @@ export const googleSignIn = () => {
 export const normalSignIn = async (values) => {
   const details = await axios
     .post(BASE_API_URL + "/user/login", values)
-    //.post("https://abacus-22-backend.herokuapp.com/user/login", values)
     .then((response) => {
       if (response.status === 200) {
-        //console.log("Token ==", response.data.token);
-        localStorage.setItem("apiToken", response.data.token);
-        // alert(" token has been generated, check console");
-        toast.success("✅ Token has been generated, check console");
+        localStorage.setItem("apiToken", response.data.details.token);
+        toast.success("Token has been generated, check console");
 
         return response.data;
       }
@@ -29,7 +26,7 @@ export const normalSignIn = async (values) => {
       toast.error(err.response.data.message);
       if (err.response.status === 404) {
         setTimeout(() => {
-          window.location = "http://localhost:3000/Login/";
+          window.location = "/login";
         }, 1000);
       }
     });
@@ -46,7 +43,7 @@ export const afterGoogleSignIn = () => {
   if (searchparams.has("message")) {
     const msg = searchparams.get("message");
     // //console.log(msg);
-    window.alert(msg);
+    toast.info(msg);
   }
   if (searchparams.has("token")) {
     // setToken(searchparams.get("token"));
@@ -58,7 +55,7 @@ export const afterGoogleSignIn = () => {
 
 export const forgetPassword = async (values) => {
   const msg = await axios
-    .post("http://localhost:8000/forgetPassword", values)
+    .post(BASE_API_URL + "/forgetPassword", values)
     .then((response) => {
       if (response.status === 200) {
         // var res_msg = document.getElementById("msg");
@@ -81,7 +78,7 @@ export const forgetPassword = async (values) => {
 
 export const resetPassword = async (token, values) => {
   const msg = await axios
-    .put("http://localhost:8000/resetPassword/" + token, values)
+    .put(BASE_API_URL + "/resetPassword/" + token, values)
     .then((response) => {
       if (response.status === 200) {
         //console.log(response.data.message);
@@ -124,21 +121,20 @@ export const signUp = (signupURL, values) => {
     .post(signupURL, values)
     .then((response) => {
       if (response.status === 201 || response.status === 200) {
-        alert(response.data.message);
+        toast.success(response.data.message);
         // setMessage(response.data.message);
-        window.location = "http://localhost:3000/Login";
       }
       //console.log(response);
     })
     .catch((err) => {
       //console.log(err);
       if (err.response.data.code === 11000) {
-        alert(
+        toast.info(
           err.response.data.keyValue.email +
             "is already registered. Go to login"
         );
         setTimeout(() => {
-          window.location = "http://localhost:3000/Login";
+          window.location = "/login";
         }, 300);
       } else {
         //console.log(err.response.data);
@@ -146,9 +142,9 @@ export const signUp = (signupURL, values) => {
     });
 };
 
-export const eventRegistration = async (id,name) => {
-  const data = await axios
-    .post("http://localhost:8000/user/registration/"+id+"/"+name)
+export const eventRegistration = async (type, id, name) => {
+  const msg = await axios
+    .post(BASE_API_URL + "/user/registration/" + id + "/" + name)
     .then((response) => {
       if (response.status === 200) {
         alert(response.data.message);
@@ -156,25 +152,26 @@ export const eventRegistration = async (id,name) => {
       }
     })
     .catch((err) => {
-      alert(response.data.message);
+      alert(err.response.data.message);
       return 400;
     });
-  return data;
+  return msg;
 };
 
 export const logOut = () => {
+  const token = localStorage.getItem("apiToken");
+  localStorage.clear();
   axios
     .post(
       BASE_API_URL + "/user/logout",
       {},
       {
         headers: {
-          Authorization: localStorage.getItem("apiToken"),
+          Authorization: token,
         },
       }
     )
     .then((response) => {
-      localStorage.removeItem("apiToken");
       toast(response.data);
     });
 };

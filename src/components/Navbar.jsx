@@ -76,7 +76,7 @@ activeStyle={{ color: '#ff2483' }}>
                     onClick={
                       ()=>{
                         clickLogout();
-                        SetAuth(false)  
+                        // SetAuth(false);  
                         }
                       } 
                     activeClassName="selected"

@@ -71,7 +71,7 @@ const AppRoutes = () => {
         <Route path="/workshops/:title" exact component={ComingSoon} />
 
         <Route path="/test/:type/:title" exact component={Test} />
-        <Route path="/dashboard" exact component={Dashboard} />
+        {/*  <Route path="/dashboard" exact component={Dashboard} />
         <Route path="/login" exact component={ComingSoon} />
         <Route path="/Login/VerifyEmail" exact component={ComingSoon} />
         <Route path="/signUp" exact component={ComingSoon} />
@@ -103,7 +103,7 @@ const AppRoutes = () => {
         ) : (
           <>
             <Route path="/login" exact component={LoginRegister} />
-            <Route path="/Login/VerifyEmail" exact component={VerifyEmail} />
+            <Route path="/login/VerifyEmail" exact component={VerifyEmail} />
             <Route path="/signUp" exact component={SignUp} />
             <Route path="/ForgotPassword" exact component={ForgotPassword} />
             <Route
@@ -111,6 +111,9 @@ const AppRoutes = () => {
               exact
               component={NewPassword}
             />
+            <Route path="/dashboard" exact>
+              <Redirect to="/login" />
+            </Route>
           </>
         )}
         {/* <Route path="/dashboard" exact component={Dashboard} /> */}

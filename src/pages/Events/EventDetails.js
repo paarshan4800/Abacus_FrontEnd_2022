@@ -22,32 +22,27 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function EventDetails() {
-
   const oneventRegistration = async () => {
     const token = window.location.pathname.split("/");
     var event_id;
-    if(token[2]=="tech-events"){
-      event_id = eventList.techEventsList.findIndex(function(event,index) {
-        if(event.refName == token[3])
-          return true;
+    if (token[2] == "tech-events") {
+      event_id = eventList.techEventsList.findIndex(function (event, index) {
+        if (event.refName == token[3]) return true;
       });
       event_id = eventList.techEventsList[event_id].id;
-    }
-    else {
-      event_id = eventList.nonTechEventsList.findIndex(function(event,index) {
-        if(event.refName == token[3])
-          return true;
+    } else {
+      event_id = eventList.nonTechEventsList.findIndex(function (event, index) {
+        if (event.refName == token[3]) return true;
       });
       event_id = eventList.nonTechEventsList[event_id].id;
     }
     console.log(event_id);
-    const status = await eventRegistration(token[1],event_id,token[3]);
+    const status = await eventRegistration(token[1], event_id, token[3]);
 
-    if(status == 200){
-      document.getElementById("msg").setAttribute("title", "Registered!"); 
-      location.reload();
+    if (status == 200) {
+      document.getElementById("msg").setAttribute("title", "Registered!");
+      window.location.reload();
     }
-
   };
 
   const { type, title } = useParams();
@@ -102,12 +97,14 @@ function EventDetails() {
                   alt={title}
                 />
               )}
-              {/* Change this later */ } 
-                <GlassButton id="msg" onClick={() => {
-                    oneventRegistration();
-                  }} 
-                  title="Register"
-                /> 
+              {/* Change this later */}
+              <GlassButton
+                id="msg"
+                onClick={() => {
+                  oneventRegistration();
+                }}
+                title="Register"
+              />
               {/* <p className="text-center pt-3">Registrations Opening Soon</p> */}
             </div>
           </div>
@@ -164,7 +161,7 @@ function EventDetails() {
           </div>
         </FadeInSection>
       ) : null}
-      
+
       <FadeInSection>
         <div className={styles.container}>
           <div className={styles.box} style={{ height: "auto", width: "auto" }}>

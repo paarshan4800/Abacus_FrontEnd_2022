@@ -57,6 +57,11 @@
   }
 }
 
+.verifyEmail{
+  height: 70vh;
+  color: white;
+}
+
 .pageSwitcher {
   margin-bottom: 10%;
   margin-top: 10%;

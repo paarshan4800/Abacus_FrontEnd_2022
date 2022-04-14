@@ -19,6 +19,7 @@ import {
 import { Typography } from "@material-ui/core";
 import { FaApple } from "react-icons/fa";
 import LoginRegister from "../LoginRegister";
+import { toast } from "react-toastify";
 
 //import ;
 function SignUp() {
@@ -88,7 +89,7 @@ function SignUp() {
     }
     if (searchparams.has("message")) {
       //console.log(searchparams.get("message"));
-      window.alert(searchparams.get("message"));
+      // window.alert(searchparams.get("message"));
       setMessage(searchparams.get("message"));
     }
     if (searchparams.has("googleAuth")) {
@@ -119,8 +120,6 @@ function SignUp() {
         values.verificationCode = verificationCode;
       }
 
-      // const BASE_URL = "https://abacus-22-backend.herokuapp.com/";
-      // // const BASE_URL = "http://localhost:8000/";
       const signupURL = googleAuth
         ? BASE_API_URL + "/user/signup/googleSignUp"
         : BASE_API_URL + "/user/signup/newUser";
