@@ -21,12 +21,12 @@ export const normalSignIn = async (values) => {
         // alert(" token has been generated, check console");
         toast("Token has been generated, check console");
 
-        return response.data.token;
+        return response.data;
       }
     })
     .catch((err) => {
       //console.log("the error is", err);
-      alert(err.response.data.message);
+      toast.error(err.response.data.message);
       if (err.response.status === 404) {
         setTimeout(() => {
           window.location = "http://localhost:3000/Login/";
