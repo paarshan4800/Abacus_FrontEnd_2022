@@ -34,10 +34,10 @@ import Loading from "./pages/Loading/Loading";
 // import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 import ScrollToTop from "./components/ScrollToTop";
+import ProtectedRoute from "./ProtectedRoute";
 
 const AppRoutes = () => {
   const Auth = React.useContext(AuthApi);
-
   return (
     <ScrollToTop>
       <Switch>
@@ -85,18 +85,21 @@ const AppRoutes = () => {
         <Route path="/hackathon-register" exact component={ComingSoon} /> */}
         <Route path="/loading" exact component={Loading} />
         {Auth ? (
-          <Route
-            path={[
-              "/login",
-              "/login/VerifyEmail",
-              "/signup",
-              "/ForgotPassword",
-              "/resetPassword/:resetPassword",
-            ]}
-            exact
-          >
-            <Redirect to="/dashboard" />
-          </Route>
+          <>
+            <Route
+              path={[
+                "/login",
+                "/login/VerifyEmail",
+                "/signup",
+                "/ForgotPassword",
+                "/resetPassword/:resetPassword",
+              ]}
+              exact
+            >
+              <Redirect to="/dashboard" />
+            </Route>
+            <Route path="/dashboard" exact component={Dashboard} />
+          </>
         ) : (
           <>
             <Route path="/login" exact component={LoginRegister} />
@@ -132,21 +135,6 @@ const AppRoutes = () => {
         {/* <Route component={PageNotFound} /> */}
       </Switch>
     </ScrollToTop>
-  );
-};
-
-const ProtectedRoute = ({ auth, component: Component, ...rest }) => {
-  return (
-    <Route
-      {...rest}
-      render={() => {
-        if (auth) {
-          return <Component />;
-        } else {
-          return <Redirect to="/login"></Redirect>;
-        }
-      }}
-    />
   );
 };
 
