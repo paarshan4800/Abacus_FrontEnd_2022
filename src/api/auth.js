@@ -146,19 +146,20 @@ export const signUp = (signupURL, values) => {
     });
 };
 
-export const eventRegistration = async (type,id,name) => {
-  const msg = await axios
+export const eventRegistration = async (id,name) => {
+  const data = await axios
     .post("http://localhost:8000/user/registration/"+id+"/"+name)
     .then((response) => {
       if (response.status === 200) {
-        return response.data.message;
+        alert(response.data.message);
+        return 200;
       }
     })
     .catch((err) => {
-      var err_msg = document.getElementById("msg");
-      err_msg.innerHTML = err.response.data.message;
+      alert(response.data.message);
+      return 400;
     });
-  return msg;
+  return data;
 };
 
 export const logOut = () => {

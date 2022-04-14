@@ -41,10 +41,13 @@ function EventDetails() {
       event_id = eventList.nonTechEventsList[event_id].id;
     }
     console.log(event_id);
-    const msg = await eventRegistration(token[1],event_id,token[3]);
+    const status = await eventRegistration(token[1],event_id,token[3]);
 
-    // var res_msg = document.getElementById("msg");
-    // res_msg.innerHTML = msg;
+    if(status == 200){
+      document.getElementById("msg").setAttribute("title", "Registered!"); 
+      location.reload();
+    }
+
   };
 
   const { type, title } = useParams();
@@ -100,7 +103,7 @@ function EventDetails() {
                 />
               )}
               {/* Change this later */ } 
-                <GlassButton onClick={() => {
+                <GlassButton id="msg" onClick={() => {
                     oneventRegistration();
                   }} 
                   title="Register"
@@ -113,11 +116,11 @@ function EventDetails() {
             <div className={styles.content}>
               <h2 className={styles.neon}>{data.name ? data.name : null}</h2>
               <p>{data.about ? data.about : null}</p>
-              {/* <h2 className={styles.neon}>DATE & TIME</h2> */}
+              <h2 className={styles.neon}>DATE & TIME</h2>
               {/* {data.dateTime.map((obj) => (
               <p key={1}> {obj}</p>
             ))} */}
-              {/* <h2 className={styles.neon}>CONTACT</h2> */}
+              <h2 className={styles.neon}>CONTACT</h2>
               {/* {data.contact.map((person, index) => (
               <p key={index + 1} className={styles.glowCardName}>
                 {person.name} - <i class="fa fa-phone"></i>
@@ -209,7 +212,7 @@ function EventDetails() {
                 : null}
               <p>Platform: {data.platform ? data.platform : null}</p>
 
-              {/* <GlassButton title="Scroll to Top" /> */}
+              <GlassButton title="Scroll to Top" />
             </div>
           </div>
         </div>
