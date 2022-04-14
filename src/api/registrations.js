@@ -36,12 +36,14 @@ export const eventRegistration = async (id,name) => {
   .then(function (response) {
     if (response.status === 200) {
       toast.success(response.data.message);
+      return 200;
     }
   })
   .catch((err) => {
       toast.error(err.response.message);
+      return 400;
   });
-  //return data;
+  return data;
 };
 
 export const workshopRegistration = () => {
