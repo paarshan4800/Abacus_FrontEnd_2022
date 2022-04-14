@@ -1,4 +1,4 @@
-import React, { useState, Component, useEffect } from "react";
+import React, { useState, Component, useEffect, useContext } from "react";
 // import { HashRouter as Router, Route, NavLink } from "react-router-dom";
 import {
   BrowserRouter,
@@ -16,14 +16,14 @@ import {
   afterGoogleSignIn,
 } from "../../../api/auth";
 import GoogleButton from "react-google-button";
-import LoginRegister from "../LoginRegister";
+import { SetAuthApi } from "../../../App";
 
 function SignInForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
   // console.log("token from cookie is ", localStorage.getItem("apiToken"));
-
+  const setAuth = useContext(SetAuthApi);
   //handle normal signin
   const onSubmitSignIn = async () => {
     //console.log("in on submit signin");
@@ -34,7 +34,10 @@ function SignInForm() {
     //console.log(values);
 
     const details = await normalSignIn(values);
-    console.log(details);
+    if (details.token != undefined) {
+      console.log("hello");
+      setAuth(true);
+    }
   };
 
   useEffect(afterGoogleSignIn);

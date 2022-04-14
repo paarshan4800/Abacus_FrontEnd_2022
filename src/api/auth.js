@@ -16,7 +16,7 @@ export const normalSignIn = async (values) => {
     .then((response) => {
       if (response.status === 200) {
         localStorage.setItem("apiToken", response.data.details.token);
-        toast.success("Token has been generated, check console");
+        toast.success("Login Successful");
 
         return response.data;
       }
@@ -31,7 +31,7 @@ export const normalSignIn = async (values) => {
       }
     });
 
-  return details;
+  return details.details;
 };
 
 export const afterGoogleSignIn = () => {
@@ -158,20 +158,19 @@ export const eventRegistration = async (type, id, name) => {
   return msg;
 };
 
-export const logOut = () => {
+export const logOut = async () => {
   const token = localStorage.getItem("apiToken");
   localStorage.clear();
-  axios
-    .post(
-      BASE_API_URL + "/user/logout",
-      {},
-      {
-        headers: {
-          Authorization: token,
-        },
-      }
-    )
-    .then((response) => {
-      toast(response.data);
-    });
+  const data = await axios.post(
+    BASE_API_URL + "/user/logout",
+    {},
+    {
+      headers: {
+        Authorization: token,
+      },
+    }
+  );
+
+  toast.success(data.data);
+  return data.data;
 };

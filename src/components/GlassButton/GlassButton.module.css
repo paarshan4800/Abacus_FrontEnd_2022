@@ -34,6 +34,7 @@
   transition: 0.5s;
   backdrop-filter: blur(15px) !important;
   -webkit-backdrop-filter: blur(15px) !important;
+  cursor: pointer;
 
 }
 .container .btn:hover a {
