@@ -9,7 +9,7 @@ import GlassBtn from "../../components/GlassBtn/GlassBtn";
 import background from "../../images/bgg.jpg";
 import nontech from "./../../images/nontech.png";
 import eventList from "../../api/events";
-import { eventRegistration } from "../../api/auth";
+import { eventRegistration } from "../../api/registrations";
 import FadeInSection from "../../components/FadeInSection/FadeInSection";
 
 import { Icon } from "@fortawesome/fontawesome-svg-core";

@@ -156,26 +156,6 @@ export const signUp = (signupURL, values) => {
     });
 };
 
-export const eventRegistration = async (id,name) => {
-  const token = localStorage.getItem("apiToken");
-  const data = await axios({
-    method: 'put',
-    url: BASE_API_URL + "/user/registration/" + id + "/" + name,
-    headers: {
-        "Authorization": "Bearer " + token
-    },
-  })
-  .then(function (response) {
-    if (response.status === 200) {
-      toast.success(response.data.message);
-    }
-  })
-  .catch((err) => {
-      toast.error(err.response.message);
-  });
-  //return data;
-};
-
 export const logOut = async () => {
   const token = localStorage.getItem("apiToken");
   localStorage.clear();
