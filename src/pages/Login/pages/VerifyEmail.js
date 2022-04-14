@@ -5,11 +5,13 @@ import { green } from "@material-ui/core/colors";
 import { verifyUserAPI } from "../../../api/auth";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
 
 function VerifyEmail(props) {
   const [status, setStatus] = useState("checking");
   const [emailID, setEmailID] = useState("");
   const [message, setMessage] = useState("");
+  const history = useHistory();
 
   const verifyUser = async () => {
     const search = props.location.search;
@@ -20,17 +22,19 @@ function VerifyEmail(props) {
     setMessage(res.message);
     setStatus(res.status);
     if (res.status === "verified") {
-      toast.success("✅" + res.message);
+      toast.success(res.message);
       setTimeout(() => {
-        window.location = "http://localhost:3000/Login#/sign-in";
+        history.push("/login");
       }, 2000);
+    } else {
+      toast.error(res.message);
     }
   };
 
   useEffect(verifyUser, []);
 
   return (
-    <div className={logstyle.formCenter}>
+    <div className={`${logstyle.verifyEmail} container`}>
       <p>
         Your email id: <span style={{ color: "#f0f0f0" }}>{emailID}</span>
         <br />

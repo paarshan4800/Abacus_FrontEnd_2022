@@ -22,21 +22,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function EventDetails() {
-
   const oneventRegistration = async () => {
     const token = window.location.pathname.split("/");
     var event_id;
-    if(token[2]=="tech-events"){
-      event_id = eventList.techEventsList.findIndex(function(event,index) {
-        if(event.refName == token[3])
-          return true;
+    if (token[2] == "tech-events") {
+      event_id = eventList.techEventsList.findIndex(function (event, index) {
+        if (event.refName == token[3]) return true;
       });
       event_id = eventList.techEventsList[event_id].id;
-    }
-    else {
-      event_id = eventList.nonTechEventsList.findIndex(function(event,index) {
-        if(event.refName == token[3])
-          return true;
+    } else {
+      event_id = eventList.nonTechEventsList.findIndex(function (event, index) {
+        if (event.refName == token[3]) return true;
       });
       event_id = eventList.nonTechEventsList[event_id].id;
     }
@@ -97,14 +93,14 @@ function EventDetails() {
                   alt={title}
                 />
               )}
-              {/* Change this later */ } 
-                <div id="msg">
-                <GlassButton onClick={() => {
-                    oneventRegistration();
-                  }} 
-                  title="Register"
-                /> 
-                </div>
+              {/* Change this later */}
+              <GlassButton
+                id="msg"
+                onClick={() => {
+                  oneventRegistration();
+                }}
+                title="Register"
+              />
               {/* <p className="text-center pt-3">Registrations Opening Soon</p> */}
             </div>
           </div>
@@ -161,7 +157,7 @@ function EventDetails() {
           </div>
         </FadeInSection>
       ) : null}
-      
+
       <FadeInSection>
         <div className={styles.container}>
           <div className={styles.box} style={{ height: "auto", width: "auto" }}>

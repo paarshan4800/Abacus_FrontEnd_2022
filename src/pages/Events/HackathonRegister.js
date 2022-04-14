@@ -14,18 +14,25 @@ function HackathonRegister() {
       }}
     >
       <div className={styles.container}>
-        <div className={styles.box} style={{ width: "95vw", display: "flex", justifyContent: "space-evenly"}}>
+        <div
+          className={styles.box}
+          style={{
+            width: "95vw",
+            display: "flex",
+            justifyContent: "space-evenly",
+          }}
+        >
           <span></span>
 
           <div className={styles.content}>
             <h2 className={styles.neon}>MEMBER 1</h2>
-            <img src={nontech} style={{ width: "200px", height: "100px"}} />
+            <img src={nontech} style={{ width: "200px", height: "100px" }} />
           </div>
 
           <div className={styles.content}>
             <h2 className={styles.neon}>YOU</h2>
             <img src={nontech} style={{ width: "200px", height: "100px" }} />
-            <GlassButton title="Register Team"/>
+            <GlassButton title="Register Team" />
           </div>
 
           <div className={styles.content}>
@@ -53,7 +60,6 @@ function HackathonRegister() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

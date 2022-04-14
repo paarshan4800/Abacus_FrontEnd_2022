@@ -7,7 +7,7 @@ import AppRoutes from "./routes";
 import { Provider, useSelector } from "react-redux";
 import Reducer from "./redux/Reducer";
 import { useDispatch } from "react-redux";
-import { Navbar } from "./components";
+import Navbar from "./components/Navbar";
 import background from "./images/bgg.jpg";
 import Footer from "./components/Footer";
 import { ToastContainer, toast } from "react-toastify";
