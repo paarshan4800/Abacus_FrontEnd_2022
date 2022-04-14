@@ -34,8 +34,8 @@ function SignInForm() {
     //console.log(values);
 
     const details = await normalSignIn(values);
+    console.log(details);
     if (details.token != undefined) {
-      console.log("hello");
       setAuth(true);
     }
   };

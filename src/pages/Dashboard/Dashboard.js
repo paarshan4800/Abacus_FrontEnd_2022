@@ -136,10 +136,21 @@ const Dashboard = () => {
   const [isEventList, setEventList] = useState(true);
   const [isWorkshopList, setWorkshopList] = useState(true);
 
-  useEffect(() => {
+  const [name, setName] = useState("");
+  const [abacusId, setAbacusId] = useState("");
+  const [isCegian, setIsCegian] = useState(false);
+  const [hasEventPass, setHasEventPass] = useState(false);
+  const [registeredEvents, setRegisteredEvents] = useState([]);
+
+  useEffect(async () => {
     setEventList(true);
     setWorkshopList(false);
-    getListOfEventRegistrations();
+    await getListOfEventRegistrations();
+    setName(localStorage.getItem("name"));
+    setAbacusId(Number(localStorage.getItem("abacusId")));
+    setIsCegian(JSON.parse(localStorage.getItem("isCegian")));
+    setHasEventPass(JSON.parse(localStorage.getItem("eventPass")));
+    setRegisteredEvents(JSON.parse(localStorage.getItem("registrations")));
   }, []);
 
   const expandEventList = () => {
@@ -162,10 +173,13 @@ const Dashboard = () => {
             </div>
             <div className={styles.userinfo}>
               <div className={styles.name}>
-                <p>Name : Harry Tomlinson</p>
+                <p>Name : {name}</p>
               </div>
               <div className={styles.abacusid}>
-                <p>Abacus ID : 4101</p>
+                <p>Abacus ID : {abacusId}</p>
+              </div>
+              <div className={styles.abacusid}>
+                <p>Event Pass : {hasEventPass ? "Obtained" : "Not Obtained"}</p>
               </div>
             </div>
           </div>
