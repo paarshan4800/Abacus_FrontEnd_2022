@@ -20,6 +20,10 @@ function ForgotPassword() {
   };
 
   return (
+  <div className={logstyle.space}>
+              <span className={logstyle.star1}></span>
+              <span className={logstyle.star2}></span>
+              <span className={logstyle.star3}></span>
     <div className={logstyle.App}>
       <div className={logstyle.appForm}>
         {/* <div className={logstyle.SIOut}> */}
@@ -62,6 +66,7 @@ function ForgotPassword() {
         {/* </div> */}
       </div>
     </div>
+  </div>
   );
 }
 

@@ -94,6 +94,7 @@ function SignInForm() {
             <div
               className={logstyle.styleButton}
               onClick={() => onSubmitSignIn()}
+              style={{fontSize: "1em"}}
             >
               <GlassButton title="Login" />
               {/*

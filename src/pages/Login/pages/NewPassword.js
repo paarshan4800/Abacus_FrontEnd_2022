@@ -20,6 +20,10 @@ function NewPassword() {
     //console.log(values);
   };
   return (
+    <div className={logstyle.space}>
+              <span className={logstyle.star1}></span>
+              <span className={logstyle.star2}></span>
+              <span className={logstyle.star3}></span>
     <div className={logstyle.App}>
       <div className={logstyle.appForm}>
         {/* <div className={logstyle.SIOut}> */}
@@ -35,7 +39,7 @@ function NewPassword() {
             <input
               type="password"
               id="password"
-              className={logstyle.formFieldInputNp}
+              className={logstyle.formFieldInput}
               placeholder="Enter your password"
               name="password"
               value={pass}
@@ -52,7 +56,7 @@ function NewPassword() {
             <input
               type="password"
               id="conpass"
-              className={logstyle.formFieldInputNp}
+              className={logstyle.formFieldInput}
               placeholder="Confirm your password"
               name="conpass"
               onChange={(e) => {
@@ -71,6 +75,7 @@ function NewPassword() {
         {/* </div> */}
         {/* </div> */}
       </div>
+    </div>
     </div>
   );
 }

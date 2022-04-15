@@ -5,7 +5,8 @@ import departments from "./assets/departments";
 import years from "./assets/years";
 import colleges from "./assets/colleges";
 import logstyle from "./../logstyle.module.css";
-import GlassButton from "../../../components/GlassButton/GlassButton.js";
+import GlassButton from "../../../components/GlassButton/GlassButton";
+import GlassBtn from "../../../components/GlassBtn/GlassBtn";
 import { signUp } from "../../../api/auth";
 import GoogleButton from "react-google-button";
 import { googleSignIn, BASE_API_URL } from "../../../api/auth";
@@ -271,6 +272,7 @@ function SignUp() {
             onClick={() => {
               handleSubmit();
             }}
+            style={{fontSize: "1em"}}
           >
             <GlassButton title="Sign Up" />
           </div>

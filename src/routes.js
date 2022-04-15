@@ -24,6 +24,7 @@ import ComingSoon from "./pages/ComingSoon/ComingSoon";
 import Test from "./pages/Test/Test";
 import VerifyEmail from "./pages/Login/pages/VerifyEmail";
 import Loading from "./pages/Loading/Loading";
+import SignUpPage from "./pages/Login/SignUpPage";
 
 // import ResetPassword from "./pages/ResetPassword/ResetPassword.js";
 // import Navbar from "./components/Navbar/Navbar";
@@ -105,6 +106,7 @@ const AppRoutes = () => {
             <Route path="/login" exact component={LoginRegister} />
             <Route path="/login/VerifyEmail" exact component={VerifyEmail} />
             <Route path="/signUp" exact component={SignUp} />
+            <Route path="/signUpPage" exact component={SignUpPage} />
             <Route path="/ForgotPassword" exact component={ForgotPassword} />
             <Route
               path="/resetPassword/:resetPassword"

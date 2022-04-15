@@ -8,8 +8,8 @@ import logstyle from "./logstyle.module.css";
 import NewPassword from "./pages/NewPassword";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import VerifyEmail from "./pages/VerifyEmail";
-import Main from "./dummy/Main";
-class LoginRegister extends React.Component {
+import Main2 from "./dummy/Main2";
+class SignUpPage extends React.Component {
   constructor(){
       super();
   }
@@ -20,10 +20,10 @@ class LoginRegister extends React.Component {
               <span className={logstyle.star2}></span>
               <span className={logstyle.star3}></span>
     <div className={logstyle.LoginRegisterBg}>
-      <Main />
+      <Main2 />
     </div>
     </div>
   );
 }
 }
-export default LoginRegister;
+export default SignUpPage;

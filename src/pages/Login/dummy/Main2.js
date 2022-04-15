@@ -128,23 +128,6 @@ class Main extends React.Component {
             </DefaultCardContents> */}
           <FrontSide
             style={{
-              // backgroundColor: '#11998e',
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-            }}
-          >
-            <div className={logstyle.styleButton}>
-              <GlassButton
-                title="To SignUp"
-                onClick={() => this.flippyHorizontal.toggle()}
-                
-              />
-            </div>
-            <SignInForm />
-          </FrontSide>
-          <BackSide
-            style={{
               // backgroundColor: '#38ef7d',
               display: "flex",
               alignItems: "center",
@@ -159,6 +142,23 @@ class Main extends React.Component {
               />
             </div>
             <SignUp />
+          </FrontSide>
+          <BackSide
+            style={{
+              // backgroundColor: '#11998e',
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            <div className={logstyle.styleButton}>
+              <GlassButton
+                title="To SignUp"
+                onClick={() => this.flippyHorizontal.toggle()}
+                
+              />
+            </div>
+            <SignInForm />
           </BackSide>
         </Flippy>
       </div>
