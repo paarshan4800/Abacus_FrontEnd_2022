@@ -21,97 +21,98 @@ import {
   getEventPass,
   getListOfEventRegistrations,
 } from "../../api/registrations";
+import { nonTechEventsList, techEventsList } from "../../api/events";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
   const width = useContext(Width);
 
-  let eventList = [
-    {
-      id: 1,
-      refName: "reverse-engineering",
-      name: "Reverse Engineering",
-      type: "tech-events",
-      registered: false,
-    },
-    {
-      id: 2,
-      refName: "code-for-crown",
-      name: "Code for Crown",
-      type: "tech-events",
-      registered: false,
-    },
-    {
-      id: 3,
-      refName: "web-design",
-      name: "Web Design",
-      type: "tech-events",
-      registered: false,
-    },
-    {
-      id: 4,
-      refName: "capture-the-flag",
-      name: "Capture the Flag",
-      type: "tech-events",
-      registered: false,
-    },
-    {
-      id: 5,
-      refName: "she-codes",
-      name: "She Codes",
-      type: "tech-events",
-      registered: false,
-    },
-    {
-      id: 6,
-      refName: "booting",
-      name: "Booting",
-      type: "tech-events",
-      registered: false,
-    },
-    {
-      id: 7,
-      refName: "get-hired",
-      name: "Get Hired",
-      type: "tech-events",
-      registered: false,
-    },
-    {
-      id: 8,
-      refName: "ship-wreck",
-      name: "Ship-Wreck",
-      type: "non-tech-events",
-      registered: false,
-    },
-    {
-      id: 9,
-      refName: "design-a-thon",
-      name: "Design-a-thon",
-      type: "non-tech-events",
-      registered: false,
-    },
-    {
-      id: 10,
-      refName: "fandom-quiz",
-      name: "Fandom Quiz",
-      type: "non-tech-events",
-      registered: false,
-    },
-    {
-      id: 11,
-      refName: "thadam",
-      name: "Thadam",
-      type: "non-tech-events",
-      registered: false,
-    },
-    {
-      id: 12,
-      refName: "gamindrome",
-      name: "Gamindrome",
-      type: "non-tech-events",
-      registered: false,
-    },
-  ];
+  // let eventList = [
+  //   {
+  //     id: 1,
+  //     refName: "reverse-engineering",
+  //     name: "Reverse Engineering",
+  //     type: "tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 2,
+  //     refName: "code-for-crown",
+  //     name: "Code for Crown",
+  //     type: "tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 3,
+  //     refName: "web-design",
+  //     name: "Web Design",
+  //     type: "tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 4,
+  //     refName: "capture-the-flag",
+  //     name: "Capture the Flag",
+  //     type: "tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 5,
+  //     refName: "she-codes",
+  //     name: "She Codes",
+  //     type: "tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 6,
+  //     refName: "booting",
+  //     name: "Booting",
+  //     type: "tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 7,
+  //     refName: "get-hired",
+  //     name: "Get Hired",
+  //     type: "tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 8,
+  //     refName: "ship-wreck",
+  //     name: "Ship-Wreck",
+  //     type: "non-tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 9,
+  //     refName: "design-a-thon",
+  //     name: "Design-a-thon",
+  //     type: "non-tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 10,
+  //     refName: "fandom-quiz",
+  //     name: "Fandom Quiz",
+  //     type: "non-tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 11,
+  //     refName: "thadam",
+  //     name: "Thadam",
+  //     type: "non-tech-events",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 12,
+  //     refName: "gamindrome",
+  //     name: "Gamindrome",
+  //     type: "non-tech-events",
+  //     registered: false,
+  //   },
+  // ];
 
   let workshopList = [
     {
@@ -145,6 +146,7 @@ const Dashboard = () => {
   const [hasEventPass, setHasEventPass] = useState(false);
   const [registeredEvents, setRegisteredEvents] = useState([]);
   const [college, setCollege] = useState("");
+  const [eventListItems, setEventListItems] = useState([]);
 
   useEffect(async () => {
     setEventList(true);
@@ -152,11 +154,33 @@ const Dashboard = () => {
     await getListOfEventRegistrations();
     setName(localStorage.getItem("name"));
     setAbacusId(Number(localStorage.getItem("abacusId")));
-    setIsCegian(JSON.parse(localStorage.getItem("isCegian")));
-    setHasEventPass(JSON.parse(localStorage.getItem("eventPass")));
-    setRegisteredEvents(JSON.parse(localStorage.getItem("registrations")));
+    setIsCegian(await JSON.parse(localStorage.getItem("isCegian")));
+    setHasEventPass(await JSON.parse(localStorage.getItem("eventPass")));
+    setRegisteredEvents(
+      await JSON.parse(localStorage.getItem("registrations"))
+    );
     setCollege(localStorage.getItem("college"));
   }, []);
+
+  useEffect(() => {
+    const techEventList = techEventsList.map((data) => {
+      let registered = false;
+      if (registeredEvents.find((x) => x == data.id) != undefined) {
+        registered = true;
+      }
+      return { ...data, registered: registered, type: "tech-events" };
+    });
+
+    const nonTechEventList = nonTechEventsList.map((data) => {
+      let registered = false;
+      if (registeredEvents.find((x) => x == data.id) != undefined) {
+        registered = true;
+      }
+      return { ...data, registered: registered, type: "non-tech-events" };
+    });
+
+    setEventListItems([...techEventList, ...nonTechEventList]);
+  }, [registeredEvents]);
 
   const expandEventList = () => {
     setEventList(true);
@@ -205,7 +229,7 @@ const Dashboard = () => {
                 <>
                   <div className={styles.title}>Events Registered</div>
                   <div className={styles.num1}>{registeredEvents.length}</div>
-                  <div className={styles.num2}>/{eventList.length}</div>
+                  <div className={styles.num2}>/{eventListItems.length}</div>
                 </>
               ) : (
                 <div>
@@ -277,7 +301,7 @@ const Dashboard = () => {
               <div className={styles.webView}>
                 {isEventList && (
                   <div className={styles.list}>
-                    {eventList.map((event) => (
+                    {eventListItems.map((event) => (
                       <div key={event.id} className={styles.list_element}>
                         <div className={styles.title}>{event.name}</div>
                         <div className={styles.hide}>
@@ -328,7 +352,7 @@ const Dashboard = () => {
               <div className={styles.mobileView}>
                 {isEventList && (
                   <div className={styles.list}>
-                    {eventList.map((event) => (
+                    {eventListItems.map((event) => (
                       <Link
                         key={event.id}
                         to={`/events/${event.type}/${event.refName}`}

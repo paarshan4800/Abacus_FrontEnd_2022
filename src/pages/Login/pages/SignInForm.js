@@ -37,7 +37,12 @@ function SignInForm() {
     }
   };
 
-  useEffect(afterGoogleSignIn, []);
+  useEffect(() => {
+    const data = afterGoogleSignIn();
+    if (data != undefined) {
+      setAuth(true);
+    }
+  }, []);
   return (
     <div className={logstyle.appForm}>
       <div className={logstyle.formCenter}>

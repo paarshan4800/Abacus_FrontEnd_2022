@@ -62,7 +62,7 @@ export const eventRegistration = async (id, name) => {
   const token = localStorage.getItem("apiToken");
   const data = await axios({
     method: "put",
-    url: BASE_API_URL + "/user/registration/event/" + id,
+    url: BASE_API_URL + "/user/registration/event/" + id + "/" + name,
     headers: {
       Authorization: "Bearer " + token,
     },

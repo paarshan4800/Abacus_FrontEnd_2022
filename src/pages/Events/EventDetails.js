@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./../Events/EventDetails.module.css";
 import GlassButton from "../../components/GlassButton/GlassButton";
 import { useParams, useHistory } from "react-router-dom";
@@ -22,50 +22,43 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function EventDetails() {
+  const [data, setData] = useState({});
+  // const [registered, setRegistered] = useState(false);
+  const [totalRegisteredList, setTotalRegisteredList] = useState([]);
+  const { type, title } = useParams();
+  let registered = false;
+
   const oneventRegistration = async () => {
-    const token = window.location.pathname.split("/");
-    var event_id;
-    if (token[2] == "tech-events") {
-      event_id = eventList.techEventsList.findIndex(function (event, index) {
-        if (event.refName == token[3]) return true;
-      });
-      event_id = eventList.techEventsList[event_id].id;
-    } else {
-      event_id = eventList.nonTechEventsList.findIndex(function (event, index) {
-        if (event.refName == token[3]) return true;
-      });
-      event_id = eventList.nonTechEventsList[event_id].id;
-    }
-    console.log(event_id);
-    const status = await eventRegistration(event_id, token[3]);
+    const status = await eventRegistration(data.id, data.refName);
 
     if (status == 200) {
-      const list = localStorage
-        .getItem("registrations")
-        .concat(",", String(event_id));
+      const list = JSON.parse(localStorage.getItem("registrations"));
+      list.push(String(data.id));
       console.log(list);
-      localStorage.setItem("registrations", list);
-      window.location.reload();
+      registered = true;
+      localStorage.setItem("registrations", JSON.stringify(list));
+      setTotalRegisteredList(
+        await JSON.parse(localStorage.getItem("registrations"))
+      );
     }
   };
 
-  const { type, title } = useParams();
-  var user_eventList = localStorage.getItem("registrations");
-  user_eventList = user_eventList.split(",").map(Number);
-  // console.log(typeof(eventList))
-  // console.log(eventList)
-  let Hash;
+  useEffect(async () => {
+    setTotalRegisteredList(
+      await JSON.parse(localStorage.getItem("registrations"))
+    );
+    let Hash;
 
-  if (type === "tech-events") {
-    Hash = TechEvents;
-  } else if (type === "non-tech-events") {
-    Hash = NonTechEvents;
-  }
+    if (type === "tech-events") {
+      Hash = TechEvents;
+    } else if (type === "non-tech-events") {
+      Hash = NonTechEvents;
+    }
+    setData(Hash[title]);
+  }, []);
+  registered = totalRegisteredList.find((x) => x == data.id) != undefined;
 
-  const data = Hash[title];
-  //console.log(data);
-  const history = useHistory();
-  if (!data) {
+  if (data == "") {
     // history.push("/404")
     return <PageNotFound />;
   }
@@ -112,7 +105,7 @@ function EventDetails() {
                   }}
                   title="Register"
                 /> */}
-              {user_eventList.find((x) => x == data.id) ? (
+              {registered ? (
                 <GlassBtn title="Registered!" />
               ) : (
                 <GlassButton

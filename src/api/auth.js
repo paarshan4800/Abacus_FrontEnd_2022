@@ -28,11 +28,11 @@ export const normalSignIn = async (values) => {
         localStorage.setItem("apiToken", data.token);
         localStorage.setItem("eventPass", data.eventPass);
         localStorage.setItem("college", data.college);
-        // localStorage.setItem(
-        //   "registrations",
-        //   JSON.stringify(data.registrations)
-        // );
-        localStorage.setItem("registrations", data.registrations);
+        localStorage.setItem(
+          "registrations",
+          JSON.stringify(data.registrations)
+        );
+        // localStorage.setItem("registrations", data.registrations);
         toast.success("Login Successful");
 
         return response.data;
@@ -61,8 +61,18 @@ export const afterGoogleSignIn = () => {
 
     toast.info(msg);
   }
+  if (searchparams.has("name")) {
+    localStorage.setItem("name", searchparams.get("name"));
+  }
+  if (searchparams.has("abacusId")) {
+    localStorage.setItem("abacusId", searchparams.get("abacusId"));
+  }
+  if (searchparams.has("college")) {
+    localStorage.setItem("college", searchparams.get("college"));
+  }
   if (searchparams.has("token")) {
     localStorage.setItem("apiToken", searchparams.get("token"));
+    return searchparams.get("token");
   }
 };
 
