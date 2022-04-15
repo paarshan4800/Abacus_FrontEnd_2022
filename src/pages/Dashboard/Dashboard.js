@@ -17,7 +17,10 @@ import userimg from "../../images/usericonimg.jpg";
 import { TiTick } from "react-icons/ti";
 import ComingSoon from "../ComingSoon/ComingSoon";
 import { Width } from "../../App";
-import { getListOfEventRegistrations } from "../../api/registrations";
+import {
+  getEventPass,
+  getListOfEventRegistrations,
+} from "../../api/registrations";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -141,6 +144,7 @@ const Dashboard = () => {
   const [isCegian, setIsCegian] = useState(false);
   const [hasEventPass, setHasEventPass] = useState(false);
   const [registeredEvents, setRegisteredEvents] = useState([]);
+  const [college, setCollege] = useState("");
 
   useEffect(async () => {
     setEventList(true);
@@ -151,6 +155,7 @@ const Dashboard = () => {
     setIsCegian(JSON.parse(localStorage.getItem("isCegian")));
     setHasEventPass(JSON.parse(localStorage.getItem("eventPass")));
     setRegisteredEvents(JSON.parse(localStorage.getItem("registrations")));
+    setCollege(localStorage.getItem("college"));
   }, []);
 
   const expandEventList = () => {
@@ -179,6 +184,9 @@ const Dashboard = () => {
                 <p>Abacus ID : {abacusId}</p>
               </div>
               <div className={styles.abacusid}>
+                <p>College : {college}</p>
+              </div>
+              <div className={styles.abacusid}>
                 <p>Event Pass : {hasEventPass ? "Obtained" : "Not Obtained"}</p>
               </div>
             </div>
@@ -193,9 +201,20 @@ const Dashboard = () => {
           </div>
           <div className={styles.event_stats}>
             <div className={styles.stats_card}>
-              <div className={styles.title}>Events Registered</div>
-              <div className={styles.num1}>4</div>
-              <div className={styles.num2}>/10</div>
+              {hasEventPass ? (
+                <>
+                  <div className={styles.title}>Events Registered</div>
+                  <div className={styles.num1}>{registeredEvents.length}</div>
+                  <div className={styles.num2}>/{eventList.length}</div>
+                </>
+              ) : (
+                <div>
+                  <p>You need to obtain Event Pass to begin registration</p>
+                  <div onClick={getEventPass}>
+                    <GlassButton title={"Get Pass"} />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           {/* {1 ? (

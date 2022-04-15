@@ -36,6 +36,7 @@ import SignUpPage from "./pages/Login/SignUpPage";
 // import "react-toastify/dist/ReactToastify.css";
 import ScrollToTop from "./components/ScrollToTop";
 import ProtectedRoute from "./ProtectedRoute";
+import PaymentConfirmation from "./pages/Dashboard/PaymentConfirmation";
 
 const AppRoutes = () => {
   const Auth = React.useContext(AuthApi);
@@ -57,11 +58,6 @@ const AppRoutes = () => {
         <Route path="/events" exact component={EventsHome} />
         <Route path="/events/coding-hungama" exact component={Hackathon} />
         <Route path="/events/tech-events" exact component={TechEventsList} />
-        {/* <Route
-          path="/events/non-tech-events"
-          exact
-          component={NonTechEventsList}
-        /> */}
         <Route
           path="/events/non-tech-events"
           exact
@@ -72,18 +68,7 @@ const AppRoutes = () => {
         <Route path="/workshops/:title" exact component={ComingSoon} />
 
         <Route path="/test/:type/:title" exact component={Test} />
-        <Route path="/dashboard" exact component={Dashboard} />
-        <Route path="/login" exact component={LoginRegister} />
-        <Route path="/Login/VerifyEmail" exact component={ComingSoon} />
-        <Route path="/signUp" exact component={ComingSoon} />
-        <Route path="/ForgotPassword" exact component={ForgotPassword} />
-        <Route
-          path="/resetPassword/:resetPassword"
-          exact
-          component={NewPassword}
-        />
-        <Route path="/ComingSoon" exact component={ComingSoon} />
-        <Route path="/hackathon-register" exact component={ComingSoon} /> 
+
         <Route path="/loading" exact component={Loading} />
         {Auth ? (
           <>
@@ -100,6 +85,11 @@ const AppRoutes = () => {
               <Redirect to="/dashboard" />
             </Route>
             <Route path="/dashboard" exact component={Dashboard} />
+            <Route
+              path="/dashboard/paymentDone"
+              exact
+              component={PaymentConfirmation}
+            />
           </>
         ) : (
           <>
@@ -122,14 +112,6 @@ const AppRoutes = () => {
         <Route path="/ComingSoon" exact component={ComingSoon} />
         <Route path="/hackathon-register" exact component={HackathonRegister} />
         <Route component={PageNotFound} />
-        {/* <Route path="/Login" exact component={LoginRegister} /> */}
-
-        {/*
-      <Route path="/Login" exact component={LoginRegister} />
-      <Route path="/reset-password" exact component={ResetPassword} />
-      <Route path="/forgot-password" exact component={ForgotPassword} />
-      <Route path="/login-register" exact component={LoginRegister} />
-      <Route path="/google-form-data" exact component={GoogleFormData} />  */}
 
         <ProtectedRoute
           path="/dashboard"

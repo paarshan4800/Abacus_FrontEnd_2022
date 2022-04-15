@@ -37,19 +37,21 @@ function EventDetails() {
       event_id = eventList.nonTechEventsList[event_id].id;
     }
     console.log(event_id);
-    const status = await eventRegistration(event_id,token[3]);
-    
-    if(status == 200){
-      const list = localStorage.getItem("registrations").concat("," , String(event_id));
-      console.log(list)
-      localStorage.setItem("registrations",list);
-      location.reload();
+    const status = await eventRegistration(event_id, token[3]);
+
+    if (status == 200) {
+      const list = localStorage
+        .getItem("registrations")
+        .concat(",", String(event_id));
+      console.log(list);
+      localStorage.setItem("registrations", list);
+      window.location.reload();
     }
   };
 
   const { type, title } = useParams();
   var user_eventList = localStorage.getItem("registrations");
-  user_eventList = user_eventList.split(',').map(Number);
+  user_eventList = user_eventList.split(",").map(Number);
   // console.log(typeof(eventList))
   // console.log(eventList)
   let Hash;
@@ -103,23 +105,23 @@ function EventDetails() {
                 />
               )}
               {/* Change this later */}
-                {/* <GlassButton
+              {/* <GlassButton
                   id="msg"
                   onClick={() => {
                     oneventRegistration();
                   }}
                   title="Register"
                 /> */}
-                {user_eventList.find(x => x==data.id) ? (
-                  <GlassBtn title="Registered!" />
-                  ) : (
-                  <GlassButton
-                    onClick={() => {
-                      oneventRegistration();
-                    }}
-                    title="Register"
-                  />
-                )}
+              {user_eventList.find((x) => x == data.id) ? (
+                <GlassBtn title="Registered!" />
+              ) : (
+                <GlassButton
+                  onClick={() => {
+                    oneventRegistration();
+                  }}
+                  title="Register"
+                />
+              )}
               {/* <p className="text-center pt-3">Registrations Opening Soon</p> */}
             </div>
           </div>
