@@ -23,6 +23,7 @@ export default function PaymentConfirmation() {
 
   return (
     <div>
+      <p>Hello</p>
       <Dashboard />
     </div>
   );

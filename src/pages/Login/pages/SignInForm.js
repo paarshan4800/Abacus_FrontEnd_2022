@@ -37,7 +37,7 @@ function SignInForm() {
     }
   };
 
-  useEffect(afterGoogleSignIn);
+  useEffect(afterGoogleSignIn, []);
   return (
     <div className={logstyle.appForm}>
       <div className={logstyle.formCenter}>
@@ -89,7 +89,7 @@ function SignInForm() {
             <div
               className={logstyle.styleButton}
               onClick={() => onSubmitSignIn()}
-              style={{fontSize: "1em"}}
+              style={{ fontSize: "1em" }}
             >
               <GlassButton title="Login" />
             </div>

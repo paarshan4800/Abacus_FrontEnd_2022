@@ -95,8 +95,7 @@ const AppRoutes = () => {
           <>
             <Route path="/login" exact component={LoginRegister} />
             <Route path="/login/VerifyEmail" exact component={VerifyEmail} />
-            <Route path="/signUp" exact component={SignUp} />
-            <Route path="/signUpPage" exact component={SignUpPage} />
+            <Route path="/signup" exact component={SignUpPage} />
             <Route path="/ForgotPassword" exact component={ForgotPassword} />
             <Route
               path="/resetPassword/:resetPassword"
@@ -108,17 +107,11 @@ const AppRoutes = () => {
             </Route>
           </>
         )}
-        {/* <Route path="/dashboard" exact component={Dashboard} /> */}
+
         <Route path="/ComingSoon" exact component={ComingSoon} />
         <Route path="/hackathon-register" exact component={HackathonRegister} />
         <Route component={PageNotFound} />
 
-        <ProtectedRoute
-          path="/dashboard"
-          auth={Auth}
-          exact
-          component={Dashboard}
-        />
         {/* <Route component={PageNotFound} /> */}
       </Switch>
     </ScrollToTop>

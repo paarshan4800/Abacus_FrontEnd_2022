@@ -98,7 +98,6 @@ function SignUp() {
 
     if (searchparams.has("verificationCode"))
       setVerificationCode(searchparams.get("verificationCode"));
-    // //console.log(searchparams.get("id_token"));
   };
 
   useEffect(checkWhichPage, []);
@@ -271,7 +270,7 @@ function SignUp() {
             onClick={() => {
               handleSubmit();
             }}
-            style={{fontSize: "1em"}}
+            style={{ fontSize: "1em" }}
           >
             <GlassButton title="Sign Up" />
           </div>

@@ -13,11 +13,15 @@ export const getListOfEventRegistrations = async () => {
     })
     .then((response) => {
       if (response.status === 200) {
+        console.log(response.data);
         localStorage.setItem(
           "registrations",
           JSON.stringify(response.data.registrations)
         );
-        localStorage.setItem("hasEventPass", response.data.hasEventPass);
+        localStorage.setItem(
+          "eventPass",
+          JSON.stringify(response.data.hasEventPass)
+        );
       }
     })
     .catch((err) => {

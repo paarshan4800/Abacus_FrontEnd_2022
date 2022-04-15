@@ -52,21 +52,17 @@ export const normalSignIn = async (values) => {
 };
 
 export const afterGoogleSignIn = () => {
-  // //console.log("function after g sign called");
   const url = new URL(window.location.href);
-  // //console.log("url is", url);
+
   const searchparams = new URLSearchParams(url.search);
-  // //console.log("search params is", searchparams);
+
   if (searchparams.has("message")) {
     const msg = searchparams.get("message");
-    // //console.log(msg);
+
     toast.info(msg);
   }
   if (searchparams.has("token")) {
-    // setToken(searchparams.get("token"));
     localStorage.setItem("apiToken", searchparams.get("token"));
-    // //console.log("token is ", searchparams.get("token"));
-    //console.log("token is : ", localStorage.getItem("apiToken"));
   }
 };
 
