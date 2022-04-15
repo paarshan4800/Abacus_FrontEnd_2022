@@ -21,17 +21,14 @@ import { SetAuthApi } from "../../../App";
 function SignInForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useState("");
-  // console.log("token from cookie is ", localStorage.getItem("apiToken"));
+
   const setAuth = useContext(SetAuthApi);
-  //handle normal signin
+
   const onSubmitSignIn = async () => {
-    //console.log("in on submit signin");
     var values = {
       email,
       password,
     };
-    //console.log(values);
 
     const details = await normalSignIn(values);
     console.log(details);
@@ -48,7 +45,6 @@ function SignInForm() {
           <GoogleButton
             className="google-button"
             onClick={() => {
-              //console.log("Google button clicked");
               googleSignIn();
             }}
             type="dark"
@@ -90,17 +86,11 @@ function SignInForm() {
           </div>
 
           <div className={logstyle.formField}>
-            {/*<button className={logstyle.formFieldButton}>Sign In</button>{" "}*/}
             <div
               className={logstyle.styleButton}
               onClick={() => onSubmitSignIn()}
             >
               <GlassButton title="Login" />
-              {/*
-
-            <NavLink to="/ForgotPassword" className={logstyle.formFieldButtonDirected} >
-              Forgot Password?
-            </NavLink>*/}
             </div>
           </div>
           <div className={logstyle.formField}>

@@ -21,16 +21,18 @@ export const normalSignIn = async (values) => {
         // localStorage.setItem("apiToken", response.data.details.token);
         // // alert(" token has been generated, check console");
         // toast.success("✅ Token has been generated, check console");
-        const data = response.data.details;
+        const data = response.data;
+
         localStorage.setItem("name", data.name);
         localStorage.setItem("abacusId", data.abacusId);
         localStorage.setItem("apiToken", data.token);
         localStorage.setItem("eventPass", data.eventPass);
+        localStorage.setItem("college", data.college);
         // localStorage.setItem(
         //   "registrations",
         //   JSON.stringify(data.registrations)
         // );
-        localStorage.setItem("registrations",data.registrations);
+        localStorage.setItem("registrations", data.registrations);
         toast.success("Login Successful");
 
         return response.data;

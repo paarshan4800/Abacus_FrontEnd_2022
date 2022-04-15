@@ -75,10 +75,9 @@ function SignUp() {
 
   const checkWhichPage = () => {
     const url = new URL(window.location.href);
-    // //console.log(url);
+
     const searchparams = new URLSearchParams(url.search);
-    // //console.log(searchparams);
-    // //console.log("hello");
+
     if (searchparams.has("email")) {
       //
       setEmail(searchparams.get("email"));
