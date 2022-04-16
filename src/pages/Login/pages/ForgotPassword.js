@@ -14,9 +14,7 @@ function ForgotPassword() {
     };
     //console.log(values);
 
-    const msg = await forgetPassword(values);
-    var res_msg = document.getElementById("msg");
-    res_msg.innerHTML = msg;
+    await forgetPassword(values);
   };
 
   return (
@@ -32,7 +30,6 @@ function ForgotPassword() {
         <h3 className={logstyle.h33}>
           No worries! Enter your e-mail and we will send you a reset.
         </h3>
-        <div id="msg"></div> {/*div element prints the server's responses*/}
         <form
           className={logstyle.formFields}
           onSubmit={() => onforgetPassword()}
