@@ -11,6 +11,7 @@ import nontech from "./../../images/nontech.png";
 import eventList from "../../api/events";
 import { eventRegistration } from "../../api/registrations";
 import FadeInSection from "../../components/FadeInSection/FadeInSection";
+import { ToastContainer, toast } from "react-toastify";
 
 import { Icon } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -56,7 +57,11 @@ function EventDetails() {
     }
     setData(Hash[title]);
   }, []);
-  registered = totalRegisteredList.find((x) => x == data.id) != undefined;
+  console.log(totalRegisteredList)
+  if(totalRegisteredList == null)
+    registered = -1
+  else  
+    registered = totalRegisteredList.find((x) => x == data.id) != undefined;
 
   if (data == "") {
     // history.push("/404")
@@ -105,14 +110,20 @@ function EventDetails() {
                   }}
                   title="Register"
                 /> */}
-              {registered ? (
-                <GlassBtn title="Registered!" />
+              {registered<1 ? (
+                <GlassBtn 
+                onClick={() => {
+                  registered==-1 ? (
+                    toast.success("Login or Sign up to register")
+                  ) : (
+                  oneventRegistration()
+                  )
+                }}
+                  title="Register" 
+                />
               ) : (
                 <GlassButton
-                  onClick={() => {
-                    oneventRegistration();
-                  }}
-                  title="Register"
+                  title="Registered!"
                 />
               )}
               {/* <p className="text-center pt-3">Registrations Opening Soon</p> */}
