@@ -21,7 +21,7 @@ import {
   getEventPass,
   getListOfEventRegistrations,
 } from "../../api/registrations";
-import { nonTechEventsList, techEventsList } from "../../api/events";
+import { nonTechEventsList, techEventsList, workshopsList } from "../../api/events";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -114,28 +114,28 @@ const Dashboard = () => {
   //   },
   // ];
 
-  let workshopList = [
-    {
-      id: 13,
-      refName: "blockchain-and-cryptocurrency",
-      name: "Blockchain and Cryptocurrency",
-      registered: false,
-    },
-    {
-      id: 14,
-      refName: "dev-ops",
-      name: "DevOps",
-      registered: false,
-    },
-    {
-      id: 15,
-      refName: "stock-market-and-share-market",
-      name: "Stock Market and Share Market",
-      registered: false,
-    },
-  ];
+  // let workshopList = [
+  //   {
+  //     id: 13,
+  //     refName: "blockchain-and-cryptocurrency",
+  //     name: "Blockchain and Cryptocurrency",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 14,
+  //     refName: "dev-ops",
+  //     name: "DevOps",
+  //     registered: false,
+  //   },
+  //   {
+  //     id: 15,
+  //     refName: "stock-market-and-share-market",
+  //     name: "Stock Market and Share Market",
+  //     registered: false,
+  //   },
+  // ];
 
-  let isComingSoon = true; /*Set this as false when registrations are open for workshops */
+  let isComingSoon = false; /*Set this as false when registrations are open for workshops */
 
   const [isEventList, setEventList] = useState(true);
   const [isWorkshopList, setWorkshopList] = useState(true);
@@ -147,10 +147,11 @@ const Dashboard = () => {
   const [registeredEvents, setRegisteredEvents] = useState([]);
   const [college, setCollege] = useState("");
   const [eventListItems, setEventListItems] = useState([]);
+  const [workshopListItems, setWorkshopListItems] = useState([]);
 
   useEffect(async () => {
     setEventList(true);
-    setWorkshopList(false);
+    setWorkshopList(true);
     await getListOfEventRegistrations();
     setName(localStorage.getItem("name"));
     setAbacusId(Number(localStorage.getItem("abacusId")));
@@ -180,6 +181,17 @@ const Dashboard = () => {
     });
 
     setEventListItems([...techEventList, ...nonTechEventList]);
+  }, [registeredEvents]);
+
+  useEffect(() => {
+    const workshopList = workshopsList.map((data) => {
+      let registered = false;
+      if (registeredEvents.find((x) => x == data.id) != undefined) {
+        registered = true;
+      }
+      return { ...data, registered: registered, type: "workshops" };
+    });
+    setWorkshopListItems([...workshopList]);
   }, [registeredEvents]);
 
   const expandEventList = () => {
@@ -326,7 +338,7 @@ const Dashboard = () => {
                 {isWorkshopList && isComingSoon && <ComingSoon />}
                 {isWorkshopList && !isComingSoon && (
                   <div className={styles.list}>
-                    {workshopList.map((event) => (
+                    {workshopListItems.map((event) => (
                       <div key={event.id} className={styles.list_element}>
                         <div className={styles.title}>{event.name}</div>
                         <div className={styles.hide}>
@@ -383,7 +395,7 @@ const Dashboard = () => {
                 {isWorkshopList && isComingSoon && <ComingSoon />}
                 {isWorkshopList && !isComingSoon && (
                   <div className={styles.list}>
-                    {workshopList.map((event) => (
+                    {workshopListItems.map((event) => (
                       <Link
                         to={`/workshops/${event.refName}`}
                         key={event.id}
