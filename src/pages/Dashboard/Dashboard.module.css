@@ -23,8 +23,8 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(to right, #ffffff26, transparent);
-  backdrop-filter: blur(45px);
+  /* background: linear-gradient(to right, #ffffff26, transparent);
+  backdrop-filter: blur(45px); */
   width: 90%;
   height: 90%;
   padding: 15px;
@@ -38,8 +38,13 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(to right, #09b5e0, #30ad60);
-  backdrop-filter: blur(45px);
+  /* background: linear-gradient(to right, #09b5e0, #30ad60);
+  backdrop-filter: blur(45px); */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #0fe69e4e;
+  box-shadow: 0 0 5px #0fe69e;
+  border-style: solid;
+  backdrop-filter: blur(1px);
   width: 90%;
   height: 80%;
   padding: 15px;
@@ -67,12 +72,12 @@
 }
 
 .userinfo .name p {
-  color: #000000;
+  color: #dddddd;
   font-size: 1.1em;
 }
 
 .userinfo .abacusid p {
-  color: #000000;
+  color: #dddddd;
   font-size: 1.1em;
 }
 
@@ -122,19 +127,25 @@
   margin: 5px 0px 5px 0px;
   font-size: 1.1em;
   width: 60%;
-  height: 90%;
+  height: 80%;
   /* background: linear-gradient(
     135deg,
     rgba(138, 255, 0, 1) 4%,
     rgba(203, 233, 56, 1) 68%,
     rgba(73, 201, 40, 1) 100%
   ); */
-  background: linear-gradient(to right, #27c764, #15a79a);
-
+  /* background: linear-gradient(to right, #27c764, #15a79a); */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #0fe69e4e;
+  box-shadow: 0 0 5px #0fe69e;
+  border-style: solid;
+  backdrop-filter: blur(1px);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
   justify-content: space-evenly;
   box-shadow: 5px 5px 15px 1px rgba(7, 206, 140, 0.747);
 }
@@ -143,19 +154,20 @@
   display: flex;
   align-self: flex-end;
   font-size: 1.2em;
+  color: #dddddd;
 }
 
 .stats_card .num1 {
   display: flex;
   align-self: center;
-  color: #141414;
+  color: #dddddd;
   font-size: 5vw;
 }
 
 .stats_card .num2 {
   display: flex;
   align-self: flex-end;
-  color: #000000;
+  color: #dddddd;
   font-size: 2vw;
 }
 
@@ -187,12 +199,12 @@
   }
 
   .userinfo .name p {
-    color: #000000;
+    color: #dddddd;
     font-size: 1.1em;
   }
 
   .userinfo .abacusid p {
-    color: #000000;
+    color: #dddddd;
     font-size: 1.1em;
     margin-left: 40px;
   }
@@ -202,7 +214,11 @@
     font-size: 1.1em;
     width: 60%;
     height: 80%;
-    background-color: #4b4b4b;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #0fe69e4e;
+    box-shadow: 0 0 5px #0fe69e;
+    border-style: solid;
+    backdrop-filter: blur(1px);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -303,26 +319,39 @@
   }
 
   .userinfo .name p {
-    color: #000000;
+    color: #dddddd;
     font-size: 1em;
   }
 
   .userinfo .abacusid p {
-    color: #000000;
+    color: #dddddd;
     font-size: 1em;
     margin-left: 0px;
   }
 
   .stats_card {
     margin: 5px 0px 5px 0px;
+    font-size: 1.1em;
     width: 60%;
     height: 80%;
-    background-color: #4b4b4b;
+    /* background: linear-gradient(
+      135deg,
+      rgba(138, 255, 0, 1) 4%,
+      rgba(203, 233, 56, 1) 68%,
+      rgba(73, 201, 40, 1) 100%
+    ); */
+    /* background: linear-gradient(to right, #27c764, #15a79a); */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #0fe69e4e;
+    box-shadow: 0 0 5px #0fe69e;
+    border-style: solid;
+    backdrop-filter: blur(1px);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 20px !important;
     justify-content: space-evenly;
+    box-shadow: 5px 5px 15px 1px rgba(7, 206, 140, 0.747);
   }
 
   .stats_card .title {
@@ -383,13 +412,13 @@
 
 @media only screen and (max-width: 400px) {
   .userinfo .name p {
-    color: #000000;
-    font-size: 1em;
+    color: #dddddd;
+    font-size: 0.8em;
   }
 
   .userinfo .abacusid p {
-    color: #000000;
-    font-size: 1em;
+    color: #dddddd;
+    font-size: 0.8em;
     margin-left: 0px;
   }
 
@@ -399,6 +428,40 @@
 
   .list_element {
     max-height: 40px !important;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+  .stats_card .title {
+    display: flex;
+    align-self: center;
+    font-size: 0.7em !important;
+  }
+
+  .stats_card {
+    margin: 5px 0px 5px 0px;
+    font-size: 1.1em;
+    width: 60%;
+    height: 80%;
+    /* background: linear-gradient(
+      135deg,
+      rgba(138, 255, 0, 1) 4%,
+      rgba(203, 233, 56, 1) 68%,
+      rgba(73, 201, 40, 1) 100%
+    ); */
+    /* background: linear-gradient(to right, #27c764, #15a79a); */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #0fe69e4e;
+    box-shadow: 0 0 5px #0fe69e;
+    border-style: solid;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px !important;
+    justify-content: space-evenly;
+    box-shadow: 5px 5px 15px 1px rgba(7, 206, 140, 0.747);
   }
 }
 
@@ -449,7 +512,12 @@
   /* background: linear-gradient(to right, #27c764, #15a79a);  */
   /* background: rgb(144,244,130); */
   /* background: linear-gradient(90deg, rgba(144,244,130,1) 0%, rgba(170,248,250,1) 100%); */
-  background: linear-gradient(to right, #38ef7d, #11998e);
+  /* background: linear-gradient(to right, #38ef7d, #11998e); */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #0fe69e4e;
+  box-shadow: 0 0 5px #0fe69e;
+  border-style: solid;
+  backdrop-filter: blur(1px);
   /* background: linear-gradient(315deg, #03a9f4, #da0037); */
 
   height: 80px;
@@ -466,7 +534,7 @@
   justify-content: flex-start;
   width: 60%;
   font-size: 1.5em;
-  color: #000000;
+  color: #dddddd;
   /* background-color: antiquewhite; */
 }
 

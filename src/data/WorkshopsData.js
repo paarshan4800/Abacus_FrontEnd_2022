@@ -220,8 +220,8 @@ export const Workshops = {
 
   //Finance for Engineers
   "stock-o-nomics": {
-    name: "Finance for Engineers",
-    refName: "finance-for-engineers",
+    name: "Stock-o-nomics (Finance for Engineers)",
+    refName: "stock-o-nomics",
     about: `In today's workplace, it is nearly impossible for an engineer to perform without considering the financial impact of every action on the organization's bottom line. Make your profit center shine with sound financial learning to supplement the tech background. Enter into the realm of finance through this session on Stock Markets, Shares, Business Cycle, Equities and Investments exclusively curated for Engineers.`,
     // fee: `Registration Fee - RS.350`,
     dateTime: ["Date - 29/04/2022", "Time - 10 am to 4 pm"],
@@ -230,7 +230,19 @@ export const Workshops = {
         name: "Hariharan V M",
         //href: " https://www.linkedin.com/in/thiyagab/",
         profession: "Managing and Finance Trustee",
-        //img: "Thiyagarajan Balasubramanian.jpeg",
+        img: "dummy.jpg",
+        company: "Zenith Trust",
+      },      {
+        name: "Hariharan V M",
+        //href: " https://www.linkedin.com/in/thiyagab/",
+        profession: "Managing and Finance Trustee",
+        img: "dummy.jpg",
+        company: "Zenith Trust",
+      },      {
+        name: "Hariharan V M",
+        //href: " https://www.linkedin.com/in/thiyagab/",
+        profession: "Managing and Finance Trustee",
+        img: "dummy.jpg",
         company: "Zenith Trust",
       },
       /*{

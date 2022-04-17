@@ -15,24 +15,16 @@ with a code that fulfills some hidden test cases.`,
     duration: ["Round 1 - 30 minutes,", " Round 2 - 1 hour"],
     platform: "Yet to decide",
     participants: "All 4 years",
-    // contact: [
-    //   {
-    //     name: "Arshak Shan ",
-    //     mobile: "  8129583239",
-    //   },
-    //   {
-    //     name: "Shruthi S ",
-    //     mobile: "  7358325784",
-    //   },
-    //   {
-    //     name: "Darrshana R ",
-    //     mobile: "  9123590345",
-    //   },
-    //   {
-    //     name: "Shakkthi ",
-    //     mobile: "  7299084122",
-    //   },
-    // ],
+    contact: [
+      {
+        name: "Arshak Shan ",
+        mobile: "  8129583239",
+      },
+      {
+        name: "Shruthi S ",
+        mobile: "  7358325784",
+      },
+    ],
 
     sponsorName: "Whizzcorps",
     sponsor: "unnamed.jpg",
@@ -89,20 +81,20 @@ replicate a given website.`,
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
 
-    // contact: [
-    //   {
-    //     name: "Gabrio Mascarnas A",
-    //     mobile: "9488394416",
-    //   },
-    //   {
-    //     name: "Vasanthakumar R",
-    //     mobile: "6379841032",
-    //   },
-    //   {
-    //     name: "Sabhari P",
-    //     mobile: "8220265629",
-    //   },
-    // ],
+    contact: [
+      {
+        name: "Gokulnath",
+        mobile: "7708578759",
+      },
+      {
+        name: "Sugavaneshwaran",
+        mobile: "9092698827",
+      },
+      {
+        name: "Nithil",
+        mobile: "7358624187",
+      },
+    ],
 
     // sponsor: "",
 
@@ -157,20 +149,20 @@ domains.`,
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
 
-    // contact: [
-    //   {
-    //     name: "Gabrio Mascarnas A",
-    //     mobile: "9488394416",
-    //   },
-    //   {
-    //     name: "Vasanthakumar R",
-    //     mobile: "6379841032",
-    //   },
-    //   {
-    //     name: "Sabhari P",
-    //     mobile: "8220265629",
-    //   },
-    // ],
+    contact: [
+      {
+        name: "Blessing Charles E",
+        mobile: "9514325533",
+      },
+      {
+        name: "Arun Thilak Karthe",
+        mobile: "9445329710",
+      },
+      {
+        name: "Jyotir Aditya Giri",
+        mobile: "8056264046",
+      },
+    ],
 
     sponsorName: "Alpha Cloud Labs",
     sponsor: "alpha.jpg",
@@ -227,20 +219,20 @@ approach towards problem solving.`,
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
 
-    // contact: [
-    //   {
-    //     name: "Gabrio Mascarnas A",
-    //     mobile: "9488394416",
-    //   },
-    //   {
-    //     name: "Vasanthakumar R",
-    //     mobile: "6379841032",
-    //   },
-    //   {
-    //     name: "Sabhari P",
-    //     mobile: "8220265629",
-    //   },
-    // ],
+    contact: [
+      {
+        name: "Sachin",
+        mobile: "8610047802",
+      },
+      {
+        name: "Kaushik",
+        mobile: "9025713726",
+      },
+      {
+        name: "Jesima A",
+        mobile: "89600047786",
+      },
+    ],
 
     sponsorName: "Samsung",
     sponsor: "samsung.png",
@@ -295,20 +287,20 @@ background while they compete to win the race towards the tiara.`,
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
     participants: "All 4 years (Only Girls)",
-    // contact: [
-    //   {
-    //     name: "Gabrio Mascarnas A",
-    //     mobile: "9488394416",
-    //   },
-    //   {
-    //     name: "Vasanthakumar R",
-    //     mobile: "6379841032",
-    //   },
-    //   {
-    //     name: "Sabhari P",
-    //     mobile: "8220265629",
-    //   },
-    // ],
+    contact: [
+      {
+        name: "Diya Dhandapani",
+        mobile: "9150274149",
+      },
+      {
+        name: "Kaviya RV",
+        mobile: "9003522379",
+      },
+      {
+        name: "Sineka Ramanujam",
+        mobile: "6381450713",
+      },
+    ],
 
     sponsorName: "Pandocorp",
     sponsor: "pando.jpeg",
@@ -365,20 +357,20 @@ coders to the coding world.`,
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
 
-    // contact: [
-    //   {
-    //     name: "Gabrio Mascarnas A",
-    //     mobile: "9488394416",
-    //   },
-    //   {
-    //     name: "Vasanthakumar R",
-    //     mobile: "6379841032",
-    //   },
-    //   {
-    //     name: "Sabhari P",
-    //     mobile: "8220265629",
-    //   },
-    // ],
+    contact: [
+      {
+        name: "Aditya Ramachandran",
+        mobile: "9789749049",
+      },
+      {
+        name: "Samreen Ayesha",
+        mobile: "7338762510",
+      },
+      {
+        name: "Sanjeev K M",
+        mobile: "9965165651",
+      },
+    ],
 
     // sponsor: "",
 
@@ -436,20 +428,20 @@ the chosen contestants avail the experience of interviews.`,
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
 
-    // contact: [
-    //   {
-    //     name: "Gabrio Mascarnas A",
-    //     mobile: "9488394416",
-    //   },
-    //   {
-    //     name: "Vasanthakumar R",
-    //     mobile: "6379841032",
-    //   },
-    //   {
-    //     name: "Sabhari P",
-    //     mobile: "8220265629",
-    //   },
-    // ],
+    contact: [
+      {
+        name: "Pramodh",
+        mobile: "9361379282",
+      },
+      {
+        name: "Dheepakraaj",
+        mobile: "9360737038",
+      },
+      {
+        name: "Keshikaa R",
+        mobile: "9487811249",
+      },
+    ],
 
     sponsorName: "M2P",
     sponsor: "m2p.jpg",
@@ -505,20 +497,20 @@ tech savvy quizzer of them all in this technical quiz event.`,
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
 
-    // contact: [
-    //   {
-    //     name: "Gabrio Mascarnas A",
-    //     mobile: "9488394416",
-    //   },
-    //   {
-    //     name: "Vasanthakumar R",
-    //     mobile: "6379841032",
-    //   },
-    //   {
-    //     name: "Sabhari P",
-    //     mobile: "8220265629",
-    //   },
-    // ],
+    contact: [
+      {
+        name: "Sreeratcha B",
+        mobile: "9445644788",
+      },
+      {
+        name: "Vasudha",
+        mobile: "9600135375",
+      },
+      {
+        name: "Sneha",
+        mobile: "7449007429",
+      },
+    ],
 
     sponsorName: "Tredence",
     sponsor: "tredence.png",
@@ -567,20 +559,20 @@ tech savvy quizzer of them all in this technical quiz event.`,
     //fee: `Registration Fee - RS.150`,
     //dateTime: ["Date:March 26th", "Time:9:30am"],
 
-    // contact: [
-    //   {
-    //     name: "Gabrio Mascarnas A",
-    //     mobile: "9488394416",
-    //   },
-    //   {
-    //     name: "Vasanthakumar R",
-    //     mobile: "6379841032",
-    //   },
-    //   {
-    //     name: "Sabhari P",
-    //     mobile: "8220265629",
-    //   },
-    // ],
+    contact: [
+      {
+        name: "Bharath Kumar",
+        mobile: "9952049834",
+      },
+      {
+        name: "Niruthiya Shri",
+        mobile: "69444255725",
+      },
+      {
+        name: "Akshaya",
+        mobile: "9538295670",
+      },
+    ],
 
     sponsorName: "Cosgrid Networks",
     sponsor: "cos.jpg",

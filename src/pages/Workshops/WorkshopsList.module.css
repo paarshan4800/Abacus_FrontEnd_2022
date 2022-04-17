@@ -11,7 +11,7 @@ body {
 
 .wrapper {
   height: 100%;
-  min-height: 100vh;
+  min-height: 40vh;
   padding: 5% 0 5% 10%;
   width: 90%;
   display: -webkit-box;
@@ -26,6 +26,15 @@ body {
   -ms-flex-align: center;
   align-items: center;
   overflow: hidden;
+}
+
+.mainTitle{
+  font-family: aquire;
+  font-size: xx-large;
+  text-align: center;
+  color: #ffffff;
+  padding: 2.5% 0% 2.5% 0%;
+  border-radius: 0 0 7px 7px;
 }
 
 .maindiv {

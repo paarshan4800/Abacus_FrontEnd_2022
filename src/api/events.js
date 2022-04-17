@@ -109,6 +109,6 @@ exports.workshopsList = [
       {
         id: 16,
         refName: "stock-o-nomics",
-        name: "Stock O Nomics"
+        name: "Stock-O-Nomics"
       }
 ]

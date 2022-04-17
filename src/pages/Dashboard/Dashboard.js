@@ -2,6 +2,7 @@ import React from "react";
 import PreviewCard from "../../components/PreviewCard/PreviewCard";
 import styles from "./Dashboard.module.css";
 import { useState, useEffect, useContext } from "react";
+import CountUp from "react-countup";
 import cx from "classnames";
 import tech from "./../../images/tech.png";
 import hack from "./../../images/hack.png";
@@ -21,7 +22,11 @@ import {
   getEventPass,
   getListOfEventRegistrations,
 } from "../../api/registrations";
-import { nonTechEventsList, techEventsList, workshopsList } from "../../api/events";
+import {
+  nonTechEventsList,
+  techEventsList,
+  workshopsList,
+} from "../../api/events";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -151,7 +156,7 @@ const Dashboard = () => {
 
   useEffect(async () => {
     setEventList(true);
-    setWorkshopList(true);
+    setWorkshopList(false); // Set this as true for workshop list.
     await getListOfEventRegistrations();
     setName(localStorage.getItem("name"));
     setAbacusId(Number(localStorage.getItem("abacusId")));
@@ -219,18 +224,18 @@ const Dashboard = () => {
               <div className={styles.abacusid}>
                 <p>Abacus ID : {abacusId}</p>
               </div>
-              <div className={styles.abacusid}>
+              {/* <div className={styles.abacusid}>
                 <p>College : {college}</p>
               </div>
               <div className={styles.abacusid}>
                 <p>Event Pass : {hasEventPass ? "Obtained" : "Not Obtained"}</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
 
         <div className={styles.userstats}>
-          <div className={styles.event_pass}>
+          {/* <div className={styles.event_pass}>
             <Link to={`/events`}>
               <img src={eventpassimg} />
             </Link>
@@ -252,8 +257,8 @@ const Dashboard = () => {
                 </div>
               )}
             </div>
-          </div>
-          {/* {1 ? (
+          </div> */}
+          {0 ? (
             <div className={styles.event_pass}>
               <Link to={`/events`}>
                 <img src={eventpassimg} />
@@ -264,12 +269,22 @@ const Dashboard = () => {
               <div className={styles.stats_card}>
                 <div className={styles.title}>Events</div>
                 <div className={styles.title}>Registered</div>
-                <div className={styles.num1}>4</div>
-                <div className={styles.num2}>/10</div>
+                <div className={styles.num1}>
+                  {" "}
+                  <CountUp
+                    start={0}
+                    end={registeredEvents.length}
+                    redraw={false}
+                    duration={1}
+                  >
+                    {" "}
+                  </CountUp>
+                </div>
+                <div className={styles.num2}>/{eventListItems.length}</div>
               </div>
             </div>
           )}
-          {1 ? (
+          {0 ? (
             <div className={styles.workshop_pass}>
               <Link to={`/workshops`}>
                 <img src={workshoppassimg} />
@@ -280,11 +295,20 @@ const Dashboard = () => {
               <div className={styles.stats_card}>
                 <div className={styles.title}>Workshops</div>
                 <div className={styles.title}>Registered</div>
-                <div className={styles.num1}>2</div>
-                <div className={styles.num2}>/23</div>
+                <div className={styles.num1}>
+                  <CountUp
+                    start={0}
+                    end={registeredEvents.length} // Change this to registeredWorkshop
+                    redraw={false}
+                    duration={1}
+                  >
+                    {" "}
+                  </CountUp>
+                </div>
+                <div className={styles.num2}>/{workshopListItems.length}</div>
               </div>
             </div>
-          )} */}
+          )}
         </div>
       </div>
       <div className={styles.content}>
@@ -328,7 +352,11 @@ const Dashboard = () => {
                           </Link>
                         </div>
                         <div className={styles.badge}>
-                          {event.registered ? <TiTick size={35} /> : <></>}
+                          {event.registered ? (
+                            <TiTick size={35} style={{ color: "white" }} />
+                          ) : (
+                            <></>
+                          )}
                         </div>
                       </div>
                     ))}
@@ -353,7 +381,11 @@ const Dashboard = () => {
                           </Link>
                         </div>
                         <div className={styles.badge}>
-                          {event.registered ? <TiTick size={35} /> : <></>}
+                          {event.registered ? (
+                            <TiTick size={35} style={{ color: "white" }} />
+                          ) : (
+                            <></>
+                          )}
                         </div>
                       </div>
                     ))}
@@ -382,7 +414,7 @@ const Dashboard = () => {
                         </div>
                         <div className={styles.badge}>
                           {event.registered ? (
-                            <TiTick size={35} style={{ color: "black" }} />
+                            <TiTick size={35} style={{ color: "white" }} />
                           ) : (
                             <></>
                           )}
@@ -413,7 +445,7 @@ const Dashboard = () => {
                         </div>
                         <div className={styles.badge}>
                           {event.registered ? (
-                            <TiTick size={35} style={{ color: "black" }} />
+                            <TiTick size={35} style={{ color: "white" }} />
                           ) : (
                             <></>
                           )}
