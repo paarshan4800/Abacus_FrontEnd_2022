@@ -64,8 +64,8 @@ const AppRoutes = () => {
           component={NonTechEventsList}
         />
         <Route path="/events/:type/:title" exact component={EventDetails} />
-        <Route path="/workshops" exact component={ComingSoon} />
-        <Route path="/workshops/:title" exact component={ComingSoon} />
+        <Route path="/workshops" exact component={WorkshopsList} />
+        <Route path="/workshops/:title" exact component={WorkshopDetails} />
 
         <Route path="/test/:type/:title" exact component={Test} />
 

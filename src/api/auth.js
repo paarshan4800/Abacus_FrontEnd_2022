@@ -5,8 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 // const BASE_API_URL = "https://abacus-22-backend.herokuapp.com/";
 //export const BASE_API_URL = "http://13.235.241.226:8000";
-export const BASE_API_URL = "http://localhost:8000";
-// export const BASE_API_URL = "https://abacus.org.in/api";
+// export const BASE_API_URL = "http://localhost:8000";
+export const BASE_API_URL = "https://abacus.org.in/api";
 
 export const googleSignIn = () => {
   window.location.href = BASE_API_URL + "/user/login/google";

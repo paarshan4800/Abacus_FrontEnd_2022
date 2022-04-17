@@ -34,11 +34,11 @@ function Hackathon() {
                 src={require(`./../../images/hack.png`)}
                 style={{ width: "200px", height: "200px" }}
               />
-              <p className="text-center pt-3">Registrations Opening Soon</p>
+              {/* <p className="text-center pt-3">Registrations Opening Soon</p> */}
 
-              {/* <Link to={`/hackathon-register`}>
+              <Link to={`/hackathon-register`}>
               <GlassButton title="Register" />
-            </Link> */}
+            </Link>
             </div>
           </div>
           <div className={styles.box} style={{ height: "auto", width: "60%" }}>

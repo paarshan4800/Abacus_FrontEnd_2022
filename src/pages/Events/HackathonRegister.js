@@ -5,7 +5,7 @@ import { Hackathon as HackathonData } from "../../data/HackathonData";
 import nontech from "./../../images/nontech.png";
 
 function HackathonRegister() {
-  const data = HackathonData;
+  // const data = HackathonData;
 
   return (
     <div
@@ -54,7 +54,7 @@ function HackathonRegister() {
           <span></span>
           <div className={styles.content}>
             <h2 className={styles.neon}>SPONSORS</h2>
-            <p>{data.about}</p>
+            {/* <p>{data.about}</p> */}
 
             {/* <a href="#">Read More</a> */}
           </div>
