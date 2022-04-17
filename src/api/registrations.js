@@ -97,6 +97,26 @@ export const paymentConfirmation = async (details) => {
   return data;
 };
 
-export const workshopRegistration = () => {
-  toast("Registrations will begin soon");
+export const workshopRegistration = async(id, name) => {
+  // toast("Registrations will begin soon");
+  const token = localStorage.getItem("apiToken");
+  const data = await axios({
+    method: "put",
+    url: BASE_API_URL + "/user/registration/workshop/" + id + "/" + name,
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  })
+    .then(function (response) {
+      if (response.status === 200) {
+        toast.success(response.data.message);
+        return 200;
+      }
+    })
+    .catch((err) => {
+      console.log(err.response)
+      toast.error("" + err.response.data.message);
+      return 400;
+    });
+  return data;
 };

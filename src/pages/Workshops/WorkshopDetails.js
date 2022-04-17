@@ -7,9 +7,16 @@ import reactDom from "react-dom";
 import { Workshops } from "../../data/WorkshopsData";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import nontech from "./../../images/nontech.png";
+import { workshopRegistration } from "../../api/registrations";
+import { ToastContainer, toast } from "react-toastify";
 
 function WorkshopDetails() {
+
+  const [totalRegisteredList, setTotalRegisteredList] = useState([]);
+
   const { title } = useParams();
+
+  let registered = false;
 
   const data = Workshops[title];
   const history = useHistory();
@@ -17,6 +24,33 @@ function WorkshopDetails() {
     //history.push("/404")
     return <PageNotFound />;
   }
+
+  const onWorkshopRegistration = async () => {
+    console.log(data.id)
+    const status = await workshopRegistration(data.id, data.refName);
+
+    if (status == 200) {
+      const list = JSON.parse(localStorage.getItem("registrations"));
+      list.push(String(data.id));
+      console.log(list);
+      registered = true;
+      localStorage.setItem("registrations", JSON.stringify(list));
+      setTotalRegisteredList(
+        await JSON.parse(localStorage.getItem("registrations"))
+      );
+    }
+  };
+
+  useEffect(async () => {
+    setTotalRegisteredList(
+      await JSON.parse(localStorage.getItem("registrations"))
+    );
+  }, []);
+  //console.log(totalRegisteredList)
+  if(totalRegisteredList == null)
+    registered = -1
+  else  
+    registered = totalRegisteredList.find((x) => x == data.id) != undefined;
 
   return (
     <div
@@ -55,7 +89,22 @@ function WorkshopDetails() {
               style={{ width: "200px", height: "200px" }}
               alt={title}
             /> */}
-            <GlassButton title="Register" />
+            {registered<1 ? (
+                <GlassButton 
+                onClick={() => {
+                  registered==-1 ? (
+                    toast.success("Login or Sign up to register")
+                  ) : (
+                  onWorkshopRegistration()
+                  )
+                }}
+                  title="Register" 
+                />
+              ) : (
+                <GlassButton
+                  title="Registered!"
+                />
+              )}
           </div>
         </div>
       </div>
