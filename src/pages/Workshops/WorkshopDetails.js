@@ -19,9 +19,15 @@ import {
   faFlag,
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import { workshopRegistration } from "../../api/registrations";
 
 function WorkshopDetails() {
+
+  const [totalRegisteredList, setTotalRegisteredList] = useState([]);
+
   const { title } = useParams();
+
+  let registered = false;
 
   const data = Workshops[title];
   const history = useHistory();
@@ -30,10 +36,32 @@ function WorkshopDetails() {
     return <PageNotFound />;
   }
 
-  // The following two lines of code are added to remove errors.
-  // Backend people have fun adding the functionalities :)
-  let registered = false;
-  const oneventRegistration = async () => {};
+  const onWorkshopRegistration = async () => {
+    console.log(data.id)
+    const status = await workshopRegistration(data.id, data.refName);
+
+    if (status == 200) {
+      const list = JSON.parse(localStorage.getItem("registrations"));
+      list.push(String(data.id));
+      console.log(list);
+      registered = true;
+      localStorage.setItem("registrations", JSON.stringify(list));
+      setTotalRegisteredList(
+        await JSON.parse(localStorage.getItem("registrations"))
+      );
+    }
+  };
+
+  useEffect(async () => {
+    setTotalRegisteredList(
+      await JSON.parse(localStorage.getItem("registrations"))
+    );
+  }, []);
+  //console.log(totalRegisteredList)
+  if(totalRegisteredList == null)
+    registered = -1
+  else  
+    registered = totalRegisteredList.find((x) => x == data.id) != undefined;
 
   return (
     <div
@@ -73,7 +101,7 @@ function WorkshopDetails() {
                   onClick={() => {
                     registered == -1
                       ? toast.success("Login or Sign up to register")
-                      : oneventRegistration();
+                      : onWorkshopRegistration();
                   }}
                   title="Register"
                 />
