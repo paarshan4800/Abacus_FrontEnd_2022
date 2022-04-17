@@ -89,3 +89,26 @@ exports.nonTechEventsList = [
   //   name: "Gamindrome",
   // },
 ];
+
+exports.workshopsList = [
+      // {
+      //   id: 13,
+      //   refName: "blockchain-and-cryptocurrency",
+      //   name: "Blockchain and Cryptocurrency"
+      // },
+      // {
+      //   id: 14,
+      //   refName: "dev-ops",
+      //   name: "DevOps"
+      // },
+      // {
+      //   id: 15,
+      //   refName: "stock-market-and-share-market",
+      //   name: "Stock Market and Share Market"
+      // },
+      {
+        id: 16,
+        refName: "stock-o-nomics",
+        name: "Stock O Nomics"
+      }
+]

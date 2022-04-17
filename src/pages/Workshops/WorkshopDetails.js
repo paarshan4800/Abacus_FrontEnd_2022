@@ -38,23 +38,23 @@ function WorkshopDetails() {
               <p key={1}> {obj}</p>
             ))}
             <h2 className={styles.neon}>CONTACT</h2>
-            {data.contact.map((person, index) => (
+            {/* {data.contact.map((person, index) => (
               <p key={index + 1} className={styles.glowCardName}>
                 {person.name} - <i class="fa fa-phone"></i>
                 {person.mobile}
               </p>
-            ))}
+            ))} */}
           </div>
         </div>
 
         <div className={styles.box} style={{ width: "400px" }}>
           <span></span>
           <div className={styles.content}>
-            <img
+            {/* <img
               src={require(`./../../images/Workshops/${title}.png`)}
               style={{ width: "200px", height: "200px" }}
               alt={title}
-            />
+            /> */}
             <GlassButton title="Register" />
           </div>
         </div>

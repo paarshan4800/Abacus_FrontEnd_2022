@@ -1,11 +1,14 @@
-import React, { useState, Component } from "react";
+import React, { useState, useContext } from "react";
 import logstyle from "./../logstyle.module.css";
 import GlassButton from "../../../components/GlassButton/GlassButton";
 import { resetPassword } from "../../../api/auth";
+import { SetAuthApi } from "../../../App";
 
 function NewPassword() {
   const [pass, setPass] = useState("");
   const [confirmPass, setConPass] = useState("");
+
+  const setAuth = useContext(SetAuthApi);
 
   const onPassword = async () => {
     var values = {
@@ -14,10 +17,9 @@ function NewPassword() {
     };
 
     const token = window.location.pathname.split("/")[2];
-    const msg = await resetPassword(token, values);
-    var res_msg = document.getElementById("alert_msg");
-    res_msg.innerHTML = msg;
-    //console.log(values);
+    if(await resetPassword(token, values) == true){
+      window.location = "/login";
+    }
   };
   return (
     <div className={logstyle.space}>
@@ -28,7 +30,7 @@ function NewPassword() {
       <div className={logstyle.appForm}>
         {/* <div className={logstyle.SIOut}> */}
         {/* <div className={logstyle.SICenter}> */}
-        <div id="alert_msg" className={logstyle.formFieldLabel}></div>{" "}
+        <div className={logstyle.formFieldLabel}></div>{" "}
         {/*div element needs to be properly positioned*/}
         <h2>Enter New Password</h2>
         <form className={logstyle.formFields}>

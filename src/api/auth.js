@@ -77,26 +77,16 @@ export const afterGoogleSignIn = () => {
 };
 
 export const forgetPassword = async (values) => {
-  const msg = await axios
+  await axios
     .post(BASE_API_URL + "/forgetPassword", values)
     .then((response) => {
       if (response.status === 200) {
-        // var res_msg = document.getElementById("msg");
-        // res_msg.innerHTML = response.data.message;
-
-        //console.log(response.data.message);
-        //console.log("Forget Password successful");
-        return response.data.message;
+       toast.success(response.data.message)
       }
     })
     .catch((err) => {
-      //console.log("the error code is", err.response.status);
-
       toast.info(err.response.data.message);
-      var err_msg = document.getElementById("msg");
-      err_msg.innerHTML = err.response.data.message;
     });
-  return msg;
 };
 
 export const resetPassword = async (token, values) => {
@@ -104,18 +94,13 @@ export const resetPassword = async (token, values) => {
     .put(BASE_API_URL + "/resetPassword/" + token, values)
     .then((response) => {
       if (response.status === 200) {
-        //console.log(response.data.message);
-        //console.log("Reset Password Successful");
-        return response.data.message;
+        toast.success(response.data.message);
+        return true;
       }
     })
     .catch((err) => {
-      var msg = document.getElementById("alert_msg");
-      msg.innerHTML = err.response.data.message;
       toast.info(err.response.data.message);
-
-      //console.log(err.response.data.message);
-      //console.log("the error code is", err.response.status);
+      return false;
     });
   return msg;
 };

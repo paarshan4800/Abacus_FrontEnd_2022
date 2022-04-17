@@ -46,7 +46,7 @@ export const getEventPass = async () => {
         toast.success(response.data.message);
         if (response.data.body.success === true) {
           setTimeout(() => {
-            window.location.href = response.data.body.payment_request.longurl;
+            window.location = "/dashboard";
           }, 300);
         }
       }

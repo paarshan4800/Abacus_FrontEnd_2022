@@ -40,7 +40,7 @@ function SignUp() {
 
   const validate = () => {
     let validationError = "";
-
+    //console.log("validation")
     if (!name) {
       validationError = "Name field cannot be blank";
     } else if (!email) {
@@ -66,9 +66,10 @@ function SignUp() {
     if (!validationError && conpass !== password) {
       validationError = "Passwords do not match";
     }
-
+    //console.log("valid : " + validationError)
     if (validationError) {
       setvalidationError(validationError);
+      toast.error(validationError)
       return false;
     }
     return true;
@@ -104,6 +105,7 @@ function SignUp() {
   const handleSubmit = () => {
     //console.log("hello");
     const isValid = validate();
+    //console.log(isValid)
     if (isValid) {
       var values = {
         email,
@@ -125,7 +127,7 @@ function SignUp() {
 
       signUp(signupURL, values);
     } else {
-      //console.log(validationError);
+      //console.log("Validation Error : " + validationError);
     }
   };
   return (

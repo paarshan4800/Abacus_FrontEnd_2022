@@ -8,6 +8,9 @@
 }
 .displaylist {
   padding-top: 3%;
+    /* display: flex !important; */
+    justify-content: center !important;
+    align-items: center !important;
 }
 .linkTag {
   text-decoration: none !important;
@@ -22,6 +25,9 @@
 .linkBackground {
   background-color: black;
   /* margin-top: 60px; */
+  /* display: flex !important;
+  justify-content: center !important;
+  align-items: center !important; */
 }
 .pass {
   width: 100%;
@@ -39,7 +45,7 @@
 
 /* ####### Add the css for arrows here ####### */
 
-/* .react-3d-carousel .slider-container .slider-right div {
+.react-3d-carousel .slider-container .slider-right div {
   position: absolute;
   top: 50%;
   left: 0%;
@@ -47,16 +53,16 @@
   color: #ffffff;
   transform: translateY(-50%);
   padding: 10px 10px;
-  border-top: 2px solid #ffffff;
-  border-right: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  border-left: 2px solid #ffffff;
-} */
-/* @media only screen and (max-width: 500px) {
-.linkTag img {
-  height: 30vh;
-  width: 100vw;
+  border-top: 2px solid #ffffff !important;
+  border-right: 2px solid #ffffff !important;
+  border-bottom: 2px solid #ffffff !important;
+  border-left: 2px solid #ffffff !important;
 }
-.linkBackground {
-  background-color: black;
-  /* margin-top: 60px; */
+ @media only screen and (max-width: 500px) {
+.displaylist {
+  /* display: flex !important; */
+  margin-top: 70px;
+  justify-content: center !important;
+  align-items: center !important;
+}
+ }
