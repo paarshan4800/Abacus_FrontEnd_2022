@@ -18,10 +18,8 @@ function NewPassword() {
 
     const token = window.location.pathname.split("/")[2];
     if(await resetPassword(token, values) == true){
-      setAuth(true);
-      console.log("set")
+      window.location = "/login";
     }
-    //console.log(values);
   };
   return (
     <div className={logstyle.space}>
