@@ -59,6 +59,10 @@ export const getEventPass = async () => {
 };
 
 export const eventRegistration = async (id, name) => {
+  if (!id) {
+    toast.error("Enter valid id");
+    return 400;
+  }
   const token = localStorage.getItem("apiToken");
   const data = await axios({
     method: "put",
@@ -97,7 +101,11 @@ export const paymentConfirmation = async (details) => {
   return data;
 };
 
-export const workshopRegistration = async(id, name) => {
+export const workshopRegistration = async (id, name) => {
+  if (!id) {
+    toast.error("Enter valid workshop");
+    return 400;
+  }
   // toast("Registrations will begin soon");
   const token = localStorage.getItem("apiToken");
   const data = await axios({
@@ -114,7 +122,7 @@ export const workshopRegistration = async(id, name) => {
       }
     })
     .catch((err) => {
-      console.log(err.response)
+      console.log(err.response);
       toast.error("" + err.response.data.message);
       return 400;
     });

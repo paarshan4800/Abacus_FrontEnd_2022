@@ -20,6 +20,7 @@ import {
   faClock,
   faFlag,
   faPeopleGroup,
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 
 function EventDetails() {
@@ -35,7 +36,6 @@ function EventDetails() {
     if (status == 200) {
       const list = JSON.parse(localStorage.getItem("registrations"));
       list.push(String(data.id));
-      console.log(list);
       registered = true;
       localStorage.setItem("registrations", JSON.stringify(list));
       setTotalRegisteredList(
@@ -57,7 +57,6 @@ function EventDetails() {
     }
     setData(Hash[title]);
   }, []);
-  console.log(totalRegisteredList);
   if (totalRegisteredList == null) registered = -1;
   else registered = totalRegisteredList.find((x) => x == data.id) != undefined;
 
@@ -129,16 +128,23 @@ function EventDetails() {
               <h2 className={styles.neon}>{data.name ? data.name : null}</h2>
               <p>{data.about ? data.about : null}</p>
               <h2 className={styles.neon}>DATE & TIME</h2>
-              {/* {data.dateTime.map((obj) => (
-              <p key={1}> {obj}</p>
-            ))} */}
+              {data.dateTime
+                ? data.dateTime.map((obj) => (
+                    <p key={1}>
+                      <FontAwesomeIcon icon={faCalendarDays} /> {obj}
+                    </p>
+                  ))
+                : null}
               <h2 className={styles.neon}>CONTACT</h2>
-              {data.contact?data.contact.map((person, index) => (
-              <p key={index + 1} className={styles.glowCardName}>
-                {person.name} - <i class="fa fa-phone"></i>
-                {person.mobile}
-              </p>
-            )):null}
+              {data.contact
+                ? data.contact.map((person, index) => (
+                    <p key={index + 1} className={styles.glowCardName}>
+                      {person.name} - <FontAwesomeIcon icon={faPhone} /> -{" "}
+                      {"   "}
+                      {person.mobile}
+                    </p>
+                  ))
+                : null}
             </div>
           </div>
         </div>
@@ -224,7 +230,13 @@ function EventDetails() {
                 : null}
               <p>Platform: {data.platform ? data.platform : null}</p>
 
-              <GlassButton title="Scroll to Top" />
+              <div
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                }}
+              >
+                <GlassButton title="Scroll to Top" />
+              </div>
             </div>
           </div>
         </div>
