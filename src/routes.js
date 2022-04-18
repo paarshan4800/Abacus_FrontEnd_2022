@@ -110,7 +110,7 @@ const AppRoutes = () => {
 
         <Route path="/ComingSoon" exact component={ComingSoon} />
         <Route path="/hackathon-register" exact component={HackathonRegister} />
-        <Route component={PageNotFound} />
+        {/* <Route component={PageNotFound} /> */}
 
         {/* <Route component={PageNotFound} /> */}
       </Switch>

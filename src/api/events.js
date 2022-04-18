@@ -111,4 +111,9 @@ exports.workshopsList = [
     refName: "stock-o-nomics",
     name: "Stock-O-Nomics",
   },
+  {
+    id: 17,
+    refName: "cloud-computing-beyond-coding",
+    name: "Cloud Computing",
+  },
 ];

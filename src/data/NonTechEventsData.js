@@ -299,7 +299,7 @@ the items correctly and you will survive until rescue comes.`,
       {
         title: "Round 1",
         description:
-       [`Each participating team will be given a set of 30 questions based on IPL stats, major events and records.`,
+       [`Each participating team will be given a set of 25 questions based on IPL stats, major events and records.`,
       `The teams who solve most of the questions will be shortlisted to the next round.`],
       },
       {
