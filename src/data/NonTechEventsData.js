@@ -305,8 +305,8 @@ the items correctly and you will survive until rescue comes.`,
       {
         title: "Round 2",
         description:
-          [`In this round the shortlisted teams will be assigned an IPL franchise and each team will be participating in the auction representing their respective franchises.`
-        `. And they will be bidding for the players to form a strong squad.`,
+          [`In this round the shortlisted teams will be assigned an IPL franchise and each team will be participating in the auction representing their respective franchises.`,
+        `And they will be bidding for the players to form a strong squad.`,
       `Based on their squad strength, players rating and various other criteria, top 3 teams will be the winners of this Mega IPL Auction!`],
       },
     ],
