@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.25147b8a.css",
-    "main.js": "/static/js/main.8b9a1d6e.js",
+    "main.css": "/static/css/main.5b4f7a78.css",
+    "main.js": "/static/js/main.6ee927c3.js",
     "static/media/spin.mp4": "/static/media/spin.241660180385baff701c.mp4",
     "static/media/backk.jpg": "/static/media/backk.d81605ff49e72d49feaf.jpg",
     "static/media/techz.png": "/static/media/techz.3c004a786880f33bca77.png",
@@ -12,12 +12,14 @@
     "static/media/eventpassimg.png": "/static/media/eventpassimg.06110123f1890af27064.png",
     "static/media/ABACUS22LOGO-03.png": "/static/media/ABACUS22LOGO-03.e2404ca7e782988f6e2a.png",
     "static/media/hack.png": "/static/media/hack.2649b96f48ee75be72f0.png",
+    "static/media/dummy.jpg": "/static/media/dummy.15d4d16550dd54d38deb.jpg",
     "static/media/Tamilpreneur Logo.png": "/static/media/Tamilpreneur Logo.c3bc3b6570bee498c86b.png",
     "static/media/ACM.png": "/static/media/ACM.fea2e24ba5acbf478669.png",
     "static/media/rays.png": "/static/media/rays.b8abe54c92776f9be380.png",
     "static/media/Career Crafter.jpg": "/static/media/Career Crafter.cc126dd19a6a9ad0ad16.jpg",
     "static/media/CSEA.png": "/static/media/CSEA.e33855806ca17b0399ee.png",
     "static/media/brainstormiz-technicalQuiz.png": "/static/media/brainstormiz-technicalQuiz.74a411079e8c46b18cd7.png",
+    "static/media/cloud-computing-beyond-coding.png": "/static/media/cloud-computing-beyond-coding.74a411079e8c46b18cd7.png",
     "static/media/csea_white.png": "/static/media/csea_white.7eb0791da492ae383843.png",
     "static/media/ceg_white.png": "/static/media/ceg_white.93b296b78893efd70adf.png",
     "static/media/ab.png": "/static/media/ab.29cbe6ddcbb456f6c404.png",
@@ -44,17 +46,16 @@
     "static/media/forgot.png": "/static/media/forgot.e6415bba1c9712b669b9.png",
     "static/media/code-for-crown.png": "/static/media/code-for-crown.de45b71892bcde5c424c.png",
     "static/media/ship-wreck.png": "/static/media/ship-wreck.cb2232e5bd36ed7fe0fe.png",
-    "static/media/stock-market-and-share-market.png": "/static/media/stock-market-and-share-market.cb2232e5bd36ed7fe0fe.png",
     "static/media/Aquire-Bold.otf": "/static/media/Aquire-Bold.cfc5ce07bacb3e5972c3.otf",
     "static/media/Aquire-Light.otf": "/static/media/Aquire-Light.03035c58e93951e8d152.otf",
     "static/media/COSGrid_Network.jpg": "/static/media/COSGrid_Network.04a3733f79be651525fa.jpg",
     "static/media/m2p.jpg": "/static/media/m2p.5da602ef329e7b62202c.jpg",
-    "static/media/blockchain-and-cryptocurrency.png": "/static/media/blockchain-and-cryptocurrency.7f5945411faf1884d8a6.png",
+    "static/media/ipl-auction.png": "/static/media/ipl-auction.18f2f4b006427db0a0d0.png",
     "static/media/web-design.png": "/static/media/web-design.7f5945411faf1884d8a6.png",
     "static/media/reverse-engineering.png": "/static/media/reverse-engineering.e014ff55a56e56e95e6e.png",
     "static/media/gamindrome.png": "/static/media/gamindrome.d25869155478cafd984b.png",
+    "static/media/stock-o-nomics.png": "/static/media/stock-o-nomics.a8d79e7050ee6875cef5.png",
     "static/media/booting.png": "/static/media/booting.6c3460de29d252da1cda.png",
-    "static/media/dev-ops.png": "/static/media/dev-ops.6c3460de29d252da1cda.png",
     "static/media/pando.jpeg": "/static/media/pando.46e138e8bc90456a6009.jpeg",
     "static/media/iip.png": "/static/media/iip.ad71c771d3bb2d37549e.png",
     "static/media/design-a-thon.png": "/static/media/design-a-thon.2b2bddbece226c436045.png",
@@ -65,11 +66,11 @@
     "static/media/alien.ttf": "/static/media/alien.b3fec7b397b54820e850.ttf",
     "static/media/motorq.svg": "/static/media/motorq.c0b950113e349dd63a49.svg",
     "index.html": "/index.html",
-    "main.25147b8a.css.map": "/static/css/main.25147b8a.css.map",
-    "main.8b9a1d6e.js.map": "/static/js/main.8b9a1d6e.js.map"
+    "main.5b4f7a78.css.map": "/static/css/main.5b4f7a78.css.map",
+    "main.6ee927c3.js.map": "/static/js/main.6ee927c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.25147b8a.css",
-    "static/js/main.8b9a1d6e.js"
+    "static/css/main.5b4f7a78.css",
+    "static/js/main.6ee927c3.js"
   ]
 }

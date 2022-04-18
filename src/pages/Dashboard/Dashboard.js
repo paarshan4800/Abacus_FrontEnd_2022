@@ -27,6 +27,10 @@ import {
   techEventsList,
   workshopsList,
 } from "../../api/events";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+faHome
+} from "@fortawesome/free-solid-svg-icons";
 
 const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -226,6 +230,10 @@ const Dashboard = () => {
               <div className={styles.abacusid}>
                 <p>Abacus ID : {abacusId}</p>
               </div>
+              <GlassBtn
+                title={<FontAwesomeIcon icon={faHome}>Pay now</FontAwesomeIcon>}
+                // title="Pay Now"
+              />
               {/* <div className={styles.abacusid}>
                 <p>College : {college}</p>
               </div>
@@ -233,7 +241,6 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-
         <div className={styles.userstats}>
           {/* <div className={styles.event_pass}>
             <Link to={`/events`}>
@@ -298,7 +305,7 @@ const Dashboard = () => {
                 <div className={styles.num1}>
                   <CountUp
                     start={0}
-                    end={registeredWorkshops.length} // Change this to registeredWorkshop
+                    end={registeredWorkshops.length} 
                     redraw={false}
                     duration={1}
                   >

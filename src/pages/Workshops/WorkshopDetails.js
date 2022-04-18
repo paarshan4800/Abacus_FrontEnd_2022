@@ -97,7 +97,12 @@ function WorkshopDetails() {
                   title="Register"
                 />
               ) : (
-                <GlassBtn title="Registered!" />
+                <GlassBtn
+                  title="Registered!"
+                  onClick={() => {
+                    toast.info("Registered!");
+                  }}
+                />
               )}
               {/* <p className="text-center pt-3">Registrations Opening Soon</p> */}
             </div>

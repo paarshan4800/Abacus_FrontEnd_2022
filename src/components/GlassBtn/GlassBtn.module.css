@@ -33,6 +33,7 @@
   overflow: hidden;
   transition: 0.5s;
   backdrop-filter: blur(15px);
+  cursor: pointer;
 }
 .container .btn:hover a {
   letter-spacing: 4px;
