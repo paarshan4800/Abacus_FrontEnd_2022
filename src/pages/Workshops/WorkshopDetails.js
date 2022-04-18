@@ -36,21 +36,15 @@ function WorkshopDetails() {
     const status = await workshopRegistration(data.id, data.refName);
 
     if (status == 200) {
-      const list = JSON.parse(localStorage.getItem("registrations"));
-      list.push(String(data.id));
-      console.log(list);
-      registered = true;
-      localStorage.setItem("registrations", JSON.stringify(list));
+      const list = JSON.parse(localStorage.getItem("workshops"));
       setTotalRegisteredList(
-        await JSON.parse(localStorage.getItem("registrations"))
+        await JSON.parse(localStorage.getItem("workshops"))
       );
     }
   };
 
   useEffect(async () => {
-    setTotalRegisteredList(
-      await JSON.parse(localStorage.getItem("registrations"))
-    );
+    setTotalRegisteredList(await JSON.parse(localStorage.getItem("workshops")));
   }, []);
   if (!data) {
     //history.push("/404")
@@ -94,7 +88,7 @@ function WorkshopDetails() {
                 title="Register"
               /> */}
               {registered < 1 ? (
-                <GlassBtn
+                <GlassButton
                   onClick={() => {
                     registered == -1
                       ? toast.success("Login or Sign up to register")
@@ -103,7 +97,7 @@ function WorkshopDetails() {
                   title="Register"
                 />
               ) : (
-                <GlassButton title="Registered!" />
+                <GlassBtn title="Registered!" />
               )}
               {/* <p className="text-center pt-3">Registrations Opening Soon</p> */}
             </div>
@@ -165,59 +159,62 @@ function WorkshopDetails() {
       <FadeInSection>
         <div className={styles.mainTitle}>SPEAKER(S)</div>
       </FadeInSection>
-{data.speakers ? (
-      <FadeInSection>
-        <div className={styles.container}>
-          {data.speakers.map((speaker, index) => (
-            <div
-              className={styles.box}
-              key={index + 1}
-              style={{ width: "380px" }}
-            >
-              <span></span>
+      {data.speakers ? (
+        <FadeInSection>
+          <div className={styles.container}>
+            {data.speakers.map((speaker, index) => (
               <div
-                className={styles.content}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
+                className={styles.box}
+                key={index + 1}
+                style={{ width: "380px" }}
               >
-                <img
-                  src={require(`./../../../src/images/Workshops/Speakers/${speaker.img}`)}
-                  style={{ borderRadius: "100%", marginBottom: "25px" }}
-                />
-                <a href={speaker.href}>
-                  <h3 className={styles.neon}>{speaker.name}</h3>
-                </a>
-                <p className={styles.glowCardName}>{speaker.profession}</p>
-                <p className={styles.glowCardName}>{speaker.company}</p>
+                <span></span>
+                <div
+                  className={styles.content}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    src={require(`./../../../src/images/Workshops/Speakers/${speaker.img}`)}
+                    style={{ borderRadius: "100%", marginBottom: "25px" }}
+                  />
+                  <a href={speaker.href}>
+                    <h3 className={styles.neon}>{speaker.name}</h3>
+                  </a>
+                  <p className={styles.glowCardName}>{speaker.profession}</p>
+                  <p className={styles.glowCardName}>{speaker.company}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </FadeInSection>
+            ))}
+          </div>
+        </FadeInSection>
       ) : null}
 
-{data.prerequisite ? (
-      <FadeInSection>
-        <div className={styles.container}>
-          <div className={styles.box} style={{ height: "auto", width: "auto" }}>
-            <span></span>
-            <div className={styles.content}>
-              <h2 className={styles.neon}>PREREQUISITE</h2>
-              {data.prerequisite
-                ? data.prerequisite.map((rule, index) => (
-                    <p key={index + 1} className={styles.glowCardName}>
-                      ► {rule}
-                    </p>
-                  ))
-                : null}
+      {data.prerequisite ? (
+        <FadeInSection>
+          <div className={styles.container}>
+            <div
+              className={styles.box}
+              style={{ height: "auto", width: "auto" }}
+            >
+              <span></span>
+              <div className={styles.content}>
+                <h2 className={styles.neon}>PREREQUISITE</h2>
+                {data.prerequisite
+                  ? data.prerequisite.map((rule, index) => (
+                      <p key={index + 1} className={styles.glowCardName}>
+                        ► {rule}
+                      </p>
+                    ))
+                  : null}
+              </div>
             </div>
           </div>
-        </div>
-      </FadeInSection>
+        </FadeInSection>
       ) : null}
     </div>
   );

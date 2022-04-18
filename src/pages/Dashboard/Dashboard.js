@@ -148,8 +148,10 @@ const Dashboard = () => {
   const [name, setName] = useState("");
   const [abacusId, setAbacusId] = useState("");
   const [isCegian, setIsCegian] = useState(false);
-  const [hasEventPass, setHasEventPass] = useState(false);
+  // const [hasEventPass, setHasEventPass] = useState(false);
   const [registeredEvents, setRegisteredEvents] = useState([]);
+  const [registeredWorkshops, setRegisteredWorkshops] = useState([]);
+
   const [college, setCollege] = useState("");
   const [eventListItems, setEventListItems] = useState([]);
   const [workshopListItems, setWorkshopListItems] = useState([]);
@@ -161,10 +163,10 @@ const Dashboard = () => {
     setName(localStorage.getItem("name"));
     setAbacusId(Number(localStorage.getItem("abacusId")));
     setIsCegian(await JSON.parse(localStorage.getItem("isCegian")));
-    setHasEventPass(await JSON.parse(localStorage.getItem("eventPass")));
     setRegisteredEvents(
       await JSON.parse(localStorage.getItem("registrations"))
     );
+    setRegisteredWorkshops(await JSON.parse(localStorage.getItem("workshops")));
     setCollege(localStorage.getItem("college"));
   }, []);
 
@@ -191,13 +193,13 @@ const Dashboard = () => {
   useEffect(() => {
     const workshopList = workshopsList.map((data) => {
       let registered = false;
-      if (registeredEvents.find((x) => x == data.id) != undefined) {
+      if (registeredWorkshops.find((x) => x == data.id) != undefined) {
         registered = true;
       }
       return { ...data, registered: registered, type: "workshops" };
     });
     setWorkshopListItems([...workshopList]);
-  }, [registeredEvents]);
+  }, [registeredWorkshops]);
 
   const expandEventList = () => {
     setEventList(true);
@@ -227,9 +229,7 @@ const Dashboard = () => {
               {/* <div className={styles.abacusid}>
                 <p>College : {college}</p>
               </div>
-              <div className={styles.abacusid}>
-                <p>Event Pass : {hasEventPass ? "Obtained" : "Not Obtained"}</p>
-              </div> */}
+               */}
             </div>
           </div>
         </div>
@@ -298,7 +298,7 @@ const Dashboard = () => {
                 <div className={styles.num1}>
                   <CountUp
                     start={0}
-                    end={registeredEvents.length} // Change this to registeredWorkshop
+                    end={registeredWorkshops.length} // Change this to registeredWorkshop
                     redraw={false}
                     duration={1}
                   >

@@ -32,6 +32,9 @@ export const normalSignIn = async (values) => {
           "registrations",
           JSON.stringify(data.registrations)
         );
+        if (data.workshops)
+          localStorage.setItem("workshops", JSON.stringify(data.workshops));
+        else localStorage.setItem("workshops", JSON.stringify([]));
         // localStorage.setItem("registrations", data.registrations);
         toast.success("Login Successful");
 

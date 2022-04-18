@@ -19,8 +19,8 @@ export const getListOfEventRegistrations = async () => {
           JSON.stringify(response.data.registrations)
         );
         localStorage.setItem(
-          "eventPass",
-          JSON.stringify(response.data.hasEventPass)
+          "workshops",
+          JSON.stringify(response.data.workshops)
         );
       }
     })
@@ -118,6 +118,10 @@ export const workshopRegistration = async (id, name) => {
     .then(function (response) {
       if (response.status === 200) {
         toast.success(response.data.message);
+
+        if (response.data.body.payment_request != undefined) {
+          window.location.href = response.data.body.payment_request.longurl;
+        }
         return 200;
       }
     })
