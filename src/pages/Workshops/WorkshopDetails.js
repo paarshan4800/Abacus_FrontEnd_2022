@@ -165,6 +165,7 @@ function WorkshopDetails() {
       <FadeInSection>
         <div className={styles.mainTitle}>SPEAKER(S)</div>
       </FadeInSection>
+{data.speakers ? (
       <FadeInSection>
         <div className={styles.container}>
           {data.speakers.map((speaker, index) => (
@@ -197,6 +198,27 @@ function WorkshopDetails() {
           ))}
         </div>
       </FadeInSection>
+      ) : null}
+
+{data.prerequisite ? (
+      <FadeInSection>
+        <div className={styles.container}>
+          <div className={styles.box} style={{ height: "auto", width: "auto" }}>
+            <span></span>
+            <div className={styles.content}>
+              <h2 className={styles.neon}>PREREQUISITE</h2>
+              {data.prerequisite
+                ? data.prerequisite.map((rule, index) => (
+                    <p key={index + 1} className={styles.glowCardName}>
+                      ► {rule}
+                    </p>
+                  ))
+                : null}
+            </div>
+          </div>
+        </div>
+      </FadeInSection>
+      ) : null}
     </div>
   );
 }

@@ -133,12 +133,12 @@ function EventDetails() {
               <p key={1}> {obj}</p>
             ))} */}
               <h2 className={styles.neon}>CONTACT</h2>
-              {/* {data.contact.map((person, index) => (
+              {data.contact?data.contact.map((person, index) => (
               <p key={index + 1} className={styles.glowCardName}>
                 {person.name} - <i class="fa fa-phone"></i>
                 {person.mobile}
               </p>
-            ))} */}
+            )):null}
             </div>
           </div>
         </div>
