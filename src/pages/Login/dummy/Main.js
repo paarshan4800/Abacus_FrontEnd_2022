@@ -138,7 +138,6 @@ class Main extends React.Component {
               <GlassButton
                 title="To SignUp"
                 onClick={() => this.flippyHorizontal.toggle()}
-                
               />
             </div>
             <SignInForm />

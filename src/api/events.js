@@ -64,6 +64,11 @@ exports.techEventsList = [
 
 exports.nonTechEventsList = [
   {
+    id: 15,
+    refName: "ipl-auction",
+    name: "IPL Auction",
+  },
+  {
     id: 11,
     refName: "ship-wreck",
     name: "Ship-Wreck",
@@ -83,32 +88,27 @@ exports.nonTechEventsList = [
     refName: "thadam",
     name: "Thadam",
   },
-  // {
-  //   id: 15,
-  //   refName: "gamindrome",
-  //   name: "Gamindrome",
-  // },
 ];
 
 exports.workshopsList = [
-      // {
-      //   id: 13,
-      //   refName: "blockchain-and-cryptocurrency",
-      //   name: "Blockchain and Cryptocurrency"
-      // },
-      // {
-      //   id: 14,
-      //   refName: "dev-ops",
-      //   name: "DevOps"
-      // },
-      // {
-      //   id: 15,
-      //   refName: "stock-market-and-share-market",
-      //   name: "Stock Market and Share Market"
-      // },
-      {
-        id: 16,
-        refName: "stock-o-nomics",
-        name: "Stock-O-Nomics"
-      }
-]
+  // {
+  //   id: 13,
+  //   refName: "blockchain-and-cryptocurrency",
+  //   name: "Blockchain and Cryptocurrency"
+  // },
+  // {
+  //   id: 14,
+  //   refName: "dev-ops",
+  //   name: "DevOps"
+  // },
+  // {
+  //   id: 15,
+  //   refName: "stock-market-and-share-market",
+  //   name: "Stock Market and Share Market"
+  // },
+  {
+    id: 16,
+    refName: "stock-o-nomics",
+    name: "Stock-O-Nomics",
+  },
+];

@@ -258,66 +258,61 @@ the items correctly and you will survive until rescue comes.`,
   },
 
 
-// "gamindrome": {
-//   id: 15,
-//   name: "Fandom Quiz",
-//   refName: "fandom-quiz",
-//   about: `For all the admirers of movies, web series and tv shows, here is something
-//   which is definitely gonna interest you, an event for all the fans out there. This is a
-//   fun event where the die-hard Movies and Series Kannis (nerds) race against each
-//   other in this geeky fandom quiz. Call yourself a true fan? Let’s test!`,
-//   // fee: `Registration Fee - RS.150`,
-//   // dateTime: ["Last Date - 20 March 2021", "Instagram - abacus21_ceg"],
+"ipl-auction": {
+  id: 15,
+  name: "IPL Auction",
+  refName: "ipl-auction",
+  about: `Disappointed with your favourite team managements picks at the mega auction, think that you could have mastered it if you were there…. Here we give you a great chance in our very own IPL auction event of Abacus’22.
+	For all the craziest cricket and IPL fans, here we got something big and new for you guys! The Mega IPL auction conducted for the very first time in Abacus to entertain you as much as possible. In this event, you will be given an IPL franchise for which you will be bidding to form a core squad in the mega auction. Ready to witness an IPL player auction, save the dates.
+`,
+  // fee: `Registration Fee - RS.150`,
+  // dateTime: ["Last Date - 20 March 2021", "Instagram - abacus21_ceg"],
 
-//   // contact: [
-//   //   {
-//   //     name: "Adhithya K",
-//   //     mobile: "8883018311",
-//   //   },
-//   //   {
-//   //     name: "Usha Varshini Saravanan",
-//   //     mobile: "9894560778",
-//   //   },
-//   // ],
+  // contact: [
+  //   {
+  //     name: "Adhithya K",
+  //     mobile: "8883018311",
+  //   },
+  //   {
+  //     name: "Usha Varshini Saravanan",
+  //     mobile: "9894560778",
+  //   },
+  // ],
 
-//   // theme: "Before, during and after lockdown",
+  // theme: "Before, during and after lockdown",
 
-//   teamSize: "2-3",
-//   roundsNumber: "2",
-//   duration: "Round 1 - 35 minutes, Round 2 - 1 hr",
-//   platform: "Pen and paper",
-//   participants: "All 4 years",
-//   rules: [
-//     "A team of minimum 1 and maximum 3 individuals from any college or university are allowed to participate in the quiz.",
-//     "Candidates involved in any kind of malpractice will be disqualified immediately",
-//     "There will be no negative marking for MCQs.",
-//     "Test is to be taken on pen and paper",
-//     "Decisions made by the administrators will be final.",
-//   ],
+  teamSize: "2-3",
+  roundsNumber: "2",
+  duration: "Round 1 - 20 minutes, Round 2 - 2 hrs",
+  platform: "Pen & paper and Actual auction",
+  participants: "All 4 years",
+  rules: [
+    "A team of minimum 2 and maximum 3 individuals from any college or university are allowed to participate in the quiz.",
+    "Candidates involved in any kind of malpractice will be disqualified immediately",
+    "There will be no negative marking for wrong answers.",
+    "Decisions made by the administrators will be final.",
+  ],
 
-//   rounds: {
-//     number: 2,
-//     roundDetails: [
-//       {
-//         title: "Round 1",
-//         description:
-//        [`Each participating team will be given a set of 25 questions from the fandoms
-//         like MCU, GOT, STAR WARS, FRIENDS. Within 35 mins time, the teams who have a
-//         high number of correct answers will get further in the event and will proceed to the
-//         second round.`],
-//       },
-//       {
-//         title: "Round 2",
-//         description:
-//           [`The duration of this round is 30 mins. The teams who got through Round 1
-//           are crazy fans. To test your memory further, in this round, you’ll be given a set of
-//           questions again, but in a different manner. Solve most of them in 30 mins and your
-//           the winner!`],
-//       },
-//     ],
-//   },
-//   registration: false,
-// },
+  rounds: {
+    number: 2,
+    roundDetails: [
+      {
+        title: "Round 1",
+        description:
+       [`Each participating team will be given a set of 30 questions based on IPL stats, major events and records.`,
+      `The teams who solve most of the questions will be shortlisted to the next round.`],
+      },
+      {
+        title: "Round 2",
+        description:
+          [`In this round the shortlisted teams will be assigned an IPL franchise and each team will be participating in the auction representing their respective franchises.`,
+        `And they will be bidding for the players to form a strong squad.`,
+      `Based on their squad strength, players rating and various other criteria, top 3 teams will be the winners of this Mega IPL Auction!`],
+      },
+    ],
+  },
+  registration: false,
+},
 
 
 };
