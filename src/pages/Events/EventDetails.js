@@ -57,11 +57,9 @@ function EventDetails() {
     }
     setData(Hash[title]);
   }, []);
-  console.log(totalRegisteredList)
-  if(totalRegisteredList == null)
-    registered = -1
-  else  
-    registered = totalRegisteredList.find((x) => x == data.id) != undefined;
+  console.log(totalRegisteredList);
+  if (totalRegisteredList == null) registered = -1;
+  else registered = totalRegisteredList.find((x) => x == data.id) != undefined;
 
   if (data == "") {
     // history.push("/404")
@@ -110,21 +108,17 @@ function EventDetails() {
                   }}
                   title="Register"
                 /> */}
-              {registered<1 ? (
-                <GlassBtn 
-                onClick={() => {
-                  registered==-1 ? (
-                    toast.success("Login or Sign up to register")
-                  ) : (
-                  oneventRegistration()
-                  )
-                }}
-                  title="Register" 
+              {registered < 1 ? (
+                <GlassButton
+                  onClick={() => {
+                    registered == -1
+                      ? toast.info("Login or Sign up to register")
+                      : oneventRegistration();
+                  }}
+                  title="Register"
                 />
               ) : (
-                <GlassButton
-                  title="Registered!"
-                />
+                <GlassBtn title="Registered!" />
               )}
               {/* <p className="text-center pt-3">Registrations Opening Soon</p> */}
             </div>

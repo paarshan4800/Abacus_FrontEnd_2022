@@ -135,17 +135,14 @@ export const signUp = (signupURL, values) => {
       //console.log(response);
     })
     .catch((err) => {
-      //console.log(err);
+      console.log(err.response);
       if (err.response.data.code === 11000) {
-        toast.info(
-          err.response.data.keyValue.email +
-            "is already registered. Go to login"
-        );
+        toast.info("Your email is already registered. Go to login");
         setTimeout(() => {
           window.location = "/login";
         }, 300);
       } else {
-        //console.log(err.response.data);
+        console.log(err.response.data);
       }
     });
 };

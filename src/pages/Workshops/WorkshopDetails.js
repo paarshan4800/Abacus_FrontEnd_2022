@@ -22,7 +22,6 @@ import {
 import { workshopRegistration } from "../../api/registrations";
 
 function WorkshopDetails() {
-
   const [totalRegisteredList, setTotalRegisteredList] = useState([]);
 
   const { title } = useParams();
@@ -31,13 +30,9 @@ function WorkshopDetails() {
 
   const data = Workshops[title];
   const history = useHistory();
-  if (!data) {
-    //history.push("/404")
-    return <PageNotFound />;
-  }
 
   const onWorkshopRegistration = async () => {
-    console.log(data.id)
+    console.log(data.id);
     const status = await workshopRegistration(data.id, data.refName);
 
     if (status == 200) {
@@ -57,11 +52,13 @@ function WorkshopDetails() {
       await JSON.parse(localStorage.getItem("registrations"))
     );
   }, []);
+  if (!data) {
+    //history.push("/404")
+    return <PageNotFound />;
+  }
   //console.log(totalRegisteredList)
-  if(totalRegisteredList == null)
-    registered = -1
-  else  
-    registered = totalRegisteredList.find((x) => x == data.id) != undefined;
+  if (totalRegisteredList == null) registered = -1;
+  else registered = totalRegisteredList.find((x) => x == data.id) != undefined;
 
   return (
     <div
